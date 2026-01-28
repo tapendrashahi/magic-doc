@@ -91,15 +91,35 @@ class ApiClient {
   }
 
   // Converter endpoint
-  convertLatex(latex_content: string) {
-    console.log('[API] Converting LaTeX, length:', latex_content.length);
-    return this.client.post('/notes/convert/', { latex_content })
+  convertLatex(latex_content: string, format: 'katex' | 'plain_html' = 'katex') {
+    console.log('[API] Converting LaTeX, length:', latex_content.length, 'format:', format);
+    return this.client.post('/notes/convert/', { 
+      latex_content,
+      format
+    })
       .then(response => {
-        console.log('[API] ✓ Conversion response received, HTML length:', response.data.html?.length);
+        console.log('[API] ✓ Conversion response received, HTML length:', response.data.html_content?.length, 'format:', response.data.format);
         return response;
       })
       .catch(error => {
         console.error('[API] Conversion failed:', error.message);
+        throw error;
+      });
+  }
+
+  // Mathpix to LMS conversion endpoint (PHASE 7)
+  convertMathpixToLMS(mathpix_text: string, include_stats: boolean = false) {
+    console.log('[API] Converting Mathpix to LMS, length:', mathpix_text.length, 'stats:', include_stats);
+    return this.client.post('/convert/', { 
+      mathpix_text,
+      include_stats
+    })
+      .then(response => {
+        console.log('[API] ✓ Mathpix conversion response received, HTML length:', response.data.html_fragment?.length, 'time:', response.data.conversion_time_ms + 'ms');
+        return response;
+      })
+      .catch(error => {
+        console.error('[API] Mathpix conversion failed:', error.message);
         throw error;
       });
   }

@@ -7,6 +7,7 @@ import { Login } from './pages/Login';
 import { Notes } from './pages/Notes';
 import { Editor } from './pages/Editor';
 import { History } from './pages/History';
+import { Converter } from './pages/Converter';
 import './App.css';
 
 function AppRoutes() {
@@ -54,6 +55,14 @@ function AppRoutes() {
             <Layout>
               <History />
             </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/converter"
+        element={
+          <ProtectedRoute>
+            <Converter />
           </ProtectedRoute>
         }
       />

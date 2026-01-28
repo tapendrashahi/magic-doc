@@ -41,6 +41,7 @@ export const Editor = () => {
   const [noteMenuOpen, setNoteMenuOpen] = useState<number | null>(null);
   const [renamingNoteId, setRenamingNoteId] = useState<number | null>(null);
   const [renameValue, setRenameValue] = useState('');
+  const [conversionFormat, setConversionFormat] = useState<'katex' | 'plain_html'>('katex');
 
   useEffect(() => {
     if (id) {
@@ -74,9 +75,40 @@ export const Editor = () => {
   useEffect(() => {
     if (latex && !html && !isLoading) {
       console.log('[Editor] Auto-converting loaded LaTeX (HTML is empty)');
-      handleLatexChangeAndConvert(latex);
+      // Auto-convert with current format
+      const performConvert = async () => {
+        try {
+          const response = await apiClient.convertLatex(latex, conversionFormat);
+          const newHtml = response.data.html_content;
+          setHtml(newHtml);
+        } catch (err) {
+          console.error('[Editor] Auto-conversion failed:', err);
+        }
+      };
+      performConvert();
     }
-  }, [latex, isLoading]);
+  }, [latex, isLoading, conversionFormat]);
+
+  // Re-convert when format changes (without changing LaTeX content)
+  useEffect(() => {
+    console.log('[Editor] Effect triggered:', {conversionFormat, hasLatex: !!latex, hasHtml: !!html, isLoading});
+    if (latex && html && !isLoading) {
+      console.log('[Editor] Format changed to:', conversionFormat, 'Re-converting existing content...');
+      // Convert with the new format
+      const performConvert = async () => {
+        try {
+          console.log('[Editor] Re-converting with format:', conversionFormat);
+          const response = await apiClient.convertLatex(latex, conversionFormat);
+          const newHtml = response.data.html_content;
+          console.log('[Editor] ✓ Re-conversion complete, HTML length:', newHtml.length);
+          setHtml(newHtml);
+        } catch (err) {
+          console.error('[Editor] Re-conversion failed:', err);
+        }
+      };
+      performConvert();
+    }
+  }, [conversionFormat]);
 
   // Auto-save after 2 seconds of inactivity
   useEffect(() => {
@@ -271,15 +303,15 @@ export const Editor = () => {
   }, []);
 
   const handleLatexChangeAndConvert = useCallback(async (newLatex: string) => {
-    console.log('[Editor] LaTeX change and convert, length:', newLatex.length);
+    console.log('[Editor] LaTeX change and convert, length:', newLatex.length, 'format:', conversionFormat);
     setLatex(newLatex);
 
     if (newLatex.trim()) {
       try {
-        console.log('[Editor] Converting LaTeX...');
-        const response = await apiClient.convertLatex(newLatex);
+        console.log('[Editor] Converting LaTeX with format:', conversionFormat);
+        const response = await apiClient.convertLatex(newLatex, conversionFormat);
         const html = response.data.html_content;
-        console.log('[Editor] ✓ Conversion complete, HTML length:', html.length);
+        console.log('[Editor] ✓ Conversion complete, HTML length:', html.length, 'format:', conversionFormat);
         setHtml(html);
         setError('');
       } catch (err) {
@@ -287,7 +319,7 @@ export const Editor = () => {
         setError('Failed to convert LaTeX');
       }
     }
-  }, []);
+  }, [conversionFormat]);
 
   const handleSaveNote = async () => {
     if (!title.trim()) {
@@ -336,9 +368,12 @@ export const Editor = () => {
     try {
       await ExportService.copyToClipboard(html);
       setCopied(true);
+      const formatLabel = conversionFormat === 'katex' ? 'KaTeX HTML' : 'Plain HTML';
+      toastManager.success(`${formatLabel} copied to clipboard!`);
       setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
     } catch (err) {
       console.error('Failed to copy:', err);
+      toastManager.error('Failed to copy to clipboard');
     }
   };
 
@@ -725,6 +760,36 @@ export const Editor = () => {
               )}
             </div>
 
+            {/* Format Toggle */}
+            <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+              <button
+                onClick={() => {
+                  setConversionFormat('katex');
+                }}
+                className={`px-3 py-1.5 rounded text-sm font-medium transition ${
+                  conversionFormat === 'katex'
+                    ? 'bg-white text-blue-600 shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+                title="KaTeX format for web rendering"
+              >
+                KaTeX
+              </button>
+              <button
+                onClick={() => {
+                  setConversionFormat('plain_html');
+                }}
+                className={`px-3 py-1.5 rounded text-sm font-medium transition ${
+                  conversionFormat === 'plain_html'
+                    ? 'bg-white text-blue-600 shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+                title="Plain HTML for LMS (Moodle, Google Sites)"
+              >
+                LMS
+              </button>
+            </div>
+
             {/* Copy HTML Button */}
             <button
               onClick={handleCopyHTML}
@@ -733,8 +798,8 @@ export const Editor = () => {
                 ? 'text-green-600 bg-green-50'
                 : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
                 }`}
-              title={copied ? 'Copied!' : 'Copy HTML to clipboard (Ctrl+Shift+C)'}
-              aria-label={copied ? 'HTML copied to clipboard' : 'Copy HTML to clipboard'}
+              title={copied ? 'Copied!' : `Copy ${conversionFormat === 'katex' ? 'KaTeX HTML' : 'Plain HTML'} to clipboard (Ctrl+Shift+C)`}
+              aria-label={copied ? 'HTML copied to clipboard' : `Copy ${conversionFormat === 'katex' ? 'KaTeX HTML' : 'Plain HTML'} to clipboard`}
             >
               {copied ? (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -823,11 +888,13 @@ export const Editor = () => {
                 value={latex}
                 onChange={handleLatexChange}
                 onConvert={handleConvert}
+                conversionFormat={conversionFormat}
               />
               <HTMLPreview
                 html={html}
                 loading={storeLoading}
                 error={storeError}
+                format={conversionFormat}
                 note={note}
               />
             </div>

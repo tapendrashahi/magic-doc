@@ -6,12 +6,14 @@ interface LaTeXInputProps {
   value: string;
   onChange: (value: string) => void;
   onConvert: (html: string) => void;
+  conversionFormat?: 'katex' | 'plain_html';
 }
 
 export const LaTeXInput: React.FC<LaTeXInputProps> = ({
   value,
   onChange,
   onConvert,
+  conversionFormat = 'katex',
 }) => {
   const { loading, error } = useNoteStore();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -20,15 +22,15 @@ export const LaTeXInput: React.FC<LaTeXInputProps> = ({
   const handleChange = useCallback(
     async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       const newValue = e.target.value;
-      console.log('[LaTeXInput] Content changed, length:', newValue.length);
+      console.log('[LaTeXInput] Content changed, length:', newValue.length, 'format:', conversionFormat);
       onChange(newValue);
 
       // Real-time conversion with debounce
       if (newValue.trim()) {
         try {
-          console.log('[LaTeXInput] Starting conversion for', newValue.length, 'chars');
-          const html = await converterService.convertLatex(newValue);
-          console.log('[LaTeXInput] ✓ Conversion successful, HTML length:', html.length);
+          console.log('[LaTeXInput] Starting conversion for', newValue.length, 'chars, format:', conversionFormat);
+          const html = await converterService.convertLatex(newValue, conversionFormat);
+          console.log('[LaTeXInput] ✓ Conversion successful, HTML length:', html.length, 'format:', conversionFormat);
           onConvert(html);
         } catch (err) {
           console.error('[LaTeXInput] Conversion error:', err);
@@ -38,7 +40,7 @@ export const LaTeXInput: React.FC<LaTeXInputProps> = ({
         onConvert('');
       }
     },
-    [onChange, onConvert]
+    [onChange, onConvert, conversionFormat]
   );
 
   // Sync scroll between textarea and highlight

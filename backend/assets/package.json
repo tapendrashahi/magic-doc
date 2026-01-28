@@ -1,0 +1,14 @@
+{
+  "name": "katex-renderer",
+  "version": "1.0.0",
+  "description": "KaTeX rendering service for LMS converter",
+  "main": "render_katex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "katex": "^0.16.9"
+  }
+}
