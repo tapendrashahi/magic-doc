@@ -490,7 +490,7 @@ export const Editor = () => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         <header className="bg-white border-b border-gray-200 p-4 flex items-center justify-between shadow-sm">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 flex-1">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="p-1.5 hover:bg-gray-100 rounded transition text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
@@ -500,9 +500,20 @@ export const Editor = () => {
               {sidebarOpen ? '◀' : '▶'}
             </button>
 
-            <h1 className="text-xl font-bold text-gray-800 ml-2">
-              {id ? 'Edit Note' : 'New Note'}
-            </h1>
+            {/* Note Title Input in Header */}
+            <input
+              id="note-title-header"
+              type="text"
+              value={title}
+              onChange={(e) => {
+                setTitle(e.target.value);
+                setHasChanges(true);
+                setAutoSaveStatus('unsaved');
+              }}
+              placeholder="Enter note title..."
+              className="flex-1 max-w-md px-4 py-2 border border-gray-300 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition text-base font-semibold"
+              aria-label="Note title"
+            />
           </div>
 
           <div className="flex items-center gap-4">
@@ -614,27 +625,6 @@ export const Editor = () => {
                 {storeError}
               </div>
             )}
-
-            <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-              <label htmlFor="note-title" className="block text-sm font-semibold text-gray-700 mb-2">
-                Note Title
-              </label>
-              <input
-                id="note-title"
-                type="text"
-                value={title}
-                onChange={(e) => {
-                  setTitle(e.target.value);
-                  setHasChanges(true);
-                  setAutoSaveStatus('unsaved');
-                }}
-                placeholder="Enter note title..."
-                className="w-full px-4 py-2 border border-gray-300 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition text-base"
-                aria-label="Note title"
-                aria-describedby="title-help"
-              />
-              <p id="title-help" className="sr-only">Enter a descriptive title for this note</p>
-            </div>
 
             <div className="grid grid-cols-[60%_40%] gap-4 h-96">
               <LaTeXInput

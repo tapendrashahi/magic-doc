@@ -16,7 +16,6 @@ export const LaTeXInput: React.FC<LaTeXInputProps> = ({
   const { loading, error } = useNoteStore();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const highlightRef = useRef<HTMLPreElement>(null);
-  const [showExamples, setShowExamples] = React.useState(false);
 
   const handleChange = useCallback(
     async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -79,33 +78,13 @@ export const LaTeXInput: React.FC<LaTeXInputProps> = ({
 
   return (
     <div className="flex flex-col h-full bg-white rounded-lg shadow-md border border-gray-300">
-      <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-6 py-4 border-b border-gray-300 flex justify-between items-center">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-800">📝 LaTeX Input</h2>
-          <p className="text-xs text-gray-600 mt-1">
-            {value.length} characters
-          </p>
-        </div>
-        <button
-          onClick={() => setShowExamples(!showExamples)}
-          className="text-sm bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition font-semibold"
-          title="Show LaTeX examples"
-        >
-          {showExamples ? '✕ Hide' : '? Show'} Examples
-        </button>
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-6 py-4 border-b border-gray-300">
+        <h2 className="text-2xl font-bold text-gray-800">📝 LaTeX Input</h2>
+        <p className="text-xs text-gray-600 mt-1">
+          {value.length} characters
+        </p>
       </div>
 
-      {showExamples && (
-        <div className="px-6 py-3 bg-blue-50 border-b border-gray-300 text-xs text-gray-700 animate-slideUp">
-          <p className="font-semibold mb-2">💡 Quick Examples:</p>
-          <ul className="space-y-1">
-            <li>• <code className="bg-white px-2 py-1 rounded text-red-600">E = mc^2</code> for inline math</li>
-            <li>• <code className="bg-white px-2 py-1 rounded text-red-600">\section{Title}</code> for sections</li>
-            <li>• <code className="bg-white px-2 py-1 rounded text-red-600">\textbf{bold}</code> for bold text</li>
-            <li>• <code className="bg-white px-2 py-1 rounded text-red-600">$$...$$</code> for display math</li>
-          </ul>
-        </div>
-      )}
 
       <div className="flex-1 relative overflow-hidden p-4">
         {/* Syntax highlight overlay */}
