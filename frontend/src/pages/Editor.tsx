@@ -276,12 +276,12 @@ export const Editor = () => {
       setNote(response.data);
       setError('');
 
-      // Switch to Mathpix tab if note has Mathpix content
+      // Switch to Mathpix tab if note has Mathpix content, otherwise keep default (mathpix)
       if (response.data.mathpix_content) {
         setActiveTab('mathpix');
-      } else {
-        setActiveTab('latex');
       }
+      // If note only has LaTeX content (no mathpix), stay on default mathpix tab
+      // This makes new notes open in mathpix converter
 
       // Check if HTML is empty but LaTeX exists
       if (response.data.latex_content && !response.data.html_content) {
