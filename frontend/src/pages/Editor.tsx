@@ -1,14 +1,14 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { LaTeXInput } from '../components/LaTeXInput';
 import { HTMLPreview } from '../components/HTMLPreview';
 import { MathpixInput } from '../components/MathpixInput';
+import type { MathpixInputRef } from '../components/MathpixInput';
 import { MathpixPreview } from '../components/MathpixPreview';
 import { useNoteStore } from '../store/noteStore';
 import { keyboardManager } from '../services/keyboard';
 import { toastManager } from '../services/toast';
 import { ExportService } from '../services/export';
-import clipboardService from '../services/clipboard';
 import apiClient from '../api/client';
 
 interface Note {
@@ -33,7 +33,7 @@ export const Editor = () => {
   const [title, setTitle] = useState('');
   const [latex, setLatex] = useState('');
   const [html, setHtml] = useState('');
-  
+
   // Mathpix converter state
   const [mathpixText, setMathpixText] = useState('');
   const [mathpixResult, setMathpixResult] = useState<any>(null);
@@ -57,6 +57,9 @@ export const Editor = () => {
   const [renameValue, setRenameValue] = useState('');
   const [conversionFormat, setConversionFormat] = useState<'katex' | 'plain_html'>('katex');
 
+  // Ref for MathpixInput to trigger file upload
+  const mathpixInputRef = useRef<MathpixInputRef>(null);
+
   useEffect(() => {
     if (id) {
       loadNote();
@@ -73,7 +76,7 @@ export const Editor = () => {
         hour12: true
       }).replace(/,/g, '');
       const defaultTitle = `Untitled Note_${dateTimeString}`;
-      
+
       setTitle(defaultTitle);
       setLatex('');
       setHtml('');
@@ -105,7 +108,7 @@ export const Editor = () => {
 
   // Re-convert when format changes (without changing LaTeX content)
   useEffect(() => {
-    console.log('[Editor] Effect triggered:', {conversionFormat, hasLatex: !!latex, hasHtml: !!html, isLoading});
+    console.log('[Editor] Effect triggered:', { conversionFormat, hasLatex: !!latex, hasHtml: !!html, isLoading });
     if (latex && html && !isLoading) {
       console.log('[Editor] Format changed to:', conversionFormat, 'Re-converting existing content...');
       // Convert with the new format
@@ -361,7 +364,17 @@ export const Editor = () => {
 
   const handleCopyHTML = async () => {
     try {
-      await ExportService.copyToClipboard(html);
+      // Determine which HTML to copy based on active tab
+      const htmlToCopy = activeTab === 'mathpix'
+        ? (mathpixResult?.html || '')
+        : html;
+
+      if (!htmlToCopy) {
+        toastManager.warning('No content to copy');
+        return;
+      }
+
+      await ExportService.copyToClipboard(htmlToCopy);
       setCopied(true);
       const formatLabel = conversionFormat === 'katex' ? 'KaTeX HTML' : 'Plain HTML';
       toastManager.success(`${formatLabel} copied to clipboard!`);
@@ -518,21 +531,6 @@ export const Editor = () => {
     }
   };
 
-  const handleMathpixPaste = async () => {
-    try {
-      const text = await clipboardService.paste();
-      if (!text) {
-        toastManager.warning('Clipboard is empty');
-        return;
-      }
-      setMathpixText(text);
-      await handleConvertMathpix(text);
-    } catch (err) {
-      toastManager.error('Failed to paste from clipboard');
-      console.error(err);
-    }
-  };
-
   const handleConvertMathpix = async (text: string) => {
     if (!text.trim()) {
       toastManager.warning('Please enter or upload Mathpix text');
@@ -542,10 +540,10 @@ export const Editor = () => {
     try {
       setIsMathpixConverting(true);
       console.log('[Editor] Converting Mathpix text, length:', text.length);
-      
+
       const response = await apiClient.convertMathpixToLMS(text, true);
       console.log('[Editor] ✓ Mathpix conversion complete');
-      
+
       setMathpixResult({
         html: response.data.html_fragment || response.data.html_content,
         format: conversionFormat,
@@ -815,11 +813,10 @@ export const Editor = () => {
                 onClick={() => {
                   setConversionFormat('katex');
                 }}
-                className={`px-3 py-1.5 rounded text-sm font-medium transition ${
-                  conversionFormat === 'katex'
-                    ? 'bg-white text-blue-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
+                className={`px-3 py-1.5 rounded text-sm font-medium transition ${conversionFormat === 'katex'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+                  }`}
                 title="KaTeX format for web rendering"
               >
                 KaTeX
@@ -828,11 +825,10 @@ export const Editor = () => {
                 onClick={() => {
                   setConversionFormat('plain_html');
                 }}
-                className={`px-3 py-1.5 rounded text-sm font-medium transition ${
-                  conversionFormat === 'plain_html'
-                    ? 'bg-white text-blue-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
+                className={`px-3 py-1.5 rounded text-sm font-medium transition ${conversionFormat === 'plain_html'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+                  }`}
                 title="Plain HTML for LMS (Moodle, Google Sites)"
               >
                 LMS
@@ -842,7 +838,7 @@ export const Editor = () => {
             {/* Copy HTML Button */}
             <button
               onClick={handleCopyHTML}
-              disabled={!html}
+              disabled={activeTab === 'mathpix' ? !mathpixResult?.html : !html}
               className={`p-2 rounded transition disabled:opacity-50 disabled:cursor-not-allowed ${copied
                 ? 'text-green-600 bg-green-50'
                 : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
@@ -908,6 +904,46 @@ export const Editor = () => {
               )}
             </div>
 
+
+            {/* Compile Button - Only visible on Mathpix tab */}
+            {activeTab === 'mathpix' && (
+              <button
+                onClick={() => handleConvertMathpix(mathpixText)}
+                disabled={!mathpixText.trim() || isMathpixConverting}
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-semibold rounded transition text-sm flex items-center gap-2 disabled:cursor-not-allowed"
+                aria-label="Compile Mathpix LaTeX"
+              >
+                {isMathpixConverting ? (
+                  <>
+                    <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+                    Compiling...
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Compile
+                  </>
+                )}
+              </button>
+            )}
+
+            {/* Upload File Button - Only visible on Mathpix tab */}
+            {activeTab === 'mathpix' && (
+              <button
+                onClick={() => mathpixInputRef.current?.triggerFileUpload()}
+                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded font-semibold transition text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 flex items-center gap-2"
+                aria-label="Upload Mathpix file"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+                Upload File
+              </button>
+            )}
+
             <button
               onClick={() => navigate('/notes')}
               className="px-4 py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded font-semibold transition text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
@@ -922,21 +958,19 @@ export const Editor = () => {
         <div className="border-b border-gray-200 bg-white px-6 flex gap-0">
           <button
             onClick={() => setActiveTab('latex')}
-            className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${
-              activeTab === 'latex'
-                ? 'border-blue-600 text-blue-600'
-                : 'border-transparent text-gray-600 hover:text-gray-800'
-            }`}
+            className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${activeTab === 'latex'
+              ? 'border-blue-600 text-blue-600'
+              : 'border-transparent text-gray-600 hover:text-gray-800'
+              }`}
           >
             📝 LaTeX Editor
           </button>
           <button
             onClick={() => setActiveTab('mathpix')}
-            className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${
-              activeTab === 'mathpix'
-                ? 'border-blue-600 text-blue-600'
-                : 'border-transparent text-gray-600 hover:text-gray-800'
-            }`}
+            className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${activeTab === 'mathpix'
+              ? 'border-blue-600 text-blue-600'
+              : 'border-transparent text-gray-600 hover:text-gray-800'
+              }`}
           >
             📊 Mathpix Converter
           </button>
@@ -975,40 +1009,21 @@ export const Editor = () => {
             )}
 
             {activeTab === 'mathpix' && (
-              <div className="space-y-3">
-                <button
-                  onClick={() => handleConvertMathpix(mathpixText)}
-                  disabled={!mathpixText.trim() || isMathpixConverting}
-                  className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-semibold rounded-lg transition flex items-center gap-2 shadow-md disabled:cursor-not-allowed"
-                >
-                  {isMathpixConverting ? (
-                    <>
-                      <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
-                      Compiling...
-                    </>
-                  ) : (
-                    <>
-                      ⚙️ Compile
-                    </>
-                  )}
-                </button>
-                
-                <div className="grid grid-cols-[60%_40%] gap-4 h-96">
-                  <MathpixInput
-                    value={mathpixText}
-                    onChange={setMathpixText}
-                    onFileUpload={handleMathpixFileUpload}
-                    onPaste={handleMathpixPaste}
-                    isConverting={isMathpixConverting}
-                  />
-                  <MathpixPreview
-                    html={mathpixResult?.html || ''}
-                    loading={isMathpixConverting}
-                    error={error}
-                    format={mathpixResult?.format || conversionFormat}
-                    stats={mathpixResult?.stats || {}}
-                  />
-                </div>
+              <div className="grid grid-cols-[60%_40%] gap-4 h-96">
+                <MathpixInput
+                  ref={mathpixInputRef}
+                  value={mathpixText}
+                  onChange={setMathpixText}
+                  onFileUpload={handleMathpixFileUpload}
+                  isConverting={isMathpixConverting}
+                />
+                <MathpixPreview
+                  html={mathpixResult?.html || ''}
+                  loading={isMathpixConverting}
+                  error={error}
+                  format={mathpixResult?.format || conversionFormat}
+                  stats={mathpixResult?.stats || {}}
+                />
               </div>
             )}
           </div>
@@ -1021,7 +1036,7 @@ export const Editor = () => {
           </div>
         </footer>
       </div>
-    </div>
+    </div >
   );
 };
 

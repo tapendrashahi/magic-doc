@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import katexService from '../services/katex';
-import clipboardService from '../services/clipboard';
 
 type ConversionFormat = 'katex' | 'plain_html';
 
@@ -21,7 +20,6 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
 }) => {
   const previewRef = useRef<HTMLDivElement>(null);
   const [outputTab, setOutputTab] = useState<'preview' | 'code'>('preview');
-  const [copied, setCopied] = useState(false);
 
   // Initialize KaTeX only if format is 'katex'
   useEffect(() => {
@@ -49,48 +47,35 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
     };
   }, [format, html]);
 
-  const handleCopyHTML = async () => {
-    try {
-      await clipboardService.copyHTML(html, 'HTML copied to clipboard!');
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('[MathpixPreview] Copy error:', err);
-    }
-  };
+
 
   return (
     <div className="flex flex-col h-full bg-white rounded-lg shadow-md border border-gray-300">
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 px-6 py-4 border-b border-gray-300">
         <h2 className="text-2xl font-bold text-gray-800">
-          {outputTab === 'preview' ? '👁️ Preview' : '📄 HTML Code'}
+          {outputTab === 'preview' ? 'Preview' : 'HTML Code'}
         </h2>
-        <p className="text-sm text-gray-600 mt-1">
-          {outputTab === 'preview' ? 'Rendered output' : 'LMS-compatible HTML'}
-        </p>
       </div>
 
       {/* Tab Navigation */}
       <div className="flex border-b border-gray-200 bg-gray-50 px-6 py-2">
         <button
           onClick={() => setOutputTab('preview')}
-          className={`px-4 py-2 font-semibold text-sm transition-colors ${
-            outputTab === 'preview'
-              ? 'text-indigo-600 border-b-2 border-indigo-600'
-              : 'text-gray-600 hover:text-gray-800'
-          }`}
+          className={`px-4 py-2 font-semibold text-sm transition-colors ${outputTab === 'preview'
+            ? 'text-indigo-600 border-b-2 border-indigo-600'
+            : 'text-gray-600 hover:text-gray-800'
+            }`}
         >
-          👁️ Preview
+          Preview
         </button>
         <button
           onClick={() => setOutputTab('code')}
-          className={`px-4 py-2 font-semibold text-sm transition-colors ${
-            outputTab === 'code'
-              ? 'text-indigo-600 border-b-2 border-indigo-600'
-              : 'text-gray-600 hover:text-gray-800'
-          }`}
+          className={`px-4 py-2 font-semibold text-sm transition-colors ${outputTab === 'code'
+            ? 'text-indigo-600 border-b-2 border-indigo-600'
+            : 'text-gray-600 hover:text-gray-800'
+            }`}
         >
-          📄 HTML Code
+          HTML Code
         </button>
       </div>
 
@@ -131,18 +116,8 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
 
         {!loading && html && outputTab === 'code' && (
           <div>
-            <div className="flex justify-between items-center mb-4 pb-3 border-b border-gray-200">
+            <div className="pb-3 border-b border-gray-200">
               <h3 className="font-semibold text-gray-800">HTML Fragment</h3>
-              <button
-                onClick={handleCopyHTML}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium text-sm ${
-                  copied
-                    ? 'bg-green-100 text-green-700'
-                    : 'bg-green-500 text-white hover:bg-green-600'
-                }`}
-              >
-                {copied ? '✅ Copied!' : '📋 Copy HTML'}
-              </button>
             </div>
 
             <pre className="bg-gray-50 border border-gray-300 rounded-lg p-4 overflow-auto max-h-96 text-xs text-gray-700 font-mono">
