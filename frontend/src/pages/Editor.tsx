@@ -39,6 +39,8 @@ export const Editor = () => {
   const [exportOpen, setExportOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [noteMenuOpen, setNoteMenuOpen] = useState<number | null>(null);
+  const [renamingNoteId, setRenamingNoteId] = useState<number | null>(null);
+  const [renameValue, setRenameValue] = useState('');
 
   useEffect(() => {
     if (id) {
@@ -410,18 +412,32 @@ export const Editor = () => {
     }
   };
 
-  const handleRenameNote = async (noteId: number) => {
+  const handleStartRename = (noteId: number) => {
     const noteToRename = allNotes.find(n => n.id === noteId);
     if (!noteToRename) return;
 
-    const newTitle = prompt('Enter new title:', noteToRename.title);
-    if (!newTitle || newTitle.trim() === '') {
+    setRenamingNoteId(noteId);
+    setRenameValue(noteToRename.title);
+    setNoteMenuOpen(null);
+  };
+
+  const handleCancelRename = () => {
+    setRenamingNoteId(null);
+    setRenameValue('');
+  };
+
+  const handleSaveRename = async (noteId: number) => {
+    if (!renameValue.trim()) {
+      toastManager.warning('Title cannot be empty');
       return;
     }
 
+    const noteToRename = allNotes.find(n => n.id === noteId);
+    if (!noteToRename) return;
+
     try {
       await apiClient.updateNote(noteId, {
-        title: newTitle.trim(),
+        title: renameValue.trim(),
         latex_content: noteToRename.latex_content,
       });
       toastManager.success('Note renamed!');
@@ -429,9 +445,10 @@ export const Editor = () => {
       fetchAllNotes();
       // If we're viewing the renamed note, update the title
       if (id && parseInt(id) === noteId) {
-        setTitle(newTitle.trim());
+        setTitle(renameValue.trim());
       }
-      setNoteMenuOpen(null);
+      setRenamingNoteId(null);
+      setRenameValue('');
     } catch (err) {
       toastManager.error('Failed to rename note');
       console.error(err);
@@ -481,68 +498,104 @@ export const Editor = () => {
                     }`}
                   aria-selected={!!(id && parseInt(id) === n.id)}
                 >
-                  <div
-                    onClick={() => navigate(`/editor/${n.id}`)}
-                    role="option"
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        navigate(`/editor/${n.id}`);
-                      }
-                    }}
-                    aria-label={`Open note: ${n.title}`}
-                    className="flex-1"
-                  >
-                    <h3 className="font-semibold text-gray-800 truncate text-sm pr-8">
-                      {n.title}
-                    </h3>
-                  </div>
-
-                  {/* Three-dot menu button - shows on hover */}
-                  <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity note-menu-container">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setNoteMenuOpen(noteMenuOpen === n.id ? null : n.id);
-                      }}
-                      className="p-1 hover:bg-gray-200 rounded transition"
-                      aria-label="Note options"
-                    >
-                      <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-                      </svg>
-                    </button>
-
-                    {/* Dropdown menu */}
-                    {noteMenuOpen === n.id && (
-                      <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50 min-w-[140px]">
+                  {renamingNoteId === n.id ? (
+                    // Inline rename mode
+                    <div className="flex flex-col gap-2 p-1" onClick={(e) => e.stopPropagation()}>
+                      <input
+                        type="text"
+                        value={renameValue}
+                        onChange={(e) => setRenameValue(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') {
+                            handleSaveRename(n.id);
+                          } else if (e.key === 'Escape') {
+                            handleCancelRename();
+                          }
+                        }}
+                        className="w-full px-2 py-1 text-sm border border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        autoFocus
+                      />
+                      <div className="flex gap-1">
                         <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleRenameNote(n.id);
-                          }}
-                          className="w-full px-4 py-2 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm text-gray-700"
+                          onClick={() => handleSaveRename(n.id)}
+                          className="flex-1 px-2 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition"
                         >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                          </svg>
-                          Rename
+                          ✓ Save
                         </button>
                         <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleDeleteNote(n.id);
-                          }}
-                          className="w-full px-4 py-2 text-left hover:bg-red-50 transition flex items-center gap-2 text-sm text-red-600 border-t border-gray-100"
+                          onClick={handleCancelRename}
+                          className="flex-1 px-2 py-1 bg-gray-300 text-gray-700 text-xs rounded hover:bg-gray-400 transition"
                         >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                          </svg>
-                          Delete
+                          ✗ Cancel
                         </button>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  ) : (
+                    <>
+                      <div
+                        onClick={() => navigate(`/editor/${n.id}`)}
+                        role="option"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            navigate(`/editor/${n.id}`);
+                          }
+                        }}
+                        aria-label={`Open note: ${n.title}`}
+                        className="flex-1"
+                      >
+                        <h3 className="font-semibold text-gray-800 truncate text-sm pr-8">
+                          {n.title}
+                        </h3>
+                      </div>
+
+                      {/* Three-dot menu button - shows on hover */}
+                      <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity note-menu-container">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setNoteMenuOpen(noteMenuOpen === n.id ? null : n.id);
+                          }}
+                          className="p-1 hover:bg-gray-200 rounded transition"
+                          aria-label="Note options"
+                        >
+                          <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                          </svg>
+                        </button>
+
+                        {/* Dropdown menu */}
+                        {noteMenuOpen === n.id && (
+                          <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50 min-w-[140px]">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleStartRename(n.id);
+                              }}
+                              className="w-full px-4 py-2 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm text-gray-700"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                              </svg>
+                              Rename
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleDeleteNote(n.id);
+                              }}
+                              className="w-full px-4 py-2 text-left hover:bg-red-50 transition flex items-center gap-2 text-sm text-red-600 border-t border-gray-100"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                              </svg>
+                              Delete
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
@@ -767,6 +820,6 @@ export const Editor = () => {
           </div>
         </footer>
       </div>
-    </div>
+    </div >
   );
 };
