@@ -28,6 +28,8 @@ export const Editor = () => {
   const [html, setHtml] = useState('');
   const [isLoading, setIsLoading] = useState(!!id);
   const [isSaving, setIsSaving] = useState(false);
+  const [autoSaveStatus, setAutoSaveStatus] = useState<'saved' | 'saving' | 'unsaved' | 'error'>('saved');
+  const [hasChanges, setHasChanges] = useState(false);
   const [error, setError] = useState('');
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
   const [note, setNote] = useState<any>(null);
@@ -49,6 +51,34 @@ export const Editor = () => {
       handleLatexChangeAndConvert(latex);
     }
   }, [latex, isLoading]);
+
+  // Auto-save after 2 seconds of inactivity
+  useEffect(() => {
+    if (!hasChanges || !title.trim() || autoSaveStatus === 'saving') return;
+
+    setAutoSaveStatus('saving');
+    const autoSaveTimer = setTimeout(async () => {
+      try {
+        console.log('[Editor] Auto-saving note...');
+        if (id) {
+          await apiClient.updateNote(parseInt(id), {
+            title,
+            latex_content: latex,
+            html_content: html,
+          });
+        }
+        setAutoSaveStatus('saved');
+        setLastSaved(new Date());
+        setHasChanges(false);
+        console.log('[Editor] ✓ Auto-save complete');
+      } catch (err) {
+        console.error('[Editor] Auto-save failed:', err);
+        setAutoSaveStatus('error');
+      }
+    }, 2000);
+
+    return () => clearTimeout(autoSaveTimer);
+  }, [hasChanges, title, latex, id]);
 
   // Register keyboard shortcuts
   useEffect(() => {
@@ -150,6 +180,8 @@ export const Editor = () => {
   const handleLatexChange = useCallback((newLatex: string) => {
     console.log('[Editor] LaTeX changed, length:', newLatex.length);
     setLatex(newLatex);
+    setHasChanges(true);
+    setAutoSaveStatus('unsaved');
   }, []);
 
   const handleConvert = useCallback((newHtml: string) => {
@@ -186,6 +218,7 @@ export const Editor = () => {
 
     try {
       setIsSaving(true);
+      setAutoSaveStatus('saving');
       setError('');
 
       if (id) {
@@ -196,22 +229,38 @@ export const Editor = () => {
         });
         setNote(response.data);
         setLastSaved(new Date());
+        setAutoSaveStatus('saved');
+        setHasChanges(false);
         toastManager.success('Note saved!');
+        console.log('[Editor] ✓ Note saved manually');
       } else {
         const response = await apiClient.createNote({
           title,
           latex_content: latex,
         });
         setNote(response.data);
+        setAutoSaveStatus('saved');
+        setHasChanges(false);
         navigate(`/editor/${response.data.id}`);
         toastManager.success('Note created!');
+        console.log('[Editor] ✓ Note created');
       }
     } catch (err) {
       setError('Failed to save note');
+      setAutoSaveStatus('error');
       toastManager.error('Failed to save note');
       console.error(err);
     } finally {
       setIsSaving(false);
+    }
+  };
+
+  const handleCopyHTML = async () => {
+    try {
+      await ExportService.copyToClipboard(html);
+      toastManager.success('HTML copied to clipboard!');
+    } catch (err) {
+      toastManager.error('Failed to copy to clipboard');
     }
   };
 
@@ -254,11 +303,20 @@ export const Editor = () => {
                 <div
                   key={n.id}
                   onClick={() => navigate(`/editor/${n.id}`)}
-                  className={`p-2.5 cursor-pointer hover:bg-gray-50 transition border-l-4 text-xs ${
+                  role="option"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      navigate(`/editor/${n.id}`);
+                    }
+                  }}
+                  className={`p-2.5 cursor-pointer hover:bg-gray-50 transition border-l-4 text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${
                     id == n.id
                       ? 'bg-blue-50 border-blue-500'
                       : 'border-transparent hover:border-gray-300'
                   }`}
+                  aria-selected={id == n.id}
+                  aria-label={`Open note: ${n.title}`}
                 >
                   <h3 className="font-semibold text-gray-800 truncate text-sm">
                     {n.title}
@@ -278,60 +336,103 @@ export const Editor = () => {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
-        <div className="bg-white border-b border-gray-200 p-3 flex items-center gap-2">
-          <button
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-1.5 hover:bg-gray-100 rounded transition text-sm font-semibold"
-            title={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
-          >
-            {sidebarOpen ? '◀' : '▶'}
-          </button>
-          <h2 className="text-xl font-bold text-gray-800">
-            {id ? 'Edit' : 'New Note'}
-          </h2>
-          <div className="ml-auto flex items-center gap-2">
-            {lastSaved && (
-              <span className="text-xs text-green-600 font-semibold">
-                ✓ {lastSaved.toLocaleTimeString()}
-              </span>
-            )}
+        <header className="bg-white border-b border-gray-200 p-4 flex items-center justify-between shadow-sm">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="p-1.5 hover:bg-gray-100 rounded transition text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+              title={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
+              aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
+            >
+              {sidebarOpen ? '◀' : '▶'}
+            </button>
+
+            {/* New Note button moved to header */}
+            <button
+              onClick={() => navigate('/editor')}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-semibold flex items-center gap-2 transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+              aria-label="Create a new note"
+            >
+              ✏️ New Note
+            </button>
+
+            <h1 className="text-xl font-bold text-gray-800 ml-2">
+              {id ? 'Edit Note' : 'New Note'}
+            </h1>
+          </div>
+
+          <div className="flex items-center gap-4">
+            {/* Auto-save status indicator */}
+            <div className="flex items-center gap-2">
+              {autoSaveStatus === 'saving' && (
+                <span className="flex items-center gap-1 text-sm text-blue-600 font-semibold">
+                  <div className="animate-spin h-3 w-3 border-2 border-blue-600 border-t-transparent rounded-full" />
+                  Saving...
+                </span>
+              )}
+              {autoSaveStatus === 'saved' && lastSaved && (
+                <span className="text-xs text-green-600 font-semibold whitespace-nowrap">
+                  ✓ Saved {lastSaved.toLocaleTimeString()}
+                </span>
+              )}
+              {autoSaveStatus === 'unsaved' && (
+                <span className="text-xs text-amber-600 font-semibold whitespace-nowrap">
+                  ⚠️ Unsaved changes
+                </span>
+              )}
+              {autoSaveStatus === 'error' && (
+                <span className="text-xs text-red-600 font-semibold whitespace-nowrap">
+                  ✗ Save failed
+                </span>
+              )}
+            </div>
+
             <button
               onClick={() => navigate('/notes')}
-              className="px-3 py-1 text-gray-600 hover:text-gray-800 font-semibold transition text-sm"
+              className="px-4 py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded font-semibold transition text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+              aria-label="Go back to all notes"
             >
               All Notes
             </button>
           </div>
-        </div>
+        </header>
 
-        <div className="flex-1 overflow-auto p-4">
-          <div className="space-y-3 animate-slideUp">
+        <div className="flex-1 overflow-auto px-6 py-4">
+          <div className="space-y-4">
             {error && (
-              <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded text-sm animate-slideUp">
+              <div className="p-2 bg-red-100 border-l-4 border-red-500 text-red-700 text-sm rounded-r animate-slideUp">
                 {error}
               </div>
             )}
 
             {storeError && (
-              <div className="p-3 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded text-sm animate-slideUp">
+              <div className="p-2 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 text-sm rounded-r animate-slideUp">
                 {storeError}
               </div>
             )}
 
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+            <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+              <label htmlFor="note-title" className="block text-sm font-semibold text-gray-700 mb-2">
                 Note Title
               </label>
               <input
+                id="note-title"
                 type="text"
                 value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                  setHasChanges(true);
+                  setAutoSaveStatus('unsaved');
+                }}
                 placeholder="Enter note title..."
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition text-sm"
+                className="w-full px-4 py-2 border border-gray-300 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition text-base"
+                aria-label="Note title"
+                aria-describedby="title-help"
               />
+              <p id="title-help" className="sr-only">Enter a descriptive title for this note</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 h-80">
+            <div className="grid grid-cols-[60%_40%] gap-4 h-96">
               <LaTeXInput
                 value={latex}
                 onChange={handleLatexChange}
@@ -344,44 +445,60 @@ export const Editor = () => {
                 note={note}
               />
             </div>
-
-            <div className="flex gap-2 mt-3">
-              <button
-                onClick={handleSaveNote}
-                disabled={isSaving}
-                className="flex-1 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 disabled:bg-gray-400 transition font-semibold flex items-center justify-center gap-1 text-sm"
-                title="Ctrl+S"
-              >
-                {isSaving ? (
-                  <>
-                    <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-white"></div>
-                    Saving...
-                  </>
-                ) : (
-                  <>💾 Save</>
-                )}
-              </button>
-              <button
-                onClick={() => navigate('/notes')}
-                className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition font-semibold text-sm"
-              >
-                Back
-              </button>
-            </div>
-
-            <div className="text-xs text-gray-500 p-2 bg-gray-50 rounded">
-              <p className="font-semibold mb-1">⌨️ Shortcuts:</p>
-              <ul className="space-y-0.5 text-xs">
-                <li>
-                  <kbd className="bg-gray-200 px-1.5 py-0.5 rounded text-xs">Ctrl+S</kbd> - Save
-                </li>
-                <li>
-                  <kbd className="bg-gray-200 px-1.5 py-0.5 rounded text-xs">Ctrl+Shift+C</kbd> - Copy
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
+
+        {/* Action Bar */}
+        <footer className="border-t border-gray-200 bg-white p-4 flex gap-3 items-center shadow-md">
+          <button
+            onClick={handleSaveNote}
+            disabled={isSaving || autoSaveStatus === 'saved'}
+            className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400 transition font-semibold flex items-center justify-center gap-2 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
+            title="Save note (Ctrl+S)"
+            aria-label="Save note"
+            aria-busy={isSaving}
+          >
+            {isSaving ? (
+              <>
+                <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-white"></div>
+                Saving...
+              </>
+            ) : (
+              <>💾 Save Note</>
+            )}
+          </button>
+          <button
+            onClick={() => navigate('/notes')}
+            className="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition font-semibold text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700"
+            aria-label="Back to notes list"
+          >
+            📝 Back to Notes
+          </button>
+          <button
+            onClick={handleCopyHTML}
+            disabled={!html}
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 transition font-semibold text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+            title="Copy HTML to clipboard (Ctrl+Shift+C)"
+            aria-label="Copy HTML to clipboard"
+          >
+            📋 Copy HTML
+          </button>
+
+          {/* Spacer */}
+          <div className="flex-1" />
+
+          {/* Keyboard Shortcuts */}
+          <div className="text-xs text-gray-600 hidden md:flex gap-4 border-l border-gray-200 pl-4">
+            <span className="flex items-center gap-1">
+              <kbd className="bg-gray-200 px-2 py-1 rounded text-xs font-mono">Ctrl+S</kbd>
+              <span>Save</span>
+            </span>
+            <span className="flex items-center gap-1">
+              <kbd className="bg-gray-200 px-2 py-1 rounded text-xs font-mono">Ctrl+Shift+C</kbd>
+              <span>Copy</span>
+            </span>
+          </div>
+        </footer>
       </div>
     </div>
   );
