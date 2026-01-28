@@ -760,18 +760,10 @@ export const Editor = () => {
           </div>
         </div>
 
-        {/* Action Bar */}
+        {/* Action Bar - Auto-save enabled */}
         <footer className="border-t border-gray-200 bg-white p-4 flex gap-3 items-center shadow-md">
-          {/* Keyboard Shortcuts */}
-          <div className="text-xs text-gray-600 hidden md:flex gap-4">
-            <span className="flex items-center gap-1">
-              <kbd className="bg-gray-200 px-2 py-1 rounded text-xs font-mono">Ctrl+S</kbd>
-              <span>Save</span>
-            </span>
-            <span className="flex items-center gap-1">
-              <kbd className="bg-gray-200 px-2 py-1 rounded text-xs font-mono">Ctrl+Shift+C</kbd>
-              <span>Copy</span>
-            </span>
+          <div className="text-xs text-gray-500 italic">
+            Auto-save enabled
           </div>
         </footer>
       </div>
