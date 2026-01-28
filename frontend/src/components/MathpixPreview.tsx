@@ -49,32 +49,41 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
 
   return (
     <div className="flex flex-col h-full bg-white rounded-lg shadow-md border border-gray-300">
-      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 px-6 py-4 border-b border-gray-300">
+      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 px-6 py-4 border-b border-gray-300 flex items-center justify-between">
         <h2 className="text-2xl font-bold text-gray-800">
           {outputTab === 'preview' ? 'Preview' : 'HTML Code'}
         </h2>
-      </div>
 
-      {/* Tab Navigation */}
-      <div className="flex border-b border-gray-200 bg-gray-50 px-6 py-2">
-        <button
-          onClick={() => setOutputTab('preview')}
-          className={`px-4 py-2 font-semibold text-sm transition-colors ${outputTab === 'preview'
-            ? 'text-indigo-600 border-b-2 border-indigo-600'
-            : 'text-gray-600 hover:text-gray-800'
-            }`}
-        >
-          Preview
-        </button>
-        <button
-          onClick={() => setOutputTab('code')}
-          className={`px-4 py-2 font-semibold text-sm transition-colors ${outputTab === 'code'
-            ? 'text-indigo-600 border-b-2 border-indigo-600'
-            : 'text-gray-600 hover:text-gray-800'
-            }`}
-        >
-          HTML Code
-        </button>
+        {/* Claude-style icon toggle */}
+        <div className="flex items-center gap-1 bg-gray-800 rounded-lg p-1">
+          <button
+            onClick={() => setOutputTab('preview')}
+            className={`p-2 rounded-md transition-colors ${outputTab === 'preview'
+                ? 'bg-gray-700 text-white'
+                : 'text-gray-400 hover:text-white hover:bg-gray-700'
+              }`}
+            title="Preview"
+            aria-label="Show preview"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+          </button>
+          <button
+            onClick={() => setOutputTab('code')}
+            className={`p-2 rounded-md transition-colors ${outputTab === 'code'
+                ? 'bg-gray-700 text-white'
+                : 'text-gray-400 hover:text-white hover:bg-gray-700'
+              }`}
+            title="HTML Code"
+            aria-label="Show HTML code"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Content Area */}

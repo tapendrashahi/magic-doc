@@ -976,8 +976,8 @@ export const Editor = () => {
           </button>
         </div>
 
-        <div className="flex-1 overflow-auto px-6 py-4">
-          <div className="space-y-4">
+        <div className="flex-1 overflow-hidden px-6 pt-4 flex flex-col">
+          <div className="flex-1 flex flex-col">
             {error && (
               <div className="p-2 bg-red-100 border-l-4 border-red-500 text-red-700 text-sm rounded-r animate-slideUp">
                 {error}
@@ -991,7 +991,7 @@ export const Editor = () => {
             )}
 
             {activeTab === 'latex' && (
-              <div className="grid grid-cols-[60%_40%] gap-4 h-96">
+              <div className="grid grid-cols-[60%_40%] gap-4 h-full">
                 <LaTeXInput
                   value={latex}
                   onChange={handleLatexChange}
@@ -1009,7 +1009,7 @@ export const Editor = () => {
             )}
 
             {activeTab === 'mathpix' && (
-              <div className="grid grid-cols-[60%_40%] gap-4 h-96">
+              <div className="grid grid-cols-[60%_40%] gap-4 h-full">
                 <MathpixInput
                   ref={mathpixInputRef}
                   value={mathpixText}
@@ -1022,7 +1022,6 @@ export const Editor = () => {
                   loading={isMathpixConverting}
                   error={error}
                   format={mathpixResult?.format || conversionFormat}
-                  stats={mathpixResult?.stats || {}}
                 />
               </div>
             )}
