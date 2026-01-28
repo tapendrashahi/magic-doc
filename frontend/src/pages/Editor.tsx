@@ -46,8 +46,20 @@ export const Editor = () => {
     if (id) {
       loadNote();
     } else {
-      // Clear form for new note
-      setTitle('');
+      // Clear form for new note with default title
+      const now = new Date();
+      const dateTimeString = now.toLocaleString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      }).replace(/,/g, '');
+      const defaultTitle = `Untitled Note_${dateTimeString}`;
+      
+      setTitle(defaultTitle);
       setLatex('');
       setHtml('');
       setNote(null);
