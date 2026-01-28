@@ -27,7 +27,7 @@ export const Editor = () => {
   const { loading: storeLoading, error: storeError } = useNoteStore();
 
   // Editor tabs state
-  const [activeTab, setActiveTab] = useState<'latex' | 'mathpix'>('latex');
+  const [activeTab, setActiveTab] = useState<'latex' | 'mathpix'>('mathpix');
 
   // LaTeX editor state
   const [title, setTitle] = useState('');
@@ -976,15 +976,6 @@ export const Editor = () => {
         {/* Tab Navigation */}
         <div className="border-b border-gray-200 bg-white px-6 flex gap-0">
           <button
-            onClick={() => setActiveTab('latex')}
-            className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${activeTab === 'latex'
-              ? 'border-blue-600 text-blue-600'
-              : 'border-transparent text-gray-600 hover:text-gray-800'
-              }`}
-          >
-            📝 LaTeX Editor
-          </button>
-          <button
             onClick={() => setActiveTab('mathpix')}
             className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${activeTab === 'mathpix'
               ? 'border-blue-600 text-blue-600'
@@ -992,6 +983,15 @@ export const Editor = () => {
               }`}
           >
             📊 Mathpix Converter
+          </button>
+          <button
+            onClick={() => setActiveTab('latex')}
+            className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${activeTab === 'latex'
+              ? 'border-blue-600 text-blue-600'
+              : 'border-transparent text-gray-600 hover:text-gray-800'
+              }`}
+          >
+            📝 LaTeX Editor
           </button>
         </div>
 
@@ -1006,24 +1006,6 @@ export const Editor = () => {
             {storeError && (
               <div className="p-2 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 text-sm rounded-r animate-slideUp">
                 {storeError}
-              </div>
-            )}
-
-            {activeTab === 'latex' && (
-              <div className="grid grid-cols-[60%_40%] gap-4 h-full">
-                <LaTeXInput
-                  value={latex}
-                  onChange={handleLatexChange}
-                  onConvert={handleConvert}
-                  conversionFormat={conversionFormat}
-                />
-                <HTMLPreview
-                  html={html}
-                  loading={storeLoading}
-                  error={storeError}
-                  format={conversionFormat}
-                  note={note}
-                />
               </div>
             )}
 
@@ -1044,6 +1026,24 @@ export const Editor = () => {
                     format={mathpixResult?.format || conversionFormat}
                   />
                 </div>
+              </div>
+            )}
+
+            {activeTab === 'latex' && (
+              <div className="grid grid-cols-[60%_40%] gap-4 h-full">
+                <LaTeXInput
+                  value={latex}
+                  onChange={handleLatexChange}
+                  onConvert={handleConvert}
+                  conversionFormat={conversionFormat}
+                />
+                <HTMLPreview
+                  html={html}
+                  loading={storeLoading}
+                  error={storeError}
+                  format={conversionFormat}
+                  note={note}
+                />
               </div>
             )}
           </div>
