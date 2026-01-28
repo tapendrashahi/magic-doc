@@ -39,6 +39,7 @@ export const Editor = () => {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [exportOpen, setExportOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [noteMenuOpen, setNoteMenuOpen] = useState<number | null>(null);
 
   useEffect(() => {
     if (id) {
@@ -165,6 +166,24 @@ export const Editor = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [exportOpen]);
+
+  // Close note menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (noteMenuOpen !== null && !target.closest('.note-menu-container')) {
+        setNoteMenuOpen(null);
+      }
+    };
+
+    if (noteMenuOpen !== null) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [noteMenuOpen]);
 
   const loadNote = async () => {
     try {
@@ -375,6 +394,54 @@ export const Editor = () => {
     }
   };
 
+  const handleDeleteNote = async (noteId: number) => {
+    if (!confirm('Are you sure you want to delete this note?')) {
+      return;
+    }
+    try {
+      await apiClient.deleteNote(noteId);
+      toastManager.success('Note deleted!');
+      // Refresh the notes list
+      fetchAllNotes();
+      // If we're viewing the deleted note, navigate to notes list
+      if (id && parseInt(id) === noteId) {
+        navigate('/notes');
+      }
+      setNoteMenuOpen(null);
+    } catch (err) {
+      toastManager.error('Failed to delete note');
+      console.error(err);
+    }
+  };
+
+  const handleRenameNote = async (noteId: number) => {
+    const noteToRename = allNotes.find(n => n.id === noteId);
+    if (!noteToRename) return;
+
+    const newTitle = prompt('Enter new title:', noteToRename.title);
+    if (!newTitle || newTitle.trim() === '') {
+      return;
+    }
+
+    try {
+      await apiClient.updateNote(noteId, {
+        title: newTitle.trim(),
+        latex_content: noteToRename.latex_content,
+      });
+      toastManager.success('Note renamed!');
+      // Refresh the notes list
+      fetchAllNotes();
+      // If we're viewing the renamed note, update the title
+      if (id && parseInt(id) === noteId) {
+        setTitle(newTitle.trim());
+      }
+      setNoteMenuOpen(null);
+    } catch (err) {
+      toastManager.error('Failed to rename note');
+      console.error(err);
+    }
+  };
+
   if (isLoading && id) {
     return (
       <div className="text-center py-8 animate-fadeIn">
@@ -412,30 +479,74 @@ export const Editor = () => {
               {allNotes.map((n) => (
                 <div
                   key={n.id}
-                  onClick={() => navigate(`/editor/${n.id}`)}
-                  role="option"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      navigate(`/editor/${n.id}`);
-                    }
-                  }}
-                  className={`p-2.5 cursor-pointer hover:bg-gray-50 transition border-l-4 text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${id == n.id
+                  className={`group relative p-2.5 cursor-pointer hover:bg-gray-50 transition border-l-4 text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${id == n.id
                     ? 'bg-blue-50 border-blue-500'
                     : 'border-transparent hover:border-gray-300'
                     }`}
                   aria-selected={id == n.id}
-                  aria-label={`Open note: ${n.title}`}
                 >
-                  <h3 className="font-semibold text-gray-800 truncate text-sm">
-                    {n.title}
-                  </h3>
-                  <p className="text-gray-600 mt-0.5 line-clamp-1 text-xs">
-                    {n.latex_content.substring(0, 40)}...
-                  </p>
-                  <p className="text-gray-400 mt-0.5 text-xs">
-                    {new Date(n.updated_at).toLocaleDateString()}
-                  </p>
+                  <div
+                    onClick={() => navigate(`/editor/${n.id}`)}
+                    role="option"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        navigate(`/editor/${n.id}`);
+                      }
+                    }}
+                    aria-label={`Open note: ${n.title}`}
+                    className="flex-1"
+                  >
+                    <h3 className="font-semibold text-gray-800 truncate text-sm pr-8">
+                      {n.title}
+                    </h3>
+                  </div>
+
+                  {/* Three-dot menu button - shows on hover */}
+                  <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity note-menu-container">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setNoteMenuOpen(noteMenuOpen === n.id ? null : n.id);
+                      }}
+                      className="p-1 hover:bg-gray-200 rounded transition"
+                      aria-label="Note options"
+                    >
+                      <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                      </svg>
+                    </button>
+
+                    {/* Dropdown menu */}
+                    {noteMenuOpen === n.id && (
+                      <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50 min-w-[140px]">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleRenameNote(n.id);
+                          }}
+                          className="w-full px-4 py-2 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm text-gray-700"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                          </svg>
+                          Rename
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleDeleteNote(n.id);
+                          }}
+                          className="w-full px-4 py-2 text-left hover:bg-red-50 transition flex items-center gap-2 text-sm text-red-600 border-t border-gray-100"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                          </svg>
+                          Delete
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -549,8 +660,8 @@ export const Editor = () => {
               onClick={handleCopyHTML}
               disabled={!html}
               className={`p-2 rounded transition disabled:opacity-50 disabled:cursor-not-allowed ${copied
-                  ? 'text-green-600 bg-green-50'
-                  : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                ? 'text-green-600 bg-green-50'
+                : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
                 }`}
               title={copied ? 'Copied!' : 'Copy HTML to clipboard (Ctrl+Shift+C)'}
               aria-label={copied ? 'HTML copied to clipboard' : 'Copy HTML to clipboard'}
