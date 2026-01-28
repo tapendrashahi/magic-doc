@@ -1,0 +1,395 @@
+\section*{Ellipse}
+
+An ellipse is the locus of the point $\mathrm{P}(\mathrm{x}, \mathrm{y})$ in a plane such that sum of its distances from two fixed points is always constant.
+![](https://cdn.mathpix.com/cropped/92d32278-2c0e-411b-8283-4965ba9f40da-01.jpg?height=561&width=847&top_left_y=258&top_left_x=368)
+
+A conic section having eccentricity less than one is called ellipse ( $\mathrm{e}<1$ The ratio of the distance of any point on ellipse from the fixed point to its distance from a fixed line is always constant which is less than 1 .
+$$
+\frac{S P}{P M}=\text { constant }=e
+$$
+![](https://cdn.mathpix.com/cropped/92d32278-2c0e-411b-8283-4965ba9f40da-01.jpg?height=537&width=652&top_left_y=1180&top_left_x=471)
+
+\section*{Note :}
+- The general equation of $2^{\text {nd }}$ degree in $x$ and $y$ i. e $a x^{2}+2 h x y+ b y^{2}+2 g x+2 f y+c=0$ represents an ellipse if :
+$$
+\Delta=a b c+2 f g h-a f^{2}-b g^{2}-c h^{2} \neq 0 \text { and } h^{2}<a b
+$$
+- When eccentricity' s becomes zero the ellipse is a circle
+(I) Standard equation of an ellipse: $(\mathbf{a}>\mathbf{b})$
+![](https://cdn.mathpix.com/cropped/92d32278-2c0e-411b-8283-4965ba9f40da-02.jpg?height=623&width=973&top_left_y=20&top_left_x=306)
+
+The standard equation of the ellipse is
+$$
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1(\mathrm{a}>\mathrm{b})
+$$
+(i) length of major axis $=2 a$
+(ii) length of minor axis $=2 b$
+(i) major axis : along x -axis (i.e. $\mathrm{y}=0$ )
+(ii) minor axis: along $y$-axis (i.e. $x=0$ )
+(iii) centre of the ellipse: $\mathrm{C}(0,0)$
+(iv) Foci of the ellipse : $\mathrm{S}(\mathrm{ae}, 0), \mathrm{S}^{\prime}(-\mathrm{ae}, \mathrm{o})$
+$$
+:( \pm a e, 0)
+$$
+(v) vertices of the Ellipse
+$$
+: A(a .0) \text { and } A^{\prime}(-a, 0)
+$$
+: i.e. ( ± a, 0 )
+(vi) Equation of directrices are
+$$
+: x=a / e \text { and } x=-a / e
+$$
+(vii) length of latus rectum $\mathrm{LL}^{\prime}=\frac{2 b^{2}}{a}$
+(viii) equation of latus rectum : $x= \pm$ ae (ix) eccentricity e is given by:
+$$
+\mathrm{e}=\frac{c}{a}
+$$
+where $\left(a^{2}-c^{2}\right)=b^{2}$.
+Note:
+(i) $b^{2}=a^{2}\left(1-c^{2}\right)$
+(ii) $e=\sqrt{1-\left(\frac{\text { minor axis }}{\text { major axis }}\right)^{2}}$
+(x) distance between two foci $=2 \mathrm{ae}$
+(xi) distance between the directrices $=\frac{2 a}{e}$
+
+\section*{Example:-}
+
+The equation of the ellipse is $\frac{x^{2}}{25}+\frac{y^{2}}{9}=1$ Then the length of the major and minor axis are
+a) 8.6
+b) 10.6
+c) 6.4
+d) 10.4
+
+\section*{Solution:-}
+
+Given equation of the ellipse is $\frac{x^{2}}{25}+\frac{y^{2}}{9}=1$.
+Then,
+$$
+\begin{array}{ll}
+a^{2}=25 & , b^{2}=9 \\
+a= \pm 5 & b= \pm 3 \\
+(a>b) &
+\end{array}
+$$
+
+Length of major axis $=2 \mathrm{a}$
+$$
+\begin{aligned}
+& =2 \times 5 \\
+& =10
+\end{aligned}
+$$
+
+Length of minor axis $=2 b$
+$$
+\begin{aligned}
+& =2 \times 3 \\
+& =6 .
+\end{aligned}
+$$
+(II) When $\mathbf{b}>\mathbf{a}$ (vertical ellipse)
+![](https://cdn.mathpix.com/cropped/92d32278-2c0e-411b-8283-4965ba9f40da-03.jpg?height=575&width=584&top_left_y=1661&top_left_x=503)
+
+\section*{The equation of the ellipse:}
+$$
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=\mathrm{T}(a<b)
+$$
+(i) Major axis along y -axis $(\mathrm{x}=0)$
+(ii) Minor axis along x -axis ( $\mathrm{y}=0$ )
+(iii) centre of ellipse $\mathrm{C}(0,0)$
+(iv) foci of the ellipse
+$$
+S(0, \text { be }) \text { and } S^{\prime}(0,- \text { be })
+$$
+(v) vertices of the ellipse
+$$
+(0, \pm b)
+$$
+(vi) Equation of directrix are :
+$$
+\mathrm{y}=\frac{b}{c} \text { and } \mathrm{y}=-\frac{b}{c}
+$$
+(vii) length of latus rectum $=\frac{2 a^{2}}{b}$
+(viii) equation of latus rectum : $y= \pm a e$
+(ix) eccentricity of an ellipse ' $e$ ' is given by :
+$$
+\begin{aligned}
+\mathrm{e} & =\sqrt{1-\frac{a^{2}}{b^{2}}} \\
+a^{2} & =b^{2}\left(1-e^{2}\right)
+\end{aligned}
+$$
+(III) Equation of the ellipse whose centre at (h, k)
+![](https://cdn.mathpix.com/cropped/92d32278-2c0e-411b-8283-4965ba9f40da-04.jpg?height=579&width=883&top_left_y=1548&top_left_x=355)
+
+The equation of the ellipse is
+$$
+\begin{aligned}
+& \frac{(x-h)^{2}}{a^{2}}+\frac{(y-k)^{2}}{b^{2}}=1 \\
+& a>b>0
+\end{aligned}
+$$
+(i) Major axis : parallel to x -axis, length 2 a .
+(ii) Minor axis parallel to $y$-axis, length $2 b$
+(iii) Centre of the ellipse $=(\mathrm{h}, \mathrm{k})$
+(iv) Foci $=(h \pm a e, k)$
+
+510 Ellipse
+(v) Vertices $=(\mathrm{h} \pm \mathrm{a}, \mathrm{k})$
+(vi) Length of latus rectum $=2 \mathrm{~b}^{2} / \mathrm{a}$
+(vii) Equation of Latus rectum $x=h \pm$ ae
+(viii) Eccentricity:
+$$
+e=\sqrt{1-\frac{b^{2}}{a^{2}}}
+$$
+
+\section*{Example:}
+
+The eccentricity of the ellipse $9 x^{2}+5 y^{2}-30 y=0$ is
+a) $\mathrm{e}=\frac{2}{3}$
+b) $e=\frac{1}{\sqrt{2}}$
+c) $e=\frac{2}{\sqrt{3}}$
+d) $e=\frac{3}{5}$
+
+\section*{Solution:-}
+
+The equation of the ellipse is
+$$
+9 x^{2}+5 y^{2}-30 y=0
+$$
+or, $9 x^{2}+5\left(y^{2}-6 y\right)=0$
+or, $\frac{x^{2}}{3}+\frac{(y-3)^{2}}{9}=0$
+$$
+\begin{aligned}
+& \text { since } b^{2}>a^{2} \\
+& a^{2}=b^{2}\left(1-e^{2}\right) \\
+& \text { or. } 5=9\left(1-e^{2}\right) \\
+& \Rightarrow \mathrm{e}=\frac{2}{3}
+\end{aligned}
+$$
+
+\section*{Note:}
+(i) distance between two foci $=2 \mathrm{ae}$
+(ii) distance between directrices $=\frac{2 a}{e}$
+(iii) sum of focal distance = 2a = length of major axis
+
+Parametric form:
+
+\section*{Example:-}
+
+The parametric equation $x=a \cos \theta$ and $y=b \sin \theta$ represents.
+a) a circle
+b) parabola
+c) hyperbola
+d) ellipse
+
+Solution:
+$$
+\frac{x}{a}=\cos \theta
+$$
+and $\frac{v}{b}=\sin \theta$
+Squaring and adding we get
+$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$ which is an ellipse
+Example:-
+The curve with parametric equations $x=1+4 \operatorname{cost}$ and $y=2+3 \sin t$ represents
+a) an ellipse
+b) a circle
+c) parabola
+d) hyperbola
+
+\section*{Solution:-}
+$\mathrm{x}=1+4$ cost
+$\cos \mathrm{t}=\left(\frac{x-1}{4}\right)$
+and $y=2+3 \sin t$
+$\sin \mathrm{t}=\left(\frac{y-2}{3}\right)$
+squaring and adding $\left(\frac{x-1}{4}\right)^{2}+\left(\frac{y-2}{3}\right)^{2}=1$ which is an ellipse.
+When $\mathrm{a}=\mathrm{b}$ ellipse changes to the circle. auxiliary circle:- It is a circle $x^{2}+ y^{2}=a^{2}$ on major axis as a dismeter.
+(IV) Equation of the tangent to the ellipse at point ( $x_{1}, y_{1}$ ) is
+(i) $\frac{x x_{1}}{a^{2}}+\frac{y y_{1}}{b^{2}}=1$ at point $\mathrm{P}\left(\mathrm{x}_{1}, \mathrm{y}_{1}\right)$
+(ii) $\frac{x}{a} \cos \theta+\frac{y}{b} \sin \theta=1$ at $\mathrm{P}(\mathrm{a} \cos \theta, \mathrm{b} \sin \theta)$
+
+\section*{Tangent in the form of slope:-}
+
+The equation of the tangent to the ellipse at point ( $\mathrm{x}_{1}, \mathrm{y}_{1}$ ) is:
+$$
+\mathrm{y}=m \mathrm{x} \pm \sqrt{a^{2} m^{2}+b^{2}}
+$$
+
+\section*{Important Table:-}
+
+\section*{Example:-}
+
+The radius of the circle passing through the centre of an ellipse $\frac{x^{2}}{16}+\frac{y^{2}}{9}=1$ and having centre at $(0,3)$ is
+a) $7 / 2$
+b) 5
+c) $\sqrt{3}$
+d) 4
+
+\section*{Solution:-}
+
+The equation of the ellipse is
+$$
+\frac{x^{2}}{16}+\frac{y^{2}}{9}=1
+$$
+where $a^{2}=16, b^{2}=9$
+$$
+\begin{aligned}
+& a^{2}\left(1-e^{2}\right)=b^{2} \\
+& a^{2}-a^{2} e^{2}=b^{2} \\
+& a e=\sqrt{7} \\
+& 16-a^{2} c^{2}=9
+\end{aligned}
+$$
+foci are at $(\sqrt{7}, 0)$ and $(-\sqrt{7}, 0)$
+$$
+\begin{gathered}
+\text { radius }=\sqrt{(\sqrt{7}-0)^{2}+(3-0)^{2}} \\
+=4
+\end{gathered}
+$$
+
+\section*{Example:-}
+
+The equation of the ellipse with vertices ( $\pm 5,0$ ) and foci at ( $\pm 4,0$ ) is:
+a) $16 x^{2}+12 y^{2}=228$
+b) $9 x^{2}+25 y^{2}=225$
+c) $3 x^{2}+4 y^{2}=12$
+d) $x^{2}+2 y^{2}=12$
+
+\section*{Solution:-}
+
+Vertices $=( \pm \mathrm{a}, 0)=( \pm 5,0)$
+$a=5$
+foci $=( \pm \mathrm{c}, 0)=( \pm 4,0)$
+$\mathrm{c}=4$
+we have, $\mathrm{b}^{2}=\mathrm{a}^{2}-\mathrm{c}^{2}$
+$$
+\begin{aligned}
+& =25-16 \\
+& =9
+\end{aligned}
+$$
+i.e. $b= \pm 3$
+the equation of the ellipse is $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$.
+$$
+\begin{aligned}
+& \frac{x^{2}}{25}+\frac{y^{2}}{9}=1 \\
+& 9 x^{2}+25 y^{2}=225
+\end{aligned}
+$$
+
+\section*{Example:-}
+
+The centre of the ellipse $4 x^{2}+9 y^{2}-16 x-54 y+61=0$ is
+a) $(1,4)$
+b) $(2,0)$
+c) $(2,3)$
+d) $(3,-1)$
+
+\section*{Solution:-}
+
+The equation of the ellipse is:
+$$
+4 x^{2}+9 y^{2}-16 x-54 y+61=0
+$$
+or, $4\left(x^{2}-4 x\right)+9\left(y^{2}-6 y\right)=-61$
+or, $4\left(x^{2}-4 x+4\right)+9\left(y^{2}-6 y+9\right)-16-81=-61$
+or, $4(x-2)^{2}+9(y-3)^{2}=36$
+or, $\frac{(x-2)^{2}}{9}+\frac{(y-3)^{2}}{4}=1$ (dividing by 36 )
+∴ Centre of the ellipse $(\mathrm{h}, \mathrm{k})=(2,3)$
+
+\section*{Example:-}
+
+The equation of the ellipse having eccentricity $=1 / 2$ and foci ( $\pm 1,0$ ) is
+a) $\frac{x^{2}}{4}+\frac{y^{2}}{3}=1$
+b) $\frac{x^{2}}{2}+\frac{y^{2}}{4}=1$
+c) $\frac{x^{2}}{9}+\frac{y^{2}}{16}=1$
+d) $x^{2}+y^{2}=4$
+
+\section*{Solution:-}
+
+Foci $( \pm \mathrm{ae}, 0)=( \pm 1,0)$. So, $\mathrm{ae}=1$
+Where $\mathrm{e}=1 / 2$ i.e
+a. $1 / 2=1$
+$\therefore a=2$
+and $b^{2}=a^{2}\left(1-e^{2}\right)=4(1-1 / 4)$
+$$
+b^{2}=3
+$$
+
+The equation of the ellipse is
+$$
+\frac{x^{2}}{4}+\frac{y^{2}}{3}=1
+$$
+
+\section*{Example:-}
+
+In an ellipse the distance between its foci is 6 and its minor axis is 8 . Then the eccentricity of the ellipse is:
+a) $1 / \sqrt{2}$
+b) $\sqrt{3} / 2$
+c) $3 / 5$
+d) $1 / 3$
+
+\section*{Solution:-}
+
+Distance between the foci $=2 \mathrm{ae}=6$
+$$
+\therefore a e=3
+$$
+
+Length of minor axis ( 2 b ) $=8$
+$$
+\therefore \mathrm{b}=4
+$$
+
+We have:
+$$
+\begin{gathered}
+b^{2}=a^{2}\left(1-\mathrm{e}^{2}\right) \\
+16=a^{2}-9 \\
+a=5
+\end{gathered}
+$$
+
+Now, $\mathrm{e}=3 / 5$, from (i)
+
+\section*{Example:-}
+
+The latus rectum is 3 and $e=1 / \sqrt{2}$. Then. the equation of the ellipse is
+a) $x^{2}+4 y^{2}=25$
+b) $3 x^{2}+4 y^{2}=12$
+c) $x^{2}+2 y^{2}=9$
+d) $9 x^{2}+25 y^{2}=144$
+
+Solution:-
+Length of latus rectum $=3$
+i.e. $2 b^{2} / a=3$
+or, $2 b^{2}=3$ a
+and $e=1 / \sqrt{2}$
+Now,
+$\mathrm{b}^{2}=\mathrm{a}^{2}\left(1-\mathrm{e}^{2}\right)$
+i.e. $\frac{3 a}{2}=a^{2}\left(1-\frac{1}{2}\right)$
+or, $\mathrm{a}=3$
+From (i), $b^{2}=9 / 2$
+The equation of the ellipse is
+$\frac{x^{2}}{9}+\frac{2 y^{2}}{9}=1$
+or, $x^{2}+2 y^{2}=9$
+
+\section*{Example:-}
+
+The equation of the ellipse is $5 x^{2}+7 y^{2}=11$ and $(4,-3)$ is any point.
+Then, the point lies:
+a) inside
+b) outside
+c) on
+d) at the centre of the ellipse
+
+Solution:-
+The equation of the ellipse is: $5 x^{2}+7 y^{2}=11$
+or, $\frac{5 x^{2}}{11}+\frac{7 y^{2}}{11}=1$
+Given point is $(4,-3)$
+Now,
+$$
+\frac{5.4^{2}}{11}+\frac{7(-3)^{2}}{11}-1=12>0
+$$
+
+So, the point lies outside the ellipse.

@@ -73,10 +73,11 @@ class HTMLAssembler:
     ) -> str:
         """
         Wrap a rendered equation with LMS-specific attributes.
+        Preserves inline spacing - inline equations stay inline without extra newlines.
         
         Args:
             equation: Equation object with katex_html already set
-            add_newlines: If True, add newlines before/after for readability
+            add_newlines: If True, add newlines before/after only for DISPLAY equations
             
         Returns:
             LMS-wrapped equation HTML
@@ -103,7 +104,9 @@ class HTMLAssembler:
             f'</span>'
         )
         
-        if add_newlines:
+        # Only add newlines for DISPLAY equations (block level)
+        # Inline equations should NOT have newlines to preserve spacing
+        if add_newlines and equation.equation_type == EquationType.DISPLAY:
             wrapper = f'\n{wrapper}\n'
         
         return wrapper
@@ -122,12 +125,13 @@ class HTMLAssembler:
         title = escape(section.title)
         return f'<{tag}>{title}</{tag}>'
     
-    def format_text(self, text: str) -> str:
+    def format_text(self, text: str, inline_mode: bool = False) -> str:
         """
         Format plain text with optional div wrapping and text formatting.
         
         Args:
             text: Plain text to format
+            inline_mode: If True, don't wrap in divs (for inline content with equations)
             
         Returns:
             Formatted HTML
@@ -141,17 +145,17 @@ class HTMLAssembler:
         # Escape any remaining HTML entities
         formatted = escape(formatted)
         
-        # Wrap in div if requested
-        if self.wrap_text_in_divs:
-            # Split by newlines and wrap each line
-            lines = formatted.split('\n')
-            wrapped_lines = [
-                f'<div>{line}</div>' if line.strip() else '<div></div>'
-                for line in lines
-            ]
-            return '\n'.join(wrapped_lines)
+        # Normalize whitespace but preserve single spaces
+        formatted = re.sub(r'  +', ' ', formatted)
         
-        return formatted
+        if inline_mode or not self.wrap_text_in_divs:
+            # Don't wrap in divs for inline content
+            return formatted.strip()
+        
+        # Split by paragraph breaks and wrap each paragraph
+        paragraphs = re.split(r'\n\s*\n+', formatted.strip())
+        wrapped = [f'<div>{p.strip()}</div>' for p in paragraphs if p.strip()]
+        return '\n'.join(wrapped)
     
     def apply_text_formatting(self, text: str) -> str:
         """
@@ -197,12 +201,12 @@ class HTMLAssembler:
         """
         Assemble HTML fragment from original text, equations, and sections.
         
-        Uses position-based reconstruction:
-        1. Identify all replaceable regions (equations and sections)
-        2. Keep text between them
-        3. Replace equations with LMS-wrapped versions
-        4. Replace sections with formatted headers
-        5. Format remaining text
+        Strategy:
+        - Inline equations stay inline with surrounding text (no wrapping divs)
+        - Display equations are block-level
+        - Sections are block-level headers
+        - Text before/after inline equations stays in same container
+        - Paragraph breaks (double newlines) create new divs
         
         Args:
             original_text: The original Mathpix text
@@ -216,66 +220,96 @@ class HTMLAssembler:
             HTMLAssemblyError: If assembly fails
         """
         if not equations and not sections:
-            # Just format the text
             return self.format_text(original_text)
         
-        # Create a list of all replaceable elements with their positions
+        # Build list of all replaceable elements
         replacements = []
-        
         for eq in equations:
             replacements.append({
                 'type': 'equation',
                 'start': eq.start_pos,
                 'end': eq.end_pos,
                 'object': eq,
-                'original_text': eq.original_text
             })
-        
         for sec in sections:
             replacements.append({
                 'type': 'section',
                 'start': sec.start_pos,
                 'end': sec.end_pos,
                 'object': sec,
-                'original_text': sec.title
             })
         
-        # Sort by position
         replacements.sort(key=lambda x: x['start'])
         
-        # Build the output by walking through positions
-        html_parts = []
+        # Strategy: collect content into logical "blocks" (paragraphs or sections)
+        # Inline equations within a paragraph stay in the same block
+        html_blocks = []
         current_pos = 0
+        current_block = []  # Accumulate HTML parts for current block
         
         for replacement in replacements:
-            # Add text before this replacement
+            # Get text before this element
             if current_pos < replacement['start']:
                 text_before = original_text[current_pos:replacement['start']]
+                
                 if text_before:
-                    formatted = self.format_text(text_before)
-                    if formatted:
-                        html_parts.append(formatted)
+                    # Check for paragraph breaks
+                    if '\n\n' in text_before or text_before.count('\n') > 2:
+                        # Has significant breaks - split block
+                        lines = text_before.split('\n\n')
+                        
+                        # Add first part to current block
+                        if lines[0].strip():
+                            formatted = self.format_text(lines[0], inline_mode=True)
+                            current_block.append(formatted)
+                        
+                        # Flush current block if has content
+                        if current_block:
+                            html_blocks.append(self._wrap_block(current_block))
+                            current_block = []
+                        
+                        # Process middle paragraphs
+                        for line in lines[1:-1]:
+                            if line.strip():
+                                formatted = self.format_text(line, inline_mode=False)
+                                html_blocks.append(formatted)
+                        
+                        # Start new block with last part
+                        if lines[-1].strip():
+                            formatted = self.format_text(lines[-1], inline_mode=True)
+                            current_block = [formatted]
+                    else:
+                        # No significant break - keep in current block
+                        formatted = self.format_text(text_before, inline_mode=True)
+                        current_block.append(formatted)
             
-            # Add the replacement
+            # Add the replacement element
             if replacement['type'] == 'equation':
                 wrapped = self.wrap_equation(replacement['object'])
-                html_parts.append(wrapped)
+                current_block.append(wrapped)
             elif replacement['type'] == 'section':
+                # Section breaks the block
+                if current_block:
+                    html_blocks.append(self._wrap_block(current_block))
+                    current_block = []
                 formatted = self.format_section(replacement['object'])
-                html_parts.append(formatted)
+                html_blocks.append(formatted)
             
             current_pos = replacement['end']
         
-        # Add any remaining text after last replacement
+        # Handle remaining text
         if current_pos < len(original_text):
-            text_after = original_text[current_pos:]
-            if text_after:
-                formatted = self.format_text(text_after)
-                if formatted:
-                    html_parts.append(formatted)
+            text_remaining = original_text[current_pos:]
+            if text_remaining.strip():
+                formatted = self.format_text(text_remaining, inline_mode=True)
+                current_block.append(formatted)
         
-        # Join all parts
-        html_fragment = '\n'.join(html_parts)
+        # Flush final block
+        if current_block:
+            html_blocks.append(self._wrap_block(current_block))
+        
+        # Join blocks
+        html_fragment = '\n'.join(html_blocks)
         
         # Validate
         is_valid, error_msg = self.validate_html(html_fragment)
@@ -283,6 +317,35 @@ class HTMLAssembler:
             raise HTMLAssemblyError(f"HTML validation failed: {error_msg}")
         
         return html_fragment
+    
+    def _wrap_block(self, parts: List[str]) -> str:
+        """
+        Wrap a block of content (text + inline equations) in a div.
+        
+        Args:
+            parts: List of HTML parts (text, inline equation spans, etc.)
+            
+        Returns:
+            Wrapped block
+        """
+        # Join parts - inline equations should have no extra spacing
+        content = ''
+        for i, part in enumerate(parts):
+            if i == 0:
+                content = part
+            else:
+                # No space between text and inline equation spans
+                if part.strip().startswith('<span'):
+                    content += part
+                else:
+                    # Text content
+                    if content and not content.endswith(' '):
+                        content += ' '
+                    content += part
+        
+        if content.strip():
+            return f'<div>{content.strip()}</div>'
+        return ''
     
     def get_statistics(
         self,

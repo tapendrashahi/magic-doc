@@ -1,0 +1,508 @@
+\section*{Conic Section:-}
+
+Conic section or conic is the locus of a point $\mathrm{P}(\mathrm{x}, \mathrm{y})$ which moves in a plane in such a way that the ratio of its distance from a fixed point $S$ to its distance from a fixed line $M N$ is always constant.
+i.e. $\frac{P S}{P M}=$ constant
+The fixed point is called focus and fixed line is called the directrix of the conic.
+The constant ratio is called eccentricity of the conic and is denoted by e. Important things to remember:-
+(i) If $\mathrm{e}=1$, the conic is parabola
+(ii) If $\mathrm{e}<1$, the conic is ellipse
+(iii) If $\mathrm{e}>1$, the conic is hyperbola
+(iv) If $\mathrm{e}=0$, the conic is circle.
+
+\section*{Example:-}
+
+If e and e are the eccentricities of two conics. and $\mathrm{e}^{2}+\mathrm{e}^{2}=3$ then the conics are both
+a) circles
+b) parabolas
+c) hyperbolas
+d) ellipse
+
+\section*{Solution: -}
+
+If the conics are circle $0+0 \neq 3$ (not possible) parabola . $1+1 \neq 2$ (not possible)
+ellipses < 1 (not possible)
+hyperbolas > 1 (possible)
+
+\section*{Important terms:-}
+(i) Focus and Directrix:-
+
+Any fixed point ' $S$ ' of the parabola is called a focus of the parabola and the fixed line MZ is called a directrix of the parabola.
+
+\section*{(ii) Eccentricity (e)}
+
+The distance of any point $P(x, y)$ from the focus ( S ) to its distance from the directrix (MZ) bears a constant ratio, known as eccentricity.
+It is denoted by 'e' i.e. $\mathrm{e}=\frac{P S}{P M}$ Eccentricity of a parabola is ' 1 '
+
+\section*{(iii) Axis of the parabola}
+
+The straight line passing through the focus and perpendicular to the directrix of the parabola is called the axis of the parabola. In the figure, $x$-axis is the axis of the parabola.
+
+\section*{(iv) Focal chord}
+
+Any chord passing through the focus is called focal chord. Distance of any point of the parabola from the focus is called focal distance.
+
+\section*{(v) Latus Rectum}
+
+The chrod of the parabola through the focus and perpendicular to the axis is called latus rectum of the parabola. In the figure, LL ' is the latus rectum of the parabola.
+
+\section*{Standard form of parabola}
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-02.jpg?height=515&width=863&top_left_y=1069&top_left_x=629)
+
+The standard equation of the parabola with vertex at origin and X -axis as the axis of the parabola is
+$$
+y^{2}=4 a x
+$$
+(i) Focus: $(a, 0)$
+(ii) Vertex: $(0,0)$ at the origin
+(iii) Axis of the parabola : x -axis $(\mathrm{y}=0)$
+(iv) Equation of directrix: $x=-a$
+$$
+x+a=0
+$$
+(v) Tangent at the vertex: $\mathrm{x}=0$
+
+\section*{Example: -}
+
+The equation of the parabola whose focus is $(-3,1)$ and directrix is $x+ y=2$ is given by
+a) $x^{2}+y^{2}-2 x y+16 x+16=0$
+b) $x^{2}+y^{2}-x y+12 x+12=0$
+c) $x^{2}+y^{2}-4 x+4 y+1=0$
+d) $2 x^{2}+2 y^{2}-8 x+16=0$
+
+\section*{Solution:-}
+
+Let $\mathrm{P}(\mathrm{x}, \mathrm{y})$ be any point on the parabola then
+$$
+(x+3)^{2}+(y-1)^{2}=\left(\frac{x+y-2}{\sqrt{2}}\right)^{2}
+$$
+
+Solving we get
+$x^{2}+y^{2}-2 x y+16 x+16=0$
+
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline Form of parabola & $$
+\begin{aligned}
+& \mathbf{y}^{2} \\
+& =\mathbf{4 a x}
+\end{aligned}
+$$ & $$
+\begin{aligned}
+& y^{2} \\
+& =-4 a x
+\end{aligned}
+$$ & $$
+\begin{aligned}
+& x^{2} \\
+& =4 a y
+\end{aligned}
+$$ & $$
+\begin{aligned}
+& x^{2} \\
+& =-4 a y
+\end{aligned}
+$$ & $$
+\begin{aligned}
+& (y-k)^{2} \\
+& =4 a(x-h)
+\end{aligned}
+$$ & $$
+\begin{aligned}
+& (x-h)^{2} \\
+& =4 a(y-k)
+\end{aligned}
+$$ \\
+\hline (i) Focus & (a, 0) & (-a. 0) & (0, a) & ( 0, -a ) & ( h + a, k ) & ( h, k + a ) \\
+\hline (ii) Vertex & $(0,0)$ & $(0,0)$ & $(0,0)$ & $(0,0)$ & (h, k) & (h. k) \\
+\hline (iii) Equation of axis & $\mathrm{y}=0$ & $\mathrm{y}=0$ & $\mathrm{x}=0$ & $\mathrm{x}=0$ & $y=k$ (parallel to x axis) & $\mathrm{x}=\mathrm{h}$ (parallel to y axis) \\
+\hline (iv) Equation of Directrix & $x$
+$$
+=-a
+$$ & $\mathrm{x}=\mathrm{a}$ & $$
+\begin{aligned}
+& y \\
+& =-a
+\end{aligned}
+$$ & $y=a$ & $\mathrm{x}=\mathrm{h}-\mathrm{a}$ & $y=k-a$ \\
+\hline (v) Tangent at vertex & $\mathrm{x}=0$ & $\mathrm{x}=0$ & $\mathrm{y}=0$ & $y=0$ & $\mathrm{x}=\mathrm{h}$ & $\mathrm{y}=\mathrm{k}$ \\
+\hline (vi) Length of latus rectum & 4a & 4 a & 4 a & 4 a & 4a & 4 a \\
+\hline
+\end{tabular}
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-04.jpg?height=493&width=592&top_left_y=279&top_left_x=313)
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-04.jpg?height=519&width=600&top_left_y=253&top_left_x=1063)
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-04.jpg?height=549&width=435&top_left_y=923&top_left_x=311)
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-04.jpg?height=512&width=450&top_left_y=956&top_left_x=1059)
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-04.jpg?height=553&width=519&top_left_y=1624&top_left_x=313)
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-04.jpg?height=493&width=407&top_left_y=1684&top_left_x=1059)
+
+\section*{Example:-}
+
+The equation of the parabola with focus ( $0, \mathrm{a}$ ) and directrix $\mathrm{y}+\mathrm{a}=0$ is
+a) $x^{2}=-4 a y$
+b) $x^{2}=4 a y$
+c) $y^{2}=-4 a x$
+d) $(y-k)^{2}=4 a(x-$
+h)
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-05.jpg?height=528&width=801&top_left_y=461&top_left_x=656)
+
+\section*{Solution:-}
+
+Focus $=(0, a)$
+Hence, Y -axis is the axis of parabola.
+The equation of the directrix is $y=-a$
+Hence the parabola is
+$$
+x^{2}=4 a y
+$$
+
+\section*{Example:-}
+
+The eccentricity of the parabola $x^{2}-4 x-4 y+4=0$ is
+a) $e>1$
+b) $e=1 / 4$
+c) $e=1 / 2$
+d) $e=1$
+
+Solution: eccentricity (e) of the parabola $=1$
+
+\section*{Example:-}
+
+The focal distance of a point $P$ on the parabola $y^{2}=12 x$ in which the ordinate of $P$ is 6 is
+a) 12
+b) 4
+c) 3
+d) 6
+
+\section*{Solution:-}
+
+Equation of the parabola: $y^{2}=12 x$ ordinate of P is 6 .
+i.e. $36=12 x$
+or, $x=3$
+$P$ is $(3,6)$. Also focus is at $(a, 0)=(3,0)$
+So, focal distance $=6$
+
+\section*{Parametric Equations:-}
+
+For any parameter $\mathrm{t}, \mathrm{x}=\mathrm{at}^{2}$ and $\mathrm{y}=2$ at are called the parametric equation of the parabola.
+
+\section*{Example:}
+
+The parmetric equations $\mathrm{x}=\mathrm{at}^{2}$ and $\dot{y}=4 a t, t \in R$ represents,
+a) a parabola
+b) hyperbola
+c) ellipse
+d) circle
+
+\section*{Solution:}
+$$
+\begin{aligned}
+& \mathrm{y}=4 \mathrm{at} \\
+& \mathrm{t}=\mathrm{y} / 4 \mathrm{a} \\
+& \text { and } \mathrm{x}=\mathrm{a}\left(\frac{y}{4 a}\right)^{2} \\
+& \mathrm{x}=a \frac{y^{2}}{16 a} \\
+& y^{2}=16 a x
+\end{aligned}
+$$
+which is the equation of parabola.
+
+\section*{Example:}
+
+The graph represented by the equation $x=\sin ^{2} t$ and $y=2$ cost is
+a) parabola
+b) hyperbola
+c) ellipse
+d) circle
+
+\section*{Solution:}
+$$
+\begin{aligned}
+& y=2 \cos t x=\sin ^{2} t-\cdots \\
+& y / 2=\cos t y^{2} / 4=\cos ^{2} t \\
+& \text { adding (i) \& (ii) } \\
+& y^{2} / 4+x=\sin ^{2} t+\cos ^{2} t=1 \\
+& y^{2}=-4 x+4 \text { (parabola) }
+\end{aligned}
+$$
+
+\section*{A point and a parabola}
+
+Let $P\left(x_{1}, y_{1}\right)$ be any point and $y^{2}=4$ ax be the parabola, then (i) a point $\mathrm{P}\left(\mathrm{x}_{1}, \mathrm{y}_{1}\right)$ lies outside the parabola if
+$$
+y_{1}^{2}>4 a x_{1} \text { i.e. } y_{1}^{2}-4 a x_{1}>0
+$$
+(ii) a point $\mathrm{P}\left(\mathrm{x}_{1}, \mathrm{y}_{1}\right)$ lies inside the parabola if
+$$
+y_{1}^{2}<4 a x_{1} \text { i.e } y_{1}^{2}-4 a x_{1}<0
+$$
+(iii) a point $\mathrm{P}\left(\mathrm{x}_{1}, \mathrm{y}_{1}\right)$ lies on the parabola if $\mathrm{y}_{1}{ }^{2}$
+$$
+=4 a x_{1} \text { i.e. } y_{1}^{2}-4 a x_{1}=0
+$$
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-07.jpg?height=607&width=633&top_left_y=779&top_left_x=747)
+
+\section*{Example:-}
+$P(1,2)$ is any point and $y^{2}=4 x$ is the parabola. Then P lies
+a) inside
+b) outside
+c) on the parabola
+d) none
+
+\section*{Solution:-}
+
+Given equation of the parabola is
+$$
+y^{2}=4 x
+$$
+
+Putting $x=1$ and $y=2$ we get
+$$
+4=4
+$$
+
+Hence the point $(1,2)$ lies on the parabola.
+Equation of the tangent to the parabola $\mathbf{y}^{2}=4$ ax at point $\left(x_{1}, y_{1}\right)$ :
+(i) The equation of the tangent to the parabola $y^{2}=4 a x$ at point ( $x_{1}, y_{1}$ ) is
+$$
+y y_{1}=2 a\left(x+x_{1}\right)
+$$
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-08.jpg?height=476&width=469&top_left_y=240&top_left_x=827)
+(ii) Equation of the tangent to the parabola $x^{2}=4$ ay at point $\left(x_{1}, y_{1}\right)$ is
+$$
+x_{1}=2 a\left(y+y_{1}\right)
+$$
+(iii) The line $\mathrm{y}=\mathrm{mx}+\mathrm{c}$ becomes tangent to the parabola $\mathrm{y}^{2}=4$ ax if $\mathrm{c}= \frac{a}{m}$ and the equation of the tangent to the parabola is
+$$
+y=m x+a / m
+$$
+
+The co-ordinates of point of contact between the tangent and the parabola are $\left(\frac{a}{m^{2}}, \frac{2 a}{m}\right)$
+(iv) Equation of the tangent to the parabola $y^{2}=4 a x$ at a point (at ${ }^{2}$, 2at) is
+(v) The line $y=m x+c$ touches the parabola $x^{2}=4$ ay if $c=a m^{2}$
+
+\section*{Example:-}
+
+If the parabola $y^{2}=4 a x$ passes through the point $(1,-2)$, then the tangent at this point is
+*a) $x+y+1=0$
+b) $2 x+3 y+1=0$
+c) $x-y-1=0$
+d) $7 x+4 y+13=0$
+
+\section*{Solution:-}
+$(1,-2)$ lies on the parabola $y^{2}=4 a x$ i.e.
+$$
+4=4 a \cdot 1 \Rightarrow a=1
+$$
+∴ tangent at point $(1,-2)$ is
+$$
+\begin{aligned}
+& y(-2)=2(x+1) \\
+& \text { i.e. } x+y+1=0
+\end{aligned}
+$$
+
+\section*{Line and a parabola:-}
+
+Let $y=m x+c$ be the line and $y^{2}=4 a x$ be the equation of the parabola.
+$$
+\begin{aligned}
+& (m x+c)^{2}=4 a x \\
+& \text { or, } m^{2} x^{2}+2 x(m c-2 a)+c^{2}=0 \\
+& \text { discriminant } b^{2}-4 a c \\
+& =4(m c-2 a)^{2}-4 \cdot m^{2} c^{2} \\
+& =16 a(a-m c)
+\end{aligned}
+$$
+(i) If $a-m c>0$ i.e. $c<a / m$ the line intersects the parabola at two distinct points (secant line).
+(ii) If $\mathrm{a}-\mathrm{mc}=0$ i.e. $\mathrm{c}=\mathrm{a} / \mathrm{m}$ the line meets the parabola at coincident points. (tangent line)
+(iii) If $\mathrm{a}-\mathrm{mc}<0$, i.e. $\mathrm{c}>\mathrm{a} / \mathrm{m}$ the line does not cut the parabola.
+
+Equation of the Normal to the parabola $\mathbf{y}^{2}=\mathbf{4} \mathbf{a x}$ at point $\left(\mathbf{x}_{1}, \mathbf{y}_{1}\right)$
+![](https://cdn.mathpix.com/cropped/8042535a-1f14-4d37-9d05-e2c646c96edc-09.jpg?height=579&width=811&top_left_y=964&top_left_x=657)
+(i) Equation of the normal to the parabola at point $\left(\mathrm{x}_{1}, \mathrm{y}_{1}\right)$ :
+$$
+y=m x-2 a m-a m^{3}
+$$
+
+The point of contact between the normal and the parabola is ( $\mathrm{am}^{2},-2 \mathrm{am}$ ) Equation: (i) is cubic in $m$. Hence, in general 3 normals can be drawn to the parabola from a given point, at least one of them being real.
+(ii) The equation of the tangent to the parabola at point ( $a t^{2}$, 2at) is
+$$
+x-t y+a t^{2}=0
+$$
+where as the equation of the normal is
+$$
+y+t x=2 a t+a t^{2}
+$$
+(iii) If the normal at any point $\mathrm{P}\left(\mathrm{at}^{2}, 2 \mathrm{at}\right)$, on the parabola $y^{2}=4 a x$ meets the curve again at $\mathrm{Q}\left(\mathrm{at}_{22}{ }^{2}, 2 \mathrm{at}_{2}\right)$, then
+$$
+\left(t_{1}+t_{2}\right) t_{1}+2=0
+$$
+i.e. $t_{2}=-t_{1}-2 / t_{1}$
+Pair of tangents from an external point ( $x_{1}, y_{1}$ ) to the parabola $\boldsymbol{y}^{2}=\mathbf{4} \mathbf{a x}$ Equation of the pair of tangents from an external point $\mathrm{P}\left(\mathrm{x}_{1}, \mathrm{y}_{1}\right)$ to the parabola $\mathrm{y}^{2}=4$ ax is
+$$
+\begin{aligned}
+& S S_{1}=T^{2} \\
+& \text { where } S=y^{2}-4 a x \\
+& S_{1}=y^{2}-4 a x_{1}-2 a\left(x+x_{1}\right)
+\end{aligned}
+$$
+
+\section*{Chord of contact:-}
+
+The equation of the chord of contact of tangents from the point $\left(\mathrm{x}_{1}, \mathrm{y}_{1}\right)$ to the parabola $y^{2}=4 a x$ is
+$$
+\mathrm{yy}_{1}=2 a\left(x+x_{1}\right)
+$$
+
+\section*{Pole and Polar}
+(i) The polar of the point $\left(x_{1}, y_{1}\right)$ with respect to the parabola $y^{2}=4 a x$ is
+$$
+y_{1}=2 a\left(x+x_{1}\right)
+$$
+(ii) Pole of $l \mathrm{x}+\mathrm{my}+\mathrm{n}=0$ with respect to the parabola $\mathrm{y}^{2}=4$ ax is $\left(\frac{n}{l}, \frac{-2 a m}{l}\right)$
+
+\section*{Example:}
+
+The pole of $l x+m y+n=0$ with respect to the parabola $y^{2}=4 a x$ is
+a) $\left(\frac{n}{l}, \frac{-2 a m}{l}\right)$
+b) $\left(\frac{m}{l}, \frac{-2 a n}{l}\right)$
+c) $\left(-\frac{2}{l}, \frac{m n}{l}\right)$
+d) none
+
+Solution:
+If the pole is $\left(x_{1}, y_{1}\right)$, then the equation of the polar is
+$$
+y y_{1}=2 a\left(x+x_{1}\right)
+$$
+which is equivalent to $l x+m y+n=0$
+Comparing the coefficients we get
+$$
+\begin{aligned}
+& \frac{2 a}{l}=\frac{-\mathrm{y}_{1}}{m}=\frac{-2 \mathrm{ax}_{1}}{n} \\
+& x_{1}=\frac{n}{l} \text { and } y_{1}=\frac{2 a m}{l} \\
+& \therefore\left(\frac{n}{l},-\frac{2 a m}{l}\right) \text { is the pole. }
+\end{aligned}
+$$
+
+\section*{Some Important Notes:-}
+(i) If the normal at the points $t_{1}$ and $t_{2}$ meet on the parabola $y^{2}=4 a x$, then $t_{1} t_{2}=2$.
+(ii) The pole of the focal chord of the parabola lies on its axis.
+(iii) Tangents at the extremities of a focal chord of the parabola intersect at right angles on the directrix.
+(iv) Equation of the chord of a parabola with a given middle point $P\left(x_{1}, y_{1}\right)$ is $S_{1}=T$
+i.e. $y_{1}\left(y-y_{1}\right)=2 a\left(x-x_{1}\right)$
+where $S_{1}=y_{1}{ }^{2}-4 a x_{1}$
+$$
+T=y y_{!}-2 a\left(x+x_{1}\right)
+$$
+
+\section*{Example:-}
+
+The length of the latus rectum of the parabola $y^{2}+8 x-2 y+17=0$ is
+a) 2
+b) 4
+c) 8
+d) 16
+
+\section*{Solution:-}
+
+The equation of the parabola is:
+$$
+\begin{aligned}
+& y^{2}+8 x-2 y+17=0 \\
+& y^{2}-2 y+1=-8 x-17+1 \\
+& (y-1)^{2}=-8(x-2) \\
+& \text { comparing with }(y-k)^{2}=-4 a(x-h) \\
+& \text { length of latus rectum }(4 a)=8
+\end{aligned}
+$$
+
+\section*{Example:-}
+
+The line $y=2 x+c$ is a tangent to the parabola $y^{2}=16 x$ if $c$ equals
+a) 1
+b) 4
+c) -2
+d) 2
+
+Equation of the other curve: $x^{2}=32 y$.
+$\therefore 2 \mathrm{x}=32 \frac{d y}{d x}$
+or, $\frac{d y}{d x}=\frac{x}{16}$
+At point $(16,8), \frac{d y}{d x}=\frac{16}{16}=1=\mathrm{m}_{2}$.
+Now,
+$\tan \theta=\frac{m_{1}-m_{2}}{1+m_{1} m_{2}}=\frac{\frac{1}{4}-1}{1+\frac{1}{4} \cdot 1}=\frac{3}{5} \cdot \theta=\tan ^{-1}(3 / 5)$.
+
+\section*{Example:-}
+
+The locus of the point of intersection of the perpendiculars tangents to $y^{2}= 4 a x$ is
+a) $x+a=0$
+b) $x-a=0$
+c) $y+a=0$
+d) $y-a=0$
+
+\section*{Solution:-}
+$\mathrm{SS}_{1}=\mathrm{T}^{2}$
+or, $\left(y^{2}-4 a x\right)\left(y_{1}^{2}-4 a x_{1}\right)=\left[y_{1}-2 a\left(x+x_{1}\right)\right]^{2}$
+since they are perpendicular,
+coefficient of $x^{2}+$ coefficient of $y^{2}=0$.
+i.e., $x_{1}+a=0$
+So, the locus of the point is: $x+a=0$
+
+\section*{Alternate Method:}
+
+Equation of tangent: $y=m x+a / m$
+Satisfied by $\left(x_{1}, y_{1}\right): y_{1}=m x_{1}+a / m$
+or, $x_{1} m^{2}-y_{1} m+a=0$
+Now, product of the roots $=-1\left[\mathrm{~m}_{1} \cdot \mathrm{~m}_{2}=-1\right]$
+i.e. $a / x_{1}=-1$
+or, $\mathrm{x}_{1}+\mathrm{a}=0$
+∴ The locus of the point is $x+a=0$
+
+\section*{Example:-}
+
+The angle between the tangents drawn from the point $(1,4)$ to the parabola $y^{2}=4 x$ is
+a) $\pi / 2$
+b) $\pi / 3$
+c) $\pi / 4$
+d) $\pi / 6$
+
+\section*{Solution:-}
+
+Any tangent to $y^{2}=4 x$ is $y=m x+1 / m$
+It passes through $(1,4)$. So,
+$4=m+1 / m$
+$m^{2}-4 m+1=0$
+$\operatorname{sum}\left(m_{1}+m_{2}\right)=4$ and product $\left(m_{1} \cdot m_{2}\right)=1$
+Now,
+$\left(\mathrm{m}_{1}-\mathrm{m}_{2}\right)=\sqrt{\left(m_{1}+m_{2}\right)^{2}-4 m_{1} m_{2}}=\sqrt{16-4}=2 \sqrt{3}$
+we have:
+$$
+\begin{aligned}
+& \tan \theta=\frac{m_{1}-m_{2}}{1+m_{1} m_{2}}=\frac{2 \sqrt{3}}{1+1}=\sqrt{3} \\
+& \therefore \theta=\pi / 3
+\end{aligned}
+$$
+
+\section*{Example:-}
+
+The straight line $y=2 x+\lambda$ does not meet the parabola $\mathrm{y}^{2}=2 \mathrm{x}$ if
+a) $\lambda<1 / 4$
+b) $\lambda=1 / 4$
+c) $\lambda>1 / 4$
+d) $\lambda=4$
+
+\section*{Solution:-}
+
+Equation of the line: $y=2 x+\lambda$ :
+Equation of the parabola: $y^{2}=2 x$.
+Solving (i) and (ii) we get,
+$$
+\begin{aligned}
+& (2 x+\lambda)^{2}=2 x \\
+& 4 x^{2}+2 x(2 \lambda-1)+\lambda^{2}=0
+\end{aligned}
+$$
+
+Line does not intersect the parabola if:
+$b^{2}-4 \mathrm{ac}<0$
+i.e. $[2(2 \lambda-1)]^{2}-4.4 \lambda^{2}<0$
+or, $4(1-4 \lambda)<0$
+or, $1-4 \lambda<0$
+or, $\lambda>1 / 4$

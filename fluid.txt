@@ -1,0 +1,457 @@
+\section*{Fluid-Statics}
+
+\section*{Fluid}
+
+Liquids and gases are collectively called fluids. For examples : air, water etc. The study of fluids at rest is called fluid statics.
+
+The intermolecular forces in liquids are comparatively weaker than in solids. Therefore, their shapes can be changed easily. The intermolecular forces are weakest in gases, so their shapes and sizes can be changed much easily.
+Gases are highly compressible and occupy the entire space of the container quite rapidly. Unlike liquid, gases can 't form free surface.
+
+\section*{Density}
+
+Mass per unit volume of a substance is called density.
+Density=mass / volume
+
+\section*{Regarding density it is worth noting that :}
+i. We generally confuse that density does not depend on mass and volume of a substance. Yes, this is right only when both are variable simultaneously. But for mass to be constant, $\rho \propto \frac{1}{V}$ i. e. density increases with decrease in volume for constant mass and vice-versa. Similarly, for volume to be constant $\rho \propto \mathrm{m}$ i. e. density increases/decreases with increase/decrease in mass for constant volume.
+In the riddle regarding the cottons and bricks, the masses are the same, but the volume occupied by the cottons is much greater, since their density is much lower.
+
+\section*{ii. Dimensions and units}
+$[\rho]=\left[M L^{-3} T^{0}\right]$
+
+\section*{Units:}
+
+SI unit: $\mathrm{kg} / \mathrm{m}^{3}$
+CGS unit: $\mathrm{g} / \mathrm{cm}^{3}$
+$1 \mathrm{~g} / \mathrm{cm}^{3}=10^{3} \mathrm{~kg} / \mathrm{m}^{3}$
+
+\section*{iii. It is a scalar quantity.}
+
+\section*{Surface Density}
+
+We have just defined volume density in terms of mass and volume. Another density called surface density is defined in term of mass and area. Mass per
+unit area of the substance is called surface density.
+Surface density $=\frac{\text { Mass }}{\text { Area }}$
+
+\section*{Dimension and unit}
+[Surface density] = [ML-2]
+C.G.S. System $\Rightarrow \mathrm{gmcm}^{-2}$
+S.I. unit $\Rightarrow \mathrm{kgm}^{-2}$
+
+\section*{Linear density}
+
+Linear density is defined in terms of mass and length. Mass per unit length is called linear density.
+
+Linear density $=\frac{\text { Mass }}{\text { Length }}$
+
+\section*{Dimension and unit}
+[Linear density] = [ML-1]
+C.G.S. System ⇒ $\mathrm{gmcm}^{-1}$
+S.I. unit $\Rightarrow \mathrm{kgm}^{-1}$
+
+\section*{Relative Density}
+
+The ratio of density of a substance to the density of a standard substance is called relative density.
+
+Relative density $=\frac{\text { Density of a substance }}{\text { Density of a standard substance }}$
+Water is taken as a standard substance to determine the relative density of solid and liquid while hydrogen gas is taken for a gas.
+
+\section*{Dimension and Unit}
+[Relative density] $=\left[\frac{\mathrm{ML}^{-3}}{\mathrm{ML}^{-3}}\right]=\left[\mathrm{M}^{0} \mathrm{~L}^{0}\right]$
+Relative density is dimensionless quantity so it has no unit. It is a pure number.
+
+\section*{Specific Density or Specific Gravity}
+
+When the density of a standard substance is taken water at $4^{\circ} \mathrm{C}$ (for liquid and solid), hydrogen at STP (for gas), then the relative density of a substance is known as specific density or specific gravity. Hence, the ratio of density of a substance to the density of water at $4^{\circ} \mathrm{C}$ or $\mathrm{H}_{2}$ at STP is called specific gravity.
+∴ Specific gravity of a substance $=\frac{\text { Density of a substance }}{\text { Density of water at } 4^{\circ} \mathrm{C} \text { or } \mathrm{H}_{2} \text { at S.T.P. }}$
+Thus,
+$$
+\text { Specific gravity of solid or liquid }=\frac{\text { Density of solid or liquid }}{\text { Density of water at } 4^{\circ} \mathrm{C}}
+$$
+$$
+\text { and Specific gravity of a gas }=\frac{\text { Density of gas }}{\text { Density of } \mathrm{H}_{2} \text { at } \mathrm{STP}}
+$$
+
+Now
+$$
+\begin{aligned}
+& \text { Specific gravity of a substance }=\frac{\text { Density of the substance }}{\text { Density of water at } 4^{\circ} \mathrm{C}} \\
+= & \frac{\text { Mass of } 1 \mathrm{cc} \text { of the substance }}{\text { Mass of } 1 \mathrm{cc} \text { of water at } 4^{\circ}}=\frac{\text { Mass of Vcc of the substance }}{\text { Mass of Vcc of water at } 4^{\circ} \mathrm{C}} \\
+= & \frac{\text { Weight of Vcc of the substance }}{\text { Wieght of Vcc of water at } 4^{\circ} \mathrm{C}}
+\end{aligned}
+$$
+
+Thus, specific gravity can also be defined as the ratio of weight of certain volume of the substance to the weight of an equal volume of water at $4^{\circ} \mathrm{C}$.
+
+In C.G.S. system, the density and specific gravity of a substance are equal numerically, but unit of density is $\mathrm{gmcm}^{-3}$ and specific density has no unit. The
+density of water at $4^{0} \mathrm{C}$ in S.I. units is $10^{3} \mathrm{kgm}^{-3}$.
+∴ Density of a substance $=$ Specific density $\times 10^{3}$ (numerically)
+1. STP or NTP: STP stands for Standard temperature and pressure and NTP stands for Normal temperature and pressure.
+
+A temperature of $0^{\circ} \mathrm{C}$ or 273 K and a pressure of one atmosphere (or 760 mm of Hg ) is known as STP or NTP.
+Standard temperature $=0^{\circ} \mathrm{C}$ or 273 K
+Standard pressure $=760 \mathrm{mmHg}$ or $1.013 \times 10^{5}$ pascal (Pa)
+$\therefore 1$ atmospheric pressure $=760 \mathrm{mmHg}=1.013 \times 10^{5} \mathrm{~Pa}$ or $\mathrm{Nm}^{-2}$
+2. At $4^{\circ} \mathrm{C}$ the density of pure water is maximum equal to $1 \mathrm{~g} \mathrm{~cm}^{-3}$ (C.G.S.) and $10^{3} \mathrm{kgm}^{-3}$ (in S.I. units).
+3. $1 \mathrm{~g} \mathrm{~cm}^{-3}=\frac{1 \times 10^{-3} \mathrm{~kg}}{\left(10^{-2} \mathrm{~m}\right)^{3}}=\frac{10^{-3} \mathrm{~kg}}{10^{-6} \mathrm{~m}^{3}}=10^{-3+6} \mathrm{~kg} \mathrm{~m}^{-3}=10^{3} \mathrm{~kg} \mathrm{~m}^{-3}$
+4. A device used to measure the specific gravity of a solid or liquid is called a hydrometer.
+5. A device used to test the purity of milk is called lactometer. It is a special kind of hydrometer.
+
+\section*{Relation between density and specific density}
+
+We know that
+Specific density $=\frac{\text { Density of a substance }}{\text { Density of water at } 4^{\circ} \mathrm{C}}$
+The density of water at $4^{0} \mathrm{C}$ in CGS System is $1 \mathrm{~g} \mathrm{~cm}^{-3}$. Therefore,
+Specific density $=\frac{\text { Density of a substance }}{1 \mathrm{~g} \mathrm{~cm}^{-3}}$
+or Density of a substance $=$ Specific density $\times 1 \mathrm{~g} \mathrm{~cm}^{-3}$
+or Density of a substance = Specific density (numerically)
+Example: Specific gravity of iron is 7.8 and so in S.I. units, density of iron will be $7.8 \times 10^{3} \mathrm{~kg} \mathrm{~m}^{-3}$.
+
+\section*{Average density of the mixture}
+
+Case (i): If $m_{1}$ mass of a liquid of density $\rho_{1}$ and $m_{2}$ mass of density $\rho_{2}$ are mixed, then $\mathrm{m}=m_{1}+m_{2}$ and $V=\frac{m_{1}}{\rho_{1}}+\frac{m_{2}}{\rho_{2}}$
+$\rho=\frac{m}{V}=\frac{m_{1}+m_{2}}{\frac{m_{1}}{\rho_{1}}+\frac{m_{2}}{\rho_{2}}}=\frac{\sum m_{i}}{\sum\left(\frac{m_{i}}{\rho_{i}}\right)}$
+If $m_{1}=m_{2}$ then
+$$
+\rho=\frac{2 \rho_{1} \rho_{2}}{\rho_{1}+\rho_{2}} \#(i)
+$$
+
+Clearly, the average density of mixture is the harmonic mean.
+Case (ii) : If $V_{1}$ volume of liquid of density $\rho_{1}$ and $V_{2}$ volume of liquid of density $\rho_{2}$ are mixed then,
+$\mathrm{M}=\rho_{1} V_{1}+\rho_{2} V_{2}$ and $V=V_{1}+V_{2}$
+$\rho=\frac{m}{V}=\frac{\rho_{1} V_{1}+\rho_{2} V_{2}}{V_{1}+V_{2}}=\frac{\sum \rho_{i} V_{i}}{\sum\left(V_{i}\right)}$
+If $V_{1}=V_{2}$, then
+$$
+\rho=\frac{\rho_{1}+\rho_{2}}{2} \#(i i)
+$$
+
+Clearly, density of mixture is the arithmetic mean.
+Q. $\mathbf{1 0 0 ~ g}$ of gold of relative density $\mathbf{1 9 . 3}$ and $\mathbf{1 0 0 ~ g}$ of silver of relative density $\mathbf{1 0 . 5}$ forms an alloy. Find the average density of the mixture.
+(a) $13.6 \mathrm{~g} / \mathrm{cc}$
+(b) $15.2 \mathrm{~g} / \mathrm{cc}$
+(c) $18 \mathrm{~g} / \mathrm{cc}$
+(d) $19 \mathrm{~g} / \mathrm{cc}$
+
+Ans: (a)
+Q. The relative density of an object is less than that of the liquid. What will happen to the object when placed in the liquid?
+a) It will sink to the bottom
+b) It will float on the surface
+c) It will remain suspended in the liquid
+d) It will dissolve in the liquid
+
+Answer: (b)
+Q. Which of the following factors does NOT affect the density of a substance?
+a) Temperature
+b) Pressure
+c) Volume of the substance
+d) Nature of the substance
+
+Ans: (c)
+
+\section*{Pressure}
+
+Force acting normally per unit surface area is called pressure.
+$P=\frac{\text { Force }}{\text { Area }}$
+Pressure does not depend on the cross section or base area or shape of the vessel. But if area is constant then as force increases so pressure increases and for force to be constant as area increases so pressure decreases and vice versa. Although force is a vector, pressure is a scalar as its direction is unique and not to be specified.
+
+\section*{Units and dimensions}
+
+Dimensions: $\left[\mathrm{ML}^{-1} \mathrm{~T}^{-2}\right]$
+SI units: $\mathrm{N} / \mathrm{m}^{2}$ which is also called pascal (Pa).
+$1 \mathrm{~Pa}=1 \mathrm{~N} / \mathrm{m}^{2}$
+Practical units: atmospheric pressure (atm), bar and torr.
+$1 \mathrm{~atm}=1.01325 \times 10^{5} \mathrm{~Pa}=1.01325 \mathrm{bar}=760 \mathrm{torr}=760 \mathrm{~mm}$ of $\mathrm{Hg}=10.33 \mathrm{~m}$ of water $1 \mathrm{bar}=10^{\circ} \mathrm{Pa}$; $1 \mathrm{torr}=$ pressure exerted by 1 mm of mercury column $=133 \mathrm{~Pa}$.
+
+\section*{Types of Pressures}
+
+There are three types of pressures associated with a fluid system.
+(i) Atmospheric pressure (Po)
+(ii) Gauge pressure $\left(\mathrm{P}_{g}\right.$
+(iii) Absolute pressure ( $\mathrm{P}_{\text {in }}$ )
+
+\section*{(i) Atmospheric pressure}
+
+Force exerted by atmosphere per unit cross-sectional area at mean sea level is called atmospheric pressure.
+$$
+1 \mathrm{~atm}=760 \mathrm{~mm} \text { of } \mathrm{Hg}
+$$
+∴ atmospheric pressure $P_{0}=\rho g h$
+$$
+\begin{aligned}
+& =13.6 \times 10^{3} \times 9.81 \times 76 \times 10^{-2} \\
+& =1.013 \times 10^{5} \mathrm{~N} / \mathrm{m}^{2}
+\end{aligned}
+$$
+
+Here $\rho$ is the density of mercury equal to $13.6 \times 10^{3} \mathrm{~kg} / \mathrm{m}^{3}$. Barometer is used to measure the atmospheric pressure.
+(ii) Gauge Pressure
+
+Excess Pressure over the atmospheric pressure is called Gauge Pressure. It is the difference between hydrostatic pressure and atmospheric pressure.
+$$
+\mathrm{P}-\mathrm{P}_{0}=h \rho g
+$$
+
+Hydrostatic pressure $\mathrm{P}=h \rho g+\mathrm{P}_{0}$
+Here h is the depth of a point inside a liquid where pressure is P and $\rho$ is the liquid density.
+Gauge pressure is always measured with the help of a manometer.
+
+\section*{(iii) Absolute Pressure:}
+
+Sum of the atmospheric and gauge pressure is called absolute pressure. $\mathrm{P}_{\mathrm{a}}=P_{0}+h \rho g$
+Pressure due to liquid on a vertical wall is different at different depths, so average fluid pressure on side wall a of container $=$ mean pressure $=\frac{h \rho g}{2}(h=$ height of wall).
+Pressure always acts normal to the fluid boundaries.
+Pressure depends on depth of the point below liquid surface (h), nature of liquid ( $\rho$ ) and acceleration due to gravity(g) while it is independent of amount of liquid, shape of vessel and area of consideration.
+
+\section*{Pascal's Law}
+
+It states that a liquid exerts equal pressures in all directions. It is applied in hydraulic jacks, hydraulic lifts, hydraulic press, hydraulic brakes, etc.
+
+\section*{Q. According to Pascal's law, pressure applied to an enclosed fluid is transmitted:}
+a) Only in the upward direction
+b) Only to the surface of the fluid
+c) Equally in all directions
+d) In the direction of the fluid flow
+
+Ans: (c)
+
+\section*{Buoyant Force}
+- If a body is partially or fully immersed in a fluid, it experiences an upward force due to the fluid surrounding it. This phenomenon of force exerted by fluid on the body is called buoyancy and force is called buoyant force or upthrust.
+- Buoyant force acts vertically upward through the centre of gravity (C.G.) of the displaced fluid. This point is called the centre of buoyancy (C.B.). The expression for buoyant force is as
+$$
+\mathrm{U}=\mathrm{V} \sigma \mathrm{~g}
+$$
+where $\sigma=$ density of liquid, $\mathrm{V}=$ volume of liquid displaced
+- The effective weight of a body decreases due to upthrust
+$$
+\mathrm{W}_{\mathrm{App}}=\mathrm{W}-\mathrm{U}(\mathrm{~W} \text { is the true weight of the body })
+$$
+- Decrease in weight $=\mathrm{W}-\mathrm{W}_{\mathrm{App}}=\mathrm{U}=$ Weight of the fluid displaced.
+
+\section*{Q. The buoyant force depends on:}
+a) The density of the object only
+b) The density of the fluid only
+c) The volume of the displaced fluid
+d) Both the density of the object and the fluid
+
+Ans: (c)
+
+\section*{Factors affecting the upthrust}
+- Buoyant force or force of upthrust does not depend upon the characteristics of the body such as its mass, size, density, etc. However, it depends upon the volume of the body inside the liquid.
+$$
+\mathrm{U} \propto \mathrm{~V}_{\mathrm{in}}
+$$
+- It depends upon the nature of the fluid as it is proportional to the density of the liquid. $\Rightarrow \mathrm{U} \propto \rho$
+This is the reason that force of upthrust on a fully submerged body is more in sea water than in pure water ( $\because \rho_{\text {sea }}>\rho_{\text {pure }}$ )
+- It depends on acceleration due to gravity ie., $\mathrm{U} \propto g$.
+
+\section*{Q. When a body is placed in a fluid with a higher temperature, its upthrust:}
+a) Increases because the density of the fluid increases
+b) Decreases because the density of the fluid decreases
+c) Remains the same
+d) Depends on the volume of the body submerged
+
+Answer: (b)
+Q. When a body is weighed inside water, its weight is less compared to weight in air due to :
+(a) Viscous force
+(b) Upthrust
+(c) Tension
+(d) Centripetal force
+
+Ans : (b)
+
+\section*{Archimede 's Principle}
+- It states that the upward buoyant force on a body that is partially or totally immersed in a fluid is equal to the weight of the fluid displaced by it
+- Decreased in weight in a fluid=upthrust=weight of fluid displaced
+- A body of volume V and density $\rho$ is completely immersed in a liquid of density $\sigma$. Then
+Apparent weight of the body $=$ weight of the body in air - upthrust or, $\mathrm{W}_{\mathrm{a}}=\mathrm{mg}$-weight of liquid displaced
+$$
+=(\rho V) g-(\sigma V) g \therefore W_{a}=(\rho-\sigma) V g
+$$
+
+Here volume of the body is equal to the volume of liquid displaced.
+- Generally, the weight of a body in air is called its real weight equal to mg
+- Weight ( $\mathrm{W}=\rho \mathrm{Vg}$ ) of a body acts vertically downward through its C. G. and upthrust ( $\mathrm{U}=\sigma \mathrm{Vg}$ ) acts vertically upward through centre of buoyancy.
+- Whether a body floats or sinks in a fluid depends on the values of these two forces.
+(i)If $\mathrm{U}>\mathrm{W}$ then the body will float with its fraction inside the liquid. In this case, average density of the body is less than that of liquid ( $\rho<\sigma$ ). Let $\mathrm{V}^{\prime}$ be the volume of a body inside a liquid. Then
+$$
+\begin{gathered}
+\rho V g=\sigma V^{\prime} g \#(i) \\
+\text { or } V^{\prime}=\frac{\rho}{\sigma} \mathrm{V}
+\end{gathered}
+$$
+
+Fraction of volume inside is
+$$
+\begin{equation*}
+\frac{V^{\prime}}{V}=\frac{\rho}{\sigma} \ldots . \tag{ii}
+\end{equation*}
+$$
+\%Volume inside is $\frac{\mathrm{V}^{\prime}}{\mathrm{V}} \times 100 \%=\frac{\rho}{\sigma} \times 100 \%$
+- In the condition of $\mathrm{U}>\mathrm{W}$, if the body is pressed down and released then it will oscillate in SHM under the restoring force F.
+$$
+\mathrm{F}=-\mathrm{m}^{\prime} \mathrm{g}=-(\sigma \mathrm{V}) \mathrm{g}
+$$
+
+Where m ' is the mass of liquid displaced.
+If $x$ be the displacement of the body of mass $m$ then
+$$
+\begin{aligned}
+\mathrm{F} & =-(\sigma \mathrm{A} \times \mathrm{x}) \mathrm{g} \\
+\text { or } \mathrm{ma} & =-\sigma \mathrm{Axg} \\
+\text { or } \mathrm{a} & =\frac{\mathrm{A} \sigma \mathrm{~g}}{\mathrm{~m}} \mathrm{x} \\
+\Rightarrow \mathrm{a} & =-\omega^{2} \mathrm{x}
+\end{aligned}
+$$
+
+Where $\omega^{2}=\frac{A \sigma g}{m}$ is a constant.
+The time period of body in this situation is given by
+$$
+\omega=\frac{2 \pi}{T}
+$$
+or $\sqrt{\frac{\mathrm{A} \sigma \mathrm{g}}{\mathrm{m}}}=\frac{2 \pi}{\mathrm{~T}} \quad \therefore \quad \mathrm{~T}=2 \pi \sqrt{\frac{\mathrm{~m}}{\mathrm{~A} \sigma \mathrm{~g}}}$
+Also, $\mathrm{T}=2 \pi \sqrt{\frac{\mathrm{~h} \rho}{\sigma \mathrm{~g}}} \ldots$. . (ii)
+Where $h$ is the vertical height of the body.
+Q. According to Archimedes' principle, the buoyant force acting on an object submerged in a fluid is equal to:
+a) The weight of the fluid displaced by the object
+b) The volume of the fluid displaced
+c) The density of the object
+d) The weight of the object
+
+Ans: (a)
+Q. If the volume of water displaced due to an object of mass $\mathbf{1 0 ~ g}$ is $\mathbf{2 0 ~ c c}$, what is the density of the object in g/cc is?
+(a) 1
+(b) 0.5
+(c) 2
+(d) 4
+
+Ans: (b)
+
+\section*{Principle of Floatation}
+- The principle of floatation states that when a body floats in a liquid then weight of the floating body is equal to weight of the liquid displaced by the body i.e.
+Weight of floating body = Weight of the liquid displaced
+
+Calculation of relative density using Archimede's principle:
+$$
+\begin{aligned}
+\text { (i)Relative density } & =\frac{\text { density of body }}{\text { density of pure water at } 4^{\circ} \mathrm{C}} \\
+& =\frac{\text { wt. of body }}{\text { wt. of equal volume of water }} \\
+& =\frac{w t . \text { of body }}{\text { force of upthrust due to water }} \\
+& =\frac{w t . \text { of body }}{\text { loss of wt. in water }}=\frac{w t . \text { of body in air }}{w t . \text { in air }-w t . \text { in water }}=\frac{W_{A}}{W_{A}-W_{w}}
+\end{aligned}
+$$
+(ii) If a body is weighed in air ( $\mathrm{W}_{\star}$ ), in water ( $\mathrm{W}_{\mathrm{W}}$ ) and in a liquid ( $\mathrm{W}_{v}$ ), then
+$$
+\text { specific gravity of liquid }=\frac{\text { loss of weight in liquid }}{\text { loss of weight in water }}=\frac{W_{A}-W_{L}}{W_{A}-W_{W}}
+$$
+
+Notes: (A) In case of $\mathrm{W}=\mathrm{U}$, the equilibrium of a floating body does not depend upon the variation in $g$ though both thrust and weight depends upon $g$.
+(B) The weight of a plastic bag full of air is same as that of empty bag because the force of upthrust is equal to the weight of the air enclosed.
+Q. An object will float in a liquid if its density is:
+a) Greater than the density of the liquid
+b) Less than the density of the liquid
+c) Equal to the density of the liquid
+d) Independent of the liquid's density
+
+Ans: (b)
+Q. An object with a density greater than the fluid in which it is placed will:
+a) Float
+b) Sink
+c) Stay at the surface
+d) Experience no buoyant force
+
+Ans: (b)
+Q. If the density of wood is $0.8 \mathrm{~g} / \mathrm{cc}$ and it is floating in water of density $\mathbf{1 ~ g} / \mathbf{c c}$, the ratio of volume of wood inside and outside the water is:
+(a) $5: 1$
+(b) $5: 2$
+(c) $4: 5$
+(d) $4: 1$
+
+Ans: 4:1
+
+\section*{Equilibrium of a floating body}
+- When a body is immersed wholly or partly in a fluids, there are two forces acting on the body : (i) weight of the body acting downward through centre of gravity and (ii) upthrust acting vertically upward centre of buoyancy.
+- Let us consider a body (For example, ship) floating in complete equilibrium in a liquid where centre of gravity ( G ) and centre of buoyancy (B) lie in the same vertical line Fig. (a) .
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/0a550f43-ec48-4459-9af8-0eaa6fbf156d-11.jpg?height=366&width=1328&top_left_y=553&top_left_x=129}
+\captionsetup{labelformat=empty}
+\caption{Fig. (a) A floating body in complete equilibrium b) Stable ( ) Unstable ( ) Neutral.}
+\end{figure}
+
+If the body is slightly tilted from its position to left then centre of buoyancy $B$ also moves to left and comes at new position B ' but not the centre of gravity of the body as shown in Fig. (b), (c) and (d) . The vertical line passing through new centre of buoyancy $\mathrm{B}^{\prime}$ in the displaced position of the body intersects the vertical line through old centre of buoyancy $B$ at point $M$ and is called metacentre. Thus the point where the new vertical line passing through the centre of buoyancy on the displaced position cuts the central line of the body is called metacentre. We consider the three different conditions :
+i. If the base of the body is made heavy then metacentre M lies above the centre of gravity G . The weight of the body W acting vertically downward at G and upthrust U acting upward at B ' form a clockwise couple due to which body wants to get back to its original untilted position as shown in Fig. (b) . This is called stable equilibrium of floating body. That is, why lowest part of the ship is loaded with heavy goods like cargo, luggage so that C . G . of the ship lies sufficiently below the metacentre and it becomes stable equilibrium.
+ii. If the top of the body is made heavy then metacentre lies below the C. G. The weight and upthrust now form an anticlockwise couple due to which the body wants to tilt further in the direction in which it was initially titled as shown in Fig. (c) . This is called unstable equilibrium of floating body. That is why, passengers in a boat are advised not to stand up.
+iii. If metacentre coincides with the C.G. of the body, W and U will be in the same vertical line, even in the tilted position of the floating body and will
+balance each other as shown in Fig. (d). They do not form a couple so the body remains floating in the tilted position without an increase or decrease in the tilt. This type of equilibrium is called neutral equilibrium of floating body.
+The condition for stable equilibrium of a floating body is that metacentre always must be above the centre of gravity of the body.
+The equilibrium of a floating body is not affected by the variation of $g$. this is because both weight and upthrust are changed by the same amount.
+The apparent weight of a floating body is zero.
+A balloon filled with a gas of density $\sigma$ is released in air of density $\rho$ then resultant upward force is $\mathrm{F}=\mathrm{V}(\rho-\sigma) \mathrm{g}$.
+Q. The metacenter of a floating body is the point of intersection of the:
+a) Center of gravity and center of buoyancy
+b) Vertical line passing through the center of buoyancy when the body is tilted
+c) Line of action of the buoyant force and the weight
+d) Line joining the center of gravity and the center of buoyancy
+
+Ans: (b)
+Q. If the metacenter is below the center of gravity of a floating object, the object will:
+a) Be stable
+b) Be in neutral equilibrium
+c) Be unstable
+d) Not float
+
+Ans: (c)
+Q . The metacentric height is an indicator of:
+a) The volume of the body
+b) The surface area of the body
+c) The stability of a floating body
+d) The buoyant force on the body
+
+Ans: (c)
+
+\section*{Level of a liquid in a vessel when ice melts}
+- Let ice of mass m be floating in a liquid of density $\sigma$. So that in equilibrium, its volume inside the liquid is V .
+In equilibrium,
+Weight of ice = upthrust
+or, $\mathrm{mg}=\mathrm{V} \sigma \mathrm{g}$
+or, $V=\frac{m}{\sigma} \ldots$. (i)
+When ice melts, let $V_{1}$ be the volume of water formed by $m$ mass of ice.
+Then $\mathrm{V}_{1}=\frac{\mathrm{m}}{\rho} \ldots .$. (ii) ( $\rho$ being density of water)
+- Let us see some cases:
+
+Case (i) If the liquid is water then $\sigma=\rho$. Obviously, $V=V_{1}$ i.e., water displaced by floating ice is equal to water formed by melting of whole ice and hence level of water remains unchanged.
+Case (ii) If $\rho<\sigma$ then $V_{1}>V$. Thus, liquid level rises if ice completely melts.
+Case (iii) If $\rho>\sigma$ then $V_{1}<V$. Thus, level of liquid in the vessel decreases.
+
+\section*{Buoyant force in accelerating fluid}
+- The expression for buoyant force is $\mathrm{U}=\mathrm{V} \sigma \mathrm{g}$..... (i)
+
+This is applicable when the fluid is at rest or in uniform motion.
+- If the fluid is moving upward with acceleration (a) then effective acceleration due to gravity ( $\mathrm{g}_{\text {eff }}$ ) will be ( $\mathrm{g}+\mathrm{a}$ ) while in downward direction it will be ( $\mathrm{g}-\mathrm{a}$ ).
+In upward direction,
+$$
+\therefore U=V \sigma(g+a) \#(i i)
+$$
+
+In downward direction,
+$$
+\mathrm{U}=\mathrm{V} \sigma(\mathrm{~g}-\mathrm{a}) \#(i i i)
+$$
+
+In case of a freely falling body, $\mathrm{g}=\mathrm{a}$ so $\mathrm{U}=\mathrm{O}$ i.e. no buoyant force acts if a fluid is in a freely falling body like an artificial satellite.
+Q. An object when totally immersed in water, displaces 50 cc of water, placed in a container. Calculate the upthrust when the container is in a lift moving upwards with an acceleration of $5 \mathrm{~m} / \mathrm{s}^{2}$.
+(a) 0.75 N
+(b) 0.075 N
+(c) 7.5 N
+(d) 75 N
+
+Ans: (a)
+
+\section*{Density of a body floating in liquids}
+- Let a body of density $\rho$ be floating in the liquids of densities $\sigma_{1}$, and $\sigma_{2}$ in such a way that its fraction $x$ is inside liquid of density $\sigma_{1}$, and remaining ( $1-x$ ) inside another liquid of density $\sigma_{2}$. Then in equilibrium of the body,
+Weight = upthrust due to both liquids
+![](https://cdn.mathpix.com/cropped/0a550f43-ec48-4459-9af8-0eaa6fbf156d-13.jpg?height=308&width=324&top_left_y=1821&top_left_x=1189)
+or $\mathrm{mg}=\mathrm{U}_{1}+\mathrm{U}_{2}$ or $V \rho \mathrm{~g}=$ volume due to $\sigma_{1} \times \sigma_{1} \times \mathrm{g}+$ volume due to $\sigma_{2} \times \sigma_{2} \times \mathrm{g}$ or $\rho=\frac{\text { volume due to } \sigma_{1} \times \sigma_{1}}{\mathrm{~V}}+\frac{\text { volume due to } \sigma_{2} \times \sigma_{2}}{\mathrm{~V}}$
+$$
+\therefore \rho=\mathrm{x} \sigma_{1}+(1-\mathrm{x}) \sigma_{2}
+$$
