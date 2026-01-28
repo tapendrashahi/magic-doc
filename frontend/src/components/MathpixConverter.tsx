@@ -1,12 +1,13 @@
 /**
- * MathpixConverter component - PHASE 7 Frontend Integration
+ * MathpixConverter component - PHASE 8 Editor Integration
  * 
  * This component handles:
- * 1. File upload for Mathpix LaTeX
- * 2. Conversion to LMS HTML via /api/convert/ endpoint
- * 3. Display of HTML output and statistics
- * 4. Copy-to-clipboard functionality
- * 5. Preview rendering with KaTeX
+ * 1. Beautiful code editor with syntax highlighting (LaTeXInput)
+ * 2. File upload for Mathpix LaTeX
+ * 3. Conversion to LMS HTML via /api/convert/ endpoint
+ * 4. Dual-tab interface: Code View | Preview
+ * 5. Copy-to-clipboard functionality
+ * 6. Preview rendering with KaTeX and HTML output
  */
 
 import React, { useRef, useState, useCallback } from 'react';
@@ -17,6 +18,7 @@ import mathpixConverterService, {
 import clipboardService from '../services/clipboard';
 import katexService from '../services/katex';
 import { useNoteStore } from '../store/noteStore';
+import { LaTeXInput } from './LaTeXInput';
 
 interface MathpixConverterProps {
   onConversionComplete?: (result: MathpixConversionResult) => void;
@@ -30,7 +32,8 @@ export const MathpixConverter: React.FC<MathpixConverterProps> = ({ onConversion
   const [error, setError] = useState<string | null>(null);
   const [showStats, setShowStats] = useState<boolean>(false);
   const [copySuccess, setCopySuccess] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'preview' | 'html' | 'katex'>('preview');
+  const [activeTab, setActiveTab] = useState<'code' | 'preview'>('code');
+  const [outputTab, setOutputTab] = useState<'html' | 'katex'>('html');
   const previewRef = useRef<HTMLDivElement>(null);
   const katexRef = useRef<HTMLDivElement>(null);
 
@@ -226,182 +229,149 @@ export const MathpixConverter: React.FC<MathpixConverterProps> = ({ onConversion
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-4 text-white">
         <h2 className="text-2xl font-bold">Mathpix to LMS Converter</h2>
         <p className="text-indigo-100 text-sm mt-1">
-          Convert Mathpix LaTeX output to LMS-compatible HTML fragments
+          Beautiful editor for converting Mathpix LaTeX to LMS-compatible HTML
         </p>
       </div>
 
       {/* Content */}
       <div className="flex-1 overflow-auto p-6">
-        <div className="max-w-6xl mx-auto space-y-6">
-          {/* Input Section */}
-          <div className="bg-white rounded-lg border-2 border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Step 1: Input Mathpix LaTeX</h3>
-
-            {/* File Upload */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                📁 Upload File
-              </label>
-              <div className="flex gap-3">
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept=".txt"
-                  onChange={handleFileUpload}
-                  className="hidden"
-                />
-                <button
-                  onClick={() => fileInputRef.current?.click()}
-                  className="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors font-medium"
-                >
-                  Choose File
-                </button>
-                <button
-                  onClick={handlePaste}
-                  className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors font-medium"
-                >
-                  Paste from Clipboard
-                </button>
-              </div>
+        <div className="max-w-7xl mx-auto space-y-6">
+          
+          {/* Code View | Preview Tabs */}
+          <div className="bg-white rounded-lg border-2 border-gray-200 overflow-hidden shadow-sm">
+            {/* Tab Navigation */}
+            <div className="flex border-b border-gray-200 bg-gray-50">
+              <button
+                onClick={() => setActiveTab('code')}
+                className={`flex-1 px-4 py-3 text-center font-semibold text-sm transition-colors ${
+                  activeTab === 'code'
+                    ? 'bg-indigo-600 text-white border-b-2 border-indigo-600'
+                    : 'text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                📝 Code View
+              </button>
+              <button
+                onClick={() => setActiveTab('preview')}
+                className={`flex-1 px-4 py-3 text-center font-semibold text-sm transition-colors ${
+                  activeTab === 'preview'
+                    ? 'bg-indigo-600 text-white border-b-2 border-indigo-600'
+                    : 'text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                👁️ Preview
+              </button>
             </div>
 
-            {/* Textarea */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Mathpix LaTeX Content
-              </label>
-              <textarea
-                value={mathpixText}
-                onChange={(e) => setMathpixText(e.target.value)}
-                placeholder="Paste Mathpix LaTeX output here or upload a file..."
-                className="w-full h-32 p-3 border border-gray-300 rounded-lg font-mono text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
-              {mathpixText && (
-                <div className="text-xs text-gray-500 mt-2">
-                  {mathpixText.length} characters
-                </div>
-              )}
-            </div>
+            {/* Tab Content */}
+            <div className="p-6">
+              {/* Code View Tab */}
+              {activeTab === 'code' && (
+                <div className="space-y-6">
+                  {/* Beautiful LaTeX Editor */}
+                  <div className="h-64 flex flex-col">
+                    <LaTeXInput
+                      value={mathpixText}
+                      onChange={setMathpixText}
+                      onConvert={() => {}} // Handled separately
+                      conversionFormat="katex"
+                    />
+                  </div>
 
-            {/* Options */}
-            <div className="flex items-center gap-4">
-              <label className="flex items-center gap-2 text-sm text-gray-700">
-                <input
-                  type="checkbox"
-                  checked={showStats}
-                  onChange={(e) => setShowStats(e.target.checked)}
-                  className="w-4 h-4 rounded border-gray-300"
-                />
-                <span>Show conversion statistics</span>
-              </label>
-            </div>
-          </div>
-
-          {/* Convert Button */}
-          <div className="flex justify-center">
-            <button
-              onClick={handleConvert}
-              disabled={!mathpixText.trim() || isConverting}
-              className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-lg hover:from-indigo-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
-            >
-              {isConverting ? (
-                <>
-                  <span className="inline-block mr-2 animate-spin">⚙️</span>
-                  Converting...
-                </>
-              ) : (
-                '🚀 Convert to LMS HTML'
-              )}
-            </button>
-          </div>
-
-          {/* Error Message */}
-          {error && (
-            <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-800 font-medium">❌ Error</p>
-              <p className="text-red-700 text-sm mt-1">{error}</p>
-            </div>
-          )}
-
-          {/* Success Message */}
-          {copySuccess && (
-            <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-              <p className="text-green-800 font-medium">✅ {copySuccess}</p>
-            </div>
-          )}
-
-          {/* Results Section */}
-          {result && result.success && (
-            <div className="space-y-6">
-              {/* Conversion Info */}
-              <div className="bg-white rounded-lg border-2 border-green-200 p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-green-800 mb-2">✓ Conversion Successful</h3>
-                <p className="text-sm text-gray-600">
-                  ⏱️ Conversion time: <span className="font-mono font-bold">{result.conversion_time_ms}ms</span>
-                </p>
-                <p className="text-sm text-gray-600 mt-1">
-                  📦 HTML output: <span className="font-mono font-bold">{result.html_fragment.length}</span> characters
-                </p>
-              </div>
-
-              {/* Statistics */}
-              {result.stats && renderStats(result.stats)}
-
-              {/* Preview and HTML Output with Tabs */}
-              <div className="bg-white rounded-lg border-2 border-gray-200 overflow-hidden">
-                {/* Tab Navigation */}
-                <div className="flex border-b border-gray-200 bg-gray-50">
-                  <button
-                    onClick={() => setActiveTab('preview')}
-                    className={`flex-1 px-4 py-3 text-center font-semibold text-sm transition-colors ${
-                      activeTab === 'preview'
-                        ? 'bg-indigo-600 text-white border-b-2 border-indigo-600'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    👁️ Preview
-                  </button>
-                  <button
-                    onClick={() => setActiveTab('html')}
-                    className={`flex-1 px-4 py-3 text-center font-semibold text-sm transition-colors ${
-                      activeTab === 'html'
-                        ? 'bg-indigo-600 text-white border-b-2 border-indigo-600'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    📄 HTML Output
-                  </button>
-                  <button
-                    onClick={() => setActiveTab('katex')}
-                    className={`flex-1 px-4 py-3 text-center font-semibold text-sm transition-colors ${
-                      activeTab === 'katex'
-                        ? 'bg-indigo-600 text-white border-b-2 border-indigo-600'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    ⚡ KaTeX HTML
-                  </button>
-                </div>
-
-                {/* Tab Content */}
-                <div className="p-6">
-                  {/* Preview Tab */}
-                  {activeTab === 'preview' && (
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-800 mb-4">Rendered Preview</h3>
-                      <div
-                        ref={previewRef}
-                        className="border border-gray-300 rounded-lg p-4 bg-white min-h-[300px] overflow-auto text-sm shadow-sm"
-                        style={{ fontSize: '14px' }}
+                  {/* Upload/Paste Controls */}
+                  <div className="flex flex-wrap gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept=".txt"
+                      onChange={handleFileUpload}
+                      className="hidden"
+                    />
+                    <button
+                      onClick={() => fileInputRef.current?.click()}
+                      className="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors font-medium text-sm flex items-center gap-2"
+                    >
+                      📁 Upload File
+                    </button>
+                    <button
+                      onClick={handlePaste}
+                      className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors font-medium text-sm flex items-center gap-2"
+                    >
+                      📋 Paste from Clipboard
+                    </button>
+                    <label className="flex items-center gap-2 text-sm text-gray-700 ml-auto">
+                      <input
+                        type="checkbox"
+                        checked={showStats}
+                        onChange={(e) => setShowStats(e.target.checked)}
+                        className="w-4 h-4 rounded border-gray-300"
                       />
+                      <span>Show Statistics</span>
+                    </label>
+                  </div>
+
+                  {/* Convert Button */}
+                  <div className="flex justify-center">
+                    <button
+                      onClick={handleConvert}
+                      disabled={isConverting || !mathpixText.trim()}
+                      className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-400 transition-all font-semibold text-lg shadow-lg hover:shadow-xl disabled:shadow-none"
+                    >
+                      {isConverting ? '⏳ Converting...' : '✨ Convert to LMS HTML'}
+                    </button>
+                  </div>
+
+                  {/* Error Message */}
+                  {error && (
+                    <div className="p-4 bg-red-100 border border-red-300 rounded-lg text-red-700 text-sm">
+                      ❌ {error}
                     </div>
                   )}
 
-                  {/* HTML Output Tab */}
-                  {activeTab === 'html' && (
-                    <div>
-                      <div className="flex justify-between items-center mb-4">
-                        <h3 className="text-lg font-semibold text-gray-800">LMS HTML Fragment</h3>
+                  {/* Copy Success Message */}
+                  {copySuccess && (
+                    <div className="p-4 bg-green-100 border border-green-300 rounded-lg text-green-700 text-sm">
+                      ✅ {copySuccess}
+                    </div>
+                  )}
+
+                  {/* Statistics */}
+                  {showStats && result?.stats && renderStats(result.stats)}
+                </div>
+              )}
+
+              {/* Preview Tab */}
+              {activeTab === 'preview' && result && (
+                <div className="space-y-6">
+                  {/* Output Format Selector */}
+                  <div className="flex gap-3 border-b border-gray-200 pb-4">
+                    <button
+                      onClick={() => setOutputTab('html')}
+                      className={`px-4 py-2 font-semibold text-sm rounded-t-lg transition-colors ${
+                        outputTab === 'html'
+                          ? 'bg-indigo-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      📄 HTML Output
+                    </button>
+                    <button
+                      onClick={() => setOutputTab('katex')}
+                      className={`px-4 py-2 font-semibold text-sm rounded-t-lg transition-colors ${
+                        outputTab === 'katex'
+                          ? 'bg-indigo-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      ⚡ KaTeX Markup
+                    </button>
+                  </div>
+
+                  {/* HTML Output View */}
+                  {outputTab === 'html' && (
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center">
+                        <h4 className="font-semibold text-gray-800">LMS HTML Fragment</h4>
                         <button
                           onClick={handleCopyHTML}
                           className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-medium text-sm flex items-center gap-2"
@@ -414,17 +384,17 @@ export const MathpixConverter: React.FC<MathpixConverterProps> = ({ onConversion
                         readOnly
                         className="w-full h-96 p-3 border border-gray-300 rounded-lg font-mono text-xs bg-gray-50 focus:outline-none overflow-auto"
                       />
-                      <p className="text-xs text-gray-500 mt-2">
+                      <p className="text-xs text-gray-500">
                         💡 Tip: This HTML is ready to paste directly into your LMS content editor.
                       </p>
                     </div>
                   )}
 
-                  {/* KaTeX HTML Tab */}
-                  {activeTab === 'katex' && (
-                    <div>
-                      <div className="flex justify-between items-center mb-4">
-                        <h3 className="text-lg font-semibold text-gray-800">KaTeX HTML Markup</h3>
+                  {/* KaTeX Output View */}
+                  {outputTab === 'katex' && (
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center">
+                        <h4 className="font-semibold text-gray-800">KaTeX HTML Markup</h4>
                         <button
                           onClick={handleCopyKaTeXHTML}
                           className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium text-sm flex items-center gap-2"
@@ -432,58 +402,73 @@ export const MathpixConverter: React.FC<MathpixConverterProps> = ({ onConversion
                           📋 Copy KaTeX HTML
                         </button>
                       </div>
-                      
-                      {/* KaTeX HTML Source Display */}
-                      <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                        <p className="text-xs text-blue-700 mb-2">
-                          <strong>ℹ️ Raw KaTeX HTML Markup:</strong>
-                        </p>
+
+                      {/* Raw Source */}
+                      <div>
+                        <p className="text-xs text-gray-600 font-semibold mb-2">Raw KaTeX Markup:</p>
                         <pre
-                          className="text-xs bg-white border border-blue-300 rounded p-3 overflow-auto max-h-96 text-gray-700"
+                          className="text-xs bg-white border border-gray-300 rounded p-3 overflow-auto max-h-64 text-gray-700"
                           style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}
                         >
                           {katexRef.current?.innerHTML || 'Converting...'}
                         </pre>
                       </div>
 
-                      {/* KaTeX HTML Rendered Display */}
-                      <div className="p-4 border border-gray-300 rounded-lg bg-white min-h-[200px]">
-                        <p className="text-xs text-gray-600 mb-3 font-semibold">Rendered Output:</p>
+                      {/* Rendered Output */}
+                      <div>
+                        <p className="text-xs text-gray-600 font-semibold mb-2">Rendered Output:</p>
                         <div
                           ref={katexRef}
-                          className="text-sm"
+                          className="p-4 border border-gray-300 rounded-lg bg-white min-h-[200px] text-sm"
                           style={{ fontSize: '14px' }}
                         />
                       </div>
-                      
-                      <p className="text-xs text-gray-500 mt-2">
-                        💡 Tip: This shows the actual KaTeX HTML that renders the equations. Copy and embed in your LMS.
+
+                      <p className="text-xs text-gray-500">
+                        💡 Tip: This shows the actual KaTeX HTML that renders equations. Copy and embed in your LMS.
                       </p>
                     </div>
                   )}
-                </div>
-              </div>
 
-              {/* Action Buttons */}
-              <div className="flex gap-3 justify-center">
-                <button
-                  onClick={handleSaveAsNote}
-                  className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
-                >
-                  💾 Save as Note
-                </button>
-                <button
-                  onClick={() => {
-                    setMathpixText('');
-                    setResult(null);
-                    setError(null);
-                    mathpixConverterService.clearCache();
-                  }}
-                  className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors font-medium"
-                >
-                  🔄 New Conversion
-                </button>
-              </div>
+                  {/* Statistics */}
+                  {showStats && result?.stats && renderStats(result.stats)}
+                </div>
+              )}
+
+              {/* No conversion yet */}
+              {activeTab === 'preview' && !result && (
+                <div className="flex items-center justify-center py-12">
+                  <div className="text-center text-gray-500">
+                    <div className="text-4xl mb-2">📋</div>
+                    <p className="text-lg font-semibold">No conversion yet</p>
+                    <p className="text-sm">Switch to Code View and convert your LaTeX</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          {result && (
+            <div className="flex gap-3 justify-center">
+              <button
+                onClick={handleSaveAsNote}
+                className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
+              >
+                💾 Save as Note
+              </button>
+              <button
+                onClick={() => {
+                  setMathpixText('');
+                  setResult(null);
+                  setError(null);
+                  setActiveTab('code');
+                  mathpixConverterService.clearCache();
+                }}
+                className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors font-medium"
+              >
+                🔄 New Conversion
+              </button>
             </div>
           )}
         </div>

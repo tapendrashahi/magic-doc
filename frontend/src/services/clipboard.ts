@@ -150,6 +150,14 @@ class ClipboardService {
     }
     return null;
   }
+
+  /**
+   * Paste content from clipboard (alias for getClipboardContent)
+   * @returns Clipboard content or null if empty/failed
+   */
+  async paste(): Promise<string | null> {
+    return this.getClipboardContent();
+  }
 }
 
 export default new ClipboardService();

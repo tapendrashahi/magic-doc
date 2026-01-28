@@ -2,10 +2,13 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { LaTeXInput } from '../components/LaTeXInput';
 import { HTMLPreview } from '../components/HTMLPreview';
+import { MathpixInput } from '../components/MathpixInput';
+import { MathpixPreview } from '../components/MathpixPreview';
 import { useNoteStore } from '../store/noteStore';
 import { keyboardManager } from '../services/keyboard';
 import { toastManager } from '../services/toast';
 import { ExportService } from '../services/export';
+import clipboardService from '../services/clipboard';
 import apiClient from '../api/client';
 
 interface Note {
@@ -23,9 +26,20 @@ export const Editor = () => {
   const navigate = useNavigate();
   const { loading: storeLoading, error: storeError } = useNoteStore();
 
+  // Editor tabs state
+  const [activeTab, setActiveTab] = useState<'latex' | 'mathpix'>('latex');
+
+  // LaTeX editor state
   const [title, setTitle] = useState('');
   const [latex, setLatex] = useState('');
   const [html, setHtml] = useState('');
+  
+  // Mathpix converter state
+  const [mathpixText, setMathpixText] = useState('');
+  const [mathpixResult, setMathpixResult] = useState<any>(null);
+  const [isMathpixConverting, setIsMathpixConverting] = useState(false);
+
+  // Common state
   const [isLoading, setIsLoading] = useState(!!id);
   const [autoSaveStatus, setAutoSaveStatus] = useState<'saved' | 'saving' | 'unsaved' | 'error'>('saved');
   const [hasChanges, setHasChanges] = useState(false);
@@ -302,25 +316,6 @@ export const Editor = () => {
     setError('');
   }, []);
 
-  const handleLatexChangeAndConvert = useCallback(async (newLatex: string) => {
-    console.log('[Editor] LaTeX change and convert, length:', newLatex.length, 'format:', conversionFormat);
-    setLatex(newLatex);
-
-    if (newLatex.trim()) {
-      try {
-        console.log('[Editor] Converting LaTeX with format:', conversionFormat);
-        const response = await apiClient.convertLatex(newLatex, conversionFormat);
-        const html = response.data.html_content;
-        console.log('[Editor] ✓ Conversion complete, HTML length:', html.length, 'format:', conversionFormat);
-        setHtml(html);
-        setError('');
-      } catch (err) {
-        console.error('[Editor] Conversion failed:', err);
-        setError('Failed to convert LaTeX');
-      }
-    }
-  }, [conversionFormat]);
-
   const handleSaveNote = async () => {
     if (!title.trim()) {
       setError('Please enter a title');
@@ -508,6 +503,60 @@ export const Editor = () => {
     } catch (err) {
       toastManager.error('Failed to rename note');
       console.error(err);
+    }
+  };
+
+  // Mathpix handlers
+  const handleMathpixFileUpload = async (file: File) => {
+    try {
+      const text = await file.text();
+      setMathpixText(text);
+      await handleConvertMathpix(text);
+    } catch (err) {
+      toastManager.error('Failed to read file');
+      console.error(err);
+    }
+  };
+
+  const handleMathpixPaste = async () => {
+    try {
+      const text = await clipboardService.paste();
+      if (!text) {
+        toastManager.warning('Clipboard is empty');
+        return;
+      }
+      setMathpixText(text);
+      await handleConvertMathpix(text);
+    } catch (err) {
+      toastManager.error('Failed to paste from clipboard');
+      console.error(err);
+    }
+  };
+
+  const handleConvertMathpix = async (text: string) => {
+    if (!text.trim()) {
+      toastManager.warning('Please enter or upload Mathpix text');
+      return;
+    }
+
+    try {
+      setIsMathpixConverting(true);
+      console.log('[Editor] Converting Mathpix text, length:', text.length);
+      
+      const response = await apiClient.convertMathpixToLMS(text, true);
+      console.log('[Editor] ✓ Mathpix conversion complete');
+      
+      setMathpixResult({
+        html: response.data.html_fragment || response.data.html_content,
+        format: conversionFormat,
+        stats: response.data.statistics || {}
+      });
+      toastManager.success('Conversion complete!');
+    } catch (err) {
+      toastManager.error('Failed to convert Mathpix');
+      console.error(err);
+    } finally {
+      setIsMathpixConverting(false);
     }
   };
 
@@ -869,6 +918,30 @@ export const Editor = () => {
           </div>
         </header>
 
+        {/* Tab Navigation */}
+        <div className="border-b border-gray-200 bg-white px-6 flex gap-0">
+          <button
+            onClick={() => setActiveTab('latex')}
+            className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${
+              activeTab === 'latex'
+                ? 'border-blue-600 text-blue-600'
+                : 'border-transparent text-gray-600 hover:text-gray-800'
+            }`}
+          >
+            📝 LaTeX Editor
+          </button>
+          <button
+            onClick={() => setActiveTab('mathpix')}
+            className={`px-4 py-3 text-sm font-semibold transition border-b-2 ${
+              activeTab === 'mathpix'
+                ? 'border-blue-600 text-blue-600'
+                : 'border-transparent text-gray-600 hover:text-gray-800'
+            }`}
+          >
+            📊 Mathpix Converter
+          </button>
+        </div>
+
         <div className="flex-1 overflow-auto px-6 py-4">
           <div className="space-y-4">
             {error && (
@@ -883,21 +956,61 @@ export const Editor = () => {
               </div>
             )}
 
-            <div className="grid grid-cols-[60%_40%] gap-4 h-96">
-              <LaTeXInput
-                value={latex}
-                onChange={handleLatexChange}
-                onConvert={handleConvert}
-                conversionFormat={conversionFormat}
-              />
-              <HTMLPreview
-                html={html}
-                loading={storeLoading}
-                error={storeError}
-                format={conversionFormat}
-                note={note}
-              />
-            </div>
+            {activeTab === 'latex' && (
+              <div className="grid grid-cols-[60%_40%] gap-4 h-96">
+                <LaTeXInput
+                  value={latex}
+                  onChange={handleLatexChange}
+                  onConvert={handleConvert}
+                  conversionFormat={conversionFormat}
+                />
+                <HTMLPreview
+                  html={html}
+                  loading={storeLoading}
+                  error={storeError}
+                  format={conversionFormat}
+                  note={note}
+                />
+              </div>
+            )}
+
+            {activeTab === 'mathpix' && (
+              <div className="space-y-3">
+                <button
+                  onClick={() => handleConvertMathpix(mathpixText)}
+                  disabled={!mathpixText.trim() || isMathpixConverting}
+                  className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-semibold rounded-lg transition flex items-center gap-2 shadow-md disabled:cursor-not-allowed"
+                >
+                  {isMathpixConverting ? (
+                    <>
+                      <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+                      Compiling...
+                    </>
+                  ) : (
+                    <>
+                      ⚙️ Compile
+                    </>
+                  )}
+                </button>
+                
+                <div className="grid grid-cols-[60%_40%] gap-4 h-96">
+                  <MathpixInput
+                    value={mathpixText}
+                    onChange={setMathpixText}
+                    onFileUpload={handleMathpixFileUpload}
+                    onPaste={handleMathpixPaste}
+                    isConverting={isMathpixConverting}
+                  />
+                  <MathpixPreview
+                    html={mathpixResult?.html || ''}
+                    loading={isMathpixConverting}
+                    error={error}
+                    format={mathpixResult?.format || conversionFormat}
+                    stats={mathpixResult?.stats || {}}
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -908,6 +1021,8 @@ export const Editor = () => {
           </div>
         </footer>
       </div>
-    </div >
+    </div>
   );
 };
+
+export default Editor;
