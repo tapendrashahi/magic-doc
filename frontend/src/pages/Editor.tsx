@@ -401,12 +401,22 @@ export const Editor = () => {
   };
 
   const handleExportLatex = () => {
-    if (!latex || !title) {
+    let contentToExport = '';
+    
+    if (activeTab === 'mathpix') {
+      // For Mathpix tab, export the Mathpix text
+      contentToExport = mathpixText;
+    } else {
+      // For LaTeX tab, export the LaTeX content
+      contentToExport = latex;
+    }
+
+    if (!contentToExport || !title) {
       toastManager.warning('No content to export');
       return;
     }
     try {
-      const blob = new Blob([latex], { type: 'text/plain' });
+      const blob = new Blob([contentToExport], { type: 'text/plain' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -421,12 +431,22 @@ export const Editor = () => {
   };
 
   const handleExportHTML = () => {
-    if (!html || !title) {
+    let htmlToExport = '';
+    
+    if (activeTab === 'mathpix') {
+      // For Mathpix tab, export the converted HTML
+      htmlToExport = mathpixResult?.html || '';
+    } else {
+      // For LaTeX tab, export the LaTeX HTML
+      htmlToExport = html;
+    }
+
+    if (!htmlToExport || !title) {
       toastManager.warning('No content to export');
       return;
     }
     try {
-      const blob = new Blob([html], { type: 'text/html' });
+      const blob = new Blob([htmlToExport], { type: 'text/html' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -441,13 +461,23 @@ export const Editor = () => {
   };
 
   const handleExportMarkdown = async () => {
-    if (!html || !title) {
+    let htmlToConvert = '';
+    
+    if (activeTab === 'mathpix') {
+      // For Mathpix tab, use the converted HTML
+      htmlToConvert = mathpixResult?.html || '';
+    } else {
+      // For LaTeX tab, use the LaTeX HTML
+      htmlToConvert = html;
+    }
+
+    if (!htmlToConvert || !title) {
       toastManager.warning('No content to export');
       return;
     }
     try {
       // Simple HTML to Markdown conversion (basic implementation)
-      let markdown = html
+      let markdown = htmlToConvert
         .replace(/<h1>(.*?)<\/h1>/g, '# $1\n')
         .replace(/<h2>(.*?)<\/h2>/g, '## $1\n')
         .replace(/<h3>(.*?)<\/h3>/g, '### $1\n')
