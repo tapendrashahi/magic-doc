@@ -94,9 +94,10 @@ export class MathJaxService {
   static typeset(element?: HTMLElement) {
     console.log('[MathJax] typeset() called - initialized:', this.initialized, 'element:', !!element);
     
+    // If not initialized, wait for initialization first
     if (!this.initialized) {
-      console.warn('[MathJax] typeset called but not initialized');
-      return Promise.resolve();
+      console.log('[MathJax] Not initialized, waiting for init before typeset...');
+      return this.init().then(() => this.typeset(element));
     }
     
     if (!(window as any).MathJax) {
