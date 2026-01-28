@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import katexService from '../services/katex';
 
 type ConversionFormat = 'katex' | 'plain_html';
@@ -21,33 +21,87 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
   const preElementRef = useRef<HTMLPreElement>(null);
   const [outputTab, setOutputTab] = useState<'preview' | 'code'>('preview');
 
-  // Initialize KaTeX only if format is 'katex'
+  // Initialize KaTeX only if format is 'katex' - runs once on component mount
   useEffect(() => {
-    if (format !== 'katex' || !html) {
+    if (format !== 'katex') {
+      console.log('[MathpixPreview] Format is plain_html, skipping KaTeX initialization');
       return;
     }
 
+    console.log('[MathpixPreview] Initializing KaTeX for format:', format);
     let isMounted = true;
-
+    
     const initKaTeX = async () => {
+      console.log('[MathpixPreview] Initializing KaTeX...');
       try {
         await katexService.init();
-        if (isMounted && previewRef.current) {
-          await katexService.render(previewRef.current);
+        if (isMounted) {
+          console.log('[MathpixPreview] ✓ KaTeX init complete');
+          // After init, immediately render if we have HTML and preview is active
+          if (previewRef.current && html && outputTab === 'preview') {
+            console.log('[MathpixPreview] Rendering after init with existing HTML');
+            await katexService.render(previewRef.current);
+            console.log('[MathpixPreview] ✓ Initial render complete');
+          }
         }
       } catch (err) {
-        console.error('[MathpixPreview] KaTeX error:', err);
+        if (isMounted) {
+          console.error('[MathpixPreview] KaTeX init error:', err);
+        }
       }
     };
-
+    
     initKaTeX();
-
+    
     return () => {
       isMounted = false;
     };
-  }, [format, html]);
+  }, [format]); // Only on format change
 
+  // Re-render KaTeX when HTML changes or tab switches
+  useEffect(() => {
+    console.log('[MathpixPreview] html changed or tab switched:', {
+      htmlLength: html?.length,
+      outputTab,
+      loading,
+      hasError: !!error,
+      format
+    });
 
+    // If not on preview tab, skip rendering
+    if (outputTab !== 'preview') {
+      console.log('[MathpixPreview] Not on preview tab, skipping render');
+      return;
+    }
+
+    // If plain_html format, skip KaTeX rendering
+    if (format === 'plain_html') {
+      console.log('[MathpixPreview] Format is plain_html, skipping KaTeX render');
+      return;
+    }
+
+    // For KaTeX format, check if initialized
+    if (!katexService.isInitialized()) {
+      console.log('[MathpixPreview] KaTeX not initialized yet, skipping render');
+      return;
+    }
+
+    if (previewRef.current && html) {
+      console.log('[MathpixPreview] Calling KaTeX.render on preview element');
+      katexService.render(previewRef.current)
+        .then(() => console.log('[MathpixPreview] ✓ KaTeX render complete'))
+        .catch((err: Error) => {
+          console.error('[MathpixPreview] render error:', err);
+        });
+    } else {
+      console.log('[MathpixPreview] Skip render - no ref or no html');
+    }
+  }, [html, format, outputTab]);
+
+  // Memoized display HTML for fallback
+  const displayHtml = useMemo(() => {
+    return html || '';
+  }, [html]);
 
   return (
     <div className="flex flex-col h-full bg-white rounded-lg shadow-md border border-gray-300">
@@ -118,8 +172,12 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
         {!loading && html && outputTab === 'preview' && (
           <div
             ref={previewRef}
-            className="prose prose-sm max-w-none"
-            style={{ fontSize: '14px' }}
+            className="prose prose-sm max-w-none leading-relaxed text-gray-900"
+            style={{ 
+              fontSize: '14px',
+              lineHeight: '1.6'
+            }}
+            dangerouslySetInnerHTML={{ __html: displayHtml }}
           />
         )}
 
