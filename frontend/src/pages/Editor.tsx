@@ -38,6 +38,7 @@ export const Editor = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [exportOpen, setExportOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -296,9 +297,10 @@ export const Editor = () => {
   const handleCopyHTML = async () => {
     try {
       await ExportService.copyToClipboard(html);
-      toastManager.success('HTML copied to clipboard!');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
     } catch (err) {
-      toastManager.error('Failed to copy to clipboard');
+      console.error('Failed to copy:', err);
     }
   };
 
@@ -546,13 +548,22 @@ export const Editor = () => {
             <button
               onClick={handleCopyHTML}
               disabled={!html}
-              className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition disabled:opacity-50 disabled:cursor-not-allowed"
-              title="Copy HTML to clipboard (Ctrl+Shift+C)"
-              aria-label="Copy HTML to clipboard"
+              className={`p-2 rounded transition disabled:opacity-50 disabled:cursor-not-allowed ${copied
+                  ? 'text-green-600 bg-green-50'
+                  : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                }`}
+              title={copied ? 'Copied!' : 'Copy HTML to clipboard (Ctrl+Shift+C)'}
+              aria-label={copied ? 'HTML copied to clipboard' : 'Copy HTML to clipboard'}
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
+              {copied ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              )}
             </button>
 
             {/* Export Dropdown */}
