@@ -139,8 +139,8 @@ export const Editor = () => {
     if (newLatex.trim()) {
       try {
         console.log('[Editor] Converting LaTeX...');
-        const store = useNoteStore();
-        const html = await store.convertLatex(newLatex);
+        const response = await apiClient.convertLatex(newLatex);
+        const html = response.data.html_content;
         console.log('[Editor] ✓ Conversion complete, HTML length:', html.length);
         setHtml(html);
         setError('');

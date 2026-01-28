@@ -1,4 +1,4 @@
-import { useNoteStore } from '../store/noteStore';
+import apiClient from '../api/client';
 
 // Debounce utility
 export function debounce<T extends (...args: any[]) => any>(
@@ -44,8 +44,9 @@ class ConverterService {
   ) {
     try {
       console.log('[ConverterService] _convert executing for', latex.length, 'chars');
-      const store = useNoteStore();
-      const html = await store.convertLatex(latex);
+      // Call API directly to avoid hook violations
+      const response = await apiClient.convertLatex(latex);
+      const html = response.data.html_content;
       console.log('[ConverterService] ✓ Conversion done, HTML length:', html.length);
       resolve(html);
     } catch (error) {
@@ -58,8 +59,8 @@ class ConverterService {
   async convertInstant(latex: string): Promise<string> {
     console.log('[ConverterService] convertInstant called with', latex.length, 'chars');
     try {
-      const store = useNoteStore();
-      return await store.convertLatex(latex);
+      const response = await apiClient.convertLatex(latex);
+      return response.data.html_content;
     } catch (error) {
       throw error;
     }
