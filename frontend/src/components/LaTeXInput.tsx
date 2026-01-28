@@ -79,10 +79,7 @@ export const LaTeXInput: React.FC<LaTeXInputProps> = ({
   return (
     <div className="flex flex-col h-full bg-white rounded-lg shadow-md border border-gray-300">
       <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-6 py-4 border-b border-gray-300">
-        <h2 className="text-2xl font-bold text-gray-800">📝 LaTeX Input</h2>
-        <p className="text-xs text-gray-600 mt-1">
-          {value.length} characters
-        </p>
+        <h2 className="text-2xl font-bold text-gray-800">LaTeX Input</h2>
       </div>
 
 

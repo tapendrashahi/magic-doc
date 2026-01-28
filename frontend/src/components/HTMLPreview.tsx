@@ -40,7 +40,7 @@ export const HTMLPreview: React.FC<HTMLPreviewProps> = ({
       loading,
       error
     });
-    
+
     if (previewRef.current && html) {
       console.log('[HTMLPreview] Calling MathJax.typeset on preview element');
       MathJaxService.typeset(previewRef.current)
@@ -89,7 +89,7 @@ export const HTMLPreview: React.FC<HTMLPreviewProps> = ({
   return (
     <div className="flex flex-col h-full bg-white rounded-lg shadow-md p-6">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold text-gray-800">📖 Preview</h2>
+        <h2 className="text-2xl font-bold text-gray-800">Preview</h2>
         {loading && (
           <span className="text-sm text-blue-600 font-semibold animate-pulse">
             ✨ Updating...
