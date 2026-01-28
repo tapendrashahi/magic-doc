@@ -1,0 +1,387 @@
+1. A binomial is an algebraic expression of two terms which are connected by the operations ' + ' or ' - '. e.g. $(x+2)$
+
+\section*{2. Binomial Theorem:}
+
+The binomial theorem for natural numbers states that -
+For any positive integer $n$, the expansion of
+$$
+\begin{aligned}
+& (a+x)^{n}={ }^{n} C_{0} a^{n-1} x^{0}+{ }^{n} C_{1} a^{n-1} x+{ }^{n} C_{2} a^{n-2} x^{2}+\cdots \\
+& \cdots+a^{n}+{ }^{n} C_{1} a^{n-1} x+{ }^{n} C_{2} a^{n-2} x^{2}+\cdots \\
+& =\cdots+\cdots
+\end{aligned}
+$$
+
+\section*{Note:}
+(i) Total number of terms after binomial expansion of $(a+x)^{n}$ is $(n+1)$
+(ii) Sum of the exponents in each term is $n$.
+(iii) Powers of a are in descending order and the powers of $x$ are in ascending order
+
+\section*{3) Pascal's Triangle}
+
+The coefficients of various terms in $(a+b)^{n}$ for different values of n follows the pattern given below.
+
+\begin{tabular}{|l|l|}
+\hline $(a+b)^{n}$ & Coefficients \\
+\hline $(\mathrm{a}+\mathrm{b})^{1}$ & 11 \\
+\hline $(\mathrm{a}+\mathrm{b})^{2}$ & 121 \\
+\hline $(\mathrm{a}+\mathrm{b})^{3}$ & 1331 \\
+\hline $(a+b)^{4}$ & 14641 \\
+\hline $(\mathrm{a}+\mathrm{b})^{5}$ & 15101051 \\
+\hline $(\mathrm{a}+\mathrm{b})^{6}$ & 16101020515 \\
+\hline $(\mathrm{a}+\mathrm{b})^{7}$ & 172135352171 \\
+\hline $(\mathrm{a}+\mathrm{b})^{7}$ & 18285670562881 \\
+\hline
+\end{tabular}
+
+\section*{General term:-}
+(i) General term i.e. $(\mathrm{r}+1)^{\text {th }}$ term in the expansion of $(\mathrm{a}+\mathrm{x})^{\mathrm{n}}$ is
+$$
+t_{r+1}={ }^{n} C_{r} a^{n-r} x^{r}
+$$
+(ii) General term in the expansion of $(a-x)^{n}$ is $t_{r+1}= (-1)^{r} C(n, r) a^{n-r} x^{r}$.
+
+\section*{Note: -}
+(i) For $1 \leq \mathrm{r} \leq \mathrm{n},{ }^{n} \mathrm{C}_{\mathrm{r}}=\frac{n(n-1) \ldots \ldots(n-r+1)}{1.2 \ldots \ldots \ldots}$
+(ii) In particular, ${ }^{n} \mathrm{C}_{0}={ }^{n} \mathrm{C}_{\mathrm{n}}=1$
+(iii) If $1 \leq r \leq n$, then ${ }^{n} C_{r}={ }^{n} C_{n-r}$
+(iv) If $\mathrm{I} \leq \mathrm{r} \leq \mathrm{n}$, then ${ }^{n} \mathrm{C}_{r}+{ }^{\mathrm{n}} \mathrm{C}_{r-1}={ }^{\mathrm{n}=1} \mathrm{C}_{\mathrm{r}}$
+(v) ${ }^{n} \mathrm{C}_{r}=\mathrm{n} / \mathrm{r} .{ }^{\mathrm{n}-1} \mathrm{C}_{r-1}=\frac{n(n-1)}{r(r-1)} .{ }^{n-2} \mathrm{C}_{r-2}$ etc
+
+\section*{Middle term:-}
+(i) If $\mathbf{n}$ is even :- There are $(\mathrm{n}+1)^{\text {th }}$ terms after binomial expansion which is odd. So, there is only one middle term and is obtained by
+$$
+\mathrm{t}_{\mathrm{n} / 2+1}=\mathrm{C}(\mathrm{n}, \mathrm{n} / 2) \mathrm{a}^{\mathrm{n} / 2} \mathrm{x}^{\mathrm{n} / 2}
+$$
+$$
+\text { middle term }=\left(\frac{n}{2}+1\right)^{\text {th }} \text { term }
+$$
+
+\section*{Example:}
+
+The middle term in the expansion of $(x+2 y)^{30}$ is
+a) $150 x^{5} y^{7}$
+b) ${ }^{30} \mathrm{C}_{16} \mathrm{x}^{16} \mathrm{y}^{14}$
+c) ${ }^{30} \mathrm{C}_{15} \mathrm{X}^{15} \cdot(2 \mathrm{y})^{15}$
+d) $\frac{30!}{15!} x^{15} y^{15}$
+
+\section*{Solution:-}
+
+Total number of terms after binomial expansion $=30+1=31$ which is odd.
+There is only one middle term middle term $=(\mathrm{n} / 2+1)=(30 / 2+1)=$ 16
+$$
+\begin{aligned}
+t_{15+1}= & { }^{30} C_{15}(x)^{30-15} \cdot(2 y)^{15} \\
+& =C(30,15) x^{15} \cdot(2 y)^{15}
+\end{aligned}
+$$
+(ii) If $\mathbf{n}$ is odd:- there are ( $\mathrm{n}+1$ ) terms after binomial expansion which is even. there are two middle terms. middle terms are $\left(\frac{n+1}{2}\right)^{\text {th }}$ term and
+$$
+\left(\frac{n+1}{2}+1\right)^{\text {th }} \text { term }
+$$
+
+\section*{Example:-}
+
+A middle term in the expansion of $(1+\mathrm{x})^{15}$ is
+a) ${ }^{16} \mathrm{C}_{7} \mathrm{X}^{7}$
+b) ${ }^{15} \mathrm{C}_{8} \mathrm{x}^{8}$
+c) $256 x^{9}$
+d) $120 x^{8}$
+
+\section*{Solution:-}
+total number of terms after binomial expansion $=15+1=16$ which is even. there are two middle terms $16 / 2=8^{\text {th }}$ and $9^{\text {th }}$ term.
+$$
+t_{r+1}={ }^{13} \mathrm{C}_{1}(1)^{15-1} \cdot \mathrm{x}^{1}
+$$
+
+To get the $8^{\text {th }}$ term put $\mathrm{r}=7$
+$$
+t_{7+1}={ }^{15} C_{7} \cdot 1 \cdot x^{7}
+$$
+
+To get the $9^{\text {th }}$ term put $\mathrm{r}=8$
+$$
+t_{8+1}={ }^{15} C_{8} x^{8}
+$$
+
+Some special cases of binomial theorem:-
+(i) $(1-\mathrm{x})^{-1}=1+\mathrm{x}+\mathrm{x}^{2}+\mathrm{x}^{3}+\mathrm{x}^{4}+\cdots \ldots+\infty$
+(ii) $(1+x)^{-1}=1-x+x^{2}-x^{3}+x^{4}+\cdots \cdots \infty$
+(iii) $(1-x)^{-2}=1+2 x+3 x^{2}+4 x^{3}+\cdots \cdots \infty$
+(iv) $(1+x)^{-2}=1-2 x+3 x^{2}-4 x^{3}+\cdots \cdots+\cdots$
+(v) $(1-\mathrm{x})^{-1 / 2}=1+\frac{1}{2} x+\frac{1.3}{2.4} x^{2}+\cdots+\infty$
+(vi) $(1+\mathrm{x})^{-1 / 2}=1-\frac{1}{2} x+\frac{1.3}{2.4} x^{2}+\cdots-\cdots+\infty$
+
+\section*{Note:}
+
+When n is other than positive integers, expansion of $(1+x)^{n}$ terminates and is valid only if $|x|<1$
+$$
+(1+x)^{n}=1+\frac{n}{1} x+\frac{n(n-1)}{1.2} x^{2}+\cdots \cdots+\infty
+$$
+
+\section*{Binomial coefficients:-}
+
+The coefficients $\mathrm{C}(\mathrm{n}, 0), \mathrm{C}(\mathrm{n}, 1) \cdots-\mathrm{C}(\mathrm{n}, \mathrm{n})$ in the expansion of $(a+x)^{n}$ are known as Binomial coefficients
+$$
+\begin{aligned}
+\mathrm{C}_{0}= & { }^{n} \mathrm{C}_{0}=1 \\
+\mathrm{C}_{1}= & { }^{n} \mathrm{C}_{1}=\frac{n}{1} \\
+\mathrm{C}_{2}= & { }^{n} \mathrm{C}_{2}=\frac{n(n-1)}{1.2} \\
+\mathrm{C}_{3}= & { }^{n} \mathrm{C}_{3}=\frac{n(n-1)(n-2)}{1.2 .3} \\
+& C_{n}={ }^{n} C_{n}=1
+\end{aligned}
+$$
+
+Note:
+(i) Sum of the binomial coefficients $=2^{n}$ i.e
+$$
+\begin{aligned}
+& C_{0}+C_{1}+C_{2}+\cdots \cdots+\cdots+C_{n}=2^{n} \\
+& 1+C_{1}+C_{2}+\cdots \cdots+\cdots+\cdots+C_{n}=2^{n}-1 \\
+& C_{1}+C_{2}+\cdots \cdots \cdots
+\end{aligned}
+$$
+(ii) Sum of odd Binomial coefficients $=$ sum of even binomial coefficients $=2^{\mathrm{n}-1}$
+i.e. $C_{0}+C_{2}+C_{4}+\cdots--C_{1}+C_{3}+C_{5}+\cdots--=2^{n-1}$
+Number of dissimilar terms in the expansion of $(\mathrm{x}+\mathrm{y}+\mathrm{z})^{\mathrm{n}}, \mathrm{n} \in \mathbf{N}$ is given by
+$$
+=\frac{(n+1)(n+2)}{2} \text { or } C(n+m-1, n)
+$$
+(iii) Greatest term in the expansion of $(a+x)^{n}$. For positive a and $x$, the term $t_{r+1}$ is the greatest term if $r$ is the greatest possible value satisfying the equation $t_{r+1} \geq t_{\mathrm{r}}$ i.e.
+$$
+\frac{t_{r+1}}{t_{r}} \geq 1
+$$
+(iv) Greatest coefficient in the expansion of $(a+x)^{n}$. In the expansion of $(a+x)^{n}$, the coefficient of general term $\mathrm{t}_{\mathrm{r}+1}$ is ${ }^{\mathrm{n}} \mathrm{C}_{\mathrm{r}}$. If n is even the ${ }^{n} C_{r}$ is greatest when $r=n / 2$ and if n is odd, then ${ }^{\mathrm{n}} \mathrm{C}_{\mathrm{r}}$ is greatest when $\mathrm{r}=(\mathrm{n}-$ 1)/ 2 or $(\mathrm{n}+1) / 2$
+
+\section*{Example:}
+
+The total number of terms in the expansion of $(x+y+z)^{10}=$
+a) 55
+b) 66
+c) 60
+d) 75
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+& \text { Total number of terms }=\frac{(n+1)(n+2)}{2} \\
+& =\frac{(10+1)(10+2)}{2} \\
+& =11 \times 6 \\
+& =66
+\end{aligned}
+$$
+
+Alternate Method,
+$$
+\begin{aligned}
+& \mathrm{n}=10 \\
+& \mathrm{~m}=3 \\
+& \text { total number of terms }=C(n+m-1, n) \\
+& =C(10+3-1,10) \\
+& =C(12,10) \\
+& =C(12,2)=(12 \times 11) / 1.2=66
+\end{aligned}
+$$
+
+\section*{Example:}
+
+In the expansion of $(1+x)^{2 n}$. The coefficient of $(p+1)^{\text {th }}$ term is equal to coefficient of $(p+3)^{\text {th }}$ the term. Then
+a) $p=n$
+b) $p=n-1$
+c) $p=n-2$
+d) $p=n-3$
+
+\section*{Solution:}
+
+Coefficient of $(p+1)^{\text {th }}$ term = coefficient of
+$$
+\begin{aligned}
+& (\mathrm{p}+3)^{\text {th }} \text { term } \\
+& { }^{2 \mathrm{n}} C_{\mathrm{p}}={ }^{2 \mathrm{n}} C_{\mathrm{p}+2} \\
+& \mathrm{p}+\mathrm{p}+2=2 \mathrm{n} \\
+& \mathrm{p}=\mathrm{n}-1 \\
+& {\left[\begin{array}{c}
+\text { Hint } s:- \\
+{ }^{n} C_{r}={ }^{n} C_{x} \\
+\Rightarrow r+s=n
+\end{array}\right]}
+\end{aligned}
+$$
+
+\section*{Example:}
+
+If the sum of the coefficients in the expansion of $(x+y)^{n}$ is 4096 , then the greatest coefficient in the expansion is
+a) 512
+b) 720
+c) 1024
+d) 924
+
+Solution:-
+Sum of the binomial coefficients $=2^{n}$
+$$
+\begin{aligned}
+& 4096=2^{n} \\
+& n=12
+\end{aligned}
+$$
+
+Greatest coefficient $=12 / 2=6$
+$$
+\begin{aligned}
+\text { i.e. } & ={ }^{12} \mathrm{C}_{6} \\
+& =924
+\end{aligned}
+$$
+
+\section*{Example:}
+$$
+\text { If }(1+x)^{n}=C_{0}+C_{1} x+C_{2} x^{2}+\cdots \cdots+C_{n} x^{n}
+$$
+
+Then the value of $\mathrm{C}_{0}+2 \mathrm{C}_{1}+2^{2} \cdot \mathrm{C}_{2}+2^{3} \cdot \mathrm{C}_{3}+\cdots+2^{n} \cdot C_{n}=$
+a) $2^{n}$
+b) $2^{n}-1$
+c) $3^{n}$
+d) $3^{n}+1$
+
+Solution:-
+We have
+$$
+(1+x)^{n}=C_{0}+C_{1} x+C_{1} x^{2}+\cdots \cdots \cdots+\cdots+C_{n} x^{n}
+$$
+
+Putting $x=2$, we get
+$$
+3^{n}=C_{0}+2 C_{1}+2^{2} C_{2}+\cdots \cdots \cdots \cdots \cdots+\cdots \cdots+2^{n} C_{n}
+$$
+
+\section*{Example:-}
+
+The term free from $x$ in the expansion of $\left(x+\frac{1}{x}\right)^{2 n}$ is
+a) $n$
+b) $(\mathrm{n}-1)$
+c) $n+2$
+d) $(n+I)$
+
+Solution:-
+$$
+\begin{aligned}
+t_{t+1} & ={ }^{2 n} C_{r}(x)^{2 n-r} \\
+& ={ }^{2 n} C_{r}(x)^{2 n-r-r}
+\end{aligned}
+$$
+
+To get the term free from $x$,
+$$
+\begin{aligned}
+& (x)^{2 n-2 r}=x^{0} \\
+& 2 n-2 r=0
+\end{aligned} r=n
+$$
+
+From (1)
+$$
+t_{n+1}={ }^{2 n} C_{n} x^{0}
+$$
+∴ coeff. of the term free from $x={ }^{2 n} \mathrm{C}_{\mathrm{n}}=\frac{2 n!}{(n!)^{2}}$
+The required term is ( $\mathrm{n}+1$ )
+
+\section*{Example:}
+
+The expansion of $\left(9-4 x^{2}\right)^{1 / 2}$ is valid for
+a) $-\frac{1}{2} \leq x \leq 1$
+b) $-2 \leq x \leq \frac{1}{2}$
+c) $-\frac{1}{3} \leq x \leq \frac{1}{3}$
+d) $-\frac{3}{2} \leq x \leq \frac{3}{2}$
+
+Solution:
+$$
+\begin{aligned}
+& \left(9-4 x^{2}\right)^{1 / 2} \\
+& =3\left(1-\frac{4 x^{2}}{9}\right)^{1 / 2}
+\end{aligned}
+$$
+
+This is valid if $\frac{4 x^{2}}{9}<1$
+$$
+\begin{gathered}
+\Rightarrow x^{2}<\frac{9}{4} \\
+|x|<\frac{3}{2} \\
+\text { i.e. }-\frac{3}{2} \leq x \leq \frac{3}{2}
+\end{gathered}
+$$
+
+\section*{Example:}
+$1+\frac{1}{3}+\frac{1.3}{3.6}+\frac{1.3 .5}{3.6 .9}+\cdots-$ is equal to
+a) $\sqrt{3}$
+b) $\frac{3}{2}$
+c) $\sqrt{5}$
+d) $\frac{1}{2}$
+
+\section*{Solution:}
+
+Comparing with
+$(1+x)^{n}=1+n x+$
+$\frac{n(n-1)}{1.2} x^{2}$
+------+++ we get,
+$\mathrm{nx}=\frac{1}{3}(\mathrm{i})$ and
+$\frac{n(n-1)}{1.2} x^{2}=\frac{1.3}{3.6}=\frac{1}{6}$.
+
+Squaring: $n^{2} x^{2}=\frac{1}{9}$
+dividing (ii) by (i), we get
+$$
+\begin{aligned}
+& \frac{\frac{n(n-1)}{1.2} x^{2}}{n^{2} x^{2}}=\frac{1}{1 / 6} \\
+& \frac{(n-1)}{2 n}=\frac{9}{6}=\frac{3}{2} \\
+& 3 n=n-1 \Rightarrow n=-\frac{1}{2}
+\end{aligned}
+$$
+
+From (i), $x=-2 / 3$
+∴ Required. sum $=(1+x)^{n}=$
+$$
+\begin{aligned}
+(1-z / 3)^{-1 / 2} & =\left(\frac{1}{3}\right)^{-1 / 2} \\
+& =\sqrt{3}
+\end{aligned}
+$$
+
+\section*{Example:}
+
+The greatest term in the expansion of $(3+2 x)^{3}$ when $x=1$ is
+a. 489888
+b. 409888
+c. 418888
+d. 283848
+
+Solution :
+In $(3+2 x)^{9}$, we have
+$\mathrm{T}_{1}+1={ }^{9} \mathrm{C}_{r} 3^{9-1}(2 \mathrm{x})^{r}$
+and $\mathrm{T}_{\mathrm{r}}=\mathrm{T}_{(r-1)}={ }^{9} \mathrm{C}_{r-1} 3^{9-(r-1)}(2 \mathrm{x})^{r-1}$
+$$
+\begin{aligned}
+\therefore \frac{T_{r+1}}{T_{r}} & =\frac{{ }^{9} C_{r} 3^{9-r}(2 x)^{r}}{{ }^{9} C_{r-1} 3^{9-r+1}(2 x)^{r-1}} \\
+& =\frac{9!}{r!(9-r)!} \cdot \frac{(r-1)!(9-r+1)!}{9!} \cdot \frac{2 x}{3} \\
+& =\frac{9-r+1}{r} \cdot \frac{2 x}{3}=\frac{10-r}{r} \cdot \frac{2(1)}{3}=\frac{20-2 r}{3 r}
+\end{aligned}
+$$
+
+Now, $\mathrm{T}_{r+1} \geq \mathrm{T}$, if $\frac{T_{r+1}}{T_{r}} \geq 1$
+$$
+\begin{aligned}
+& \text { if } \frac{20-2 r}{3 r} \geq 1 \\
+& \text { if } 20-2 r \geq 3 r \\
+& \text { if } r \leq 4
+\end{aligned}
+$$
+∴ The greatest possible value of $r$ is 4 .
+∴ Greatest term
+$$
+\begin{aligned}
+& =\mathrm{T}_{4+1}={ }^{9} \mathrm{C}_{4} 3^{9-4}(2 \mathrm{x})^{4} \\
+& =\frac{9 \times 8 \times 7 \times 6}{1 \times 2 \times 3 \times 4} \times 243 \times 16 \times(1)^{4} \\
+& =489888
+\end{aligned}
+$$
+
+Note. When $r=4$, we have $T_{4+1}=T_{4} \therefore T_{5}$ and $\mathrm{T}_{4}$ are both greatest terms.

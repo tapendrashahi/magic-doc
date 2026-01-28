@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h2, h3 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            color: #000;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .math-block {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 3px solid #0066cc;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        ol, ul {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+    </style>
+</head>
+<body>
+1. A binomial is an algebraic expression of two terms which are connected by the operations ' + ' or ' - '. e.g. <span>(x+2)</span>
+
+<h2>2. Binomial Theorem:</h2>
+
+The binomial theorem for natural numbers states that -
+For any positive integer <span>n</span>, the expansion of
+<div class="math-block">
+
+& (a+x)^{n}={ }^{n} C_{0} a^{n-1} x^{0}+{ }^{n} C_{1} a^{n-1} x+{ }^{n} C_{2} a^{n-2} x^{2}+ 
+
+& +a^{n}+{ }^{n} C_{1} a^{n-1} x+{ }^{n} C_{2} a^{n-2} x^{2}+ 
+
+& =+
+
+</div>
+
+<h2>Note:</h2>
+(i) Total number of terms after binomial expansion of <span>(a+x)^{n}</span> is <span>(n+1)</span>
+(ii) Sum of the exponents in each term is <span>n</span>.
+(iii) Powers of a are in descending order and the powers of <span>x</span> are in ascending order
+
+<h2>3) Pascal's Triangle</h2>
+
+The coefficients of various terms in <span>(a+b)^{n}</span> for different values of n follows the pattern given below.
+
+<table border="1">
+  <tr><td><span>(a+b)^{n}</span></td><td>Coefficients</td></tr>
+  <tr><td><span>(+)^{1}</span></td><td>11</td></tr>
+  <tr><td><span>(+)^{2}</span></td><td>121</td></tr>
+  <tr><td><span>(+)^{3}</span></td><td>1331</td></tr>
+  <tr><td><span>(a+b)^{4}</span></td><td>14641</td></tr>
+  <tr><td><span>(+)^{5}</span></td><td>15101051</td></tr>
+  <tr><td><span>(+)^{6}</span></td><td>16101020515</td></tr>
+  <tr><td><span>(+)^{7}</span></td><td>172135352171</td></tr>
+  <tr><td><span>(+)^{7}</span></td><td>18285670562881</td></tr>
+  <tr><td></td></tr>
+</table>
+
+<h2>General term:-</h2>
+(i) General term i.e. <span>(+1)^{ {th }}</span> term in the expansion of <span>(+)^{}</span> is
+<div class="math-block">
+t_{r+1}={ }^{n} C_{r} a^{n-r} x^{r}
+</div>
+(ii) General term in the expansion of <span>(a-x)^{n}</span> is <span>t_{r+1}= (-1)^{r} C(n, r) a^{n-r} x^{r}</span>.
+
+<h2>Note: -</h2>
+(i) For <span>1    ,{ }^{n} _{}={1.2   }</span>
+(ii) In particular, <span>{ }^{n} _{0}={ }^{n} _{}=1</span>
+(iii) If <span>1  r  n</span>, then <span>{ }^{n} C_{r}={ }^{n} C_{n-r}</span>
+(iv) If <span>    </span>, then <span>{ }^{n} _{r}+{ }^{} _{r-1}={ }^{=1} _{}</span>
+(v) <span>{ }^{n} _{r}= /  .{ }^{-1} _{r-1}={r(r-1)} .{ }^{n-2} _{r-2}</span> etc
+
+<h2>Middle term:-</h2>
+(i) If <span></span> is even :- There are <span>(+1)^{ {th }}</span> terms after binomial expansion which is odd. So, there is only one middle term and is obtained by
+<div class="math-block">
+_{ / 2+1}=(,  / 2) ^{ / 2} ^{ / 2}
+</div>
+<div class="math-block">
+ { middle term }=({2}+1)^{ {th }}  { term }
+</div>
+
+<h2>Example:</h2>
+
+The middle term in the expansion of <span>(x+2 y)^{30}</span> is
+a) <span>150 x^{5} y^{7}</span>
+b) <span>{ }^{30} _{16} ^{16} ^{14}</span>
+c) <span>{ }^{30} _{15} ^{15} (2 )^{15}</span>
+d) <span>{15!} x^{15} y^{15}</span>
+
+<h2>Solution:-</h2>
+
+Total number of terms after binomial expansion <span>=30+1=31</span> which is odd.
+There is only one middle term middle term <span>=( / 2+1)=(30 / 2+1)=</span> 16
+<div class="math-block">
+
+t_{15+1}= & { }^{30} C_{15}(x)^{30-15} (2 y)^{15} 
+
+& =C(30,15) x^{15} (2 y)^{15}
+
+</div>
+(ii) If <span></span> is odd:- there are ( <span>+1</span> ) terms after binomial expansion which is even. there are two middle terms. middle terms are <span>({2})^{ {th }}</span> term and
+<div class="math-block">
+({2}+1)^{ {th }}  { term }
+</div>
+
+<h2>Example:-</h2>
+
+A middle term in the expansion of <span>(1+)^{15}</span> is
+a) <span>{ }^{16} _{7} ^{7}</span>
+b) <span>{ }^{15} _{8} ^{8}</span>
+c) <span>256 x^{9}</span>
+d) <span>120 x^{8}</span>
+
+<h2>Solution:-</h2>
+total number of terms after binomial expansion <span>=15+1=16</span> which is even. there are two middle terms <span>16 / 2=8^{ {th }}</span> and <span>9^{ {th }}</span> term.
+<div class="math-block">
+t_{r+1}={ }^{13} _{1}(1)^{15-1}  ^{1}
+</div>
+
+To get the <span>8^{ {th }}</span> term put <span>=7</span>
+<div class="math-block">
+t_{7+1}={ }^{15} C_{7}  1  x^{7}
+</div>
+
+To get the <span>9^{ {th }}</span> term put <span>=8</span>
+<div class="math-block">
+t_{8+1}={ }^{15} C_{8} x^{8}
+</div>
+
+Some special cases of binomial theorem:-
+(i) <span>(1-)^{-1}=1++^{2}+^{3}+^{4}+ +</span>
+(ii) <span>(1+x)^{-1}=1-x+x^{2}-x^{3}+x^{4}+  </span>
+(iii) <span>(1-x)^{-2}=1+2 x+3 x^{2}+4 x^{3}+  </span>
+(iv) <span>(1+x)^{-2}=1-2 x+3 x^{2}-4 x^{3}+ +</span>
+(v) <span>(1-)^{-1 / 2}=1+{2} x+{2.4} x^{2}++</span>
+(vi) <span>(1+)^{-1 / 2}=1-{2} x+{2.4} x^{2}+-+</span>
+
+<h2>Note:</h2>
+
+When n is other than positive integers, expansion of <span>(1+x)^{n}</span> terminates and is valid only if <span>|x|<1</span>
+<div class="math-block">
+(1+x)^{n}=1+{1} x+{1.2} x^{2}+ +
+</div>
+
+<h2>Binomial coefficients:-</h2>
+
+The coefficients <span>(, 0), (, 1) -(, )</span> in the expansion of <span>(a+x)^{n}</span> are known as Binomial coefficients
+<div class="math-block">
+
+_{0}= & { }^{n} _{0}=1 
+
+_{1}= & { }^{n} _{1}={1} 
+
+_{2}= & { }^{n} _{2}={1.2} 
+
+_{3}= & { }^{n} _{3}={1.2 .3} 
+
+& C_{n}={ }^{n} C_{n}=1
+
+</div>
+
+Note:
+(i) Sum of the binomial coefficients <span>=2^{n}</span> i.e
+<div class="math-block">
+
+& C_{0}+C_{1}+C_{2}+ ++C_{n}=2^{n} 
+
+& 1+C_{1}+C_{2}+ +++C_{n}=2^{n}-1 
+
+& C_{1}+C_{2}+  
+
+</div>
+(ii) Sum of odd Binomial coefficients <span>=</span> sum of even binomial coefficients <span>=2^{-1}</span>
+i.e. <span>C_{0}+C_{2}+C_{4}+--C_{1}+C_{3}+C_{5}+--=2^{n-1}</span>
+Number of dissimilar terms in the expansion of <span>(++)^{},   </span> is given by
+<div class="math-block">
+={2}  { or } C(n+m-1, n)
+</div>
+(iii) Greatest term in the expansion of <span>(a+x)^{n}</span>. For positive a and <span>x</span>, the term <span>t_{r+1}</span> is the greatest term if <span>r</span> is the greatest possible value satisfying the equation <span>t_{r+1}  t_{}</span> i.e.
+<div class="math-block">
+}{t_{r}}  1
+</div>
+(iv) Greatest coefficient in the expansion of <span>(a+x)^{n}</span>. In the expansion of <span>(a+x)^{n}</span>, the coefficient of general term <span>_{+1}</span> is <span>{ }^{} _{}</span>. If n is even the <span>{ }^{n} C_{r}</span> is greatest when <span>r=n / 2</span> and if n is odd, then <span>{ }^{} _{}</span> is greatest when <span>=(-</span> 1)/ 2 or <span>(+1) / 2</span>
+
+<h2>Example:</h2>
+
+The total number of terms in the expansion of <span>(x+y+z)^{10}=</span>
+a) 55
+b) 66
+c) 60
+d) 75
+
+<h2>Solution:-</h2>
+<div class="math-block">
+
+&  { Total number of terms }={2} 
+
+& ={2} 
+
+& =11  6 
+
+& =66
+
+</div>
+
+Alternate Method,
+<div class="math-block">
+
+& =10 
+
+& =3 
+
+&  { total number of terms }=C(n+m-1, n) 
+
+& =C(10+3-1,10) 
+
+& =C(12,10) 
+
+& =C(12,2)=(12  11) / 1.2=66
+
+</div>
+
+<h2>Example:</h2>
+
+In the expansion of <span>(1+x)^{2 n}</span>. The coefficient of <span>(p+1)^{ {th }}</span> term is equal to coefficient of <span>(p+3)^{ {th }}</span> the term. Then
+a) <span>p=n</span>
+b) <span>p=n-1</span>
+c) <span>p=n-2</span>
+d) <span>p=n-3</span>
+
+<h2>Solution:</h2>
+
+Coefficient of <span>(p+1)^{ {th }}</span> term = coefficient of
+<div class="math-block">
+
+& (+3)^{ {th }}  { term } 
+
+& { }^{2 } C_{}={ }^{2 } C_{+2} 
+
+& ++2=2  
+
+& =-1 
+
+& {[{c}
+ { Hint } s:- 
+
+{ }^{n} C_{r}={ }^{n} C_{x} 
+
+ r+s=n
+]}
+
+</div>
+
+<h2>Example:</h2>
+
+If the sum of the coefficients in the expansion of <span>(x+y)^{n}</span> is 4096 , then the greatest coefficient in the expansion is
+a) 512
+b) 720
+c) 1024
+d) 924
+
+Solution:-
+Sum of the binomial coefficients <span>=2^{n}</span>
+<div class="math-block">
+
+& 4096=2^{n} 
+
+& n=12
+
+</div>
+
+Greatest coefficient <span>=12 / 2=6</span>
+<div class="math-block">
+
+ { i.e. } & ={ }^{12} _{6} 
+
+& =924
+
+</div>
+
+<h2>Example:</h2>
+<div class="math-block">
+ { If }(1+x)^{n}=C_{0}+C_{1} x+C_{2} x^{2}+ +C_{n} x^{n}
+</div>
+
+Then the value of <span>_{0}+2 _{1}+2^{2}  _{2}+2^{3}  _{3}++2^{n}  C_{n}=</span>
+a) <span>2^{n}</span>
+b) <span>2^{n}-1</span>
+c) <span>3^{n}</span>
+d) <span>3^{n}+1</span>
+
+Solution:-
+We have
+<div class="math-block">
+(1+x)^{n}=C_{0}+C_{1} x+C_{1} x^{2}+  ++C_{n} x^{n}
+</div>
+
+Putting <span>x=2</span>, we get
+<div class="math-block">
+3^{n}=C_{0}+2 C_{1}+2^{2} C_{2}+    + +2^{n} C_{n}
+</div>
+
+<h2>Example:-</h2>
+
+The term free from <span>x</span> in the expansion of <span>(x+{x})^{2 n}</span> is
+a) <span>n</span>
+b) <span>(-1)</span>
+c) <span>n+2</span>
+d) <span>(n+I)</span>
+
+Solution:-
+<div class="math-block">
+
+t_{t+1} & ={ }^{2 n} C_{r}(x)^{2 n-r} 
+
+& ={ }^{2 n} C_{r}(x)^{2 n-r-r}
+
+</div>
+
+To get the term free from <span>x</span>,
+<div class="math-block">
+
+& (x)^{2 n-2 r}=x^{0} 
+
+& 2 n-2 r=0
+ r=n
+</div>
+
+From (1)
+<div class="math-block">
+t_{n+1}={ }^{2 n} C_{n} x^{0}
+</div>
+∴ coeff. of the term free from <span>x={ }^{2 n} _{}={(n!)^{2}}</span>
+The required term is ( <span>+1</span> )
+
+<h2>Example:</h2>
+
+The expansion of <span>(9-4 x^{2})^{1 / 2}</span> is valid for
+a) <span>-{2}  x  1</span>
+b) <span>-2  x  {2}</span>
+c) <span>-{3}  x  {3}</span>
+d) <span>-{2}  x  {2}</span>
+
+Solution:
+<div class="math-block">
+
+& (9-4 x^{2})^{1 / 2} 
+
+& =3(1-}{9})^{1 / 2}
+
+</div>
+
+This is valid if <span>}{9}<1</span>
+<div class="math-block">
+
+ x^{2}<{4} 
+
+|x|<{2} 
+
+ { i.e. }-{2}  x  {2}
+
+</div>
+
+<h2>Example:</h2>
+<span>1+{3}+{3.6}+{3.6 .9}+-</span> is equal to
+a) <span></span>
+b) <span>{2}</span>
+c) <span></span>
+d) <span>{2}</span>
+
+<h2>Solution:</h2>
+
+Comparing with
+<span>(1+x)^{n}=1+n x+</span>
+<span>{1.2} x^{2}</span>
+------+++ we get,
+<span>={3}()</span> and
+<span>{1.2} x^{2}={3.6}={6}</span>.
+
+Squaring: <span>n^{2} x^{2}={9}</span>
+dividing (ii) by (i), we get
+<div class="math-block">
+
+& {1.2} x^{2}}{n^{2} x^{2}}={1 / 6} 
+
+& {2 n}={6}={2} 
+
+& 3 n=n-1  n=-{2}
+
+</div>
+
+From (i), <span>x=-2 / 3</span>
+∴ Required. sum <span>=(1+x)^{n}=</span>
+<div class="math-block">
+
+(1-z / 3)^{-1 / 2} & =({3})^{-1 / 2} 
+
+& =
+
+</div>
+
+<h2>Example:</h2>
+
+The greatest term in the expansion of <span>(3+2 x)^{3}</span> when <span>x=1</span> is
+a. 489888
+b. 409888
+c. 418888
+d. 283848
+
+Solution :
+In <span>(3+2 x)^{9}</span>, we have
+<span>_{1}+1={ }^{9} _{r} 3^{9-1}(2 )^{r}</span>
+and <span>_{}=_{(r-1)}={ }^{9} _{r-1} 3^{9-(r-1)}(2 )^{r-1}</span>
+<div class="math-block">
+
+ }{T_{r}} & =^{9} C_{r} 3^{9-r}(2 x)^{r}}{{ }^{9} C_{r-1} 3^{9-r+1}(2 x)^{r-1}} 
+
+& ={r!(9-r)!}  {9!}  {3} 
+
+& ={r}  {3}={r}  {3}={3 r}
+
+</div>
+
+Now, <span>_{r+1}  </span>, if <span>}{T_{r}}  1</span>
+<div class="math-block">
+
+&  { if } {3 r}  1 
+
+&  { if } 20-2 r  3 r 
+
+&  { if } r  4
+
+</div>
+∴ The greatest possible value of <span>r</span> is 4 .
+∴ Greatest term
+<div class="math-block">
+
+& =_{4+1}={ }^{9} _{4} 3^{9-4}(2 )^{4} 
+
+& ={1  2  3  4}  243  16 (1)^{4} 
+
+& =489888
+
+</div>
+
+Note. When <span>r=4</span>, we have <span>T_{4+1}=T_{4}  T_{5}</span> and <span>_{4}</span> are both greatest terms.
+</body>
+</html>
