@@ -21,44 +21,6 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
   const preElementRef = useRef<HTMLPreElement>(null);
   const [outputTab, setOutputTab] = useState<'preview' | 'code'>('preview');
 
-  // Debug logging for scroll issue
-  useEffect(() => {
-    if (outputTab === 'code' && html) {
-      console.log('[MathpixPreview] Code tab active, html length:', html.length);
-      
-      setTimeout(() => {
-        if (preElementRef.current) {
-          const preElement = preElementRef.current;
-          const scrollHeight = preElement.scrollHeight;
-          const clientHeight = preElement.clientHeight;
-          const offsetHeight = preElement.offsetHeight;
-          
-          console.log('[MathpixPreview] Pre element dimensions:');
-          console.log('  - scrollHeight:', scrollHeight);
-          console.log('  - clientHeight:', clientHeight);
-          console.log('  - offsetHeight:', offsetHeight);
-          console.log('  - overflow:', window.getComputedStyle(preElement).overflow);
-          console.log('  - overflowY:', window.getComputedStyle(preElement).overflowY);
-          console.log('  - height:', window.getComputedStyle(preElement).height);
-          console.log('  - display:', window.getComputedStyle(preElement).display);
-          console.log('  - flex:', window.getComputedStyle(preElement).flex);
-          console.log('  - scrollable:', scrollHeight > clientHeight);
-        }
-        
-        if (codeContainerRef.current) {
-          const container = codeContainerRef.current;
-          console.log('[MathpixPreview] Container dimensions:');
-          console.log('  - scrollHeight:', container.scrollHeight);
-          console.log('  - clientHeight:', container.clientHeight);
-          console.log('  - offsetHeight:', container.offsetHeight);
-          console.log('  - height:', window.getComputedStyle(container).height);
-          console.log('  - display:', window.getComputedStyle(container).display);
-          console.log('  - flex:', window.getComputedStyle(container).flex);
-        }
-      }, 0);
-    }
-  }, [outputTab, html]);
-
   // Initialize KaTeX only if format is 'katex'
   useEffect(() => {
     if (format !== 'katex' || !html) {

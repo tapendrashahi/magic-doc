@@ -80,6 +80,8 @@ export const Editor = () => {
       setTitle(defaultTitle);
       setLatex('');
       setHtml('');
+      setMathpixText('');
+      setMathpixResult(null);
       setNote(null);
       setError('');
       setHasChanges(false);
@@ -140,6 +142,7 @@ export const Editor = () => {
             title,
             latex_content: latex,
             html_content: html,
+            mathpix_content: mathpixText,
           });
         }
         setAutoSaveStatus('saved');
@@ -153,7 +156,7 @@ export const Editor = () => {
     }, 2000);
 
     return () => clearTimeout(autoSaveTimer);
-  }, [hasChanges, title, latex, id]);
+  }, [hasChanges, title, latex, mathpixText, id]);
 
   // Register keyboard shortcuts
   useEffect(() => {
@@ -263,13 +266,22 @@ export const Editor = () => {
       console.log('[Editor] ✓ Note loaded:', {
         title: response.data.title,
         latexLength: response.data.latex_content?.length,
-        htmlLength: response.data.html_content?.length
+        htmlLength: response.data.html_content?.length,
+        mathpixLength: response.data.mathpix_content?.length
       });
 
       setTitle(response.data.title);
       setLatex(response.data.latex_content);
+      setMathpixText(response.data.mathpix_content || '');
       setNote(response.data);
       setError('');
+
+      // Switch to Mathpix tab if note has Mathpix content
+      if (response.data.mathpix_content) {
+        setActiveTab('mathpix');
+      } else {
+        setActiveTab('latex');
+      }
 
       // Check if HTML is empty but LaTeX exists
       if (response.data.latex_content && !response.data.html_content) {
@@ -335,6 +347,7 @@ export const Editor = () => {
           title,
           latex_content: latex,
           html_content: html,
+          mathpix_content: mathpixText,
         });
         setNote(response.data);
         setLastSaved(new Date());
@@ -346,6 +359,7 @@ export const Editor = () => {
         const response = await apiClient.createNote({
           title,
           latex_content: latex,
+          mathpix_content: mathpixText,
         });
         setNote(response.data);
         setAutoSaveStatus('saved');
@@ -549,6 +563,11 @@ export const Editor = () => {
         format: conversionFormat,
         stats: response.data.statistics || {}
       });
+      
+      // Mark changes to trigger auto-save
+      setHasChanges(true);
+      setAutoSaveStatus('unsaved');
+      
       toastManager.success('Conversion complete!');
     } catch (err) {
       toastManager.error('Failed to convert Mathpix');

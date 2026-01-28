@@ -14,7 +14,7 @@ class NoteSerializer(serializers.ModelSerializer):
     """Serializer for Note model"""
     class Meta:
         model = Note
-        fields = ['id', 'title', 'latex_content', 'html_content', 'is_favorite', 'created_at', 'updated_at']
+        fields = ['id', 'title', 'latex_content', 'html_content', 'mathpix_content', 'is_favorite', 'created_at', 'updated_at']
 
 
 class ConversionHistorySerializer(serializers.ModelSerializer):

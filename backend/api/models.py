@@ -7,6 +7,7 @@ class Note(models.Model):
     title = models.CharField(max_length=200, default='Untitled')
     latex_content = models.TextField(blank=True)
     html_content = models.TextField(blank=True)
+    mathpix_content = models.TextField(blank=True)
     is_favorite = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
