@@ -977,7 +977,7 @@ export const Editor = () => {
         </div>
 
         <div className="flex-1 overflow-hidden px-6 pt-4 flex flex-col">
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col min-h-0">
             {error && (
               <div className="p-2 bg-red-100 border-l-4 border-red-500 text-red-700 text-sm rounded-r animate-slideUp">
                 {error}
@@ -1009,7 +1009,7 @@ export const Editor = () => {
             )}
 
             {activeTab === 'mathpix' && (
-              <div className="grid grid-cols-[60%_40%] gap-4 h-full">
+              <div className="grid grid-cols-[60%_40%] gap-4 h-full overflow-hidden">
                 <MathpixInput
                   ref={mathpixInputRef}
                   value={mathpixText}
@@ -1017,12 +1017,14 @@ export const Editor = () => {
                   onFileUpload={handleMathpixFileUpload}
                   isConverting={isMathpixConverting}
                 />
-                <MathpixPreview
-                  html={mathpixResult?.html || ''}
-                  loading={isMathpixConverting}
-                  error={error}
-                  format={mathpixResult?.format || conversionFormat}
-                />
+                <div className="flex flex-col min-h-0 overflow-hidden">
+                  <MathpixPreview
+                    html={mathpixResult?.html || ''}
+                    loading={isMathpixConverting}
+                    error={error}
+                    format={mathpixResult?.format || conversionFormat}
+                  />
+                </div>
               </div>
             )}
           </div>

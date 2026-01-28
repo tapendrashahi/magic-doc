@@ -17,7 +17,47 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
   format = 'katex',
 }) => {
   const previewRef = useRef<HTMLDivElement>(null);
+  const codeContainerRef = useRef<HTMLDivElement>(null);
+  const preElementRef = useRef<HTMLPreElement>(null);
   const [outputTab, setOutputTab] = useState<'preview' | 'code'>('preview');
+
+  // Debug logging for scroll issue
+  useEffect(() => {
+    if (outputTab === 'code' && html) {
+      console.log('[MathpixPreview] Code tab active, html length:', html.length);
+      
+      setTimeout(() => {
+        if (preElementRef.current) {
+          const preElement = preElementRef.current;
+          const scrollHeight = preElement.scrollHeight;
+          const clientHeight = preElement.clientHeight;
+          const offsetHeight = preElement.offsetHeight;
+          
+          console.log('[MathpixPreview] Pre element dimensions:');
+          console.log('  - scrollHeight:', scrollHeight);
+          console.log('  - clientHeight:', clientHeight);
+          console.log('  - offsetHeight:', offsetHeight);
+          console.log('  - overflow:', window.getComputedStyle(preElement).overflow);
+          console.log('  - overflowY:', window.getComputedStyle(preElement).overflowY);
+          console.log('  - height:', window.getComputedStyle(preElement).height);
+          console.log('  - display:', window.getComputedStyle(preElement).display);
+          console.log('  - flex:', window.getComputedStyle(preElement).flex);
+          console.log('  - scrollable:', scrollHeight > clientHeight);
+        }
+        
+        if (codeContainerRef.current) {
+          const container = codeContainerRef.current;
+          console.log('[MathpixPreview] Container dimensions:');
+          console.log('  - scrollHeight:', container.scrollHeight);
+          console.log('  - clientHeight:', container.clientHeight);
+          console.log('  - offsetHeight:', container.offsetHeight);
+          console.log('  - height:', window.getComputedStyle(container).height);
+          console.log('  - display:', window.getComputedStyle(container).display);
+          console.log('  - flex:', window.getComputedStyle(container).flex);
+        }
+      }, 0);
+    }
+  }, [outputTab, html]);
 
   // Initialize KaTeX only if format is 'katex'
   useEffect(() => {
@@ -59,8 +99,8 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
           <button
             onClick={() => setOutputTab('preview')}
             className={`p-2 rounded-md transition-colors ${outputTab === 'preview'
-                ? 'bg-gray-700 text-white'
-                : 'text-gray-400 hover:text-white hover:bg-gray-700'
+              ? 'bg-gray-700 text-white'
+              : 'text-gray-400 hover:text-white hover:bg-gray-700'
               }`}
             title="Preview"
             aria-label="Show preview"
@@ -73,8 +113,8 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
           <button
             onClick={() => setOutputTab('code')}
             className={`p-2 rounded-md transition-colors ${outputTab === 'code'
-                ? 'bg-gray-700 text-white'
-                : 'text-gray-400 hover:text-white hover:bg-gray-700'
+              ? 'bg-gray-700 text-white'
+              : 'text-gray-400 hover:text-white hover:bg-gray-700'
               }`}
             title="HTML Code"
             aria-label="Show HTML code"
@@ -87,7 +127,7 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
       </div>
 
       {/* Content Area */}
-      <div className="flex-1 overflow-auto p-4">
+      <div className="flex-1 overflow-auto p-4 flex flex-col min-h-0">
         {error && (
           <div className="p-4 bg-red-100 border border-red-300 rounded-lg text-red-700 text-sm">
             ❌ {error}
@@ -122,8 +162,8 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
         )}
 
         {!loading && html && outputTab === 'code' && (
-          <div>
-            <pre className="bg-gray-50 border border-gray-300 rounded-lg p-4 overflow-auto max-h-96 text-xs text-gray-700 font-mono">
+          <div ref={codeContainerRef} className="flex-1 flex flex-col min-h-0 w-full">
+            <pre ref={preElementRef} className="bg-gray-50 border border-gray-300 rounded-lg p-4 overflow-auto flex-1 text-xs text-gray-700 font-mono break-words whitespace-pre-wrap">
               {html}
             </pre>
           </div>
