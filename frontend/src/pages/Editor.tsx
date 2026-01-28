@@ -45,6 +45,15 @@ export const Editor = () => {
   useEffect(() => {
     if (id) {
       loadNote();
+    } else {
+      // Clear form for new note
+      setTitle('');
+      setLatex('');
+      setHtml('');
+      setNote(null);
+      setError('');
+      setHasChanges(false);
+      setAutoSaveStatus('saved');
     }
     fetchAllNotes();
   }, [id]);
