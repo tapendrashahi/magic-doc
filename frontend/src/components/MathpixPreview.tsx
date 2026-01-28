@@ -8,7 +8,6 @@ interface MathpixPreviewProps {
   loading?: boolean;
   error?: string | null;
   format?: ConversionFormat;
-  stats?: any;
 }
 
 export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
@@ -16,7 +15,6 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
   loading = false,
   error = null,
   format = 'katex',
-  stats,
 }) => {
   const previewRef = useRef<HTMLDivElement>(null);
   const [outputTab, setOutputTab] = useState<'preview' | 'code'>('preview');
@@ -116,33 +114,9 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
 
         {!loading && html && outputTab === 'code' && (
           <div>
-            <div className="pb-3 border-b border-gray-200">
-              <h3 className="font-semibold text-gray-800">HTML Fragment</h3>
-            </div>
-
             <pre className="bg-gray-50 border border-gray-300 rounded-lg p-4 overflow-auto max-h-96 text-xs text-gray-700 font-mono">
               {html}
             </pre>
-
-            {stats && (
-              <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                <h4 className="font-semibold text-blue-900 mb-2">📊 Statistics</h4>
-                <div className="grid grid-cols-2 gap-2 text-sm text-blue-800">
-                  <div>
-                    <span className="font-semibold">Total Equations:</span> {stats.total_equations || 0}
-                  </div>
-                  <div>
-                    <span className="font-semibold">Display:</span> {stats.display_equations || 0}
-                  </div>
-                  <div>
-                    <span className="font-semibold">Inline:</span> {stats.inline_equations || 0}
-                  </div>
-                  <div>
-                    <span className="font-semibold">Sections:</span> {stats.sections || 0}
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         )}
       </div>
