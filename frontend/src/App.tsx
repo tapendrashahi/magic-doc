@@ -35,9 +35,7 @@ function AppRoutes() {
         path="/editor"
         element={
           <ProtectedRoute>
-            <Layout>
-              <Editor />
-            </Layout>
+            <Editor />
           </ProtectedRoute>
         }
       />
@@ -45,9 +43,7 @@ function AppRoutes() {
         path="/editor/:id"
         element={
           <ProtectedRoute>
-            <Layout>
-              <Editor />
-            </Layout>
+            <Editor />
           </ProtectedRoute>
         }
       />

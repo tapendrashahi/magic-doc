@@ -36,6 +36,8 @@ export const Editor = () => {
   const [allNotes, setAllNotes] = useState<Note[]>([]);
   const [notesLoading, setNotesLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [exportOpen, setExportOpen] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -127,6 +129,42 @@ export const Editor = () => {
     };
   }, [title, html]);
 
+  // Close settings dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (settingsOpen && !target.closest('.settings-dropdown')) {
+        setSettingsOpen(false);
+      }
+    };
+
+    if (settingsOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [settingsOpen]);
+
+  // Close export dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (exportOpen && !target.closest('.export-dropdown')) {
+        setExportOpen(false);
+      }
+    };
+
+    if (exportOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [exportOpen]);
+
   const loadNote = async () => {
     try {
       console.log('[Editor] Loading note with id:', id);
@@ -136,7 +174,7 @@ export const Editor = () => {
         latexLength: response.data.latex_content?.length,
         htmlLength: response.data.html_content?.length
       });
-      
+
       setTitle(response.data.title);
       setLatex(response.data.latex_content);
       setNote(response.data);
@@ -193,7 +231,7 @@ export const Editor = () => {
   const handleLatexChangeAndConvert = useCallback(async (newLatex: string) => {
     console.log('[Editor] LaTeX change and convert, length:', newLatex.length);
     setLatex(newLatex);
-    
+
     if (newLatex.trim()) {
       try {
         console.log('[Editor] Converting LaTeX...');
@@ -264,6 +302,77 @@ export const Editor = () => {
     }
   };
 
+  const handleExportLatex = () => {
+    if (!latex || !title) {
+      toastManager.warning('No content to export');
+      return;
+    }
+    try {
+      const blob = new Blob([latex], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${title}.tex`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toastManager.success('LaTeX exported!');
+      setExportOpen(false);
+    } catch (err) {
+      toastManager.error('Failed to export LaTeX');
+    }
+  };
+
+  const handleExportHTML = () => {
+    if (!html || !title) {
+      toastManager.warning('No content to export');
+      return;
+    }
+    try {
+      const blob = new Blob([html], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${title}.html`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toastManager.success('HTML exported!');
+      setExportOpen(false);
+    } catch (err) {
+      toastManager.error('Failed to export HTML');
+    }
+  };
+
+  const handleExportMarkdown = async () => {
+    if (!html || !title) {
+      toastManager.warning('No content to export');
+      return;
+    }
+    try {
+      // Simple HTML to Markdown conversion (basic implementation)
+      let markdown = html
+        .replace(/<h1>(.*?)<\/h1>/g, '# $1\n')
+        .replace(/<h2>(.*?)<\/h2>/g, '## $1\n')
+        .replace(/<h3>(.*?)<\/h3>/g, '### $1\n')
+        .replace(/<strong>(.*?)<\/strong>/g, '**$1**')
+        .replace(/<em>(.*?)<\/em>/g, '*$1*')
+        .replace(/<p>(.*?)<\/p>/g, '$1\n\n')
+        .replace(/<br\s*\/?>/g, '\n')
+        .replace(/<[^>]+>/g, ''); // Remove remaining HTML tags
+
+      const blob = new Blob([markdown], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${title}.md`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toastManager.success('Markdown exported!');
+      setExportOpen(false);
+    } catch (err) {
+      toastManager.error('Failed to export Markdown');
+    }
+  };
+
   if (isLoading && id) {
     return (
       <div className="text-center py-8 animate-fadeIn">
@@ -279,9 +388,8 @@ export const Editor = () => {
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
       <div
-        className={`bg-white border-r border-gray-200 transition-all duration-300 flex flex-col overflow-hidden ${
-          sidebarOpen ? 'w-56' : 'w-0'
-        }`}
+        className={`bg-white border-r border-gray-200 transition-all duration-300 flex flex-col overflow-hidden ${sidebarOpen ? 'w-56' : 'w-0'
+          }`}
       >
         <div className="p-2 border-b border-gray-200">
           <button
@@ -310,11 +418,10 @@ export const Editor = () => {
                       navigate(`/editor/${n.id}`);
                     }
                   }}
-                  className={`p-2.5 cursor-pointer hover:bg-gray-50 transition border-l-4 text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${
-                    id == n.id
-                      ? 'bg-blue-50 border-blue-500'
-                      : 'border-transparent hover:border-gray-300'
-                  }`}
+                  className={`p-2.5 cursor-pointer hover:bg-gray-50 transition border-l-4 text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${id == n.id
+                    ? 'bg-blue-50 border-blue-500'
+                    : 'border-transparent hover:border-gray-300'
+                    }`}
                   aria-selected={id == n.id}
                   aria-label={`Open note: ${n.title}`}
                 >
@@ -332,6 +439,52 @@ export const Editor = () => {
             </div>
           )}
         </div>
+
+        {/* Settings Menu at Bottom */}
+        <div className="border-t border-gray-200 p-2 relative settings-dropdown">
+          <button
+            onClick={() => setSettingsOpen(!settingsOpen)}
+            className="w-full p-2 hover:bg-gray-100 rounded transition flex items-center justify-center text-gray-700"
+            aria-label="Settings menu"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </button>
+
+          {/* Settings Dropdown */}
+          {settingsOpen && (
+            <div className="absolute bottom-full left-2 right-2 mb-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+              <button
+                onClick={() => {
+                  navigate('/profile');
+                  setSettingsOpen(false);
+                }}
+                className="w-full px-4 py-2.5 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm font-medium text-gray-700"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Profile
+              </button>
+              <button
+                onClick={() => {
+                  // Add logout logic here
+                  localStorage.removeItem('token');
+                  navigate('/login');
+                  setSettingsOpen(false);
+                }}
+                className="w-full px-4 py-2.5 text-left hover:bg-red-50 transition flex items-center gap-2 text-sm font-medium text-red-600 border-t border-gray-100"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                Logout
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Main Content */}
@@ -345,15 +498,6 @@ export const Editor = () => {
               aria-label={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
             >
               {sidebarOpen ? '◀' : '▶'}
-            </button>
-
-            {/* New Note button moved to header */}
-            <button
-              onClick={() => navigate('/editor')}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-semibold flex items-center gap-2 transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
-              aria-label="Create a new note"
-            >
-              ✏️ New Note
             </button>
 
             <h1 className="text-xl font-bold text-gray-800 ml-2">
@@ -384,6 +528,66 @@ export const Editor = () => {
                 <span className="text-xs text-red-600 font-semibold whitespace-nowrap">
                   ✗ Save failed
                 </span>
+              )}
+            </div>
+
+            {/* Copy HTML Button */}
+            <button
+              onClick={handleCopyHTML}
+              disabled={!html}
+              className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition disabled:opacity-50 disabled:cursor-not-allowed"
+              title="Copy HTML to clipboard (Ctrl+Shift+C)"
+              aria-label="Copy HTML to clipboard"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </button>
+
+            {/* Export Dropdown */}
+            <div className="relative export-dropdown">
+              <button
+                onClick={() => setExportOpen(!exportOpen)}
+                className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition"
+                title="Export options"
+                aria-label="Export menu"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </button>
+
+              {/* Export Dropdown Menu */}
+              {exportOpen && (
+                <div className="absolute right-0 top-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50 min-w-[180px]">
+                  <button
+                    onClick={handleExportLatex}
+                    className="w-full px-4 py-2.5 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm font-medium text-gray-700"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Export as LaTeX
+                  </button>
+                  <button
+                    onClick={handleExportHTML}
+                    className="w-full px-4 py-2.5 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm font-medium text-gray-700 border-t border-gray-100"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    Export as HTML
+                  </button>
+                  <button
+                    onClick={handleExportMarkdown}
+                    className="w-full px-4 py-2.5 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm font-medium text-gray-700 border-t border-gray-100"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    Export as Markdown
+                  </button>
+                </div>
               )}
             </div>
 
@@ -466,22 +670,6 @@ export const Editor = () => {
             ) : (
               <>💾 Save Note</>
             )}
-          </button>
-          <button
-            onClick={() => navigate('/notes')}
-            className="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition font-semibold text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700"
-            aria-label="Back to notes list"
-          >
-            📝 Back to Notes
-          </button>
-          <button
-            onClick={handleCopyHTML}
-            disabled={!html}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 transition font-semibold text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
-            title="Copy HTML to clipboard (Ctrl+Shift+C)"
-            aria-label="Copy HTML to clipboard"
-          >
-            📋 Copy HTML
           </button>
 
           {/* Spacer */}
