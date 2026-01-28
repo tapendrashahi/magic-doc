@@ -321,6 +321,7 @@ class HTMLAssembler:
     def _wrap_block(self, parts: List[str]) -> str:
         """
         Wrap a block of content (text + inline equations) in a div.
+        Preserves single space gap between text and equations.
         
         Args:
             parts: List of HTML parts (text, inline equation spans, etc.)
@@ -328,18 +329,22 @@ class HTMLAssembler:
         Returns:
             Wrapped block
         """
-        # Join parts - inline equations should have no extra spacing
+        # Join parts - preserve single space before/after equations
         content = ''
         for i, part in enumerate(parts):
             if i == 0:
                 content = part
             else:
-                # No space between text and inline equation spans
-                if part.strip().startswith('<span'):
-                    content += part
-                else:
-                    # Text content
+                # Check if part is an equation span
+                if part.strip().startswith('<span') and '__se__katex' in part:
+                    # Add single space if content doesn't already end with space
                     if content and not content.endswith(' '):
+                        content += ' '
+                    content += part
+                    # Add space after equation if next content exists (handled in next iteration)
+                else:
+                    # Text content - add space separator
+                    if content and not content.endswith(' ') and part.strip():
                         content += ' '
                     content += part
         
