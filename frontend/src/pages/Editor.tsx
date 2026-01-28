@@ -27,7 +27,6 @@ export const Editor = () => {
   const [latex, setLatex] = useState('');
   const [html, setHtml] = useState('');
   const [isLoading, setIsLoading] = useState(!!id);
-  const [isSaving, setIsSaving] = useState(false);
   const [autoSaveStatus, setAutoSaveStatus] = useState<'saved' | 'saving' | 'unsaved' | 'error'>('saved');
   const [hasChanges, setHasChanges] = useState(false);
   const [error, setError] = useState('');
@@ -275,7 +274,6 @@ export const Editor = () => {
     }
 
     try {
-      setIsSaving(true);
       setAutoSaveStatus('saving');
       setError('');
 
@@ -308,8 +306,6 @@ export const Editor = () => {
       setAutoSaveStatus('error');
       toastManager.error('Failed to save note');
       console.error(err);
-    } finally {
-      setIsSaving(false);
     }
   };
 
@@ -479,11 +475,11 @@ export const Editor = () => {
               {allNotes.map((n) => (
                 <div
                   key={n.id}
-                  className={`group relative p-2.5 cursor-pointer hover:bg-gray-50 transition border-l-4 text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${id == n.id
+                  className={`group relative p-2.5 cursor-pointer hover:bg-gray-50 transition border-l-4 text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${id && parseInt(id) === n.id
                     ? 'bg-blue-50 border-blue-500'
                     : 'border-transparent hover:border-gray-300'
                     }`}
-                  aria-selected={id == n.id}
+                  aria-selected={!!(id && parseInt(id) === n.id)}
                 >
                   <div
                     onClick={() => navigate(`/editor/${n.id}`)}
@@ -766,29 +762,8 @@ export const Editor = () => {
 
         {/* Action Bar */}
         <footer className="border-t border-gray-200 bg-white p-4 flex gap-3 items-center shadow-md">
-          <button
-            onClick={handleSaveNote}
-            disabled={isSaving || autoSaveStatus === 'saved'}
-            className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400 transition font-semibold flex items-center justify-center gap-2 text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
-            title="Save note (Ctrl+S)"
-            aria-label="Save note"
-            aria-busy={isSaving}
-          >
-            {isSaving ? (
-              <>
-                <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-white"></div>
-                Saving...
-              </>
-            ) : (
-              <>💾 Save Note</>
-            )}
-          </button>
-
-          {/* Spacer */}
-          <div className="flex-1" />
-
           {/* Keyboard Shortcuts */}
-          <div className="text-xs text-gray-600 hidden md:flex gap-4 border-l border-gray-200 pl-4">
+          <div className="text-xs text-gray-600 hidden md:flex gap-4">
             <span className="flex items-center gap-1">
               <kbd className="bg-gray-200 px-2 py-1 rounded text-xs font-mono">Ctrl+S</kbd>
               <span>Save</span>

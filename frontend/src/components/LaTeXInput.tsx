@@ -117,10 +117,6 @@ export const LaTeXInput: React.FC<LaTeXInputProps> = ({
           Converting...
         </div>
       )}
-
-      <div className="px-6 py-3 bg-gray-50 border-t border-gray-300 text-xs text-gray-600">
-        <p>💡 Tip: Start typing to see live preview on the right</p>
-      </div>
     </div>
   );
 };
