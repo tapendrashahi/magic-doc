@@ -1,0 +1,1276 @@
+Circle
+
+\section*{Definition:-}
+
+⇒ A geometrical path traced out by a moving point in a plane such that its distance from some fixed point always remain--s equal or constant is called a circle.
+
+→ The fixed point is called centre of the circle and the constant distance is called the radius of the circle.
+
+→ The outer path is called circumference.
+
+We can also define a circle as:A closed plane figure bounded by a curve such that every point of the curve remains equidistant from a fixed point is called circle.
+
+→ The fixed point is called the centre of the circle, the constant distance is called radius of the circle and the bounding
+
+Curve iscalled the circumference of the circle.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-02.jpg?height=523&width=631&top_left_y=197&top_left_x=59)
+
+In 'above figure, ' 0 ' is the centre of the circle, $OA=OB=r$ be radius of the circle.
+
+\section*{Chord:-}
+
+A line segment joining any two points of the circumference is called the chord of the circle. In the above figure, $AB, CD, EF$ are chords of the circle.
+
+\section*{Arc}
+
+A part of the circumference of a circle is called an arc.
+In figure,
+$$
+\begin{aligned}
+& \widehat{AE}=\text{arc } AE \\
+& \widehat{AC}=\text{arc } AC
+\end{aligned}
+$$
+
+\section*{Diameter:}
+
+The longest chord passing through the centre of a circle is called its diameter. It is twice the radius of the circle.
+
+\section*{Semicircle:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-03.jpg?height=375&width=546&top_left_y=556&top_left_x=366)
+
+One of two parts of a circle made by its diameter is said to be a semi-circle.
+Here, in above figure, $ADB$ is a semi-circle.
+
+\section*{Segments}
+
+Two unequal parts of a circle made by a chord are called its segments.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-03.jpg?height=427&width=486&top_left_y=1806&top_left_x=39)
+
+Here, the larger one is called major segments and the smaller one is called minor Segment.
+
+\section*{Sector:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-04.jpg?height=518&width=738&top_left_y=478&top_left_x=164)
+
+The area of a circle between any two radii is called its sector. The greater one is called major sector and the smaller one is called minor sector.
+
+\section*{Central angle:}
+
+The angle subtended by an are at the centre of a circle is called its central angle. It is the angle made by any two radii of the circle at its centre.
+The central angle and its opposite arc are equal in degree measure.
+
+Here, angle $AOB$ is called the central angle.
+Also,
+$\angle AOB \cong \widehat{AOB}$ read as the arc $AOB$ equals in degree measure. Where, the symbol $\cong$ read as equal influence.
+
+\section*{Inscribed angle:}
+
+An angle subtended by an are of a circle at its circumference is called an inscribed angle. An inscribed angle is an angle made by any two chords of a circle at its circumference. The inscribed angle is also called an angle at the circumference.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-05.jpg?height=506&width=776&top_left_y=1818&top_left_x=0)
+
+\section*{Concentric Circles:}
+
+Two or more circles having same centre is called Concentric circles.
+
+\section*{Intersecting Circles:}
+
+Two circles which intersect each other at two distinct points are called intersecting circles.
+
+\section*{Con-cyclic points:-}
+
+Two or more than two points which lie on the circumference of the same circle are called con-cyclic points.
+
+\section*{Cyclic quadrilaterals:-}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-07.jpg?height=452&width=558&top_left_y=219&top_left_x=113)
+
+A quadrilateral whose all vertices lie on the circumference of a circle is called a cyclic quadrilateral.
+
+Some Important Notes:-
+
+\section*{Note no. 1:-}
+
+In a circle, equal chords cut off equal arcs.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-07.jpg?height=574&width=603&top_left_y=1496&top_left_x=142)
+
+If chord $AB = $ chord $CD$
+then, $\widehat{AB} = \widehat{CD}$.
+
+\section*{Note no. 2:}
+
+Two equal ares of a circle subtend two equal chords in a circle.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-08.jpg?height=428&width=514&top_left_y=458&top_left_x=80)
+
+If arc $AB = $ arc $CD$ then, the chord $AB = $ chord $CD$.
+
+\section*{Note no. 3:-}
+
+Two arcs, subtending equal angles at the centre of a circle, are equal in length.
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-08.jpg?height=510&width=505&top_left_y=1600&top_left_x=154}
+\captionsetup{labelformat=empty}
+\caption{If $\angle AOB = \angle COB$ then, $\widehat{AB} = \widehat{BC}$}
+\end{figure}
+
+\section*{Note no. 4:}
+
+Two equal ares of a circle subtend equal angles at the centre of a circle.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-09.jpg?height=500&width=459&top_left_y=413&top_left_x=163)
+
+If $\widehat{AB} = \widehat{CD}$, then $\angle AOB = \angle COD$.
+
+\section*{Note no. 5:-}
+
+The inscribed angle in a semicircle is a right angle.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-09.jpg?height=449&width=507&top_left_y=1357&top_left_x=105)
+
+If $AOC$ is a diameter, then $\angle ABC = 90^{\circ}$.
+
+\section*{Note no. 6:}
+
+The perpendicular drawn through centre of a circle to the chord bisect the chord.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-10.jpg?height=443&width=495&top_left_y=0&top_left_x=131)
+
+If $OC \perp AB$, $AC = CB$.
+Similarly,
+If $AC = CB$, then $OC \perp AB$.
+
+\section*{Note no. 7:}
+
+The angle at the centre is double the angle at the circumference standing on a same arc.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-10.jpg?height=466&width=418&top_left_y=1218&top_left_x=223)
+
+$\angle AOB$ is a central angle and $\angle ACB$ is a inscribed angle, then $\angle AOB = 2\angle ACB$.
+
+\section*{Note no: 8:}
+
+The sum of opposite angles of a cyclic quadrilateral is supplementary.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-11.jpg?height=491&width=555&top_left_y=429&top_left_x=108)
+
+If $ABCD$ is a cyclic quadrilateral, then $\angle B + \angle D = 180^{\circ}$
+and $\angle A + \angle C = 180^{\circ}$.
+
+\section*{Question (1)}
+
+Inscribed angles of a circle standing on the same arc are equal.
+
+\section*{Experimental Verification:-}
+
+Draw the circles having different radii as shown in the figure. The angle $\angle ABC$ and $\angle ADC$ are the angles on the circumference based on the same arc $AC$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-12.jpg?height=532&width=984&top_left_y=0&top_left_x=3)
+
+\begin{tabular}{|c|c|c|c|}
+\hline Fig. no. & $\angle ABC$ & $\angle ADC$ & Result \\
+\hline$(1)$ & $40^{\circ}$ & $40^{\circ}$ & $\angle ABC = \angle ADC$ \\
+\hline$(2)$ & $70^{\circ}$ & $70^{\circ}$ & $\angle ABC = \angle ADC$ \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:-}
+
+Inscribed angles of a circle standing on the same arc are equal.
+
+\section*{Theoretical proof:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-12.jpg?height=562&width=497&top_left_y=1427&top_left_x=310)
+
+\section*{Given:-}
+
+$O$ is the centre of a circle in which inscribed angles $\angle ACB$ and $\angle ADB$ are based on the same arc $AB$.
+
+\section*{To prove:}
+
+$\angle ACB = \angle ADB$.
+
+\section*{Construction:-}
+
+Join centre $O$ of the circle with the points $A$ and $B$ successively.
+
+\section*{Proof:-}
+
+\begin{tabular}{|l|l|l|}
+\hline S. No. & Statements & Reasons \\
+\hline (1) & $\angle AOB = 2\angle ACB$ & The circumference angle and the central angle based on the same arc $AB$. \\
+\hline (2) & $\angle AOB = 2\angle ADB$ & The circumference angle and the central angle are based on the same arc $AB$. \\
+\hline (3) & $2\angle ACB = 2\angle ADB$ or $\angle ACB = \angle ADB$ & From statements (1) and (2). \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:}
+
+The angles on the circumference of a circle, based on the same arc are equal.
+
+\section*{Proved}
+
+\section*{Question 2}
+
+In a circle, the inscribed angle is half of the central angle standing on the same arc.
+
+\section*{Experimental verification:-}
+
+Draw the two circles having different radii as shown in figure.
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-14.jpg?height=365&width=299&top_left_y=1261&top_left_x=79}
+\captionsetup{labelformat=empty}
+\caption{Figure (i)}
+\end{figure}
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-14.jpg?height=429&width=429&top_left_y=1255&top_left_x=399}
+\captionsetup{labelformat=empty}
+\caption{Figure (2)}
+\end{figure}
+
+\begin{tabular}{|c|c|c|c|}
+\hline Fig. no. & $\angle AOB$ & $\angle ACB$ & Result \\
+\hline$(1)$ & $100^{\circ}$ & $50^{\circ}$ & $\angle ACB = \frac{1}{2}\angle AOB$ \\
+\hline$(2)$ & $120^{\circ}$ & $60^{\circ}$ & $\angle ACB = \frac{1}{2}\angle AOB$ \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:-}
+
+The inscribed angle is half of the central angle standing on the same arc.
+
+\section*{Theoretical verification:}
+
+Given: $O$ is the centre of the circle. The central angle $\angle AOB$ and inscribed angle $\angle ACB$ are based on the same arc $AB$ as shown in figure below:-
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-15.jpg?height=461&width=405&top_left_y=867&top_left_x=155)
+
+\section*{To be proved:-}
+
+$$\frac{1}{2}\angle AOB = \angle ACB \text{ i.e., } \angle ACB = \frac{1}{2}\angle AOB$$
+
+\section*{Construction:-}
+
+Points $C$ and $O$ are joined and produced to the point $D$.
+
+\section*{Proof:}
+
+\begin{tabular}{|l|l|l|}
+\hline S. N. & Statements & Reasons \\
+\hline (1) & In $\triangle AOC$: $\angle OAC = \angle OCA$ & $OA = OC$ (radii of same circle), so base angles of isosceles triangle. \\
+\hline (2) & $\angle AOD = \angle OAC + \angle OCA$ & Exterior and opposite interior angle of $\triangle AOC$. \\
+\hline (3) & In $\triangle BOC$: $\angle BOD = 2\angle OCB$ & Same as above facts and reasons. \\
+\hline (4) & $\angle AOD + \angle BOD = 2\angle OCA + 2\angle OCB = 2(\angle OCA + \angle OCB)$ & From statements above. \\
+\hline (5) & $\angle AOB = 2\angle ACB$ i.e., $\angle ACB = \frac{1}{2}\angle AOB$ & From statement (4), by whole part axiom. \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:-}
+
+The inscribed angle is half of the central angle based on the same arc.
+
+\section*{Relation between inscribed angle and its corresponding arc:-}
+
+\section*{Proof:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-17.jpg?height=543&width=486&top_left_y=303&top_left_x=230)
+
+\section*{Given:-}
+
+$O$ is the centre of the circle. The central angle $\angle AOB$ and the circumference angle $\angle ACB$ are based on the same arc $AB$.
+
+\section*{To be proved:-}
+
+$$2\angle ACB = \widehat{AB}$$
+
+\section*{Construction:-}
+
+Points $O$ and $C$ are joined.
+
+\section*{Proof:}
+
+In an isosceles triangle $OAC$,
+$$\angle OAC + \angle OCA + \angle AOC = 180^{\circ}$$
+or, $2\angle OCA = 180^{\circ} - \angle AOC$ ... (i)
+[since $\angle OAC = \angle OCA$]
+
+Again, in an isosceles triangle $OBC$,
+$$\angle OCB + \angle OBC + \angle BOC = 180^{\circ}$$
+or, $\angle OCB = 180^{\circ} - \angle BOC$ ... (ii)
+[since $\angle OCB = \angle OBC$]
+
+Adding equations (i) and (ii), we get,
+$$2(\angle OCA + \angle OCB) = 360^{\circ} - (\angle AOC + \angle BOC)$$
+or, $2\angle ACB = 360^{\circ} - \text{Reflex } \angle AOB$
+or, $2\angle ACB = \angle AOB$
+or, $2\angle ACB = \widehat{AB}$
+
+Therefore, $2\angle ACB \cong \widehat{AB}$
+
+\section*{Question no. 3}
+
+An angle in a semi-circle is a right angle.
+
+\section*{Solution:-}
+
+\section*{Experimental verification:-}
+
+Draw two circles having different radii as shown in the figures.
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-19.jpg?height=395&width=428&top_left_y=821&top_left_x=63}
+\captionsetup{labelformat=empty}
+\caption{Figure (1)}
+\end{figure}
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-19.jpg?height=359&width=428&top_left_y=860&top_left_x=496}
+\captionsetup{labelformat=empty}
+\caption{Figure (2)}
+\end{figure}
+
+\begin{tabular}{|c|l|l|}
+\hline Figure no. & $\angle ACB$ & Result \\
+\hline$(1)$ & $90^{\circ}$ & $\angle ACB = 90^{\circ}$ \\
+\hline$(2)$ & $90^{\circ}$ & $\angle ACB = 90^{\circ}$ \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:}
+
+An angle in a semicircle is a right angle.
+
+\section*{Theoretical proof:-}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-20.jpg?height=595&width=641&top_left_y=113&top_left_x=67)
+
+\section*{Given:-}
+
+$O$ is the centre of a circle in which $AOB$ is the diameter of the circle. $\angle ACB$ is the angle of the circumference based on the diameter.
+
+\section*{To prove:}
+
+$\angle ACB = 90^{\circ}$
+
+\section*{Proof:-}
+
+\begin{tabular}{|l|l|l|}
+\hline S. N. & Statements & Reasons \\
+\hline (1) & $\angle ACB = \frac{1}{2}\angle AOB$ & Inscribed angle is half of the central angle standing on the same arc. \\
+\hline (2) & $\angle AOB = 180^{\circ}$ & Being $\angle AOB$ is a straight angle. \\
+\hline (3) & $\angle ACB = \frac{1}{2} \times 180^{\circ} = 90^{\circ}$ & From statements (1) and (2) above. \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:-}
+
+An angle in a semi-circle is a right angle.
+
+\section*{Proved}
+
+\section*{The Relation between opposite angles of cyclic quadrilateral:}
+
+The sum of opposite interior angles of a cyclic quadrilateral is $180^{\circ}$ (supplementary).
+
+\section*{Solution:-}
+
+\section*{Experimental Verification}
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-21.jpg?height=333&width=332&top_left_y=1942&top_left_x=38}
+\captionsetup{labelformat=empty}
+\caption{Figure (1)}
+\end{figure}
+
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-21.jpg?height=429&width=412&top_left_y=1876&top_left_x=423)
+
+Figure (2)
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{Step 2:-}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline Figure No. & $\angle A$ & $\angle C$ & Result & $\angle B$ & $\angle D$ & Result \\
+\hline (1) & $90^{\circ}$ & $90^{\circ}$ & $\angle A + \angle C = 180^{\circ}$ & $90^{\circ}$ & $90^{\circ}$ & $\angle B + \angle D = 180^{\circ}$ \\
+\hline (2) & $88^{\circ}$ & $92^{\circ}$ & $\angle A + \angle C = 180^{\circ}$ & $95^{\circ}$ & $85^{\circ}$ & $\angle B + \angle D = 180^{\circ}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Step 3:
+
+\section*{Conclusion:}
+
+The sum of opposite angles of a cyclic quadrilateral are $180^{\circ}$.
+
+\section*{Theoretical proof:}
+
+\section*{Given:-}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-22.jpg?height=450&width=443&top_left_y=1271&top_left_x=372)
+
+$O$ is the centre of a circle. $ABCD$ is a cyclic quadrilateral.
+
+\section*{To prove:-}
+
+$$\angle ABC + \angle ADC = 180^{\circ}$$
+$$\angle BCD + \angle BAD = 180^{\circ}$$
+
+\section*{Construction:-}
+
+Join centre $O$ of the circle with points $A$ and $C$ successively.
+
+\section*{Proof:-}
+
+\begin{tabular}{|l|l|l|}
+\hline & Statements & Reasons \\
+\hline (1) & Obtuse $\angle AOC = 2\angle ADC$ & The central angle and the circumference angle based on the same arc $ABC$. \\
+\hline (2) & Reflex $\angle AOC = 2\angle ABC$ & The central angle and the circumference angle based on the same arc $ADC$. \\
+\hline (3) & $2\angle ADC + 2\angle ABC = \text{obtuse } \angle AOC + \text{Reflex } \angle AOC$ or $2(\angle ADC + \angle ABC) = 360^{\circ}$ Therefore $\angle ADC + \angle ABC = 180^{\circ}$ & From statements (1) and (2). \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:-}
+
+The opposite angles of a cyclic quadrilateral are supplementary. 
+
+Proved
+
+\section*{Example 1}
+
+In the given figure, $\angle PQR = 100^{\circ}$ and the points $P, Q$ and $R$ are the circumference points of the circle with the centre $O$. Find the value of $\angle OPR$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-24.jpg?height=435&width=439&top_left_y=569&top_left_x=368)
+
+\section*{Solution:-}
+
+According to the figure, (i) Reflex angle $\angle POR = 2 \times \angle PQR$ [since the central angle and the inscribed angle based on the same arc $PR$.]
+$$\text{Therefore, Reflex } \angle POR = 2 \times 100^{\circ} = 200^{\circ}$$
+
+(ii) Reflex angle $\angle POR$ + Obtuse angle $\angle POR = 360^{\circ}$
+[Sum of the angles around the point $O$]
+$$\text{or, } 200^{\circ} + \text{obtuse } \angle POR = 360^{\circ}$$
+$$\text{or, } \angle POR = 360^{\circ} - 200^{\circ} = 160^{\circ}$$
+
+(iii) Again, $\triangle POR$ is an isosceles triangle. So that, $\angle OPR = \angle ORP$.
+Now,
+$$\angle OPR + \angle ORP + \angle POR = 180^{\circ}$$
+[The sum of the angles of a triangle]
+$$\text{or, } \angle OPR + \angle OPR + 160^{\circ} = 180^{\circ}$$
+$$\text{or, } 2\angle OPR = 180^{\circ} - 160^{\circ} = 20^{\circ}$$
+$$\text{or, } \angle OPR = \frac{20^{\circ}}{2}$$
+$$\therefore \angle OPR = 10^{\circ}$$
+
+\section*{Question 2}
+
+In the adjoining figure, $\angle ABC = 70^{\circ}$ and $\angle ACB = 35^{\circ}$; then find the value of angle $\angle BDC$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-25.jpg?height=427&width=453&top_left_y=1747&top_left_x=116)
+
+\section*{Solutions:}
+
+Here,
+(i) In the triangle $ABC$, $\angle ABC + \angle ACB + \angle BAC = 180^{\circ}$.
+[Sum of interior angles of triangle]
+$$\text{or, } 70^{\circ} + 35^{\circ} + \angle BAC = 180^{\circ}$$
+$$\text{or, } \angle BAC + 105^{\circ} = 180^{\circ}$$
+$$\text{or, } \angle BAC = 180^{\circ} - 105^{\circ}$$
+$$\therefore \angle BAC = 75^{\circ}$$
+
+(ii) $\angle BDC = \angle BAC$
+[Inscribed angles standing on the same arc]
+$$\therefore \angle BDC = 75^{\circ}$$
+
+\section*{Question no. 3:}
+
+In the adjoining figure, $A, B, C$ and $D$ are four points on the circumference of the circle. The chords $AC$ and $BD$ are intersecting at a point $E$. If $\angle BEC = 140^{\circ}$ and $\angle ECD = 30^{\circ}$ find the value of $\angle BAC$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-27.jpg?height=511&width=600&top_left_y=9&top_left_x=57)
+
+\section*{Solution:}
+
+(i) $\angle BEC = 140^{\circ}$ and $\angle ECD = 30^{\circ}$. We know, $\angle BEC + \angle CED = 180^{\circ}$ [The sum of the angles in straight line.]
+$$\text{Or, } \angle CED = 180^{\circ} - \angle BEC$$
+$$\text{Or, } \angle CED = 180^{\circ} - 140^{\circ} = 40^{\circ}$$
+$$\therefore \angle CED = 40^{\circ}$$
+
+(ii) Again,
+$$\angle EDC + \angle CED + \angle ECD = 180^{\circ}$$
+[The sum of the angles of a triangle]
+$$\text{Or, } \angle EDC = 180^{\circ} - \angle CED - \angle ECD$$
+$$\text{or, } \angle EDC = 180^{\circ} - 40^{\circ} - 30^{\circ}$$
+$$\therefore \angle EDC = 110^{\circ}$$
+
+(iii) Here, $\angle EDC = \angle BDC = 110^{\circ}$
+Also,
+$$\angle BAC = \angle BDC$$
+[Inscribed angles standing on the same arc $BC$]
+$$\therefore \angle BAC = 110^{\circ}$$
+
+\section*{Question no. 4}
+
+Find the value of $x$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-28.jpg?height=550&width=578&top_left_y=963&top_left_x=199)
+
+\section*{Solution}
+
+(i) In $\triangle OAC$,
+$$\angle OAC = \angle OCA = 50^{\circ}$$
+[$OA = OC$, radii of same circle, so base angles of isosceles triangle]
+$$\therefore \angle OCA = \angle BCA = 50^{\circ}$$
+
+(ii) Here,
+$$\angle BDA = \angle BCA = 50^{\circ}$$
+[Relation between inscribed angles standing on the same arc $AB$]
+$$\therefore \angle BDA = x = 50^{\circ}$$
+
+\section*{Question no: 5:-}
+
+In the adjoining figure, $O$ is the centre of circle, $\angle OBA = 25^{\circ}$ and $\angle OCA = 30^{\circ}$, find the value of obtuse $\angle BOC$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-29.jpg?height=517&width=548&top_left_y=1222&top_left_x=56)
+
+\section*{Solution}
+
+In $\triangle OBA$,
+$$\angle OBA = \angle OAB = 25^{\circ}$$
+[$OB = OA$, radii of the same circle].
+
+Similarly,
+In $\triangle OCA$,
+$$\angle OCA = \angle OAC = 30^{\circ}$$
+[$OA = OC$, being radii of the same circle].
+
+Now,
+$$\angle OAB + \angle OAC = \angle BAC$$
+[from figure]
+$$\text{or, } \angle BAC = 25^{\circ} + 30^{\circ}$$
+$$\therefore \angle BAC = 55^{\circ}$$
+
+Now, $\angle BOC = ?$
+
+We know,
+The relation between central angle and inscribed angle formed on same arc $BC$ is,
+$$\angle BOC = 2 \times \angle BAC$$
+$$\therefore \angle BOC = 2 \times 55^{\circ} = 110^{\circ}$$
+
+\section*{Question no. 6}
+
+In the adjoining figure, $O$ is the centre of the circle. If $\angle PQR = 40^{\circ}$ and $\angle PSQ = x^{\circ}$, find the value of $x$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-31.jpg?height=525&width=557&top_left_y=6&top_left_x=9)
+
+\section*{Solution:}
+
+We have,
+$$\angle PQR = 40^{\circ}$$
+$$\angle PSQ = x^{\circ}$$
+
+Also, we know,
+$$\angle QPR = 90^{\circ}$$
+[Relation between inscribed angle formed on diameter.]
+
+Also,
+In $\triangle PQR$,
+$$\angle Q + \angle P + \angle R = 180^{\circ}$$
+$$\text{or, } 40^{\circ} + 90^{\circ} + \angle QRP = 180^{\circ}$$
+$$\text{or, } \angle QRP = 180^{\circ} - 130^{\circ}$$
+$$\therefore \angle QRP = 50^{\circ}$$
+
+Now,
+$$\angle PSQ = \angle PRQ = x^{\circ}$$
+[Relation between inscribed angles formed on the same arc $PQ$]
+$$\therefore x = 50^{\circ}$$
+
+\section*{Question no. 7}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-32.jpg?height=589&width=515&top_left_y=109&top_left_x=122)
+
+In the given figure, $O$ is the centre of the circle, $FAEC$ is a cyclic quadrilateral. If $\angle CED = 68^{\circ}$, then:
+
+(i) find the value of $\angle AFC$.
+
+(ii) find the value of reflex $\angle AOC$.
+
+\section*{Solution:}
+
+We know,
+
+(i) $\angle AFC = \angle CED = 68^{\circ}$
+[Relation between exterior angle and opposite interior angle of cyclic quadrilateral]
+
+(ii) $\angle AOC = 2 \times \angle AFC$
+[Relation between central angle and inscribed angle formed on the same arc $AC$]
+$$\therefore \angle AOC = 2 \times 68^{\circ} = 136^{\circ}$$
+
+Now,
+
+Reflex $\angle AOC + \angle AOC = 360^{\circ}$
+[Being complete turn]
+$$\text{or, Reflex } \angle AOC + 136^{\circ} = 360^{\circ}$$
+$$\therefore \text{Reflex } \angle AOC = 360^{\circ} - 136^{\circ} = 224^{\circ}$$
+
+\section*{Question no: 8:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-33.jpg?height=486&width=505&top_left_y=724&top_left_x=86)
+
+In the given figure, $AOB$ is a diameter of the circle. If $\angle ADC = 100^{\circ}$, then find the value of $\angle BAC$.
+
+\section*{Solution:}
+
+(i) $\angle ADC + \angle ABC = 180^{\circ}$
+[Relation between opposite angles of cyclic quadrilateral]
+$$\text{or, } 100^{\circ} + \angle ABC = 180^{\circ}$$
+$$\text{or, } \angle ABC = 180^{\circ} - 100^{\circ}$$
+$$\therefore \angle ABC = 80^{\circ}$$
+
+(ii) $\angle ACB = 90^{\circ}$
+[Inscribed angle formed on diameter]
+
+(iii) In $\triangle ABC$,
+$$\angle CAB + \angle ABC + \angle ACB = 180^{\circ}$$
+[Sum of interior angles of triangle $ABC$]
+$$\text{or, } \angle CAB + 80^{\circ} + 90^{\circ} = 180^{\circ}$$
+$$\text{or, } \angle CAB + 170^{\circ} = 180^{\circ}$$
+$$\therefore \angle CAB = 10^{\circ}$$
+
+\section*{Question no. 9:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-34.jpg?height=448&width=529&top_left_y=1085&top_left_x=112)
+
+In the adjoining figure, $O$ is the centre of the circle. If arc $PC = $ arc $PB$, then prove that $AC \parallel OP$.
+
+\section*{Solution:}
+
+\section*{Given:-}
+
+$O$ is the centre of the circle. And arc $PC = $ arc $PB$.
+$$\text{i.e., } \widehat{PC} = \widehat{PB}$$
+
+\section*{To be proved:}
+
+$AC \parallel OP$.
+
+\section*{Proof:}
+
+\begin{tabular}{|l|l|l|}
+\hline & Statements & Reasons \\
+\hline (1) & $\angle BAC = \frac{1}{2}\widehat{BC}$ & Relation between inscribed angle and its opposite arc in degree measure. \\
+\hline (2) & $\angle BOP = \widehat{BP}$ & Relation between central angle and its opposite arc in degree measure. \\
+\hline (3) & $\widehat{BC} = \widehat{BP} + \widehat{PC}$ & From figure: whole part of arc $BC$. \\
+\hline (4) & $\angle BAC = \frac{1}{2} \times 2\widehat{BP} = \widehat{BP}$ & From statements (1) and (3). \\
+\hline (5) & $\angle BOP = \angle BAC$ & From statements (2) and (4). \\
+\hline (6) & $AC \parallel OP$ & Being corresponding angles from statement (5). \\
+\hline
+\end{tabular}
+
+Proved.
+
+\section*{Question no. 10}
+
+In the figure, chords $MN$ and $RS$ of the circle intersect externally at the point $X$. Prove that:
+$$\angle MXR = \frac{1}{2}(\widehat{MR} - \widehat{NS})$$
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-36.jpg?height=412&width=657&top_left_y=555&top_left_x=0)
+
+\section*{Solution:}
+
+\section*{Given:-}
+
+Chords $MN$ and $RS$ of the circle intersect externally at the point $X$.
+
+\section*{To Prove:}
+
+$$\angle MXR = \frac{1}{2}(\widehat{MR} - \widehat{NS})$$
+
+\section*{Construction:-}
+
+Join $N$ to $R$.
+
+\section*{Proof:}
+
+\begin{tabular}{|l|l|}
+\hline Statements & Reasons \\
+\hline (1) $\angle NRS = \frac{1}{2}\widehat{NS}$ and $\angle MNR = \frac{1}{2}\widehat{MR}$ & Relation between inscribed angles and its corresponding arc in degree measures. \\
+\hline (2) $\angle MNR = \angle MXR + \angle XNR$ & Exterior angle property of triangle. \\
+\hline (3) $\angle MXR = \frac{1}{2}(\widehat{MR} - \widehat{NS})$ & From statements (1) and (2), solving. \\
+\hline
+\end{tabular}
+
+
+\section*{Question 2}
+
+In a circle, the inscribed angle is half of the central angle standing on the same arc.
+
+\section*{(experimental verification:-}
+
+Draval the two circles having different radii as shown in figure.
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-14.jpg?height=365&width=299&top_left_y=1261&top_left_x=79}
+\captionsetup{labelformat=empty}
+\caption{figure (i)}
+\end{figure}
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-14.jpg?height=429&width=429&top_left_y=1255&top_left_x=399}
+\captionsetup{labelformat=empty}
+\caption{figure (2)}
+\end{figure}
+
+\begin{tabular}{|c|c|c|c|}
+\hline Fig. no. & $\Varangle A O B$ & $\triangle A C B$ & Result \\
+\hline$(1)$ & $100^{\circ}$ & $50^{\circ}$ & \begin{tabular}{l}
+$\triangle A C B=$ \\
+$\frac{1}{2} \angle A O B$
+\end{tabular} \\
+\hline$(2)$ & $120^{\circ}$ & $60^{\circ}$ & \begin{tabular}{l}
+$\triangle A C B=$ \\
+$\frac{1}{2} \angle A O B$
+\end{tabular} \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:-}
+
+The inscribed angle is half of the central angle standing on the same are.
+
+\section*{(ii) Theorefical verification:}
+
+Criven:- ' $O$ ' is the centre of the circle. The central angle $\angle A O B$ and inscribed angle $\triangle A C B$ are based on the same arc $A B$ as shown in figure below:-
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-15.jpg?height=461&width=405&top_left_y=867&top_left_x=155)
+
+To be prove:-
+$$
+\begin{aligned}
+& \frac{1}{2} \Varangle A O B=\Varangle A C B \\
+& \text {.e. } \Varangle A C B=\frac{1}{2} \Varangle A O B
+\end{aligned}
+$$
+
+Construction:-
+Points $C$ and $O$ are joined and produced co to the point D.
+
+\section*{Proof:}
+
+\begin{tabular}{|l|l|l|l|}
+\hline s. N. & Statements & & Reasons. \\
+\hline \multirow{4}{*}{(1)} & In $\triangle A O C$, & \multirow{4}{*}{(1)} & \\
+\hline & (i) $\triangle O A C=\triangle O C A$ & & (i) $\mathrm{OA}=\mathrm{OC}$ (radii of same circle), Sobase angles of isoséles △ . \\
+\hline & (ii)
+$$
+\begin{aligned}
+\angle A O D & =\angle O A C \\
+& +\angle O C A
+\end{aligned}
+$$ & & (iii) Exterior and opposite interior angle of $\triangle A O C$. \\
+\hline & & & (III) From statement (i) and (ii) \\
+\hline (2) & In $\triangle B O C$,
+$$
+\triangle B O D=2 \triangle O C B
+$$ & (2) & Same as above facts and reasons \\
+\hline (3) & $$
+\begin{aligned}
+& \triangle A O D+\triangle B O D \\
+& =2 \angle O C A+2 \Varangle O C B \\
+& =2(\angle O C A+\angle O C B)
+\end{aligned}
+$$ & (3) & From statements 1Ciii) and (2) above. \\
+\hline (4) & $\Varangle A O B=2 \Varangle A C B$ i.e. $\forall A C B= \frac{1}{2} \Varangle A O B$ & (4) & From statement (3), by whole partaxiom. \\
+\hline
+\end{tabular}
+
+\section*{Conclusion :-}
+
+The inscribed angle is half of the central angle based on the same are.
+
+\section*{\# Relation between inscribedangle}
+
+\section*{and its corresponding arc:-}
+
+\section*{⇒ Proof:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-17.jpg?height=543&width=486&top_left_y=303&top_left_x=230)
+
+\section*{Given:-}
+$\bar{O}$ is the centre of the circle. The central angle $\triangle A O B$ and the circumference angle $\& A C B$ are based on the same arc $A B$.
+
+\section*{To be prove:-}
+$$
+2 \Varangle A C B \xlongequal{\circ} \overparen{A B}
+$$
+
+\section*{Construction:-}
+
+Points $O$ and $C$ are joined.
+
+\section*{Proof: Isosceles}
+
+In an $\uparrow$ triangle $O A C$,
+$$
+\begin{aligned}
+& \angle O A C+\angle O C A+\Varangle A O C=180^{\circ} \\
+& \text { or, } 2 \Varangle O C A=180^{\circ}-\Varangle A O C \rightarrow(\mathrm{Cl}) \\
+& {[\because \Varangle O A C=\Varangle O C A]}
+\end{aligned}
+$$
+
+Again, in an isosceles $\triangle O B C$, $\angle O C B+\angle O B C+\angle B O C=180^{\circ}$
+or, $\triangle O C B=180^{\circ}-\Varangle B O C$
+$$
+\begin{equation*}
+[\because \triangle O C B=\Varangle O B C] \tag{ii}
+\end{equation*}
+$$
+
+Adding equations (i) and (ii), we get,
+$\begin{aligned} 2(\Varangle O C A+\Varangle O C B)= & 360^{\circ}-C \Varangle A O C+ \\ & \Varangle B O C)\end{aligned}$
+or, $2 \Varangle A C B=360^{\circ}$ - Reflex $\Varangle A O B$
+or, $2 \Varangle A C B=\Varangle A O B$
+or, $2 \Varangle A C B=\widehat{A B}$
+$\therefore 2 \Varangle A C B \stackrel{0}{=} \overparen{A B}$
+The relation ship between the double the angle at the circumference and its opposite arc has the equal influence. It is denoted by $2 \Varangle A C B \cong \stackrel{\circ}{A B}$.
+
+\section*{Question no. 3 .}
+
+An angle in a semi-circle is a right angle.
+
+⇒ Solution:-
+(i) Experimental verification:-
+
+Draw two circles having different radii as shown in the figures.
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-19.jpg?height=395&width=428&top_left_y=821&top_left_x=63}
+\captionsetup{labelformat=empty}
+\caption{× Figure (1)}
+\end{figure}
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-19.jpg?height=359&width=428&top_left_y=860&top_left_x=496}
+\captionsetup{labelformat=empty}
+\caption{$x$ figure (2) $x$}
+\end{figure}
+
+\begin{tabular}{|c|l|l|}
+\hline Figure no. & $\triangle A C B$ & Result \\
+\hline$(1)$ & $90^{\circ}$ & $\triangle A C B$ \\
+& & $=90^{\circ}$ \\
+\hline$(2)$ & $90^{\circ}$ & $\checkmark A C B$ \\
+& & $=90^{\circ}$ \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:}
+
+An angle in a semicircle is a right angle-
+(ii) Theoretical proof:-
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-20.jpg?height=595&width=641&top_left_y=113&top_left_x=67)
+
+\section*{Given:-}
+' $O$ ' is the centre of a circle in which $A O B$ is the diameter of the circle. $\triangle A C B$ is the angle of the circumference based on the diameter.
+
+To prove:
+$\triangle A C B=90^{\circ}$
+
+Proof:-
+
+\begin{tabular}{|l|l|l|}
+\hline S. & Statements & S. \\
+N. & Reasons \\
+(1) $\forall A C B=\frac{1}{2} \forall A O B$ & (1) & In sonibed angle \\
+& & is half of the \\
+& & central angle \\
+& & standing on the \\
+& & some are.
+\end{tabular}
+
+(2) \begin{tabular}{rl|r}
+$\triangle A O B=180^{\circ}$ & \begin{tabular}{rl} 
+(2) & Being $\Varangle A O B$ \\
+& is a straight \\
+& angle.
+\end{tabular} \\
+(3) $\triangle A C B=\frac{1}{2} \times 180^{\circ}$ & \begin{tabular}{rl} 
+(3) & From statements \\
+& $=90^{\circ}$
+\end{tabular} & \begin{tabular}{l} 
+(1) and (2) \\
+above.
+\end{tabular}
+\end{tabular}
+
+\section*{ConClusion:-}
+
+\section*{An angle in a semi-circle is a right angle.}
+
+\section*{Proved H}
+\# The Relation betwieen opposite angles of cyclic quadrilateral:
+
+The sum of opposite interior angles of a cyctic quadrilateral is $180^{\circ}$ (supplementary.
+
+\section*{⇒ Solution:-}
+(i) Experimental Verification Step 1
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-21.jpg?height=333&width=332&top_left_y=1942&top_left_x=38}
+\captionsetup{labelformat=empty}
+\caption{Figure (1)}
+\end{figure}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-21.jpg?height=429&width=412&top_left_y=1876&top_left_x=423)
+- Figure (2)
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{Step 2:-}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline \begin{tabular}{l} 
+Figure \\
+No.
+\end{tabular} & $\Varangle A$ & $\Varangle C$ & Result & $\Varangle B$ & $\Varangle D$ & Result \\
+\hline (1) & $90^{\circ}$ & $90^{\circ}$ & & $\Varangle A t$ & $90^{\circ}$ & $90^{\circ}$ \\
+& & & $\Varangle C$ & & & $\Varangle D+$ \\
+\hline & & & $=180^{\circ}$ & & & $=180^{\circ}$ \\
+\hline (2) & $88^{\circ}$ & $92^{\circ}$ & $K A+$ & $95^{\circ}$ & $85^{\circ}$ & $\Varangle B+$ \\
+& & & $\Varangle C$ & & & $\Varangle D$ \\
+& & & $=180^{\circ}$ & & & $=180^{\circ}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Step 3:
+Conclusion:
+The sum of opposite angles of a cyclic quadrilateral are $180^{\circ}$.
+iii Theoretical proof:
+
+Given:-
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-22.jpg?height=450&width=443&top_left_y=1271&top_left_x=372)
+
+0 is the centre of a circle. $A B C D$ is a cyclic quadrilateral.
+
+To prove:-
+$$
+\begin{aligned}
+& \Varangle A B C+\Varangle A D C=180^{\circ} \\
+& \Varangle B C D+\Varangle B A D=180^{\circ}
+\end{aligned}
+$$
+
+\section*{Construction:-}
+
+Join centre 0 of the circle with points $A$ and C successively.
+
+\section*{Proof:-}
+
+\begin{tabular}{|l|l|l|}
+\hline & Statements & Reasons. \\
+\hline (1) & Obtuse $\times A O C= 2 \Varangle$ ADC & (1) The central angle and the circumfe--rence angle based on the same arc $A B C$. \\
+\hline (2) & Reflex $\Varangle A O C= 2 \triangle A B C$ & (2) The central angle and the circumference angle based on the same arc ADC. \\
+\hline (3) & $2 \Varangle A D C+2 \Varangle A B C =$ obituse $\Varangle A O C+$ Reflex $\Varangle A O C$ or, 2 ( $\Varangle A D C+\Varangle A B C$ ) $=360^{\circ} \therefore \Varangle A D C+\Varangle A B C =\frac{360^{\circ}}{2}=180^{\circ}$ & (3) \\
+\hline & (4) & (4) \\
+\hline
+\end{tabular}
+
+\section*{Conclusion:-}
+
+The opposite angles of a cyclic quadrilat--eral are Supplementary. proved \#
+
+\section*{Example 1}
+
+In the given figure, $\angle P Q R=100^{\circ}$ and the points $P, Q$ and $R$ are the circumference points of the circle with the centre 0 . Find the value of $\angle O P R$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-24.jpg?height=435&width=439&top_left_y=569&top_left_x=368)
+
+\section*{⇒ Solution:-}
+
+According to the figure, (i) Reflex angle $P O R=2 \times \angle P Q R [\because$ the central angle and the inscribed angle based on the same arc PR.]
+$$
+\begin{aligned}
+\therefore \text { Reflex } \angle P O R & =2 \times 100^{\circ} \\
+& =200^{\circ} .
+\end{aligned}
+$$
+(ii) Reflex anglePOR + Obtuseangle $P O R=360^{\circ}$
+$E$ : Sum of the angles around the point 0]
+$$
+\begin{aligned}
+& \text { or, } 200^{\circ}+\text { obtuse } \triangle P O R=360^{\circ} \\
+& \text { or, } \angle P O R=360^{\circ}-200^{\circ}=160^{\circ}
+\end{aligned}
+$$
+(iii) Again,
+$\triangle P O R$ is an isosceles triangle. So that, $\angle O P R=\angle O R P$.
+Now,
+$\angle O P R+\angle O R P+\angle P O R=180^{\circ}$
+F : The sum of the angles of a $\triangle J$.
+or, $\angle O P R+\angle O P R+\angle P O R=180^{\circ}$
+or, 2 \& OPR $+160^{\circ}=180^{\circ}$
+or, $2 \angle O P R=180^{\circ}-160^{\circ}=20^{\circ}$
+Or, $\angle O P R=\frac{20^{\circ}}{2}$
+$\therefore \Varangle O P R=10^{\circ}$
+
+\section*{Question 00.2}
+
+In the adjoiming, $\triangle A B C=70^{\circ}$ and $\& A C B=35^{\circ}$; then find the value of angle $\nsubseteq B D C$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-25.jpg?height=427&width=453&top_left_y=1747&top_left_x=116)
+
+\section*{⇒ Solutions:}
+
+Hene,
+(i) In the triangle $A B C$, $\Varangle A B C+\Varangle A C B+\Varangle B A C=180^{\circ}$.
+[ ∵ Sum of interior angles of triangle]
+or, $70^{\circ}+35^{\circ}+513 A C=180^{\circ}$
+or, $\forall B A C+105^{\circ}=180^{\circ}$.
+or, $\triangle B A C=180^{\circ}-105^{\circ}$
+$\therefore \angle B A C=75^{\circ}$
+(ii) $\triangle B D C=\Varangle B A C$
+[i: Inscribed angles standing on the Same are]
+$$
+\therefore \triangle B D C=75^{\circ} \#
+$$
+
+\section*{Question no. 3:}
+
+In the adjoining figure, $A, B, C$ and $D$ are four points on the circumference of the circle. The chords $A C$ and $B D$ are intersecting at a point $E$. If $\angle B E C=140^{\circ}$ and $\angle E C D=30^{\circ}$ find the value of $\forall B A C$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-27.jpg?height=511&width=600&top_left_y=9&top_left_x=57)
+
+\section*{Solution:}
+(i) $\Varangle B E C=140^{\circ}$ and $\Varangle E C D=30^{\circ}$ wle know, $\Varangle B E C+\Varangle C E D=180^{\circ} \mathrm{C} \because$ The sum of the angles in straight line.]
+$$
+\text { Or, } \angle C E D=180^{\circ}-\Varangle B E C
+$$
+$$
+\text { Or, } \Varangle C E D=180^{\circ}-140^{\circ}=40^{\circ}
+$$
+$$
+\therefore \Varangle C E D=40^{\circ}
+$$
+(ii) Again,
+$$
+\Varangle E D C+\Varangle C E D+\Varangle E C D=180^{\circ}
+$$
+[: The sum of the angles of a triangle]
+$$
+\text { Or, } \Varangle E D C=180^{\circ}-\Varangle C E D-\Varangle E C D
+$$
+$$
+\text { or, } \Varangle E D C=180^{\circ}-40^{\circ}-30^{\circ}
+$$
+$$
+\therefore \Varangle E D C=70^{\circ}
+$$
+(siii) Here, $K E D C=\Varangle B D C=110^{\circ}$
+Also,
+$$
+\Varangle B A C=\Varangle B D C
+$$
+[ ∵ Inscribed angles standing on the same arc BCJ
+$$
+\text { ∴ } \Varangle B A C=110^{\circ} .
+$$
+
+\section*{Question no. 4}
+
+Find the value of $x$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-28.jpg?height=550&width=578&top_left_y=963&top_left_x=199)
+
+\section*{⇒ Solution}
+(i) In $\triangle O A C$,
+$$
+\begin{aligned}
+& \forall O A C=\forall O C A=50^{\circ} \\
+& \angle \because O A=O C, \text { radii of same }
+\end{aligned}
+$$
+circle, So base angles of isosceles $\Delta$ ]
+$$
+\therefore \angle O C A=\angle B C A=50^{\circ}
+$$
+(iii) Here,
+$$
+\Varangle B D A=\Varangle B C A=e^{\circ}
+$$
+[ ∵ Relation between inscribed angles standing on the same $\operatorname{arc} A B J$
+$$
+\therefore \Varangle B D A=x=50^{\circ}
+$$
+
+\section*{Question no:5:-}
+
+In the adjoining figure, $O$ is the centre of circle, $\angle O B A=25^{\circ}$ and $\angle O C A=30^{\circ}$, find the value of obtuse $\triangle B O C$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-29.jpg?height=517&width=548&top_left_y=1222&top_left_x=56)
+
+Fsolution
+In $\triangle O B A$,
+$$
+\angle O B A=\angle O A B=25^{\circ}
+$$
+$[\because O B=O A$, radii of the same Circle].
+
+Similatly,
+In $\triangle O C A_{1}$
+$\angle O C A=\angle O A C=30^{\circ}$
+ie. $\angle O A C=30^{\circ}[\because O A=O C$, being radii of the same circle].
+
+Now,
+$$
+\begin{gathered}
+\forall O A B+\Varangle O A C=\Varangle B A C \\
+{[\because \text { from figure] }} \\
+\text { or, } \Varangle B A C=25^{\circ}+30^{\circ} \\
+\therefore \Varangle B A C=55^{\circ}
+\end{gathered}
+$$
+
+Now,
+$$
+\triangle B O C=?
+$$
+
+We $\mathrm{knO}(\mathrm{n})$,
+The relation between central angle and inscribed angle formed on same arc $B C$ is,
+$$
+\begin{aligned}
+\triangle B O C & =2 \times \square B A C \\
+\therefore K B O C & =2 \times 55^{\circ} \\
+& =110^{\circ} \#
+\end{aligned}
+$$
+
+\section*{Question no. 6}
+
+In the adjoining figure, 0 is the centre of the circle. If $\Varangle P Q R=40^{\circ}$ and $\angle P S Q=x^{\circ}$, find the value of $x$.
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-31.jpg?height=525&width=557&top_left_y=6&top_left_x=9)
+
+\section*{⇒ Solution:}
+
+We have,
+$$
+\begin{aligned}
+& \triangle P \ominus R=40^{\circ} \\
+& \triangle P S Q=x^{\circ}
+\end{aligned}
+$$
+
+Also, we know,
+$$
+\triangle Q P R=90^{\circ}
+$$
+$[\because$ Relation between inscribed angle formed on diameter.]
+
+Also,
+In $\Delta \dot{Q} R$,
+$$
+\Varangle Q+\Varangle P+\Varangle R=180^{\circ}
+$$
+or, $40^{\circ}+90^{\circ}+\Varangle Q R P=180^{\circ}$
+or, $\Varangle Q R P=180^{\circ}-130^{\circ}$
+∴ KRP $=50^{\circ}$
+i.e. $\operatorname{~} \operatorname{~} P R Q=50^{\circ}$
+Now,
+$$
+\operatorname{SPSQ}=\operatorname{KPRO}=x^{\circ}
+$$
+[ ∵ Relation between inscribed angles formed on the same $\operatorname{arcPQ} \cdot]$
+$$
+\therefore x=50^{\circ} \#
+$$
+
+\section*{Question no. 7}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-32.jpg?height=589&width=515&top_left_y=109&top_left_x=122)
+
+In the given figure, $O$ is the cents of the circle, FAEC is a cyclic quadrilateral. If $\Varangle C E D=68^{\circ}$, then iv find the value of $\triangle A F C$.
+ii) find the value of refle $x \triangle A O C$.
+
+\section*{⇒ Solution We know,}
+(i) $\angle A F C=\angle C E D=68^{\circ}$
+[ ∵ Relation between exterior angle and opposite interior angle of cyclic quadrilateral]
+(ii) $\Varangle \mathrm{AOC}=2 \times K A F C$
+[ ∵ Relation between central.
+angle and in scribed angle formed on the same arc AC]
+$$
+\begin{aligned}
+\therefore \triangle A O C & =2 \times 68^{\circ} \\
+& =136^{\circ}
+\end{aligned}
+$$
+
+Nour,
+
+Reflex $\Varangle A O C+\Varangle A O C=360^{\circ}$
+[ $\because$ Being complete turn]
+or, Reflex $\Varangle \mathrm{AOC}+136^{\circ}=360^{\circ}$
+∴ Reflex $\Varangle A O C=860^{\circ}-136^{\circ}$
+$$
+=224^{\circ}
+$$
+
+\section*{Question no:8:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-33.jpg?height=486&width=505&top_left_y=724&top_left_x=86)
+
+In the given figure, $A O B$ is a diameter of the circle. If $\triangle A D C=200^{\circ}$, the find the value of $\Varangle B A C$.
+
+\section*{⇒ Solution:}
+i) $\Varangle A D C+\Varangle A B C=180^{\circ}$ E Relation between opposite angles of cyclic quadrilateral]
+or, $100^{\circ}+K A B C=180^{\circ}$
+or, $\triangle A B C=180^{\circ}-100^{\circ}$
+$\therefore \angle A B C=80^{\circ}$
+(ii) $\angle A C B=90^{\circ}$
+[ In scribed angle formed on diameter
+(iii) In $\triangle A B C$,
+$\Varangle C A B+\Varangle A B C+\Varangle A C B=180^{\circ}$
+$[\because$ Sum of interior angles of $\triangle A B C$ ]
+or, $\angle C A B+80^{\circ}+90^{\circ}=180^{\circ}$
+or, $\angle C A B+170^{\circ}=180^{\circ}$
+$\therefore \Varangle C A B=10^{\circ}$.
+
+\section*{Question no. 9:}
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-34.jpg?height=448&width=529&top_left_y=1085&top_left_x=112)
+
+In the adjoining figure, $O$ is the centre of the circle. If $\operatorname{arc} P C=\operatorname{arc} P B$, then prove that $A Q \| O P$.
+
+\section*{⇒ Solution:}
+
+Given:-
+Q is the centre of the circle. And $\operatorname{arcPQ}=\operatorname{arcPB}$.
+$$
+\text { i.e. } \overparen{P Q}=\overparen{P B}
+$$
+
+To be prove:
+ACllOP.
+
+\section*{Proof:}
+
+\begin{tabular}{|l|l|l|}
+\hline & statements & Reasons \\
+\hline (1) & $\triangle B A C=\frac{1}{2} \overparen{B C}$ & Relation between inscribed angle and its opposite are in degree measure. \\
+\hline (2) & $\Varangle B O P=\overrightarrow{B P}$ & Relation between Central angle and its opposite arc in degree measure. \\
+\hline (3) & $\widehat{B C}=\widehat{B P}+\overparen{P C}$ & From figure I whole part of arc $B(2)$. \\
+\hline (4) & $\triangle A Q=\frac{1}{2} \times 2 \overparen{B P}$
+$$
+=\widehat{\mathrm{BP}}
+$$ & \begin{tabular}{l}
+from statements \\
+(1) and (3)
+\end{tabular} \\
+\hline (5) & $\Varangle B O P=\Varangle B A Q$ & From statements (2) and (4) \\
+\hline (6) & AD IIOP & Being Comesponding angles from statement (5) \\
+\hline
+\end{tabular}
+
+Proved.
+
+\section*{Question no. 10}
+
+In the figure, chords MN and RS of the circle intersect externally at the point $X$. Prove that:
+$$
+\Varangle M X R=1 / 2(\overrightarrow{M R}-\overrightarrow{N S}) .
+$$
+![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-36.jpg?height=412&width=657&top_left_y=555&top_left_x=0)
+
+⇒ Solution:
+
+\section*{Given:-}
+
+Chords MN and RS of the circle intersect externally at the point $X$.
+
+Prove :
+$$
+\Varangle M \times R=\frac{1}{2}(\overline{M R}-\overline{N S}) .
+$$
+
+\section*{Construction:-}
+
+By joining $N$ to $R$.
+
+Proof:
+
+\begin{tabular}{|l|l|}
+\hline Statements & Reasons \\
+\hline \begin{tabular}{l}
+(1) $\Varangle$ NRS $\doteq \frac{1}{2} \mathbb{N S}$ \\
+and KMNR $=\frac{1}{2} M R$
+\end{tabular} & Relation between inscribed angles and its corresponding arc in degree measures. \\
+\hline (2) & SMNR $=$ SNXR +XNRX \\
+\hline (3) KMXR = $\frac{1}{2}(\widehat{M R}-\widehat{N S})$ & Solving statement (2). \\
+\hline
+\end{tabular}
