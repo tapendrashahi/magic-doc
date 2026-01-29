@@ -520,6 +520,12 @@ export const Editor = () => {
       const { jsPDF } = await import('jspdf');
       const html2canvas = (await import('html2canvas')).default;
 
+      // Margin constants (in mm)
+      const MARGIN_TOP = 10; // 1cm
+      const MARGIN_BOTTOM = 10; // 1cm
+      const MARGIN_LEFT = 10;
+      const MARGIN_RIGHT = 10;
+
       // Create wrapper element with proper dimensions
       const wrapper = document.createElement('div');
       wrapper.id = 'pdf-export-wrapper';
@@ -562,11 +568,20 @@ export const Editor = () => {
       // Clean up wrapper
       document.body.removeChild(wrapper);
 
-      // A4 dimensions at scale 2: 1600px width, ~2263px height per page
-      const CANVAS_PAGE_HEIGHT = 2263; // A4 height (297mm) at 96dpi scale 2
-      const totalPages = Math.ceil(canvas.height / CANVAS_PAGE_HEIGHT);
+      // PDF dimensions
+      const PDF_PAGE_WIDTH = 210; // A4 width in mm
+      const PDF_PAGE_HEIGHT = 297; // A4 height in mm
+      const CONTENT_WIDTH = PDF_PAGE_WIDTH - (MARGIN_LEFT + MARGIN_RIGHT);
+      const CONTENT_HEIGHT = PDF_PAGE_HEIGHT - (MARGIN_TOP + MARGIN_BOTTOM); // 277mm
+      
+      // Canvas dimensions at scale 2
+      // 210mm = 1600px at scale 2
+      // 277mm = 2090px at scale 2 (for content height per page)
+      const CANVAS_CONTENT_HEIGHT = 2090;
+      const totalPages = Math.ceil(canvas.height / CANVAS_CONTENT_HEIGHT);
       
       console.log('[PDF Export] Total pages needed:', totalPages);
+      console.log('[PDF Export] Margins - Top:', MARGIN_TOP, 'Bottom:', MARGIN_BOTTOM, 'Left:', MARGIN_LEFT, 'Right:', MARGIN_RIGHT);
 
       // Create PDF
       const pdf = new jsPDF({
@@ -575,31 +590,21 @@ export const Editor = () => {
         format: 'a4'
       });
 
-      const imgData = canvas.toDataURL('image/png');
-      const PDF_PAGE_WIDTH = 210; // A4 width in mm
-      const PDF_PAGE_HEIGHT = 297; // A4 height in mm
-      const MARGIN_TOP = 10; // 10mm top margin
-      const MARGIN_LEFT = 10; // 10mm left margin
-      const CONTENT_WIDTH = PDF_PAGE_WIDTH - 20; // 10mm margins on each side
-      const CONTENT_HEIGHT = PDF_PAGE_HEIGHT - 20; // 10mm margins top and bottom
+      // Conversion factor: canvas pixels at scale 2 to mm
+      // 1600px canvas = 210mm PDF
+      // So 1px at scale 2 = 0.13125mm
+      const pixelToMM = CONTENT_WIDTH / 1600;
 
-      console.log('[PDF Export] PDF Page dimensions - Width:', CONTENT_WIDTH, 'mm, Height:', CONTENT_HEIGHT, 'mm');
-
-      // Add pages with proper content distribution
+      // Add pages with proper page breaks
       for (let i = 0; i < totalPages; i++) {
         if (i > 0) {
           pdf.addPage();
         }
 
-        const sourceY = i * CANVAS_PAGE_HEIGHT;
-        const sourceHeight = Math.min(CANVAS_PAGE_HEIGHT, canvas.height - sourceY);
+        // Calculate source area from canvas
+        const sourceY = i * CANVAS_CONTENT_HEIGHT;
+        const sourceHeight = Math.min(CANVAS_CONTENT_HEIGHT, canvas.height - sourceY);
         
-        // Scale canvas content to PDF page while maintaining aspect ratio
-        // Canvas width is 1600px = 210mm at scale 2
-        // So 1px at scale 2 = 0.13125mm (210/1600)
-        const pixelToMM = PDF_PAGE_WIDTH / (1600 * 0.5); // Account for scale
-        const destHeight = (sourceHeight * pixelToMM) / 2; // Adjust for scale
-
         // Create temp canvas for this page's content
         const tempCanvas = document.createElement('canvas');
         tempCanvas.width = canvas.width;
@@ -617,7 +622,10 @@ export const Editor = () => {
 
         const croppedImgData = tempCanvas.toDataURL('image/png');
         
-        // Add image centered and aligned properly
+        // Calculate destination height maintaining aspect ratio
+        const destHeight = sourceHeight * pixelToMM;
+        
+        // Add image with margins
         pdf.addImage(
           croppedImgData,
           'PNG',
@@ -627,12 +635,12 @@ export const Editor = () => {
           destHeight
         );
 
-        console.log(`[PDF Export] Added page ${i + 1}/${totalPages} - Content height: ${destHeight.toFixed(2)}mm`);
+        console.log(`[PDF Export] Added page ${i + 1}/${totalPages} - Height: ${destHeight.toFixed(2)}mm`);
       }
 
       pdf.save(`${title}.pdf`);
       console.log('[PDF Export] PDF saved successfully');
-      toastManager.success(`PDF exported successfully! (${totalPages} pages)`);
+      toastManager.success(`PDF exported successfully! (${totalPages} pages with 1cm margins)`);
       setExportOpen(false);
     } catch (err) {
       console.error('[PDF Export] Error:', err);
