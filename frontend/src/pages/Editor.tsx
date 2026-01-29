@@ -501,6 +501,207 @@ export const Editor = () => {
     }
   };
 
+  const handleExportPDF = async () => {
+    let htmlToExport = '';
+    
+    if (activeTab === 'mathpix') {
+      htmlToExport = mathpixResult?.html || '';
+    } else {
+      htmlToExport = html;
+    }
+
+    if (!htmlToExport || !title) {
+      toastManager.warning('No content to export');
+      return;
+    }
+
+    try {
+      console.log('[PDF Export] Starting hybrid PDF export...');
+      const { jsPDF } = await import('jspdf');
+      const html2canvas = (await import('html2canvas')).default;
+
+      // Create wrapper element with proper dimensions
+      const wrapper = document.createElement('div');
+      wrapper.id = 'pdf-export-wrapper';
+      wrapper.innerHTML = htmlToExport;
+      wrapper.style.padding = '0px';
+      wrapper.style.margin = '0px';
+      wrapper.style.fontFamily = 'Arial, sans-serif';
+      wrapper.style.fontSize = '12px';
+      wrapper.style.lineHeight = '1.6';
+      wrapper.style.color = '#000000';
+      wrapper.style.backgroundColor = '#ffffff';
+      wrapper.style.position = 'fixed';
+      wrapper.style.left = '-9999px';
+      wrapper.style.top = '0';
+      wrapper.style.width = '210mm'; // Full A4 width
+      wrapper.style.zIndex = '-1';
+      wrapper.style.boxSizing = 'border-box';
+      
+      document.body.appendChild(wrapper);
+      console.log('[PDF Export] Wrapper element created');
+
+      // Wait for content to render
+      await new Promise(resolve => setTimeout(resolve, 300));
+
+      // Render wrapper to canvas
+      console.log('[PDF Export] Rendering HTML to canvas...');
+      const canvas = await html2canvas(wrapper, {
+        scale: 2,
+        logging: false,
+        backgroundColor: '#ffffff',
+        allowTaint: true,
+        useCORS: true,
+        windowHeight: wrapper.scrollHeight,
+        windowWidth: 1600, // 210mm at scale 2
+        removeContainer: false
+      });
+
+      console.log('[PDF Export] Canvas created - Size:', canvas.width, 'x', canvas.height);
+
+      // Clean up wrapper
+      document.body.removeChild(wrapper);
+
+      // A4 dimensions at scale 2: 1600px width, ~2263px height per page
+      const CANVAS_PAGE_HEIGHT = 2263; // A4 height (297mm) at 96dpi scale 2
+      const totalPages = Math.ceil(canvas.height / CANVAS_PAGE_HEIGHT);
+      
+      console.log('[PDF Export] Total pages needed:', totalPages);
+
+      // Create PDF
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+      });
+
+      const imgData = canvas.toDataURL('image/png');
+      const PDF_PAGE_WIDTH = 210; // A4 width in mm
+      const PDF_PAGE_HEIGHT = 297; // A4 height in mm
+      const MARGIN_TOP = 10; // 10mm top margin
+      const MARGIN_LEFT = 10; // 10mm left margin
+      const CONTENT_WIDTH = PDF_PAGE_WIDTH - 20; // 10mm margins on each side
+      const CONTENT_HEIGHT = PDF_PAGE_HEIGHT - 20; // 10mm margins top and bottom
+
+      console.log('[PDF Export] PDF Page dimensions - Width:', CONTENT_WIDTH, 'mm, Height:', CONTENT_HEIGHT, 'mm');
+
+      // Add pages with proper content distribution
+      for (let i = 0; i < totalPages; i++) {
+        if (i > 0) {
+          pdf.addPage();
+        }
+
+        const sourceY = i * CANVAS_PAGE_HEIGHT;
+        const sourceHeight = Math.min(CANVAS_PAGE_HEIGHT, canvas.height - sourceY);
+        
+        // Scale canvas content to PDF page while maintaining aspect ratio
+        // Canvas width is 1600px = 210mm at scale 2
+        // So 1px at scale 2 = 0.13125mm (210/1600)
+        const pixelToMM = PDF_PAGE_WIDTH / (1600 * 0.5); // Account for scale
+        const destHeight = (sourceHeight * pixelToMM) / 2; // Adjust for scale
+
+        // Create temp canvas for this page's content
+        const tempCanvas = document.createElement('canvas');
+        tempCanvas.width = canvas.width;
+        tempCanvas.height = sourceHeight;
+        const ctx = tempCanvas.getContext('2d');
+        if (ctx) {
+          ctx.drawImage(
+            canvas,
+            0, sourceY,
+            canvas.width, sourceHeight,
+            0, 0,
+            canvas.width, sourceHeight
+          );
+        }
+
+        const croppedImgData = tempCanvas.toDataURL('image/png');
+        
+        // Add image centered and aligned properly
+        pdf.addImage(
+          croppedImgData,
+          'PNG',
+          MARGIN_LEFT,
+          MARGIN_TOP,
+          CONTENT_WIDTH,
+          destHeight
+        );
+
+        console.log(`[PDF Export] Added page ${i + 1}/${totalPages} - Content height: ${destHeight.toFixed(2)}mm`);
+      }
+
+      pdf.save(`${title}.pdf`);
+      console.log('[PDF Export] PDF saved successfully');
+      toastManager.success(`PDF exported successfully! (${totalPages} pages)`);
+      setExportOpen(false);
+    } catch (err) {
+      console.error('[PDF Export] Error:', err);
+      // Fallback cleanup
+      const wrapper = document.getElementById('pdf-export-wrapper');
+      if (wrapper && wrapper.parentNode) {
+        wrapper.parentNode.removeChild(wrapper);
+      }
+      toastManager.error('Failed to export PDF: ' + (err.message || 'Unknown error'));
+    }
+  };
+
+  const handleExportDocx = () => {
+    let htmlToExport = '';
+    
+    if (activeTab === 'mathpix') {
+      htmlToExport = mathpixResult?.html || '';
+    } else {
+      htmlToExport = html;
+    }
+
+    if (!htmlToExport || !title) {
+      toastManager.warning('No content to export');
+      return;
+    }
+
+    try {
+      // Convert HTML to plain text for DOCX
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlToExport, 'text/html');
+      const plainText = doc.body.textContent || '';
+
+      // Create a simple DOCX-like XML structure (Word 2007 format is actually ZIP with XML)
+      // For simplicity, we'll export as RTF or plain text in a way that Word can read
+      
+      // Simple approach: Create HTML file that Word can open
+      const wordHTML = `
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>${title}</title>
+          <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            p { line-height: 1.6; }
+          </style>
+        </head>
+        <body>
+          ${htmlToExport}
+        </body>
+        </html>
+      `;
+
+      const blob = new Blob([wordHTML], { type: 'application/vnd.ms-word' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${title}.docx`;
+      a.click();
+      URL.revokeObjectURL(url);
+
+      toastManager.success('DOCX exported!');
+      setExportOpen(false);
+    } catch (err) {
+      console.error('DOCX export error:', err);
+      toastManager.error('Failed to export DOCX');
+    }
+  };
+
   const handleDeleteNote = async (noteId: number) => {
     if (!confirm('Are you sure you want to delete this note?')) {
       return;
@@ -965,6 +1166,24 @@ export const Editor = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
                     Export as Markdown
+                  </button>
+                  <button
+                    onClick={handleExportPDF}
+                    className="w-full px-4 py-2.5 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm font-medium text-gray-700 border-t border-gray-100"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    Export as PDF
+                  </button>
+                  <button
+                    onClick={handleExportDocx}
+                    className="w-full px-4 py-2.5 text-left hover:bg-gray-50 transition flex items-center gap-2 text-sm font-medium text-gray-700 border-t border-gray-100"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Export as DOCX
                   </button>
                 </div>
               )}
