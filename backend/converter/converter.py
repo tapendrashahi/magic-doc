@@ -12,6 +12,7 @@ from .unicode_converter import convert_latex_to_plain_html as unicode_convert
 from .latex_extractor import LatexExtractor
 from .katex_renderer import KaTeXRenderer
 from .html_assembler import HTMLAssembler
+from .latex_normalizer import LatexNormalizer
 
 logger = logging.getLogger(__name__)
 
@@ -25,9 +26,10 @@ def convert_mathpix_to_lms_html(mathpix_text):
     Convert Mathpix LaTeX output to LMS-compatible HTML fragment.
     
     This is the main orchestrator that combines:
-    1. LaTeX Extraction (Phase 2) - Find equations and sections
-    2. KaTeX Rendering (Phase 3) - Render to HTML via Node.js
-    3. HTML Assembly (Phase 4) - Wrap with LMS attributes and assemble
+    1. LaTeX Normalization (Phase 1.5) - Fix Mathpix commands
+    2. LaTeX Extraction (Phase 2) - Find equations and sections
+    3. KaTeX Rendering (Phase 3) - Render to HTML via Node.js
+    4. HTML Assembly (Phase 4) - Wrap with LMS attributes and assemble
     
     Args:
         mathpix_text: Raw Mathpix LaTeX output text
@@ -45,10 +47,16 @@ def convert_mathpix_to_lms_html(mathpix_text):
         return ""
     
     try:
+        # ===== PHASE 1.5: NORMALIZATION =====
+        logger.info("Phase 1.5: Normalizing LaTeX commands...")
+        normalizer = LatexNormalizer()
+        normalized_text = normalizer.normalize(mathpix_text)
+        logger.info("  LaTeX normalization complete (Varangle->angle, overparen->widehat)")
+        
         # ===== PHASE 2: EXTRACTION =====
         logger.info("Phase 2: Extracting equations and sections...")
         extractor = LatexExtractor()
-        equations, sections = extractor.extract_all(mathpix_text)
+        equations, sections = extractor.extract_all(normalized_text)
         logger.info(f"  Extracted {len(equations)} equations, {len(sections)} sections")
         
         # ===== PHASE 3: RENDERING =====
@@ -67,7 +75,7 @@ def convert_mathpix_to_lms_html(mathpix_text):
         # ===== PHASE 4: ASSEMBLY =====
         logger.info("Phase 4: Assembling HTML fragment...")
         assembler = HTMLAssembler()
-        html_fragment = assembler.assemble_fragment(mathpix_text, equations, sections)
+        html_fragment = assembler.assemble_fragment(normalized_text, equations, sections)
         logger.info(f"  Assembled HTML fragment ({len(html_fragment)} chars)")
         
         # ===== VALIDATION =====
@@ -99,9 +107,13 @@ def convert_mathpix_to_lms_html_with_stats(mathpix_text):
     logger.info("Starting conversion with statistics...")
     
     try:
+        # Normalize
+        normalizer = LatexNormalizer()
+        normalized_text = normalizer.normalize(mathpix_text)
+        
         # Extract
         extractor = LatexExtractor()
-        equations, sections = extractor.extract_all(mathpix_text)
+        equations, sections = extractor.extract_all(normalized_text)
         
         # Render
         renderer = KaTeXRenderer()
@@ -109,10 +121,10 @@ def convert_mathpix_to_lms_html_with_stats(mathpix_text):
         
         # Assemble
         assembler = HTMLAssembler()
-        html_fragment = assembler.assemble_fragment(mathpix_text, equations, sections)
+        html_fragment = assembler.assemble_fragment(normalized_text, equations, sections)
         
         # Get statistics
-        stats = assembler.get_statistics(mathpix_text, equations, sections, html_fragment)
+        stats = assembler.get_statistics(normalized_text, equations, sections, html_fragment)
         
         logger.info(f"Conversion complete: {stats['total_equations']} equations, {stats['total_sections']} sections")
         

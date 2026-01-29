@@ -11,6 +11,9 @@ import re
 from dataclasses import dataclass, field
 from typing import List, Optional, Tuple
 from enum import Enum
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class EquationType(Enum):
@@ -120,6 +123,15 @@ class LatexExtractor:
         self.display_pattern = re.compile(self.DISPLAY_EQUATION_PATTERN, self.REGEX_FLAGS)
         self.inline_pattern = re.compile(self.INLINE_EQUATION_PATTERN, self.REGEX_FLAGS)
         self.section_pattern = re.compile(self.SECTION_PATTERN, self.REGEX_FLAGS)
+        
+        # Import normalizer here to avoid circular imports
+        try:
+            from .latex_normalizer import LatexNormalizer
+            self.normalizer = LatexNormalizer()
+            logger.debug("LatexNormalizer imported successfully")
+        except ImportError as e:
+            logger.warning(f"Could not import LatexNormalizer: {e}. Normalization disabled.")
+            self.normalizer = None
     
     def extract_equations(self, text: str) -> List[Equation]:
         """
@@ -135,6 +147,7 @@ class LatexExtractor:
             - Extracts display equations first ($$...$$)
             - Then extracts inline equations ($...$)
             - Returns combined list sorted by position
+            - Normalizes each equation (fixes \Varangle, \overparen, etc.)
         """
         equations = []
         
@@ -144,6 +157,10 @@ class LatexExtractor:
             # Skip empty matches
             if not latex_content:
                 continue
+            
+            # Normalize the equation if normalizer is available
+            if self.normalizer:
+                latex_content = self.normalizer.normalize_equation(latex_content)
             
             # Calculate positions (excluding delimiters)
             start_pos = match.start()
@@ -176,6 +193,10 @@ class LatexExtractor:
             
             if is_inside_display:
                 continue
+            
+            # Normalize the equation if normalizer is available
+            if self.normalizer:
+                latex_content = self.normalizer.normalize_equation(latex_content)
             
             start_pos = match.start()
             end_pos = match.end()

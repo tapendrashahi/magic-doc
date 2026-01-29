@@ -699,7 +699,7 @@ Draval the two circles having different radii as shown in figure.
 \end{figure}
 
 \begin{tabular}{|c|c|c|c|}
-\hline Fig. no. & $\Varangle A O B$ & $\triangle A C B$ & Result \\
+\hline Fig. no. & $\angle A O B$ & $\triangle A C B$ & Result \\
 \hline$(1)$ & $100^{\circ}$ & $50^{\circ}$ & \begin{tabular}{l}
 $\triangle A C B=$ \\
 $\frac{1}{2} \angle A O B$
@@ -723,8 +723,8 @@ Criven:- ' $O$ ' is the centre of the circle. The central angle $\angle A O B$ a
 To be prove:-
 $$
 \begin{aligned}
-& \frac{1}{2} \Varangle A O B=\Varangle A C B \\
-& \text {.e. } \Varangle A C B=\frac{1}{2} \Varangle A O B
+& \frac{1}{2} \angle A O B=\angle A C B \\
+& \text {.e. } \angle A C B=\frac{1}{2} \angle A O B
 \end{aligned}
 $$
 
@@ -752,11 +752,11 @@ $$ & (2) & Same as above facts and reasons \\
 \hline (3) & $$
 \begin{aligned}
 & \triangle A O D+\triangle B O D \\
-& =2 \angle O C A+2 \Varangle O C B \\
+& =2 \angle O C A+2 \angle O C B \\
 & =2(\angle O C A+\angle O C B)
 \end{aligned}
 $$ & (3) & From statements 1Ciii) and (2) above. \\
-\hline (4) & $\Varangle A O B=2 \Varangle A C B$ i.e. $\forall A C B= \frac{1}{2} \Varangle A O B$ & (4) & From statement (3), by whole partaxiom. \\
+\hline (4) & $\angle A O B=2 \angle A C B$ i.e. $\forall A C B= \frac{1}{2} \angle A O B$ & (4) & From statement (3), by whole partaxiom. \\
 \hline
 \end{tabular}
 
@@ -774,41 +774,38 @@ The inscribed angle is half of the central angle based on the same are.
 \section*{Given:-}
 $\bar{O}$ is the centre of the circle. The central angle $\triangle A O B$ and the circumference angle $\& A C B$ are based on the same arc $A B$.
 
-\section*{To be prove:-}
+\section*{To be proved:-}
 $$
-2 \Varangle A C B \xlongequal{\circ} \overparen{A B}
+2 \angle A C B = \widehat{AB}
 $$
 
 \section*{Construction:-}
 
 Points $O$ and $C$ are joined.
 
-\section*{Proof: Isosceles}
+\section*{Proof:}
 
-In an $\uparrow$ triangle $O A C$,
+In an isosceles triangle $OAC$,
 $$
 \begin{aligned}
-& \angle O A C+\angle O C A+\Varangle A O C=180^{\circ} \\
-& \text { or, } 2 \Varangle O C A=180^{\circ}-\Varangle A O C \rightarrow(\mathrm{Cl}) \\
-& {[\because \Varangle O A C=\Varangle O C A]}
+& \angle OAC + \angle OCA + \angle AOC = 180^{\circ} \\
+& \text{ or, } 2\angle OCA = 180^{\circ} - \angle AOC \rightarrow \text{(i)} \\
+& [\because \angle OAC = \angle OCA]
 \end{aligned}
 $$
 
-Again, in an isosceles $\triangle O B C$, $\angle O C B+\angle O B C+\angle B O C=180^{\circ}$
-or, $\triangle O C B=180^{\circ}-\Varangle B O C$
-$$
-\begin{equation*}
-[\because \triangle O C B=\Varangle O B C] \tag{ii}
-\end{equation*}
-$$
+Again, in an isosceles triangle $OBC$,
+$$\angle OCB + \angle OBC + \angle BOC = 180^{\circ}$$
+or, $\angle OCB = 180^{\circ} - \angle BOC$ ... (ii)
+[since $\angle OCB = \angle OBC$]
 
 Adding equations (i) and (ii), we get,
-$\begin{aligned} 2(\Varangle O C A+\Varangle O C B)= & 360^{\circ}-C \Varangle A O C+ \\ & \Varangle B O C)\end{aligned}$
-or, $2 \Varangle A C B=360^{\circ}$ - Reflex $\Varangle A O B$
-or, $2 \Varangle A C B=\Varangle A O B$
-or, $2 \Varangle A C B=\widehat{A B}$
-$\therefore 2 \Varangle A C B \stackrel{0}{=} \overparen{A B}$
-The relation ship between the double the angle at the circumference and its opposite arc has the equal influence. It is denoted by $2 \Varangle A C B \cong \stackrel{\circ}{A B}$.
+$$2(\angle OCA + \angle OCB) = 360^{\circ} - (\angle AOC + \angle BOC)$$
+or, $2\angle ACB = 360^{\circ} - \text{Reflex } \angle AOB$
+or, $2\angle ACB = \angle AOB$
+or, $2\angle ACB = \widehat{AB}$
+
+Therefore, $2\angle ACB \cong \widehat{AB}$
 
 \section*{Question no. 3 .}
 
@@ -866,7 +863,7 @@ N. & Reasons \\
 
 (2) \begin{tabular}{rl|r}
 $\triangle A O B=180^{\circ}$ & \begin{tabular}{rl} 
-(2) & Being $\Varangle A O B$ \\
+(2) & Being $\angle A O B$ \\
 & is a straight \\
 & angle.
 \end{tabular} \\
@@ -906,12 +903,12 @@ The sum of opposite interior angles of a cyctic quadrilateral is $180^{\circ}$ (
 \hline \begin{tabular}{l} 
 Figure \\
 No.
-\end{tabular} & $\Varangle A$ & $\Varangle C$ & Result & $\Varangle B$ & $\Varangle D$ & Result \\
-\hline (1) & $90^{\circ}$ & $90^{\circ}$ & & $\Varangle A t$ & $90^{\circ}$ & $90^{\circ}$ \\
-& & & $\Varangle C$ & & & $\Varangle D+$ \\
+\end{tabular} & $\angle A$ & $\angle C$ & Result & $\angle B$ & $\angle D$ & Result \\
+\hline (1) & $90^{\circ}$ & $90^{\circ}$ & & $\angle A t$ & $90^{\circ}$ & $90^{\circ}$ \\
+& & & $\angle C$ & & & $\angle D+$ \\
 \hline & & & $=180^{\circ}$ & & & $=180^{\circ}$ \\
-\hline (2) & $88^{\circ}$ & $92^{\circ}$ & $K A+$ & $95^{\circ}$ & $85^{\circ}$ & $\Varangle B+$ \\
-& & & $\Varangle C$ & & & $\Varangle D$ \\
+\hline (2) & $88^{\circ}$ & $92^{\circ}$ & $K A+$ & $95^{\circ}$ & $85^{\circ}$ & $\angle B+$ \\
+& & & $\angle C$ & & & $\angle D$ \\
 & & & $=180^{\circ}$ & & & $=180^{\circ}$ \\
 \hline
 \end{tabular}
@@ -930,8 +927,8 @@ Given:-
 To prove:-
 $$
 \begin{aligned}
-& \Varangle A B C+\Varangle A D C=180^{\circ} \\
-& \Varangle B C D+\Varangle B A D=180^{\circ}
+& \angle A B C+\angle A D C=180^{\circ} \\
+& \angle B C D+\angle B A D=180^{\circ}
 \end{aligned}
 $$
 
@@ -943,9 +940,9 @@ Join centre 0 of the circle with points $A$ and C successively.
 
 \begin{tabular}{|l|l|l|}
 \hline & Statements & Reasons. \\
-\hline (1) & Obtuse $\times A O C= 2 \Varangle$ ADC & (1) The central angle and the circumfe--rence angle based on the same arc $A B C$. \\
-\hline (2) & Reflex $\Varangle A O C= 2 \triangle A B C$ & (2) The central angle and the circumference angle based on the same arc ADC. \\
-\hline (3) & $2 \Varangle A D C+2 \Varangle A B C =$ obituse $\Varangle A O C+$ Reflex $\Varangle A O C$ or, 2 ( $\Varangle A D C+\Varangle A B C$ ) $=360^{\circ} \therefore \Varangle A D C+\Varangle A B C =\frac{360^{\circ}}{2}=180^{\circ}$ & (3) \\
+\hline (1) & Obtuse $\times A O C= 2 \angle$ ADC & (1) The central angle and the circumfe--rence angle based on the same arc $A B C$. \\
+\hline (2) & Reflex $\angle A O C= 2 \triangle A B C$ & (2) The central angle and the circumference angle based on the same arc ADC. \\
+\hline (3) & $2 \angle A D C+2 \angle A B C =$ obituse $\angle A O C+$ Reflex $\angle A O C$ or, 2 ( $\angle A D C+\angle A B C$ ) $=360^{\circ} \therefore \angle A D C+\angle A B C =\frac{360^{\circ}}{2}=180^{\circ}$ & (3) \\
 \hline & (4) & (4) \\
 \hline
 \end{tabular}
@@ -985,7 +982,7 @@ or, $\angle O P R+\angle O P R+\angle P O R=180^{\circ}$
 or, 2 \& OPR $+160^{\circ}=180^{\circ}$
 or, $2 \angle O P R=180^{\circ}-160^{\circ}=20^{\circ}$
 Or, $\angle O P R=\frac{20^{\circ}}{2}$
-$\therefore \Varangle O P R=10^{\circ}$
+$\therefore \angle O P R=10^{\circ}$
 
 \section*{Question 00.2}
 
@@ -995,13 +992,13 @@ In the adjoiming, $\triangle A B C=70^{\circ}$ and $\& A C B=35^{\circ}$; then f
 \section*{⇒ Solutions:}
 
 Hene,
-(i) In the triangle $A B C$, $\Varangle A B C+\Varangle A C B+\Varangle B A C=180^{\circ}$.
+(i) In the triangle $A B C$, $\angle A B C+\angle A C B+\angle B A C=180^{\circ}$.
 [ ∵ Sum of interior angles of triangle]
 or, $70^{\circ}+35^{\circ}+513 A C=180^{\circ}$
 or, $\forall B A C+105^{\circ}=180^{\circ}$.
 or, $\triangle B A C=180^{\circ}-105^{\circ}$
 $\therefore \angle B A C=75^{\circ}$
-(ii) $\triangle B D C=\Varangle B A C$
+(ii) $\triangle B D C=\angle B A C$
 [i: Inscribed angles standing on the Same are]
 $$
 \therefore \triangle B D C=75^{\circ} \#
@@ -1013,38 +1010,38 @@ In the adjoining figure, $A, B, C$ and $D$ are four points on the circumference 
 ![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-27.jpg?height=511&width=600&top_left_y=9&top_left_x=57)
 
 \section*{Solution:}
-(i) $\Varangle B E C=140^{\circ}$ and $\Varangle E C D=30^{\circ}$ wle know, $\Varangle B E C+\Varangle C E D=180^{\circ} \mathrm{C} \because$ The sum of the angles in straight line.]
+(i) $\angle B E C=140^{\circ}$ and $\angle E C D=30^{\circ}$ wle know, $\angle B E C+\angle C E D=180^{\circ} \mathrm{C} \because$ The sum of the angles in straight line.]
 $$
-\text { Or, } \angle C E D=180^{\circ}-\Varangle B E C
-$$
-$$
-\text { Or, } \Varangle C E D=180^{\circ}-140^{\circ}=40^{\circ}
+\text { Or, } \angle C E D=180^{\circ}-\angle B E C
 $$
 $$
-\therefore \Varangle C E D=40^{\circ}
+\text { Or, } \angle C E D=180^{\circ}-140^{\circ}=40^{\circ}
+$$
+$$
+\therefore \angle C E D=40^{\circ}
 $$
 (ii) Again,
 $$
-\Varangle E D C+\Varangle C E D+\Varangle E C D=180^{\circ}
+\angle E D C+\angle C E D+\angle E C D=180^{\circ}
 $$
 [: The sum of the angles of a triangle]
 $$
-\text { Or, } \Varangle E D C=180^{\circ}-\Varangle C E D-\Varangle E C D
+\text { Or, } \angle E D C=180^{\circ}-\angle C E D-\angle E C D
 $$
 $$
-\text { or, } \Varangle E D C=180^{\circ}-40^{\circ}-30^{\circ}
+\text { or, } \angle E D C=180^{\circ}-40^{\circ}-30^{\circ}
 $$
 $$
-\therefore \Varangle E D C=70^{\circ}
+\therefore \angle E D C=70^{\circ}
 $$
-(siii) Here, $K E D C=\Varangle B D C=110^{\circ}$
+(siii) Here, $K E D C=\angle B D C=110^{\circ}$
 Also,
 $$
-\Varangle B A C=\Varangle B D C
+\angle B A C=\angle B D C
 $$
 [ ∵ Inscribed angles standing on the same arc BCJ
 $$
-\text { ∴ } \Varangle B A C=110^{\circ} .
+\text { ∴ } \angle B A C=110^{\circ} .
 $$
 
 \section*{Question no. 4}
@@ -1066,11 +1063,11 @@ $$
 $$
 (iii) Here,
 $$
-\Varangle B D A=\Varangle B C A=e^{\circ}
+\angle B D A=\angle B C A=e^{\circ}
 $$
 [ ∵ Relation between inscribed angles standing on the same $\operatorname{arc} A B J$
 $$
-\therefore \Varangle B D A=x=50^{\circ}
+\therefore \angle B D A=x=50^{\circ}
 $$
 
 \section*{Question no:5:-}
@@ -1093,10 +1090,10 @@ ie. $\angle O A C=30^{\circ}[\because O A=O C$, being radii of the same circle].
 Now,
 $$
 \begin{gathered}
-\forall O A B+\Varangle O A C=\Varangle B A C \\
+\forall O A B+\angle O A C=\angle B A C \\
 {[\because \text { from figure] }} \\
-\text { or, } \Varangle B A C=25^{\circ}+30^{\circ} \\
-\therefore \Varangle B A C=55^{\circ}
+\text { or, } \angle B A C=25^{\circ}+30^{\circ} \\
+\therefore \angle B A C=55^{\circ}
 \end{gathered}
 $$
 
@@ -1117,7 +1114,7 @@ $$
 
 \section*{Question no. 6}
 
-In the adjoining figure, 0 is the centre of the circle. If $\Varangle P Q R=40^{\circ}$ and $\angle P S Q=x^{\circ}$, find the value of $x$.
+In the adjoining figure, 0 is the centre of the circle. If $\angle P Q R=40^{\circ}$ and $\angle P S Q=x^{\circ}$, find the value of $x$.
 ![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-31.jpg?height=525&width=557&top_left_y=6&top_left_x=9)
 
 \section*{⇒ Solution:}
@@ -1139,10 +1136,10 @@ $[\because$ Relation between inscribed angle formed on diameter.]
 Also,
 In $\Delta \dot{Q} R$,
 $$
-\Varangle Q+\Varangle P+\Varangle R=180^{\circ}
+\angle Q+\angle P+\angle R=180^{\circ}
 $$
-or, $40^{\circ}+90^{\circ}+\Varangle Q R P=180^{\circ}$
-or, $\Varangle Q R P=180^{\circ}-130^{\circ}$
+or, $40^{\circ}+90^{\circ}+\angle Q R P=180^{\circ}$
+or, $\angle Q R P=180^{\circ}-130^{\circ}$
 ∴ KRP $=50^{\circ}$
 i.e. $\operatorname{~} \operatorname{~} P R Q=50^{\circ}$
 Now,
@@ -1157,13 +1154,13 @@ $$
 \section*{Question no. 7}
 ![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-32.jpg?height=589&width=515&top_left_y=109&top_left_x=122)
 
-In the given figure, $O$ is the cents of the circle, FAEC is a cyclic quadrilateral. If $\Varangle C E D=68^{\circ}$, then iv find the value of $\triangle A F C$.
+In the given figure, $O$ is the cents of the circle, FAEC is a cyclic quadrilateral. If $\angle C E D=68^{\circ}$, then iv find the value of $\triangle A F C$.
 ii) find the value of refle $x \triangle A O C$.
 
 \section*{⇒ Solution We know,}
 (i) $\angle A F C=\angle C E D=68^{\circ}$
 [ ∵ Relation between exterior angle and opposite interior angle of cyclic quadrilateral]
-(ii) $\Varangle \mathrm{AOC}=2 \times K A F C$
+(ii) $\angle \mathrm{AOC}=2 \times K A F C$
 [ ∵ Relation between central.
 angle and in scribed angle formed on the same arc AC]
 $$
@@ -1175,10 +1172,10 @@ $$
 
 Nour,
 
-Reflex $\Varangle A O C+\Varangle A O C=360^{\circ}$
+Reflex $\angle A O C+\angle A O C=360^{\circ}$
 [ $\because$ Being complete turn]
-or, Reflex $\Varangle \mathrm{AOC}+136^{\circ}=360^{\circ}$
-∴ Reflex $\Varangle A O C=860^{\circ}-136^{\circ}$
+or, Reflex $\angle \mathrm{AOC}+136^{\circ}=360^{\circ}$
+∴ Reflex $\angle A O C=860^{\circ}-136^{\circ}$
 $$
 =224^{\circ}
 $$
@@ -1186,21 +1183,21 @@ $$
 \section*{Question no:8:}
 ![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-33.jpg?height=486&width=505&top_left_y=724&top_left_x=86)
 
-In the given figure, $A O B$ is a diameter of the circle. If $\triangle A D C=200^{\circ}$, the find the value of $\Varangle B A C$.
+In the given figure, $A O B$ is a diameter of the circle. If $\triangle A D C=200^{\circ}$, the find the value of $\angle B A C$.
 
 \section*{⇒ Solution:}
-i) $\Varangle A D C+\Varangle A B C=180^{\circ}$ E Relation between opposite angles of cyclic quadrilateral]
+i) $\angle A D C+\angle A B C=180^{\circ}$ E Relation between opposite angles of cyclic quadrilateral]
 or, $100^{\circ}+K A B C=180^{\circ}$
 or, $\triangle A B C=180^{\circ}-100^{\circ}$
 $\therefore \angle A B C=80^{\circ}$
 (ii) $\angle A C B=90^{\circ}$
 [ In scribed angle formed on diameter
 (iii) In $\triangle A B C$,
-$\Varangle C A B+\Varangle A B C+\Varangle A C B=180^{\circ}$
+$\angle C A B+\angle A B C+\angle A C B=180^{\circ}$
 $[\because$ Sum of interior angles of $\triangle A B C$ ]
 or, $\angle C A B+80^{\circ}+90^{\circ}=180^{\circ}$
 or, $\angle C A B+170^{\circ}=180^{\circ}$
-$\therefore \Varangle C A B=10^{\circ}$.
+$\therefore \angle C A B=10^{\circ}$.
 
 \section*{Question no. 9:}
 ![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-34.jpg?height=448&width=529&top_left_y=1085&top_left_x=112)
@@ -1212,7 +1209,7 @@ In the adjoining figure, $O$ is the centre of the circle. If $\operatorname{arc}
 Given:-
 Q is the centre of the circle. And $\operatorname{arcPQ}=\operatorname{arcPB}$.
 $$
-\text { i.e. } \overparen{P Q}=\overparen{P B}
+\text { i.e. } \widehat{P Q}=\widehat{P B}
 $$
 
 To be prove:
@@ -1222,17 +1219,17 @@ ACllOP.
 
 \begin{tabular}{|l|l|l|}
 \hline & statements & Reasons \\
-\hline (1) & $\triangle B A C=\frac{1}{2} \overparen{B C}$ & Relation between inscribed angle and its opposite are in degree measure. \\
-\hline (2) & $\Varangle B O P=\overrightarrow{B P}$ & Relation between Central angle and its opposite arc in degree measure. \\
-\hline (3) & $\widehat{B C}=\widehat{B P}+\overparen{P C}$ & From figure I whole part of arc $B(2)$. \\
-\hline (4) & $\triangle A Q=\frac{1}{2} \times 2 \overparen{B P}$
+\hline (1) & $\triangle B A C=\frac{1}{2} \widehat{B C}$ & Relation between inscribed angle and its opposite are in degree measure. \\
+\hline (2) & $\angle B O P=\overrightarrow{B P}$ & Relation between Central angle and its opposite arc in degree measure. \\
+\hline (3) & $\widehat{B C}=\widehat{B P}+\widehat{P C}$ & From figure I whole part of arc $B(2)$. \\
+\hline (4) & $\triangle A Q=\frac{1}{2} \times 2 \widehat{B P}$
 $$
 =\widehat{\mathrm{BP}}
 $$ & \begin{tabular}{l}
 from statements \\
 (1) and (3)
 \end{tabular} \\
-\hline (5) & $\Varangle B O P=\Varangle B A Q$ & From statements (2) and (4) \\
+\hline (5) & $\angle B O P=\angle B A Q$ & From statements (2) and (4) \\
 \hline (6) & AD IIOP & Being Comesponding angles from statement (5) \\
 \hline
 \end{tabular}
@@ -1243,7 +1240,7 @@ Proved.
 
 In the figure, chords MN and RS of the circle intersect externally at the point $X$. Prove that:
 $$
-\Varangle M X R=1 / 2(\overrightarrow{M R}-\overrightarrow{N S}) .
+\angle M X R=1 / 2(\overrightarrow{M R}-\overrightarrow{N S}) .
 $$
 ![](https://cdn.mathpix.com/cropped/412488ef-565e-4a71-b199-1e462d89fca7-36.jpg?height=412&width=657&top_left_y=555&top_left_x=0)
 
@@ -1255,7 +1252,7 @@ Chords MN and RS of the circle intersect externally at the point $X$.
 
 Prove :
 $$
-\Varangle M \times R=\frac{1}{2}(\overline{M R}-\overline{N S}) .
+\angle M \times R=\frac{1}{2}(\overline{M R}-\overline{N S}) .
 $$
 
 \section*{Construction:-}
@@ -1267,7 +1264,7 @@ Proof:
 \begin{tabular}{|l|l|}
 \hline Statements & Reasons \\
 \hline \begin{tabular}{l}
-(1) $\Varangle$ NRS $\doteq \frac{1}{2} \mathbb{N S}$ \\
+(1) $\angle$ NRS $\doteq \frac{1}{2} \mathbb{N S}$ \\
 and KMNR $=\frac{1}{2} M R$
 \end{tabular} & Relation between inscribed angles and its corresponding arc in degree measures. \\
 \hline (2) & SMNR $=$ SNXR +XNRX \\
