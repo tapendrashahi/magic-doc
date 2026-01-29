@@ -174,8 +174,8 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
             ref={previewRef}
             className="prose prose-sm max-w-none leading-relaxed text-gray-900"
             style={{ 
-              fontSize: '14px',
-              lineHeight: '1.6'
+              fontSize: '16px',
+              lineHeight: '1.8'
             }}
             dangerouslySetInnerHTML={{ __html: displayHtml }}
           />
@@ -183,7 +183,7 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
 
         {!loading && html && outputTab === 'code' && (
           <div ref={codeContainerRef} className="flex-1 flex flex-col min-h-0 w-full">
-            <pre ref={preElementRef} className="bg-gray-50 border border-gray-300 rounded-lg p-4 overflow-auto flex-1 text-xs text-gray-700 font-mono break-words whitespace-pre-wrap">
+            <pre ref={preElementRef} className="bg-gray-50 border border-gray-300 rounded-lg p-4 overflow-auto flex-1 text-sm text-gray-700 font-mono break-words whitespace-pre-wrap">
               {html}
             </pre>
           </div>
