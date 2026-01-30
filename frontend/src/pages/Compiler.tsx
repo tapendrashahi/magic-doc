@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import '../styles/compiler.css';
-import type { CompilerState, CompilerFile } from '../types/compiler';
+import type { CompilerState } from '../types/compiler';
 import { compilerService } from '../services/compilerService';
 import katexService from '../services/katex';
 import CompilerLayout from '../components/CompilerLayout';
@@ -28,6 +28,15 @@ const Compiler: React.FC = () => {
     uploadProgress: 0,
   });
 
+  // Separate state for transient messages to avoid re-rendering the preview panel
+  const [messageDisplay, setMessageDisplay] = useState<{
+    success: string | null;
+    error: string | null;
+  }>({
+    success: null,
+    error: null,
+  });
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Compute derived values early
@@ -50,13 +59,33 @@ const Compiler: React.FC = () => {
    */
   useEffect(() => {
     if (compiledHtml) {
+      console.log('[Compiler] compiledHtml changed, triggering KaTeX render');
+      console.log('[Compiler] HTML length:', compiledHtml.length);
+      
       // Use setTimeout to ensure DOM is updated first
       setTimeout(() => {
-        katexService.render(document.querySelector('.preview-panel') || document.body)
-          .catch((error) => {
-            console.error('Failed to render KaTeX:', error);
-          });
+        // Target the actual content div, not the container
+        const previewHtml = document.querySelector('.preview-html');
+        console.log('[Compiler] Preview HTML element found:', !!previewHtml);
+        
+        if (previewHtml) {
+          const tiptapCount = previewHtml.querySelectorAll('.tiptap-katex').length;
+          console.log('[Compiler] TipTap equations in DOM:', tiptapCount);
+          
+          katexService.render(previewHtml)
+            .then(() => {
+              console.log('[Compiler] KaTeX render completed successfully');
+            })
+            .catch((error) => {
+              console.error('[Compiler] Failed to render KaTeX:', error);
+            });
+        } else {
+          console.warn('[Compiler] Preview HTML element not found!');
+          console.log('[Compiler] Available preview elements:', Array.from(document.querySelectorAll('[class*="preview"]')).map(el => el.className));
+        }
       }, 0);
+    } else {
+      console.log('[Compiler] No compiledHtml available');
     }
   }, [compiledHtml]);
 
@@ -74,18 +103,16 @@ const Compiler: React.FC = () => {
       );
 
       if (fileArray.length === 0) {
-        setState((prev) => ({
-          ...prev,
-          errorMessage: 'Only .tex files are supported',
-        }));
-        setTimeout(
-          () =>
-            setState((prev) => ({
-              ...prev,
-              errorMessage: null,
-            })),
-          3000
-        );
+        setMessageDisplay({
+          success: null,
+          error: 'Only .tex files are supported',
+        });
+        setTimeout(() => {
+          setMessageDisplay((prev) => ({
+            ...prev,
+            error: null,
+          }));
+        }, 3000);
         return;
       }
 
@@ -122,13 +149,16 @@ const Compiler: React.FC = () => {
         reader.onerror = () => {
           setState((prev) => ({
             ...prev,
-            errorMessage: `Failed to read file: ${file.name}`,
             files: prev.files.map((f) =>
               f.id === newFiles[index].id
                 ? { ...f, status: 'error' as const }
                 : f
             ),
           }));
+          setMessageDisplay({
+            success: null,
+            error: `Failed to read file: ${file.name}`,
+          });
         };
         reader.readAsText(file);
       });
@@ -142,14 +172,16 @@ const Compiler: React.FC = () => {
         ...prev,
         successMessage: `${fileArray.length} file(s) uploaded successfully`,
       }));
-      setTimeout(
-        () =>
-          setState((prev) => ({
-            ...prev,
-            successMessage: null,
-          })),
-        3000
-      );
+      setMessageDisplay({
+        success: `${fileArray.length} file(s) uploaded successfully`,
+        error: null,
+      });
+      setTimeout(() => {
+        setMessageDisplay((prev) => ({
+          ...prev,
+          success: null,
+        }));
+      }, 3000);
     },
     []
   );
@@ -199,10 +231,10 @@ const Compiler: React.FC = () => {
   const handleCompile = useCallback(async () => {
     const activeFile = state.files.find((f) => f.id === state.activeFileId);
     if (!activeFile || !activeFile.content) {
-      setState((prev) => ({
-        ...prev,
-        errorMessage: 'No file selected or file is empty',
-      }));
+      setMessageDisplay({
+        success: null,
+        error: 'No file selected or file is empty',
+      });
       return;
     }
 
@@ -234,17 +266,20 @@ const Compiler: React.FC = () => {
           ...prev.isCompiling,
           [activeFile.id]: false,
         },
-        successMessage: 'Compilation successful!',
       }));
 
-      setTimeout(
-        () =>
-          setState((prev) => ({
-            ...prev,
-            successMessage: null,
-          })),
-        3000
-      );
+      // Use separate state for message display to avoid re-rendering the preview panel
+      setMessageDisplay({
+        success: 'Compilation successful!',
+        error: null,
+      });
+
+      setTimeout(() => {
+        setMessageDisplay((prev) => ({
+          ...prev,
+          success: null,
+        }));
+      }, 3000);
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : 'Compilation failed';
@@ -259,17 +294,20 @@ const Compiler: React.FC = () => {
           ...prev.isCompiling,
           [activeFile.id]: false,
         },
-        errorMessage: errorMessage,
       }));
 
-      setTimeout(
-        () =>
-          setState((prev) => ({
-            ...prev,
-            errorMessage: null,
-          })),
-        3000
-      );
+      // Use separate state for message display to avoid re-rendering the preview panel
+      setMessageDisplay({
+        success: null,
+        error: errorMessage,
+      });
+
+      setTimeout(() => {
+        setMessageDisplay((prev) => ({
+          ...prev,
+          error: null,
+        }));
+      }, 3000);
     }
   }, [state.files, state.activeFileId]);
 
@@ -278,10 +316,10 @@ const Compiler: React.FC = () => {
    */
   const handleCompileAll = useCallback(async () => {
     if (state.files.length === 0) {
-      setState((prev) => ({
-        ...prev,
-        errorMessage: 'No files to compile',
-      }));
+      setMessageDisplay({
+        success: null,
+        error: 'No files to compile',
+      });
       return;
     }
 
@@ -325,17 +363,19 @@ const Compiler: React.FC = () => {
         isCompiling: Object.fromEntries(
           state.files.map((f) => [f.id, false])
         ),
-        successMessage: `All ${state.files.length} file(s) compiled successfully!`,
       }));
 
-      setTimeout(
-        () =>
-          setState((prev) => ({
-            ...prev,
-            successMessage: null,
-          })),
-        3000
-      );
+      setMessageDisplay({
+        success: `All ${state.files.length} file(s) compiled successfully!`,
+        error: null,
+      });
+
+      setTimeout(() => {
+        setMessageDisplay((prev) => ({
+          ...prev,
+          success: null,
+        }));
+      }, 3000);
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : 'Batch compilation failed';
@@ -345,17 +385,19 @@ const Compiler: React.FC = () => {
         isCompiling: Object.fromEntries(
           state.files.map((f) => [f.id, false])
         ),
-        errorMessage: errorMessage,
       }));
 
-      setTimeout(
-        () =>
-          setState((prev) => ({
-            ...prev,
-            errorMessage: null,
-          })),
-        3000
-      );
+      setMessageDisplay({
+        success: null,
+        error: errorMessage,
+      });
+
+      setTimeout(() => {
+        setMessageDisplay((prev) => ({
+          ...prev,
+          error: null,
+        }));
+      }, 3000);
     }
   }, [state.files]);
 
@@ -367,33 +409,31 @@ const Compiler: React.FC = () => {
     const html = activeFile ? state.compiledHtml[activeFile.id] : null;
 
     if (!html) {
-      setState((prev) => ({
-        ...prev,
-        errorMessage: 'No compiled HTML to copy',
-      }));
+      setMessageDisplay({
+        success: null,
+        error: 'No compiled HTML to copy',
+      });
       return;
     }
 
     try {
       await compilerService.copyToClipboard(html);
-      setState((prev) => ({
-        ...prev,
-        successMessage: 'HTML copied to clipboard!',
-      }));
+      setMessageDisplay({
+        success: 'HTML copied to clipboard!',
+        error: null,
+      });
 
-      setTimeout(
-        () =>
-          setState((prev) => ({
-            ...prev,
-            successMessage: null,
-          })),
-        2000
-      );
+      setTimeout(() => {
+        setMessageDisplay((prev) => ({
+          ...prev,
+          success: null,
+        }));
+      }, 2000);
     } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        errorMessage: 'Failed to copy to clipboard',
-      }));
+      setMessageDisplay({
+        success: null,
+        error: 'Failed to copy to clipboard',
+      });
     }
   }, [state.files, state.activeFileId, state.compiledHtml]);
 
@@ -551,16 +591,16 @@ const Compiler: React.FC = () => {
       onDrop={handleDrop}
     >
       {/* Alerts */}
-      {state.successMessage && (
+      {messageDisplay.success && (
         <div className="alert alert-success" style={{ margin: '1rem' }}>
           <span>✓</span>
-          <span>{state.successMessage}</span>
+          <span>{messageDisplay.success}</span>
         </div>
       )}
-      {state.errorMessage && (
+      {messageDisplay.error && (
         <div className="alert alert-error" style={{ margin: '1rem' }}>
           <span>✕</span>
-          <span>{state.errorMessage}</span>
+          <span>{messageDisplay.error}</span>
         </div>
       )}
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import type { CompilerPreviewPanelProps } from '../types/compiler';
 
 /**
@@ -10,6 +10,18 @@ const CompilerPreviewPanel: React.FC<CompilerPreviewPanelProps> = ({
   isCompiling,
   error,
 }) => {
+  const previewHtmlRef = useRef<HTMLDivElement>(null);
+  const currentHtmlRef = useRef<string>('');
+
+  // Only update HTML when compiledHtml actually changes
+  useEffect(() => {
+    if (compiledHtml && compiledHtml !== currentHtmlRef.current && previewHtmlRef.current) {
+      console.log('[PreviewPanel] Updating preview HTML');
+      currentHtmlRef.current = compiledHtml;
+      previewHtmlRef.current.innerHTML = compiledHtml;
+    }
+  }, [compiledHtml]);
+
   return (
     <div className="compiler-preview-panel">
       {/* Header */}
@@ -45,8 +57,8 @@ const CompilerPreviewPanel: React.FC<CompilerPreviewPanelProps> = ({
           </div>
         ) : compiledHtml ? (
           <div
+            ref={previewHtmlRef}
             className="preview-html"
-            dangerouslySetInnerHTML={{ __html: compiledHtml }}
           />
         ) : (
           <div

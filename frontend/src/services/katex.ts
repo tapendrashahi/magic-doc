@@ -123,27 +123,50 @@ class KaTeXService {
       return;
     }
 
+    console.log('[KaTeX] Starting TipTap equation rendering');
     const tiptapSpans = element.querySelectorAll('span.tiptap-katex[data-latex]');
+    console.log('[KaTeX] Found', tiptapSpans.length, 'TipTap equations');
     
-    tiptapSpans.forEach((span: Element) => {
+    if (tiptapSpans.length === 0) {
+      console.warn('[KaTeX] No TipTap equations found. Available elements:');
+      console.log('[KaTeX] Total spans:', element.querySelectorAll('span').length);
+      console.log('[KaTeX] Elements with class tiptap-katex:', element.querySelectorAll('.tiptap-katex').length);
+      console.log('[KaTeX] Spans with data-latex:', element.querySelectorAll('span[data-latex]').length);
+    }
+    
+    let successCount = 0;
+    let errorCount = 0;
+    
+    tiptapSpans.forEach((span: Element, index: number) => {
       const latexEncoded = span.getAttribute('data-latex');
-      if (!latexEncoded) return;
+      if (!latexEncoded) {
+        console.warn('[KaTeX] Equation', index, 'has no data-latex attribute');
+        return;
+      }
 
       try {
         // Decode URL-encoded LaTeX
         const latex = decodeURIComponent(latexEncoded);
+        console.log('[KaTeX] Rendering equation', index, '→', latex.substring(0, 50));
 
         // Render with KaTeX
         katex.render(latex, span as HTMLElement, {
           throwOnError: false,
           errorColor: '#cc0000',
         });
+        successCount++;
       } catch (error) {
-        console.warn('[KaTeX] Failed to render TipTap equation:', error, 'LaTeX:', latexEncoded);
+        errorCount++;
+        console.warn('[KaTeX] Failed to render equation', index, '→', error);
+        console.warn('[KaTeX] Original LaTeX:', latexEncoded);
         // Add error class for visibility
         (span as HTMLElement).classList.add('katex-error');
+        (span as HTMLElement).style.backgroundColor = '#ffcccc';
+        (span as HTMLElement).title = 'LaTeX rendering failed';
       }
     });
+    
+    console.log('[KaTeX] TipTap rendering complete:', successCount, 'success,', errorCount, 'errors');
   }
 
   /**
