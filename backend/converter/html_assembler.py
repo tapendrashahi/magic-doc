@@ -10,6 +10,7 @@ Pipeline Stage 3 of 5: Wrap equations and assemble HTML fragment
 import re
 from typing import List, Tuple, Optional, Dict, Any
 from html import escape
+from urllib.parse import quote
 import logging
 
 from .latex_extractor import Equation, Section, EquationType
@@ -57,14 +58,18 @@ class HTMLAssembler:
         (r'\\texttt\{([^}]*)\}', r'<code>\1</code>'),
     ]
     
-    def __init__(self, wrap_text_in_divs: bool = True):
+    def __init__(self, wrap_text_in_divs: bool = True, equation_format: str = "tiptap"):
         """
         Initialize the assembler.
         
         Args:
             wrap_text_in_divs: If True, wrap text segments in <div> tags
+            equation_format: Format for equations - "tiptap" or "lms" (default: "tiptap")
+                - "tiptap": TipTap editor format with URL-encoded LaTeX in data-latex
+                - "lms": Full pre-rendered KaTeX HTML with LMS wrapper
         """
         self.wrap_text_in_divs = wrap_text_in_divs
+        self.equation_format = equation_format
     
     def wrap_equation(
         self,
@@ -72,7 +77,7 @@ class HTMLAssembler:
         add_newlines: bool = False
     ) -> str:
         """
-        Wrap a rendered equation with LMS-specific attributes.
+        Wrap a rendered equation based on configured format.
         Preserves inline spacing - inline equations stay inline without extra newlines.
         
         Args:
@@ -80,11 +85,16 @@ class HTMLAssembler:
             add_newlines: If True, add newlines before/after only for DISPLAY equations
             
         Returns:
-            LMS-wrapped equation HTML
+            Wrapped equation HTML in configured format
             
         Raises:
-            HTMLAssemblyError: If equation.katex_html is not set
+            HTMLAssemblyError: If equation.katex_html is not set (for LMS format)
         """
+        # Use format-specific wrapping
+        if self.equation_format == "tiptap":
+            return self.wrap_equation_tiptap(equation)
+        
+        # Default: LMS format with full KaTeX HTML
         if not hasattr(equation, 'katex_html') or not equation.katex_html:
             raise HTMLAssemblyError(
                 f"Equation has no katex_html: {equation.latex[:50]}"
@@ -108,6 +118,27 @@ class HTMLAssembler:
         # Inline equations should NOT have newlines to preserve spacing
         if add_newlines and equation.equation_type == EquationType.DISPLAY:
             wrapper = f'\n{wrapper}\n'
+        
+        return wrapper
+    
+    def wrap_equation_tiptap(self, equation: Equation) -> str:
+        """
+        Wrap a rendered equation in TipTap editor format.
+        Uses URL-encoded LaTeX in data-latex attribute.
+        
+        Args:
+            equation: Equation object with latex code
+            
+        Returns:
+            TipTap-formatted equation span
+        """
+        # URL-encode the LaTeX
+        encoded_latex = quote(equation.latex, safe='')
+        
+        # Build the TipTap wrapper span
+        wrapper = (
+            f'<span class="tiptap-katex" data-latex="{encoded_latex}"></span>'
+        )
         
         return wrapper
     
@@ -139,11 +170,15 @@ class HTMLAssembler:
         if not text or not text.strip():
             return ''
         
+        # Note: List conversion now happens in LatexNormalizer.convert_lists()
+        # before equation extraction, so lists are already HTML at this point
+        
         # Apply text formatting (bold, italic, etc.)
         formatted = self.apply_text_formatting(text)
         
-        # Escape any remaining HTML entities
-        formatted = escape(formatted)
+        # Only escape if we don't have HTML lists/elements already
+        if '<ul>' not in text and '<ol>' not in text and '<li>' not in text:
+            formatted = escape(formatted)
         
         # Normalize whitespace but preserve single spaces
         formatted = re.sub(r'  +', ' ', formatted)

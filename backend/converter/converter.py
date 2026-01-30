@@ -74,7 +74,7 @@ def convert_mathpix_to_lms_html(mathpix_text):
         
         # ===== PHASE 4: ASSEMBLY =====
         logger.info("Phase 4: Assembling HTML fragment...")
-        assembler = HTMLAssembler()
+        assembler = HTMLAssembler(equation_format="tiptap")
         html_fragment = assembler.assemble_fragment(normalized_text, equations, sections)
         logger.info(f"  Assembled HTML fragment ({len(html_fragment)} chars)")
         
@@ -107,9 +107,17 @@ def convert_mathpix_to_lms_html_with_stats(mathpix_text):
     logger.info("Starting conversion with statistics...")
     
     try:
+        # Extract content from \begin{document}...\end{document} if present
+        import re
+        doc_match = re.search(r'\\begin\{document\}(.*?)\\end\{document\}', mathpix_text, re.DOTALL)
+        if doc_match:
+            content_to_convert = doc_match.group(1).strip()
+        else:
+            content_to_convert = mathpix_text
+        
         # Normalize
         normalizer = LatexNormalizer()
-        normalized_text = normalizer.normalize(mathpix_text)
+        normalized_text = normalizer.normalize(content_to_convert)
         
         # Extract
         extractor = LatexExtractor()
@@ -120,7 +128,7 @@ def convert_mathpix_to_lms_html_with_stats(mathpix_text):
         renderer.render_batch(equations)
         
         # Assemble
-        assembler = HTMLAssembler()
+        assembler = HTMLAssembler(equation_format="tiptap")
         html_fragment = assembler.assemble_fragment(normalized_text, equations, sections)
         
         # Get statistics

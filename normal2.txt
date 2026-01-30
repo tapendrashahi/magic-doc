@@ -1,0 +1,211 @@
+\section*{Chapter:2 Market and Revenue Curves}
+
+According to N.G. Mankiw, "a market is a group of buyers and sellers of a particular commodity or service. The buyers as a group determine the demand for the product and sellers as a group determines the supply of the product."
+
+A market can be local, regional, national, international, competitive, noncompetitive, organized or unorganized etc.
+
+\section*{A.Define Perfect Competition Market with its Features.}
+
+Market is the place where buyer and seller meet each other and transaction activities are held. Perfect competition market is that type of market structure where there are a large number of buyers and sellers interact freely without any kind of external intervention and the goods are homogeneous having completely substitute of each other. It can be further described by following features
+1.A large number of buyers and sailors: This is the primary condition for perfect competition. The buyers and sailors should be in large numbers a single producer or a single seller may not create the perfect competition market.
+2.Homogeneous product: The goods traded in perfect competition market should be perfectly competitive of each other or homogeneous. The differentiated products may not fall under perfect competition.
+3.No external intervention: There should not be any kind of external intervention specially for government or any other organized body to regulate the market.
+4.Price mechanism: Perfect competition market is operated by total market demand and market supply the point where market demand is equal to market supply is called the point of equilibrium and fixes price of the product and total quantity to be produced or consumed
+5.Fixed price: Once the market reaches to equilibrium,
+the price will be fixed and remain constant. It may change at that time only there is considerable change in market forces which me affect demand and supply.
+6.Possibility of unlimited sells: Once the firm accept the market price it can sale unlimited amount of product at that price.
+7.Full utilization of resources/ full equilibrium: Perfect competition market operates under full equilibrium condition in other words there is no any excess capacity in perfect competition market.
+8.Firm is price take only: In perfect competition market, price is fixed by industry and all firms inside industry should accept the price provided by the industry or market.
+9.Perfect mobility of factors: In perfect competition market, factor of production can easily move from one firm to another firm there is no any legal restriction to protect it.
+10. Profit maximization is the objective: In perfect competition market, all individual firms operating in an industry are guided by the similar objective of profit maximization. Their ultimate goal is to maximize profit at their maximum level.
+
+\section*{B.Define Imperfect Competition Market with its Features.}
+
+Imperfect competition market is that type of market structure which is neither perfectly competitive market nor monopoly. In other words, perfect competition lies somewhere between perfect competition and monopoly. In perfect competition market, there are a large number of buyers and sellers competing for differentiated or identical product but their competition is other than price competition.
+
+\section*{Features of imperfect competition market}
+i. downward slopping demand curve: In imperfect competition market, demand curve is downward sloping. on like perfect competitions. This happens because there is application of law of demand.
+ii. Firm can set the price of product: In perfect
+competition market firm is price maker or each individual firm can set the price of its product.
+iii. Profit maximization: Similar as perfect competition market imperfect competition is also guided by profit maximization motive.
+iv. None price competition: Perfect competition market competes in none price factors.
+v. High selling cost: Since there competition is on other than price factor, they try to show their product different than competitors. Therefore, their advertisement and promotion cost is very high.
+vi. Only normal profit in long run: IN imperfect competition there is presence of competitors as well. So that, only normal profit may earn by the firm in long run. But, since product differentiation is possible, the firm may earn normal profit before normal capacity.
+
+\section*{Define different types of imperfect competition market.}
+1. Monopoly: Mono means single and poly means seller. Hence, the term monopoly refers to that type of market where there is only one producer or supplier of a product in the market having no close substitution. It can be defined as following features:
+a. Single seller: The power of monopolist is legally protected
+b. No close substitution: In monopoly market there is no availability of closely substitutable product.
+c. Downward slopping demand curve: The demand curve of monopoly market is negatively slopped because of application of law of demand.
+d. Firm is price maker: The firm can set the price of its own product.
+e. Firm is industry: Since there is only one firm in the industry, the firm itself is the whole industry as well.
+f. Only super normal profit in long run: Since there is only one firm in the industry, no need to compete with others and the monopolist will enjoy super normal profit below average production capacity in long run.
+2. Monopolistic Competition: Monopolistic competition is the stage when there is neither monopoly nor perfect competition in the market. It is a hybrid type of structure where the firms in the industry are less than as they required. But the firms are rivals of each other. It can be characterized by following features:
+a. Downward slopping demand curve: Because of application of law of demand
+b. Profit maximization: The main objective of the firm is maximization of its profit.
+c. Firm is price maker: Firm can set the price of product:
+d. High selling cost: Since there is rivalry between firms but they do not compete on price, there competition is for establishment of their product as a different product so their advertisement and promotion expenses are high.
+3. Oligopoly: Oligopoly is a special type of imperfect competition where there are only few sellers producing either homogeneous or differentiate product. It can be defined by following features:
+a. Few sellers: The number of producers is between 2 to 10 or 12 in oligopoly market.
+b. Agreement: There is agreement between firms for not to compete with each other and the agreement may be either formal or informal
+c. Large market share: Since there are only few sellers in oligopoly, each individual firm has considerable share in the market.
+d. Entry barrier: In oligopoly, entry of new firm is not legally forbidden like in monopoly market but there is structural barrier or the entry barrier is created by cartel or collusion.
+
+\section*{Give the concept of Total Revenue, Average revenue and Marginal revenue.}
+
+Revenue is the amount which is generated by selling of product in the market. Revenue is divided under three headings to make the concept clear. They are as follows:
+1. Total Revenue (TR): The total amount of money that is generated from market by total selling of product is called total revenue. It is computed as follows:
+$\mathrm{TR}=\mathrm{PXQ}$. Where, $\mathrm{TR}=$ Total Revenue, $\mathrm{P}=$ Price of the product and $\mathrm{Q}=$ Total sales quantity.
+2. Average Revenue (AR): Average revenue is the per unit revenue. It can be derived by dividing the total amount of sales by total sales quantity. It is computed as:
+$\mathrm{AR}=\mathrm{TR} / \mathrm{Q}$. Where, $\mathrm{AR}=$ Average Revenue, $\mathrm{TR}=$ Total Revenue and $\mathrm{Q}=$ Production quantity.
+3. Marginal Revenue: (MIR): Marginal revenue is the incremental revenue because of sale of one additional unit. It can be computed as: $\mathrm{MR}=\mathrm{TR}$ of last unit-TR of the unit just before the last ( n and $\mathrm{n}-1$ ). Or,
+$$
+\mathrm{MR}=\mathrm{dTR} / \mathrm{dQ} \text { or, } \mathrm{MR}=\mathrm{d}(\mathrm{PXQ}) / \mathrm{dQ} .
+$$
+
+\section*{How Total Revenue curve and Marginal Revenue curve derived under perfect competition and monopoly market?}
+
+The formation of total and marginal revenue curves differs in perfect competition and monopoly market. It can be defined as follows:
+
+\section*{Perfect Competition}
+
+Perfect competition is the market where there are a large number of buyers and sellers. Since, the price and quantity are fixed by the industry and the price is fixed, all individual firm has to accept the price fixed by the industry.
+
+\begin{tabular}{l|l|l|l|l|} 
+Quantity & \multicolumn{2}{l}{ Price } & \multicolumn{2}{l}{$\mathrm{TR}=\mathrm{PX} \quad \mathrm{AR}=\mathrm{TR} /$} \\
+& & Q & Q & \begin{tabular}{l} 
+MR=TRn- \\
+TRn-1
+\end{tabular} \\
+1 & 10 & 10 & 10 & 10 \\
+2 & 10 & 20 & 10 & 10 \\
+3 & 10 & 30 & 10 & 10 \\
+4 & 10 & 40 & 10 & 10 \\
+5 & 10 & 50 & 10 & 10 \\
+6 & 10 & 60 & 10 & 10 \\
+7 & 10 & 70 & 10 & 10 \\
+8 & 10 & 80 & 10 & 10 \\
+9 & 10 & 90 & 10 & 10
+\end{tabular}
+
+After plotting the above value in a graph, following curve will be derived:
+![](https://cdn.mathpix.com/cropped/c5c87fc1-9c1b-4599-adf9-af2c10c5c6ee-07.jpg?height=783&width=973&top_left_y=129&top_left_x=113)
+
+\section*{Monopoly and Monopolistic Market:}
+
+Monopolistic market is that type of market structure where there is only one seller of a product and in monopolistic market there is only few sellers.
+i. Some Degree of Market Power: Due to product differentiation, each firm has some control over its pricing. Firms are price makers to a certain extent because consumers may prefer their product over others due to its unique features.
+ii. Non-Price Competition: Firms often compete using non-price factors such as advertising, branding, product features, customer service, and packaging to attract customers and gain market share.
+iii. Normal Profits in the Long Run: In the long run, firms in monopolistic competition tend to earn only normal profits. Any short-term abnormal profits attract new entrants, which increases supply and reduces prices and profits.
+iv. Downward Sloping Demand Curve: Each firm faces a downward-sloping demand curve, meaning that it can sell more only by reducing its price. This is different from perfect competition, where firms are price takers and face a perfectly elastic demand curve.
+
+In conclusion, both type of market structure has downward slopping demand curve as well as average revenue curve. Which can be combinedly presented as follows:
+
+\begin{tabular}{|l|l|l|l|l|}
+\hline Qty & Price & \begin{tabular}{l} 
+Total \\
+Revenue
+\end{tabular} & \begin{tabular}{l} 
+Average \\
+Revenue
+\end{tabular} & \begin{tabular}{l} 
+Marginal \\
+Revenue
+\end{tabular} \\
+\hline 1 & 10 & 10 & 10 & 10 \\
+\hline 2 & 9 & 18 & 9 & 8 \\
+\hline 3 & 8 & 24 & 8 & 6 \\
+\hline 4 & 7 & 28 & 7 & 4 \\
+\hline 5 & 6 & 30 & 6 & 2 \\
+\hline 6 & 5 & 30 & 5 & 0 \\
+\hline 7 & 4 & 28 & 4 & -2 \\
+\hline
+\end{tabular}
+
+When above table is presented in a graph, a chart is formed, which can be presented as follows:
+
+\begin{figure}
+\captionsetup{labelformat=empty}
+\caption{MR}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/c5c87fc1-9c1b-4599-adf9-af2c10c5c6ee-09.jpg?height=899&width=1169&top_left_y=1272&top_left_x=44}
+\end{figure}
+
+\section*{Concept of total, average and marginal revenue}
+
+The total amount of money received by a firm from the sale of the product is called revenue. The profit of a firm depends upon the cost and revenue. The profit earned by the firm is the difference between the revenue and the cost of production.
+
+According to Dooley," The revenue of a firm is its sales receipt from the sale of a product."
+
+There are three types of revenue which can be explained as follows:
+
+Total revenue (TR): Total revenue is the total amount of money received by a firm from the sales of a given quantity of product. Technically, total revenue is the sum of marginal revenues. Mathematically, total revenue is the product of price and quantity sold.
+
+Symbolically;
+$\mathrm{TR}=\sum \mathrm{MR}$
+or
+$\mathrm{TR}=\mathrm{P} \times \mathrm{Q}$
+
+Where,
+TR= Total Revenue
+$\sum \mathrm{MR}=$ Sum of Marginal Revenues
+$\mathrm{P}=$ price per unit
+$\mathrm{Q}=$ Quantity sold
+
+Average revenue (AR): Average revenue is the price per unit. Average revenue is obtained by dividing the total revenue by the total number of quantities sold.
+
+Symbolically;
+$\mathrm{AR}=\mathrm{TR} / \mathrm{Q}$
+
+Where,
+
+AR=Average Revenue
+TR= Total revenue
+Q= Quantity sold
+
+Marginal Revenue (MR): Marginal revenue is the addition to the total revenue from the sales of an additional unit of a commodity. Marginal revenue is obtained by dividing change in total revenue by the change in quantity sold.
+
+Symbolically,
+$\mathbf{M R}=\Delta \mathbf{T R} / \Delta \mathbf{Q}$
+
+Where,
+$\Delta \mathrm{TR}=$ Change in TR
+$\Delta \mathrm{Q}=$ Change in quantity sold
+
+OR
+$\mathbf{M R}=\mathbf{T R}_{\mathbf{n}}-\mathbf{T R}_{\mathbf{n} \boldsymbol{-} \mathbf{1}}$
+Where,
+$\mathrm{TR}_{\mathrm{n}}=$ Current Total Revenue
+$\mathrm{TR}_{\mathrm{n}-1}=$ Initial Total Revenue
+
+\section*{Revenue Curves (TR, AR, and MR) in a Perfectly Competitive Market}
+
+In a perfectly competitive market, there is a large number of firms selling homogeneous goods and an equally large number of buyers. In such a market, individual firms cannot influence the price of goods. Firms must sell goods or services at the price determined by the industry. Therefore, firms in a perfectly competitive market are price takers. If any firm tries to sell goods at a price higher than the market-determined price, it will lose all its buyers/customers.
+The revenue obtained by a firm from selling goods or services can be classified into three categories:
+1. Total Revenue (TR)
+2. Average Revenue (AR)
+3. Marginal Revenue (MR)
+
+The given table presents the total revenue, average revenue, and marginal revenue in a perfectly competitive market.
+
+\begin{tabular}{|l|l|l|l|}
+\hline Quantity Sold (Q) & Price / Average Revenue (Rs.) (AR) & Total Revenue (Rs.) (TR) & Marginal Revenue (Rs.) (MR) \\
+\hline 1 & 5 & 5 & 5 \\
+\hline 2 & 5 & 10 & 5 \\
+\hline 3 & 5 & 15 & 5 \\
+\hline 4 & 5 & 20 & 5 \\
+\hline 5 & 5 & 25 & 5 \\
+\hline 6 & 5 & 30 & 5 \\
+\hline 7 & 5 & 35 & 5 \\
+\hline
+\end{tabular}
+
+From given table, it is evident that the price of the good remains' constant at Rs. 5. As a result, regardless of the quantity sold, both average revenue and marginal revenue remain at Rs. 5. When one unit of the good is sold, total revenue is Rs. 5. As the quantity sold increases from 1 unit to 7 units, total revenue increases gradually from Rs. 5 to Rs. 35.
+The curve that shows the relationship between total revenue and the quantity of goods produced is called the Total Revenue Curve. Similarly, the curve showing the relationship between average revenue and the quantity of goods produced is called the Average Revenue Curve, and the curve showing the relationship between marginal revenue and the quantity of goods produced is called
+the Marginal Revenue Curve.
+![](https://cdn.mathpix.com/cropped/c5c87fc1-9c1b-4599-adf9-af2c10c5c6ee-13.jpg?height=687&width=881&top_left_y=372&top_left_x=110)
+
+In Graph, the X-axis represents the quantity sold, while the Y -axis measures total revenue, average revenue, and marginal revenue. The total revenue curve is represented by the TR curve, the average revenue curve by the AR curve, and the marginal revenue curve by the MR curve.
+
+The total revenue curve starts from the origin and rises at a constant rate. Since the total revenue curve starts from the origin, it indicates that when the quantity sold is zero, total revenue is also zero. Here, the total revenue curve is (linear) a straight line.
+
+The average revenue curve is a straight line parallel to the X -axis at a height of 5 units. This is because, in a perfectly competitive market, the price (or average revenue) remains constant. Since the average revenue and marginal revenue are equal in a perfectly competitive market, the average revenue curve and marginal revenue curve coincide.

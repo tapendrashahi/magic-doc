@@ -76,6 +76,7 @@ class KaTeXService {
   /**
    * Render math in an HTML element
    * Auto-detects and renders all math expressions with $...$ and $$...$$
+   * Also renders TipTap format equations with data-latex attributes
    */
   async render(element: HTMLElement = document.body): Promise<void> {
     if (!this.initialized) {
@@ -84,6 +85,7 @@ class KaTeXService {
     }
 
     try {
+      // First, render standard math delimiters
       const renderMathInElement = (window as any).renderMathInElement;
       if (!renderMathInElement) {
         console.error('[KaTeX] renderMathInElement not found');
@@ -101,11 +103,47 @@ class KaTeXService {
         errorColor: '#cc0000',
       });
 
+      // Then, render TipTap format equations
+      this.renderTipTapEquations(element);
+
       console.log('[KaTeX] ✓ Render complete for element');
     } catch (error) {
       console.error('[KaTeX] Render error:', error);
       throw error;
     }
+  }
+
+  /**
+   * Render TipTap format equations (span.tiptap-katex with data-latex attribute)
+   */
+  private renderTipTapEquations(element: HTMLElement): void {
+    const katex = (window as any).katex;
+    if (!katex) {
+      console.warn('[KaTeX] KaTeX library not available for TipTap rendering');
+      return;
+    }
+
+    const tiptapSpans = element.querySelectorAll('span.tiptap-katex[data-latex]');
+    
+    tiptapSpans.forEach((span: Element) => {
+      const latexEncoded = span.getAttribute('data-latex');
+      if (!latexEncoded) return;
+
+      try {
+        // Decode URL-encoded LaTeX
+        const latex = decodeURIComponent(latexEncoded);
+
+        // Render with KaTeX
+        katex.render(latex, span as HTMLElement, {
+          throwOnError: false,
+          errorColor: '#cc0000',
+        });
+      } catch (error) {
+        console.warn('[KaTeX] Failed to render TipTap equation:', error, 'LaTeX:', latexEncoded);
+        // Add error class for visibility
+        (span as HTMLElement).classList.add('katex-error');
+      }
+    });
   }
 
   /**

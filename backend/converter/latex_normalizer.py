@@ -129,6 +129,9 @@ class LatexNormalizer:
         
         result = latex
         
+        # Convert lists FIRST (before other normalizations) to preserve list structure
+        result = self.convert_lists(result)
+        
         # Apply all normalization rules
         for rule in self.compiled_rules:
             # Skip rules marked as environment-specific if needed
@@ -148,6 +151,62 @@ class LatexNormalizer:
                 continue
         
         return result
+    
+    def convert_lists(self, text: str) -> str:
+        """
+        Convert LaTeX list environments to HTML lists.
+        This runs BEFORE equation extraction to preserve list integrity.
+        
+        Converts:
+        - \\begin{itemize}...\\end{itemize} to <ul>...</ul>
+        - \\begin{enumerate}...\\end{enumerate} to <ol>...</ol>
+        - \\item to <li>
+        
+        Args:
+            text: LaTeX text containing list environments
+            
+        Returns:
+            Text with LaTeX lists converted to HTML
+        """
+        # Convert \begin{itemize}...\end{itemize} to <ul>...</ul>
+        def convert_itemize_list(match):
+            content = match.group(1)
+            # Split by \item (accounting for variations and spacing)
+            items = re.split(r'\\+item\s+', content.strip())
+            items = [item.strip() for item in items if item.strip()]
+            
+            # Create HTML list items
+            li_elements = '\n'.join(f'<li>{item}</li>' for item in items)
+            return f'<ul>\n{li_elements}\n</ul>'
+        
+        # Convert \begin{enumerate}...\end{enumerate} to <ol>...</ol>
+        def convert_enumerate_list(match):
+            content = match.group(1)
+            # Split by \item (accounting for variations and spacing)
+            items = re.split(r'\\+item\s+', content.strip())
+            items = [item.strip() for item in items if item.strip()]
+            
+            # Create HTML list items
+            li_elements = '\n'.join(f'<li>{item}</li>' for item in items)
+            return f'<ol>\n{li_elements}\n</ol>'
+        
+        # Replace itemize environments (greedy to handle nested content)
+        text = re.sub(
+            r'\\begin\{itemize\}(.*?)\\end\{itemize\}',
+            convert_itemize_list,
+            text,
+            flags=re.DOTALL
+        )
+        
+        # Replace enumerate environments (greedy to handle nested content)
+        text = re.sub(
+            r'\\begin\{enumerate\}(.*?)\\end\{enumerate\}',
+            convert_enumerate_list,
+            text,
+            flags=re.DOTALL
+        )
+        
+        return text
     
     def normalize_equation(self, latex: str) -> str:
         """

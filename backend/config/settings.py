@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'converter.apps.ConverterConfig',
     'accounts.apps.AccountsConfig',
+    'compiler.apps.CompilerConfig',  # NEW: Compiler app
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,666 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+
+\DeclareUnicodeCharacter{00D7}{\ifmmode\times\else{$\times$}\fi}
+\DeclareUnicodeCharacter{21D2}{\ifmmode\Rightarrow\else{$\Rightarrow$}\fi}
+
+\begin{document}
+\captionsetup{singlelinecheck=false}
+Idea Map Equivalent Weight of Formula
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+Substance & Formula for Equivalent Weight (E) & Example \\
+\hline
+Acid & $E=\frac{\text { Molecular Mass }}{\text { Basicity }}$ & \( \begin{aligned} & \mathrm{H}_{2} \mathrm{SO}_{4} \rightarrow E=\frac{98}{2} \\ & =49 \mathrm{~g} / \mathrm{eq} \end{aligned} \) \\
+\hline
+Base & $E=\frac{\text { Molecular Mass }}{\text { Acidity }}$ & \( \begin{aligned} & \mathrm{Ca}(\mathrm{OH})_{2} \rightarrow E \\ & =\frac{74}{2}=37 \mathrm{~g} / \mathrm{eq} \end{aligned} \) \\
+\hline
+Salt & $E=\frac{\text { Molecular Mass }}{\text { Total charge }}$ & \( \begin{aligned} & \mathrm{Na}_{2} \mathrm{CO}_{3} \rightarrow E \\ & =\frac{106}{2}=53 \mathrm{~g} / \mathrm{eq} \end{aligned} \) \\
+\hline
+Redox Agent & \( \begin{aligned} & E \\ & =\frac{\text { Molecular Mass }}{\text { Change in O.N. in one molecule }} \end{aligned} \) & \( \begin{aligned} & \mathrm{KMnO}_{4} \rightarrow E \\ & =\frac{158}{5} \\ & =31.6 \mathrm{~g} / \mathrm{eq} \end{aligned} \) \\
+\hline
+Element & $E=\frac{\text { Atomic Mass }}{\text { Valency }}$ & \( \begin{aligned} A l \rightarrow E=\frac{27}{3} & \\ =9 \mathrm{~g} & / \mathrm{eq} \end{aligned} \) \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{table}[h]
+\begin{center}
+\captionsetup{labelformat=empty}
+\caption{Important n -Factors for Redox Titrations}
+\begin{tabular}{|l|l|l|}
+\hline
+Reagent & Reaction & nfactor \\
+\hline
+$\mathrm{KMnO}_{4}$ (Acidic medium) & \( \begin{aligned} \mathrm{MnO}_{4}^{-}+8 \mathrm{H}^{+}+5 \mathrm{e}^{-} & \\ & \rightarrow \mathrm{Mn}^{2+}+4 \mathrm{H}_{2} \mathrm{O} \end{aligned} \) & 5 \\
+\hline
+$\mathrm{KMnO}_{4}$ (Basic medium) & $\mathrm{MnO}_{4}^{-}+\mathrm{e}^{-} \rightarrow \mathrm{MnO}_{4}^{2-}$ & 1 \\
+\hline
+$\mathrm{K}_{2} \mathrm{Cr}_{2} \mathrm{O}_{7}$ & \( \begin{aligned} \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}+14 & \mathrm{H}^{+}+6 e^{-} \\ & \rightarrow 2 \mathrm{Cr}^{3+}+7 \mathrm{H}_{2} \mathrm{O} \end{aligned} \) & 6 \\
+\hline
+Oxalic Acid $\left(\mathrm{H}_{2} \mathrm{C}_{2} \mathrm{O}_{4}\right)$ & $\mathrm{C}_{2} \mathrm{O}_{4}^{2-} \rightarrow 2 \mathrm{CO}_{2}+2 e^{-}$ & 2 \\
+\hline
+Ferrous $\left(\mathrm{Fe}^{2+}\right) \rightarrow$ Ferric ( $\mathrm{Fe}^{3+}$ ) & $\mathrm{Fe}^{2+} \rightarrow \mathrm{Fe}^{3+}+e^{-}$ & 1 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section*{Basic Titration Formula}
+$$
+\text { Molarity }(M)=\frac{\text { Number of moles of solute }}{\text { Volume of solution in liters (L) }}
+$$
+
+\begin{itemize}
+  \item Unit: mol/L or M
+\end{itemize}
+
+$$
+\text { Normality }=\frac{\text { Number of gram equivalents of solute }}{\text { Volume of solution in liters }(\mathrm{L})}
+$$
+
+\begin{itemize}
+  \item Units: eq/L or N
+\end{itemize}
+
+\section*{Relation Between Molarity (M) and Normality (N)}
+$$
+N=M \times n \text { (where } n=\mathrm{n}-\text { factor } \text { ) }
+$$
+
+\begin{itemize}
+  \item For Acid: $n=$ Basicity (No. of replaceable $\mathrm{H}^{+}$ions)
+\end{itemize}
+
+$$
+\mathrm{H}_{2} \mathrm{SO}_{4} \rightarrow n=2
+$$
+
+\begin{itemize}
+  \item For Bases: $n=$ Acidity (No. of replaceable $\mathrm{OH}^{-}$ions)
+\end{itemize}
+
+$$
+\mathrm{NaOH} \rightarrow n=1
+$$
+
+\begin{itemize}
+  \item For Salts: $n=$ Total charge on cation/anion
+\end{itemize}
+
+$$
+\mathrm{Na}_{2} \mathrm{CO}_{3} \rightarrow n=2 \text { (since } \mathrm{CO}_{3}^{2-} \text { has } 2 \text { charge) }
+$$
+
+Dilution Formula ( $M_{1} V_{1}=M_{2} V_{2}$ )
+
+$$
+\begin{aligned}
+& M_{1} V_{1}=M_{2} V_{2}(\text { For molarity }) \\
+& N_{1} V_{1}=N_{2} V_{2}(\text { For normality })
+\end{aligned}
+$$
+
+\begin{itemize}
+  \item Used when a solution is diluted.
+\end{itemize}
+
+\section*{Titration Calculations (Acid-Base \& Redox)}
+\section*{At Equivalence Point (Neutralization)}
+$$
+N_{\text {acid }} \times V_{\text {acid }}=N_{\text {base }} \times V_{\text {base }}
+$$
+
+\begin{itemize}
+  \item For Monoprotic Acid ( HCl ) \& Monobasic Base ( NaOH ):
+\end{itemize}
+
+$$
+M_{\text {acid }} \times V_{\text {acid }}=M_{\text {base }} \times V_{\text {base }}
+$$
+
+For Polyprotic Acids/Bases
+
+$$
+\left(\mathrm{H}_{2} \mathrm{SO}_{4}+\mathrm{NaOH}\right): M_{\mathrm{H}_{2} \mathrm{SO}_{4}} \times V_{\mathrm{H}_{2} \mathrm{SO}_{4}} \times 2=M_{\mathrm{NaOH}} \times V_{\mathrm{NaOH}}
+$$
+
+(Since $\mathrm{H}_{2} \mathrm{SO}_{4}$ is diprotic, $=2$ )
+
+\section*{Redox Titrations (Using n-factor)}
+$$
+\text { Moles of solute }_{1} \times n_{1}=\text { Moles of solute } 2 \times n_{2}
+$$
+
+$\mathrm{KMnO}_{4}$ vs Oxalic Acid
+
+$$
+\begin{gathered}
+M_{K M n o_{4}} \times V_{K M n O_{4}} \times 5=M_{\text {Oxalic Acid }} \times V_{\text {Oxalic Acid }} \times 2 \\
+\left(\text { Since } n_{\mathrm{KMnO}_{4}}=5 \text { and } n_{\text {Oxalic Acid }}=2\right)
+\end{gathered}
+$$
+
+Q. One mole of $\mathrm{Sn}^{2+}$ reduces ........ moles of $\mathrm{K}_{2} \mathrm{Cr}_{2} \mathrm{O}_{7}$\\
+a. 3\\
+b. 2\\
+c. $1 / 3$\\
+d. $1 / 2$\\
+Q. 75 ml . of 0.2 NHCl will neutralize how many ml of $0.1 \mathrm{MBa}(\mathrm{OH})_{2}$ ?\\
+a. 300 ml\\
+b. 150 ml\\
+c. 75 mld .38 ml
+
+\section*{Percentage Purity of a Sample}
+$$
+\% \text { Purity }=\left(\frac{\text { Actual mass of pure substance }}{\text { Mass of impure sample }}\right) \times 100
+$$
+
+\section*{Equivalent weight}
+\begin{itemize}
+  \item No of the mass of a substance that combines with or displaces $\mathbf{1}$ gram of hydrogen ( $\mathbf{1 . 0 0 8} \mathbf{~ g ~ H}$ ), $\mathbf{8}$ grams of oxygen ( $\mathbf{0}$ ), or $\mathbf{3 5 . 5}$ grams of chlorine (Cl).
+  \item It is crucial in stoichiometry, titrations, and redox reactions.
+  \item Equivalent Weight $(E)=\frac{\text { Molar Mass (M) }}{n \text {-factor (n) }}$
+  \item Units: grams per equivalent ( g/eq )\\
+Q. 3.0 gm of metal is converted completely into its oxide. The weight of the oxide formed is 5.0 gm . The equivalent weight of the metal is\\
+a. 18.00\\
+b. 12.00\\
+c. 24.00\\
+d. 36.00
+\end{itemize}
+
+\section*{Calculation of $\mathbf{n}$-Factor}
+It depends on the type of substance:\\
+For Acids (Based on Replaceable $\mathbf{H}^{+}$Ions)
+
+\begin{itemize}
+  \item n-factor ( $\mathbf{n}$ ) = Basicity (No. of replaceable $\mathrm{H}^{+}$ions)
+\end{itemize}
+
+Examples:
+
+\begin{itemize}
+  \item $\mathbf{H C l} \rightarrow n=1$ (Monoprotic)
+  \item $\mathbf{H}_{2} \mathbf{S O}_{4} \rightarrow n=2$ (Diprotic)
+  \item $\mathbf{H}_{3} \mathbf{P O}_{4} \rightarrow n=3$ (Triprotic) eg. $\mathrm{H}_{2} \mathrm{SO}_{4}$
+  \item Molar mass $=98 \mathrm{~g} / \mathrm{mol}$
+  \item Basicity ( n ) $=2$
+  \item $E=\frac{98}{2}=49 \mathrm{~g} / \mathrm{eq}$
+\end{itemize}
+
+\section*{For Bases (Based on Replaceable $\mathbf{O H}^{-}$Ions)}
+\begin{itemize}
+  \item n-factor (n) = Acidity (No. of replaceable $\mathrm{OH}^{-}$ions)
+\end{itemize}
+
+Examples:
+
+$$
+\begin{aligned}
+& \mathrm{NaOH} \rightarrow n=1 \\
+& \mathrm{Ca}(\mathrm{OH})_{2} \rightarrow n=2 \\
+& \mathrm{Al}(\mathrm{OH})_{3} \rightarrow n=3
+\end{aligned}
+$$
+
+eg. $\mathrm{Ca}(\mathrm{OH})_{2}$
+
+\begin{itemize}
+  \item Molar mass $=74 \mathrm{~g} / \mathrm{mol}$
+  \item $\operatorname{Acidity}(\mathrm{n})=2$
+\end{itemize}
+
+$$
+E=\frac{74}{2}=37 \mathrm{~g} / \mathrm{eq}
+$$
+
+\section*{For Salts (Based on Total Cation/Anion Charge)}
+\begin{itemize}
+  \item $n$-factor $(\mathrm{n})=$ Total positive or negative charge per formula unit
+\end{itemize}
+
+$$
+\begin{aligned}
+& -\mathrm{NaCl} \rightarrow n=1\left(\mathrm{Na}^{+}+\mathrm{Cl}^{-}\right) \\
+& -\mathrm{Na}_{2} \mathrm{CO}_{3} \rightarrow n=2\left(\mathrm{CO}_{3}^{2-} \text { has } 2 \text { charge }\right) \\
+& -\mathrm{Al}_{2}\left(\mathbf{S O}_{4}\right)_{3} \rightarrow n=6\left(\mathrm{Al}^{3+} \times 2=6\right)
+\end{aligned}
+$$
+
+eg. $\mathrm{Na}_{2} \mathrm{CO}_{3}$
+
+\begin{itemize}
+  \item Molar mass $=106 \mathrm{~g} / \mathrm{mol}$
+  \item Total charge $\left(\mathrm{CO}_{3}{ }^{2-}\right)=2$
+\end{itemize}
+
+$$
+E=\frac{106}{2}=53 \mathrm{~g} / \mathrm{eq}
+$$
+
+For Redox Reactions (Based on Electron Transfer)
+
+\begin{itemize}
+  \item $\mathbf{n}$-factor $(\mathrm{n})=$ Change in oxidation number per molecule
+\end{itemize}
+
+Examples:
+
+\begin{itemize}
+  \item $\mathbf{K M n O}_{4}$ (in acidic medium) $\rightarrow \mathrm{MnO}_{4}^{-} \rightarrow \mathrm{Mn}^{2+}$ (Oxidation state change: $+7 \rightarrow+2 \Rightarrow n=5$ )
+  \item $\mathrm{K}_{2} \mathrm{Cr}_{2} \mathbf{O}_{7} \rightarrow \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-} \rightarrow 2 \mathrm{Cr}^{3+}$ (Oxidation state change: $+6 \rightarrow+3 \Rightarrow n=6$ )
+  \item $\mathrm{FeSO}_{4}$ (Ferrous to Ferric) $\rightarrow \mathrm{Fe}^{2+} \rightarrow \mathrm{Fe}^{3+}$ (Oxidation state change: $+2 \rightarrow+3$
+\end{itemize}
+
+$$
+\Rightarrow n=1)
+$$
+
+eg. $\mathrm{KMnO}_{4}$ (in acidic medium):
+
+\begin{itemize}
+  \item Molar mass $=158 \mathrm{~g} / \mathrm{mol}$
+  \item Change in oxidation number $(\mathrm{n})=5$
+  \item $E=\frac{158}{5}=31.6 \mathrm{~g} / \mathrm{eq}$\\
+Q. The amount of $\mathrm{KMnO}_{4}$ required to prepare 100 ml of 0.1 N solution in alkaline medium is\\
+a. 1.58 gm\\
+b. 3.16 gm\\
+c. 0.52 gm\\
+d. 0.31 gm
+\end{itemize}
+
+Special Cases\\
+For Elements
+
+\begin{itemize}
+  \item Equivalent weight $=\frac{\text { Atomic Mass }}{\text { Valency }}$
+\end{itemize}
+
+Example (Aluminium, Al):
+
+\begin{itemize}
+  \item Atomic mass $=27 \mathrm{~g} / \mathrm{mol}$
+  \item Valency $=3$
+  \item $E=\frac{27}{3}=9 \mathrm{~g} / \mathrm{eq}$
+\end{itemize}
+
+For Gases (At STP)
+
+\begin{itemize}
+  \item Equivalent volume $=\frac{\text { Molar Volume }(22.4 \mathrm{~L})}{\mathrm{n} \text {-factor }}$
+  \item eg. $\mathrm{H}_{2}$
+\end{itemize}
+
+Molar volume $=22.4 \mathrm{~L}$\\
+n-factor $=2\left(\quad\right.$ since $\left.H_{2} \rightarrow 2 H^{+}+2 e^{-}\right)$
+
+$$
+E_{\text {volume }}=\frac{22.4}{2}=11.2 \mathrm{~L} / \mathrm{eq}
+$$
+
+\section*{For Complex Compounds}
+\begin{itemize}
+  \item eg. $\mathrm{Na}_{2} \mathrm{H}_{2}$ EDTA
+\end{itemize}
+
+Molar mass $=372 \mathrm{~g} / \mathrm{mol}$\\
+n -factor $=2$ (since it binds with 2 metal ions)\\
+$E=\frac{372}{2}=186 \mathrm{~g} / \mathrm{eq}$
+
+\section*{Applications of Equivalent Weight Titrations (Acid-Base \& Redox)}
+\begin{itemize}
+  \item Used in Normality (N) calculations: N $=\frac{\text { Weight (g) }}{\text { Equivalent Weight × Volume (L) }}$
+\end{itemize}
+
+\section*{Stoichiometric Calculations}
+\begin{itemize}
+  \item Helps balance chemical equations.
+\end{itemize}
+
+\section*{Electrochemistry}
+\begin{itemize}
+  \item Used in Faraday's laws of electrolysis:
+\end{itemize}
+
+$$
+\text { Weight deposited }=\frac{\text { Current }(I) \times \text { Time }(t) \times \text { Equivalent Weight }}{96500}
+$$
+
+\section*{Different Concentration Terms used in Volumetric Analysis Mass Percentage (w/w \%)}
+\begin{itemize}
+  \item Mass of solute per 100 grams of solution.
+\end{itemize}
+
+$$
+\text { Mass } \%=\left(\frac{\text { Mass of solute }}{\text { Mass of solution }}\right) \times 100
+$$
+
+\begin{itemize}
+  \item Unit: Percentage (\%)
+  \item A $20 \%(\mathrm{w} / \mathrm{w}) \mathrm{NaCl}$ solution means 20 g NaCl in 100 g solution.
+\end{itemize}
+
+\section*{Volume Percentage ( $\mathbf{v} / \mathbf{v}$ \%)}
+\begin{itemize}
+  \item Volume of solute per 100 mL of solution.
+\end{itemize}
+
+$$
+\text { Volume } \%=\left(\frac{\text { Volume of solute }}{\text { Volume of solution }}\right) \times 100
+$$
+
+\begin{itemize}
+  \item Unit: Percentage (\%)
+  \item A $5 \%(\mathrm{v} / \mathrm{v})$ ethanol solution means 5 mL ethanol in 100 mL solution.
+\end{itemize}
+
+\section*{Mass by Volume Percentage (w/v \%)}
+\begin{itemize}
+  \item Mass of solute (in grams) per 100 mL of solution.
+\end{itemize}
+
+$$
+\mathrm{w} / \mathrm{v} \%=\left(\frac{\text { Mass of solute }(\mathrm{g})}{\text { Volume of solution }(\mathrm{mL})}\right) \times 100
+$$
+
+\begin{itemize}
+  \item Unit: Percentage (\%)
+  \item A $10 \%(\mathrm{w} / \mathrm{v})$ glucose solution means 10 g glucose in 100 mL solution.
+\end{itemize}
+
+\section*{Parts Per Million (ppm)}
+\begin{itemize}
+  \item Mass of solute per million parts of solution.
+\end{itemize}
+
+$$
+\mathrm{ppm}=\left(\frac{\text { Mass of solute }}{\text { Mass of solution }}\right) \times 10^{6}
+$$
+
+\begin{itemize}
+  \item Unit: ppm (dimensionless)
+\end{itemize}
+
+5 ppm lead in water means 5 g lead in $10^{6} \mathrm{~g}$ solution (or $1,000 \mathrm{~L}$ ) of water.\\
+Q. A 500 g toothpaste sample has 0.5 g fluoride concentration, then concentration of fluoride in ppm is\\
+a. 200\\
+b. 300\\
+c. 400\\[0pt]
+d. 1000 [CEE-2021]
+
+\section*{Parts Per Billion (ppb)}
+\begin{itemize}
+  \item Mass of solute per billion parts of solution.
+\end{itemize}
+
+$$
+p p b=\left(\frac{\text { Mass of solute }}{\text { Mass of solution }}\right) \times 10^{9}
+$$
+
+\begin{itemize}
+  \item Unit: ppb (dimensionless)
+  \item 2 ppb arsenic means 2 g arsenic in $10^{9} \mathrm{~g}$ solution (or $10^{6} \mathrm{~L}$ ) of water.
+\end{itemize}
+
+Mole Fraction (X)
+
+\begin{itemize}
+  \item Ratio of moles of one component to the total moles of all components.
+\end{itemize}
+
+$$
+X_{A}=\frac{n_{A}}{n_{A}+n_{B}+n_{C}+\cdots}
+$$
+
+\begin{itemize}
+  \item Unit: Dimensionless (no units)
+  \item If a solution has 2 moles of ethanol and 8 moles of water, the mole fraction of ethanol is:
+\end{itemize}
+
+$$
+X_{\text {ethanol }}=\frac{2}{2+8}=0.2
+$$
+
+Molarity (M)
+
+\begin{itemize}
+  \item Moles of solute per liter of solution.
+\end{itemize}
+
+$$
+\text { Molarity }(\mathrm{M})=\frac{\text { Moles of solute }}{\text { Volume of solution (L) }}
+$$
+
+\begin{itemize}
+  \item Unit: mol/L or M
+  \item A 0.5 M NaOH solution means 0.5 moles of NaOH in 1 L of solution.\\[0pt]
+Q. Molarity of pure water is: [CEE 2022]\\
+a. 55.55 M\\
+b. 5.55 M\\
+c. 14 M\\
+d. 555 M\\
+Q. Molarity of $\mathbf{3 8} \% \mathbf{H C l}$ ( $\mathbf{1 . 1 9 ~ g m} \mathbf{~ m o l e}^{-\mathbf{1}}$ ) is\\
+a. 11.38\\
+b. 12.38 c .1 .238\\[0pt]
+d. 10.38[CEE 2081]
+\end{itemize}
+
+Molality (m)
+
+\begin{itemize}
+  \item Moles of solute per kilogram of solvent.
+\end{itemize}
+
+$$
+\text { Molality }(\mathrm{m})=\frac{\text { Moles of solute }}{\text { Mass of solvent }(\mathrm{kg})}
+$$
+
+\begin{itemize}
+  \item Unit: mol/kg or m
+  \item A 1 m NaCl solution means 1 mole of NaCl dissolved in 1 kg of water.\\
+Normality (N)
+  \item Number of gram equivalents of solute per liter of solution.
+\end{itemize}
+
+$$
+\operatorname{Normality}(\mathrm{N})=\frac{\text { Gram equivalents of solute }}{\text { Volume of solution }(\mathrm{L})}
+$$
+
+\begin{itemize}
+  \item Unit: eq/L or N
+  \item A $1 \mathrm{NHH}_{2} \mathrm{SO}_{4}$ solution means 1 gram equivalent ( 49 g ) of $\mathrm{H}_{2} \mathrm{SO}_{4}$ in 1 L of solution.
+\end{itemize}
+
+\section*{Comparison Between Molarity and Molality}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+Feature & Molarity (M) & Molality (m) \\
+\hline
+Definition & Moles of solute per liter of solution & Moles of solute per kg of solvent \\
+\hline
+Dependence on Temperature & Changes with temperature (volume changes) & Independent of temperature (mass remains constant) \\
+\hline
+Preferred for & General lab use & Colligative properties (boiling point elevation, freezing point depression) \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Interconversion Between Concentration Terms}
+\begin{itemize}
+  \item Molarity to Molality:
+\end{itemize}
+
+$$
+m=\frac{M}{\text { Density of solution }(\mathrm{kg} / \mathrm{L})-(M \times \text { Molar mass of solute }(\mathrm{kg} / \mathrm{mol}))}
+$$
+
+\begin{itemize}
+  \item Mole Fraction to Molarity:
+\end{itemize}
+
+$$
+M=\frac{X_{A} \times \text { Density }(\mathrm{g} / \mathrm{mL}) \times 1000}{\text { Molar mass of solute }(\mathrm{g} / \mathrm{mol})}
+$$
+
+\section*{Applications of Different Concentration Terms}
+\begin{itemize}
+  \item Molarity (M): Used in titrations, chemical reactions.
+  \item Molality (m): Used in colligative properties (e.g., boiling point elevation).
+  \item ppm/ppb : Used in environmental chemistry (pollutant levels).
+  \item Mole Fraction (X) : Used in gas mixtures and Raoult's law.
+\end{itemize}
+
+Concentration Terms
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Term & Formula & Units & Temperature Dependence \\
+\hline
+$\left(\frac{W}{W}\right) \%$ & $\frac{\text { Mass solute }}{\text { Mass solution }} \times 100$ & $\%$ & No \\
+\hline
+$\left(\frac{V}{V}\right) \%$ & $\frac{\text { Vol solute }}{\text { Vol solution }} \times 100$ & $\%$ & Yes \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$\mathbf{w} / \mathbf{v} \%$ & Mass solute (g) Vol solution (mL) $\times 100$ & \% & Yes \\
+\hline
+ppm & $\frac{\text { Mass solute }}{\text { Mass solution }} \times 10^{6}$ & ppm & No \\
+\hline
+ppb & $\frac{\text { Mass solute }}{\text { Mass solution }} \times 10^{9}$ & ppb & No \\
+\hline
+Mole Fraction (X) & $\frac{n_{A}}{n_{A}+n_{B}}$ & unitles & No \\
+\hline
+Molarity (M) & $\left(\mathrm{n}_{\text {mole }}\right)_{\text {solute }} \mathrm{V}_{\mathrm{L}}$ & mol/L & Yes \\
+\hline
+Normality & Gram equivalents L solution & eq/L & Yes \\
+\hline
+Molatity & $\left(\mathrm{n}_{\text {mole }}\right)_{\text {solute }}$ Mass of Solvent (kg) & mol/kg & No \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Strength of a Solution (g/L)}
+Strength $=$ Molarity $(\mathrm{M}) \times$ Molar Mass $(\mathrm{g} / \mathrm{mol})$
+
+\begin{itemize}
+  \item $1 \mathrm{MH}_{2} \mathrm{SO}_{4} \rightarrow$ Strength $=1 \times 98=98 \mathrm{~g} / \mathrm{L}$
+\end{itemize}
+
+Back Titration (Residual Titration)
+
+\begin{itemize}
+  \item Used when direct titration is not possible.
+\end{itemize}
+
+Moles of excess reagent - Moles of back-titrated reagent $=$ Moles reacted with analyte eg.
+
+\begin{itemize}
+  \item Step 1: Add excess HCl to $\mathrm{CaCO}_{3}$.
+  \item Step 2: Titrate leftover HCl with NaOH .
+  \item Step 3: Calculate reacted HCl :
+\end{itemize}
+
+Moles of HCl reacted $=$ Moles of HCl added - Moles of NaOH used\\
+Q. 22 gm of oxalic acid is present in the 500 ml of the solution ( $1.1 \mathrm{gm} / \mathrm{ml}$ ) then percentage ( $\mathrm{w} / \mathrm{w}$ ) of oxalic acid is\\
+a. $2 \%$\\
+b. $4 \%$\\
+c. 6\%\\
+d. $8 \%$\\
+Q. The normality of 1\% solution of sulphuric acid is nearly.\\
+a. 1.0 N\\
+b. 0.1 Nc .0 .2 N\\
+d. 1.5 N\\
+Q. Amount of $\mathrm{H}_{2} \mathrm{SO}_{4}$ present in $\mathbf{5 0 0 ~ c c}$ of $1.5 \mathrm{NH}_{2} \mathrm{SO}_{4}$ is:\\
+a. 4.9 g\\
+b. 49 g\\
+c. 24.8 g\\
+d. 36.74 g
+
+Key Points to Remember\\
+For Neutralization Titrations\\
+$N_{1} V_{1}=N_{2} V_{2}$\\
+For Redox Titrations:\\
+Use n -factor method: $M_{1} V_{1} n_{1}=M_{2} V_{2} n_{2}$\\
+For Percentage Purity:\\
+Compare experimental mass with theoretical mass.\\
+For Back Titrations:
+
+\begin{itemize}
+  \item Subtract excess moles from total moles added.
+\end{itemize}
+
+Different Terms used in Volumetric Analysis
+
+\begin{itemize}
+  \item Standard solution: Solution whose Concentration or strength is known is called as standard solution. Primary standard substance/solution: The substance whose standard solution can be prepared directly by weighing is known as primary substance and its solution is known as primary standard solution. e.g. $\mathrm{K}_{2} \mathrm{Cr}_{2} \mathrm{O}_{7}, \mathrm{AgNO}_{3}$, oxalic acid crystal, $\mathrm{Na}_{2} \mathrm{CO}_{3}$ (anhy.), sodium oxalate, Mohr's salt, etc. are primary standard substance.
+  \item Primary standard substances should be non-toxic, non-hygroscopic, non-deliquescent, available in pure form, invariant composition in solid and solution state and have high molecular and equivalent weight to minimize error during weighing.
+  \item Secondary standard substance: Substance whose standard solution can't be prepared by direct weighing but by titrating with primary standard solution are secondary standard solution. They are unstable, impure and volatile deliquescent/hygroscopic. Eg. $\mathrm{KMnO}_{4}, \mathrm{NaOH}, \mathrm{HCl}, \mathrm{H}_{2} \mathrm{SO}_{4}, \mathrm{HNO}_{3}, \mathrm{FeSO}_{4}$.
+  \item Tirration: Process to determine strength of unknown solution (titrate) with the help of stam solution (titrant).
+  \item Titration error: difference between end point and equivalence point.
+  \item The solution taken in burette ⇒ Titrant ⇒ Standard Solution
+  \item The solution taken in flask ⇒ Titrand or Titrate or analyte ⇒ Whose concn is to be determined
+  \item Acidimetry: Process in which strength of acid solution is determined volumetrically by titrating with standard alkali solution in presence of indicator.
+  \item Alkalimetry: determines the strength of alkali solution against standard acid solution.
+  \item Permanganate titration: $\mathrm{KMnO}_{4}$ act as self indicator due to the formation of $\mathrm{Mn}^{2+}$ ion which shows the pink colour.
+  \item For volumetric estimation of reducing agent (e.g. ferrous salt, oxalic acid, etc.), $\mathrm{KMnO}_{4}$ is used as standard oxidizing agent.
+  \item Acid solution of $\mathrm{KMnO}_{4}$ doesn't give any precipitate but neutral and alkaline solution give.
+  \item Dichromate titration: Standard $\mathrm{K}_{2} \mathrm{Cr}_{2} \mathrm{O}_{7}$ is used for estimating iron ores in presence of HCl .
+  \item Iodometric titration: Liberated $\mathrm{I}_{2}$ from KI by means of chemical reaction is titrated against hypo solution. Note: $\mathrm{Ag}^{+}, \mathrm{Cu}^{2+}, \mathrm{Fe}^{3+}$ give iodometric titration but $\mathrm{Pb}^{2+}$ doesn't.
+\end{itemize}
+
+Which of the following cannot give iodometric titrations?\\
+(a) $\mathrm{Fe}^{3+}$\\
+(b) $\mathrm{Cu}^{2+}$\\
+(c) $\mathrm{Pb}^{2+}$\\
+(d) $\mathrm{Ag}^{+}$
+
+\begin{itemize}
+  \item End point/ Equivalence point: Termination point of reaction in titration as indicated by indicators. Nous $\mathrm{KMnO}_{4}$ can be acidified only with dil. $\mathrm{H}_{2} \mathrm{SO}_{4}$ because with $\mathrm{HCl}, \mathrm{HCl}$ is oxidised
+  \item With $\mathrm{HNO}_{3}$ : It acts as oxidising agent.
+\end{itemize}
+
+\section*{Bonus point}
+\begin{itemize}
+  \item The indicator used in the titration of iodine against sodium thiosulphate is starch.
+  \item In titration of strong acid and weak base, indicator used is methyl orange. e.g. $\mathrm{Na}_{2} \mathrm{CO}_{3}$ and HCl
+  \item The pink colour of phenolphthalein in alkaline medium is due to negative form.
+  \item Phenolphthalein is not a good indicator for titrating ferrous sulphate against $\mathrm{KMnO}_{4}$.
+  \item If we use phenolphthalein as an indicator in a titration of $\mathrm{Na}_{2} \mathrm{CO}_{3}$ with HCl , the usual result is that no visible change will occur.
+  \item Methyl orange gives red colour in hydrochloric acid solution.
+  \item The best indicator for titrating 0.1 N solution of $\mathrm{Na}_{2} \mathrm{CO}_{3}$ with 0.1 NHCL is methyl red.
+  \item Starch can be used as an indicator for the detection of traces of iodine in aqueous solution.
+  \item Mohr's salt is dissolved in dil. $\mathrm{H}_{2} \mathrm{SO}_{4}$ instead of distilled water to prevent cationic hydrolysis.
+  \item Acidified potassium permanganate solution is decolourised by Mohr's salt.
+  \item The pH indicators are either weak acids or weak bases.
+  \item Strong acids are generally used as standard solutions in acid base titration because they can be used to titrate both strong and weak bases.
+  \item The no. of equivalents of $\mathrm{Na}_{2} \mathrm{~S}_{2} \mathrm{O}_{3}$ required for the volumetric estimation of one equivalent of $\mathrm{Cu}^{2+}$ is 2 .
+  \item If 0.53 gm of $\mathrm{Na}_{2} \mathrm{CO}_{3}$ is added to 10 ml of N acid, the resulting solution is neutral.
+\end{itemize}
+
+\section*{pH Titration Curve}
+\begin{center}
+\includegraphics[max width=\textwidth]{d8e28d91-150b-447d-bd45-cd5a1f3f5589-12_956_1237_1055_187}
+\end{center}
+
+Note: Some questions are intentionally repeated to make your practice more significant.
+
+
+\end{document}

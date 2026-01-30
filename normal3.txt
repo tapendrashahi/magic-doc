@@ -1,0 +1,275 @@
+\section*{Unit: 1 Basic Concept of Economics and Allocation of Resources}
+
+\section*{Chapter: 1 Basic Concept of Economics and Allocation of Resources}
+
+\section*{Q. Give the concept of scarcity and choice.}
+
+Scarcity and choice these two words are often used in economics. Scarcity refers to the stage when something is less than its requirement. If people get something less than they required then this is the stage of scarcity. Scarcity is a relative concept because it is the comparison between requirement and available.
+
+Choice is the consequence because of scarcity. Urgency of human needs differs. Therefore, they want to select the most essential need over other needs. In this situation, they have to select the one requirement which is most essential to them. This is the case of choice. In other words, choice refers to selection of the best or the most essential alternative or requirement amount available. Resources could be used for more than one purpose. Human wants are unlimited whereas resources are always Limited. Hence the problem of choice will arise always in economics.
+
+The concept of scarcity and choice was introduced by wellknown economist Lionel Robbins in his book "An essay on the nature and significance of Economic science" which was published in 1932 A.D.
+
+\section*{Q. What do you mean by opportunity cost?}
+
+Opportunity cost is one of the most important concepts in economics to define the economic cost of different projects investment and choices. Opportunity cost is the result of alternative utilization of resources. Since the same resource can be utilized for different purpose, another alternative should be contributed to select one alternative. When one alternative is selected among other different alternatives then the benefit forgone of the next best alternative is known as opportunity cost.
+
+For example, if a building can be rented for different alternative like alternative a , alternative b , alternative c , alternative d . An investor will select the alternative with provides maximum return to him or her. Let suppose,
+alternative a is providing 10 lacs per year alternative b : 8 lakh per year, alternative C is providing 7 lakh per year and alternative D is providing 6 lakh per year. In this situation, the person will select alternative A because it is providing the maximum return when alternative is selected all remaining alternative will be foregone. In this situation, investor's opportunity cost is the benefit foregone from the next best alternative which is alternative b , that is, Rs. 8 Lakhs.
+
+\section*{Q. Give the concept of Production Possibility Curve and Shift in PPC.}
+
+Production possibility curve is based on the concept of alternative utilization of resources. Since, the same resource can be utilized for more than one alternative, a producer can allocate available resources for more than one good; say two goods, in this situation, quantity of one good will be reduced continuously to increase quantity of another good.
+
+For example, if a producer can produce two goods; television and computer from the same resources, increase in each unit of computer will reduce quantity of television set. Here, producer forms a locus of combination which shows the quantity of two different goods that can be produced by utilizing the same resources. When these combinations are plotted in a graph will be formed which is called production possibility curve.
+
+Hence, production possibility curve may define as the locus of different combinations of any two goods that an economy can produce by the full utilization of its existing resources.
+
+\section*{Assumptions}
+
+Production possibility curve is based on certain background which are called assumptions of production possibility curve. Following are the basic assumptions of production possibility curve.
+1. The technology is given and constant.
+2. Resources can be mobilized perfectly between two goods.
+3. There is a full and efficient utilization of resources in the economy.
+4. All the resources are scarce or limited.
+5. Economy is producing only two goods.
+
+On the basis of these assumptions, PPT can be explained with the help of following table and figure:
+
+\begin{tabular}{|l|l|l|}
+\hline Combinations & Computers & TV Set \\
+\hline A & 0 & 15 \\
+\hline B & 1 & 14 \\
+\hline C & 2 & 12 \\
+\hline D & 3 & 9 \\
+\hline E & 4 & 5 \\
+\hline F & 5 & 0 \\
+\hline
+\end{tabular}
+
+The given table shows the different combinations of computer and TV sets and an economy can produce by the full utilization of its existing resources. We can represent these various production possibilities on a graph and get production possibility curve.
+![](https://cdn.mathpix.com/cropped/61010394-3611-4fe5-90c9-c3229d954597-03.jpg?height=1028&width=1106&top_left_y=1264&top_left_x=92)
+
+In the above figure, x -axis represent production of Computers and y -axis represent the productions of TV sets. The point 'A' shows the production of 15000 units of TV sets and no Computers. Similarly, the point 'F' shows 500 units of computer produced and no TV sets. When we join the points $\mathrm{A}, \mathrm{B}, \mathrm{C}, \mathrm{D}, \mathrm{E}$ and F . we get the curve AF ,
+which is PPC.
+
+\section*{Shift in PPC}
+
+Production possibility curve is based on the assumption of full utilization of resources. Since the resources are completely utilized, it is hard to change in PPC. But change in production capacity of economy due to change in productive capacity of labor, change in technology and other relevant reasons, the curve may shift. Shift of PPC can be categorized as:
+i. Outward Shift: If there is increase in economy's capacity then a greater number of goods and services can be produced by the same number of resources. In this situation more quantity of both goods can be produced and the curve will shift upwards. This happens because of:
+> Increase in supply of resources
+> Specialization of labor
+> Improvement in technology.
+![](https://cdn.mathpix.com/cropped/61010394-3611-4fe5-90c9-c3229d954597-04.jpg?height=308&width=455&top_left_y=1262&top_left_x=111)
+ii. In ward shift: If there is decrease in economy's capacity then only a smaller number of goods and services can be produced by the same number of resources. In this situation less quantity of both goods can be produced and the curve will shift inwards. It happens because of:
+- Shortage of resources
+- War, natural disaster
+- Inefficiency of labor
+![](https://cdn.mathpix.com/cropped/61010394-3611-4fe5-90c9-c3229d954597-04.jpg?height=401&width=370&top_left_y=2110&top_left_x=159)
+important components of modern economics that are:
+1. Unlimited wants,
+2. Limited resources and
+3. Alternative use of the resources.
+
+If there is absence of anyone factor among them, then allocation of resources will not be the issue. It is connected with following important issues:
+1. What to Produce? : It refers to the appropriate selection of goods that have highest economic value to the society. All resources like: land, labor, capital, machines, tools, equipment, natural resources are limited. So, it should be decided that which product should be produced with the help of available resources.
+2. How to Produce? : It refers to the selection of appropriate technology of production based on the cost and return ratio of each technology. Basically, there are two types of technologies:
+a. Labor intensive technology: If a greater number of labors are used by reducing the number of capitals, then this technology is called labor intensive technology.
+b. Capital intensive technology: If number of labors are minimized by increasing the units of capital employed then this technology is called capital intensive technology.
+3. For Whom to Produce? : It refers to the proper allocation or distribution of goods and services in the economy. There are people of different economic group in every economy. It should be decided before production that who are the targeted customers for whom goods are being produced.
+4. How to achieve efficient use of resources? : All resources should be utilized at their optimum level. Maximum production can be achieved through optimum utilization by minimizing wastage of resources. Underutilization of resources is viewed as wastage.
+5. What provision should be made for economic growth? : A sustained increase in production is desired in every economy to meet the requirement of increasing population. This is called economic
+growth. Sometime sacrifices of present consumption are essential for future growth. Prober balance between consumption and saving should be decided.
+Q. How resources are allocated in different economic system?
+Resources are allocated differently in different economic system. The economic system may be:
+1.Capitalistic Economy: In this type of economy, resources are allocated on the basis of market mechanism. In other words, equilibrium between total demand and the total supply of market will decide the production quantity and price of the product and they are the determinants for proper allocation of available resources. Allocation of resources is based on from where the maximum profit can be gained.
+2.Socialist Economy: It is state directed economy where what to produce, how to produce and how much to produce is directed by government. Allocation of resources is based on which the most effective
+utilization of resources of where the resources is most essential.
+3.Mixed Economy: In mixed economy, all major decisions are taken by government and rest of the economy is on the hand of private sector. In this, allocation of resources is based on both: profit maximization and efficient utilization of resources.
+
+\section*{Q. How specialization cand be gained with division of labor? Wat are advantages and disadvantages of division of labor?}
+
+Division of labor is an economic concept where the whole task is divided into small units to make it manageable and to get the advantage of specialization. Labor specialization is the stage when the same labor can perform the existing job in most efficient way. Specialization may appear in terms of production units, time consumed or excellence or quality of production.
+
+\section*{Division of labor leads to specialization because of following reasons:}
+a. Less time required for pick up and drop down the tools.
+b. Workers became habituated to operate the same kind of tool.
+c. No need to moving around the workplace.
+d. Less training required to workers.
+e. Concentration in one field.
+
+\section*{Advantages of Division of Labor:}
+
+Less training required:
+Each worker has to learn only one type of job, so it takes less time and effort to train them.
+
+\section*{Greater production:}
+
+When everyone does a specific part of work, they become faster and more goods can be produced in less time.
+
+\section*{Decrease in per unit cost:}
+
+Because production increases and efficiency improve, the cost of making each unit becomes lower.
+
+\section*{Management of complex task:}
+
+Big and difficult work is divided into smaller and simpler parts, which makes it easier to manage and control.
+
+\section*{Right person in right place:}
+
+Workers are given jobs that suit their skills and interests, which helps in better performance.
+
+\section*{Improvement of skill of workers:}
+
+Doing the same work again and again helps workers gain experience and become more skilled.
+
+\section*{Innovations:}
+
+As workers specialize in one task, they often think of new and better ways to do it, leading to new ideas and inventions.
+
+\section*{Quality product:}
+
+Since skilled workers focus on one job, the final products are of higher quality.
+
+\section*{Time saving:}
+
+Workers don't waste time moving between different types of work, so production happens faster.
+
+\section*{Disadvantages of Division of Labor}
+
+\section*{Loss of skill:}
+
+Since workers do only one small part of the job, they forget other skills and become less capable of doing different kinds of work.
+
+\section*{Dependency:}
+
+Each worker depends on others to complete the final product. If one person stops working, the whole production can stop.
+
+\section*{Monotony in work:}
+
+Doing the same task again and again becomes boring,
+which reduces interest and creativity in work.
+
+\section*{Risk of unemployment:}
+
+When machines replace specialized workers or when demand falls, such workers may lose their jobs easily.
+
+\section*{Fear of overproduction:}
+
+If production increases too much and goods don't sell, it can cause problems like waste and loss.
+
+\section*{Exploitation of unskilled workers and children:}
+
+Factory owners may take advantage of workers who have simple skills and pay them very low wages, sometimes even making children work.
+
+\section*{Growth of slums:}
+
+Many workers move to cities for factory jobs, but due to low income, they live in poor and crowded areas, leading to the growth of slums.
+
+\section*{Q. Define different types of economic system. Which economics system is adopted by Nepal?}
+
+There are following three types of economic system in the world:
+i. Capitalist Economy
+ii. Controlled Economy / Socialist Economy
+iii. Mixed Economy
+
+Capitalist Economy/Market: In this system, all resources and businesses are owned by private individuals.
+I. People are free to produce, sell, and buy whatever they want.
+II. The main aim is to earn profit
+
+\section*{Merits of Capitalist Economy}
+
+\section*{Economic freedom:}
+
+People are free to choose any job, open any business, and buy or sell goods they like.
+
+\section*{High efficiency:}
+
+Competition encourages businesses to work better and produce good-quality goods.
+
+\section*{Fast economic growth:}
+
+People work hard and invest more to earn profit, which helps the economy grow quickly.
+
+\section*{Innovation and new ideas:}
+
+To earn more profit, producers create new products and use better technology.
+
+\section*{Better quality products:}
+
+Competition forces producers to improve the quality of goods to attract customers.
+
+\section*{Demerits of Capitalist Economy}
+
+\section*{Economic inequality:}
+
+Rich people become richer and poor people may remain poor.
+
+\section*{Exploitation of workers:}
+
+To reduce cost, owners may pay low wages or make workers work long hours.
+
+\section*{No guarantee of basic needs:}
+
+Poor people may not get enough education, health services, or security because everything depends on ability to pay.
+
+\section*{Social problems:}
+
+Unemployment, poverty, and crime may increase because of unequal distribution of wealth.
+
+\section*{Misuse of resources:}
+
+Producers may misuse natural resources for profit without caring about the environment.
+
+Socialist Economy: In this system, all resources are owned and controlled by the government.
+a. The main aim is social welfare, not profit.
+b. The government decides what to produce and how to distribute goods.
+
+\section*{Merits:}
+
+\section*{Equal distribution of income:}
+
+The government tries to reduce the gap between rich and poor.
+
+\section*{Social welfare:}
+
+The main aim is to provide basic needs like food, education, and health to everyone.
+
+\section*{No exploitation:}
+
+Workers are treated fairly since the government controls industries.
+
+\section*{Proper use of resources:}
+
+The government plans production, so resources are not wasted.
+
+\section*{Economic stability:}
+
+The government controls prices and employment, so there is less risk of inflation or unemployment.
+
+\section*{Demerits:}
+
+\section*{Lack of freedom:}
+
+People cannot freely choose jobs or open private businesses.
+
+\section*{Low efficiency:}
+
+Without competition, workers and managers may not work hard.
+
+\section*{Slow progress:}
+
+Due to long planning and lack of motivation for profit, development is slow.
+
+\section*{Government burden:}
+
+The government has to manage everything, which can cause delay and corruption.
+
+Mixed Economy: This system has features of both capitalist and socialist economies.
+a. Some businesses are owned by the government, and some by private people.
+b. The government controls major sectors, while private sectors also run freely. Example: India, Nepal.
+c. Ownership of private property.
+d. Core businesses are in the hand of government and rest are in the hand of private.
+e. Both private and public sector
+f. Both private and public sector makes decision combinedly.
+Nepal is currently adopting the mixed economy or there is equal role of both private sector and public sector in Nepal. Here, core business like infrastructure (road, bridge, communication) and power related (like: Petroleum, water, electricity etc.) are in the hand of government and rest are in the hand of private. However, private investment has been increased in recent days in core industries as well.

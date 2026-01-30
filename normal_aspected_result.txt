@@ -1,0 +1,112 @@
+<div> </div>
+
+<h1>Limitations of Statistics</h1>
+
+<p><strong>Although useful, statistics also has some limitations.</strong></p>
+
+<div> </div>
+
+<h2>What are the Limitations of Statistics?</h2>
+
+<div> 
+  <ol>
+    <li> <strong>Deals Only with Quantitative Data:</strong> 
+<p>It cannot measure feelings or qualities.</p>
+ 
+<p>Example: Can&apos;t measure happiness of people.</p>
+ </li>
+    <li> <strong>Possibility of Misuse:</strong> 
+<p>Data can be misused to show false results or bias.</p>
+ </li>
+    <li> <strong>Does not show exact truth:</strong> 
+<p>Statistics shows averages, not the exact situation of individuals.</p>
+ </li>
+    <li> <strong>Needs Skilled Persons:</strong> 
+<p>Proper knowledge is needed for data collection and interpretation.</p>
+ </li>
+    <li> <strong>Depends on Data Accuracy:</strong> 
+<p>Wrong or incomplete data leads to wrong conclusions.</p>
+ </li>
+  </ol>
+ </div>
+
+
+<div> </div>
+
+<h1>Pre-Requisites of Data Collection</h1>
+
+<h2>What Should You Know Before Collecting Data?</h2>
+
+<h3>1. Knowledge of Types of Data</h3>
+
+<p>Students must understand the two main types:</p>
+
+<h3>2. Concept of Population and Sample</h3>
+
+<p>They should know:</p>
+
+<p>This helps in understanding sampling methods.</p>
+
+<h3>3. Understanding Basic Statistical Terms</h3>
+
+<p>Students should be familiar with:</p>
+
+<h3>4. Basic Math Skills</h3>
+
+<p>Simple calculation skills such as:</p>
+
+<p>These help in organizing and interpreting collected data.</p>
+
+<h3>5. Awareness of Different Data Sources</h3>
+
+<p>Students should know that data can be collected from:</p>
+
+<h3>6. Ability to Ask Simple Questions</h3>
+
+<p>Data collection often uses questionnaires. Students should know:</p>
+
+<h3>7. Basic Understanding of Data Collection Methods</h3>
+
+<p>At least basic awareness of:</p>
+
+<div> 
+  <ul>
+    <li>Primary data (first-hand information)</li>
+    <li>Secondary data (information collected by others)</li>
+  </ul>
+ 
+  <ul>
+    <li>Population = the whole group</li>
+    <li>Sample = a small part of the population used for study</li>
+  </ul>
+ 
+  <ul>
+    <li>Variable (something that changes)</li>
+    <li>Unit of measurement</li>
+    <li>Frequency</li>
+  </ul>
+ 
+  <ul>
+    <li>Addition, subtraction</li>
+    <li>Averaging numbers</li>
+    <li>Percentages</li>
+  </ul>
+ 
+  <ul>
+    <li>People (surveys, interviews)</li>
+    <li>Government reports</li>
+    <li>Newspapers, websites, institutions</li>
+  </ul>
+ 
+  <ul>
+    <li>How to ask clear and unbiased questions</li>
+    <li>Difference between open-ended and close-ended questions</li>
+  </ul>
+ 
+  <ul>
+    <li>Survey</li>
+    <li>Interview</li>
+    <li>Observation</li>
+    <li>Questionnaire</li>
+  </ul>
+ </div>

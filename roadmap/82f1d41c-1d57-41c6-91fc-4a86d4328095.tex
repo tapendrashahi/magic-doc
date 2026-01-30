@@ -1,0 +1,824 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+
+\DeclareUnicodeCharacter{2192}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
+\DeclareUnicodeCharacter{2234}{\ifmmode\therefore\else{$\therefore$}\fi}
+
+\begin{document}
+\section*{1. Complex number :}
+Any ordered pair of real numbers ( $\mathrm{a}, \mathrm{b}$ ) is known as a complex number.\\
+It is denoted by $z$ or $w$ and given by $z=(a, b)=a+i b$
+
+$$
+\text { where } \begin{aligned}
+& a=\operatorname{Re}(z) \\
+& b=\operatorname{Im}(z)
+\end{aligned}
+$$
+
+i → imaginary unit of complex number.\\
+Note : $-\sqrt{-1}$ is denoted by i and is pronounced by iota.
+
+\section*{Examples :}
+$$
+\begin{aligned}
+& z=(2+3 i) \\
+& w=(-1+2 i) \text { etc. }
+\end{aligned}
+$$
+
+Thus, $C=\{(a, b): a, b \in R\}$\\
+\includegraphics[max width=\textwidth, center]{31db57cf-5c7a-4d09-9ac4-355c75863af7-01_654_1026_1076_546}
+
+\section*{Complex Plane}
+Every real number is a complex number : $x$ is a real number we can write $x$ as :\\
+$\mathrm{x}=\mathrm{x}+0 \mathrm{i}$\\
+Thus $\mathrm{R} \subset \mathrm{C}$ (Real number system is the subset of complex number system) Where $R$ is the set of all real numbers and $C$ is the set of all complex numbers.
+
+\section*{2. Operations of complex numbers:}
+\section*{(1) Equality:}
+Any two complex number $\mathrm{z}=(\mathrm{a}, \mathrm{b})$ and $\mathrm{w}=(\mathrm{c}, \mathrm{d})$ are said to be equal if
+
+$$
+\begin{aligned}
+& a=c \\
+& \text { and } b=d
+\end{aligned}
+$$
+
+i.e., real parts and imaginary parts are equal.
+
+\section*{(2) Addition :}
+$\mathrm{z}=(\mathrm{a}, \mathrm{b})$ and $\mathrm{w}=(\mathrm{c}, \mathrm{d})$ be any two complex numbers then
+
+$$
+\begin{aligned}
+z+w & =(a, b)+(c, d) \\
+& =(a+c, b+d)
+\end{aligned}
+$$
+
+Example:-
+
+$$
+\begin{aligned}
+\mathrm{z} & =(3,4) \\
+\mathrm{w} & =(2,1) \\
+\mathrm{z}+\mathrm{w} & =(3+2,4+1) \\
+& =(5,5)
+\end{aligned}
+$$
+
+\section*{(3) Multiplication :}
+If $\mathrm{z}=(\mathrm{a}, \mathrm{b})$ and $\mathrm{w}=(\mathrm{c}, \mathrm{d})$ be any two complex numbers then
+
+$$
+\begin{aligned}
+z \cdot w & =(a, b) \cdot(c, d) \\
+& =(a c-b d, a d+b c)
+\end{aligned}
+$$
+
+Example:
+
+$$
+\begin{aligned}
+\mathrm{z} & =(2,3) \\
+\mathrm{w} & =(2,5) \\
+\text { then } \mathrm{z} \cdot \mathrm{w} & =(2.3-3.5,2.5+2.3) \\
+\vdots & =(-9,16)
+\end{aligned}
+$$
+
+(4) Division :\\
+let $\mathrm{z}=\mathrm{a}+\mathrm{ib}$\\
+$\mathrm{w}=\mathrm{c}+\mathrm{id}$ be any two complex numbers
+
+$$
+\begin{aligned}
+\frac{z}{w} & =\frac{a+i b}{c+i d}=\frac{(a+i b)(c-i d)}{(c+i d)(c-i d)} \\
+& =\frac{(a c+b d)+i(b c-a d)}{c^{2}+d^{2}} \\
+& =\left(\frac{a c+b d}{c^{2}+d^{2}}\right)+\left(\frac{b c-a d}{c^{2}+d^{2}}\right)
+\end{aligned}
+$$
+
+; Where $z \neq 0$
+
+\section*{Example:-}
+$$
+\begin{aligned}
+\frac{z}{w} & =\frac{2+3 i}{2+5 i} \\
+\frac{z}{w} & =\frac{2+3 i}{2+5 i} \times \frac{2-5 i}{2-5 i} \\
+& =\frac{4-10 i+6 i-15 i^{2}}{4-25 i^{2}} \\
+& =\frac{4-4 i+15}{29}=\frac{19-4 i}{19}
+\end{aligned}
+$$
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (i) Let $z=(a, b)$ be any complex number. Then the additive inverse of $z$ is- $z$ i.e. $-z=(-a,-b)$\\
+(ii) For the set of complex numbers, the additive identity is ( 0,0 )\\
+(iii) For the set of complex numbers, multiplicative identity is $(1,0)$\\
+(iv) If $z=(a, b)$ is any non-zero complex number, then the multiplicative inverse of $z$ is $1 / z$ and given by
+\end{enumerate}
+
+$$
+\begin{aligned}
+\frac{1}{z} & =\frac{1}{a+i b}=\frac{1}{a+i b} \cdot \frac{a-i b}{a-i b} \\
+& =\left(\frac{a}{a^{2}+b^{2}}, \frac{-b}{a^{2}+b^{2}}\right)
+\end{aligned}
+$$
+
+\section*{Example:}
+The multiplicative inverse of $z=5(\cos \theta+i \sin \theta)$ is\\
+a) $5(\sin \theta-i \cos \theta)$\\
+b) $\frac{1}{5}(\cos \theta-i \sin \theta)$.\\
+c) $\frac{1}{5}(\cos \theta+i \sin \theta)$\\
+d) $5(\cos \theta-i \sin \theta)$
+
+\section*{Solution:}
+Multiplicative inverse of $z$ is $z^{-1}=\frac{1}{z}$
+
+$$
+\begin{aligned}
+& =\frac{1}{5(\cos \theta+i \sin \theta)} \cdot \frac{(\cos \theta-i \sin \theta)}{(\cos \theta-i \sin \theta)} \\
+& =\frac{\cos \theta-i \sin \theta}{5}
+\end{aligned}
+$$
+
+\section*{4. Purely real and Purely imaginary}
+(i) A complex number $z=a+i b$ is said to be purely real if imaginary part $b=0$ i.e
+
+$$
+\begin{aligned}
+& z=\bar{z} \\
+& a+i b=a-i b \\
+& 2 i b=0 \\
+& b=0
+\end{aligned}
+$$
+
+(ii) A complex number is said to be purely imaginary if real part $a=0$ i.e
+
+$$
+\begin{aligned}
+& z=\bar{z} \\
+& a+i b=-(a-i b) \\
+& a+i b=-a+i b \\
+& 2 a=0 \\
+& a=0
+\end{aligned}
+$$
+
+Note: Every imaginary number is a complex number but every complex number is not an imaginary number
+
+\section*{Example:-}
+$$
+\begin{aligned}
+& \frac{z-\bar{z}}{2 i}= \\
+& =\frac{(x+i y)-(x-i y)}{2 i} \\
+& =\frac{2 i y}{2 i} \\
+& =y
+\end{aligned}
+$$
+
+It is purely real:\\
+(Every imaginary part of a complex number is real)\\
+5. Powers of i:-\\
+(i) $i^{2}=-1$\\
+(ii) $i^{3}=i^{2} \cdot i=-i$\\
+(iii) $i^{4}=i^{2}, i^{2}=1$\\
+(iv) $i^{4 n+2}=(i)^{4 n} \cdot i^{2}$
+
+$$
+=1 \times(-1)=1
+$$
+
+(v) $i^{-1}=\frac{1}{i}=\frac{i}{i^{2}}=-1$
+
+Example:\\
+The value of $i^{n}+i^{n+1}+i^{n+2}+i^{n+3}$ is equal to\\
+a) I\\
+b) -4\\
+c) -I\\
+d) 0
+
+Solution:
+
+$$
+\begin{aligned}
+& i^{n}+i^{n}-i^{1}+i^{n} \cdot i^{2}+i^{n} \cdot i^{3} \\
+& =i^{n}\left(1+i+i^{2}+i^{3}\right) \\
+& =i^{n}(1+i-1-i) \\
+& =0
+\end{aligned}
+$$
+
+\section*{6. Some properties of complex numbers:-}
+Let $\mathrm{z}_{1}=(\mathrm{a}, \mathrm{b}), \mathrm{z}_{2}=(\mathrm{c}, \mathrm{d})$ and $\mathrm{z}_{3}=(\mathrm{e}, \mathrm{f})$ be any three complex numbers.\\
+Then,\\
+(i) $Z_{1}+Z_{2}=Z_{2}+Z_{1}$\\
+(ii) $\left.\begin{array}{l}Z_{1}+\left(Z_{2}+Z_{3}\right)=\left(Z_{1}+Z_{2}\right)+Z_{3} \\ Z_{1}\left(Z_{2} Z_{3}\right)=\left(Z_{1} Z_{2}\right) Z_{3}\end{array}\right]$\\
+(iii) $\left.\begin{array}{ll}z_{1}\left(z_{2}+z_{3}\right) & =z_{1} z_{2}+z_{2} z_{3} \\ \left(z_{1}+z_{2}\right) z_{3} & =z_{1} z_{3}+z_{2} z_{3}\end{array}\right]$ Distributive law
+
+\section*{7. Conjugate of a complex number:-}
+Let $\mathrm{z}=(\mathrm{a}+\mathrm{ib})$ be any complex number then its conjugate denoted by $\bar{Z}$ is given by
+
+$$
+\bar{z}=a-i b
+$$
+
+Example:-
+
+$$
+\begin{aligned}
+\mathrm{z} & =3+4 \mathrm{i} \\
+\bar{z} & =3-4 i \\
+-\overline{7} & =-7
+\end{aligned}
+$$
+
+(the conjugate of real number coincides with itself)
+
+\section*{Example:-}
+The conjugate of the complex number $\left(\frac{1-i}{1+i}\right)$ is:\\
+a) 2 I\\
+b) $(1-i)$\\
+c) -I\\
+d) i
+
+Solution:-
+
+$$
+\begin{aligned}
+\frac{1-i}{1+i} & =\frac{1-i}{1+i} \times \frac{1-i}{1-i} \\
+& =\frac{1-2 i+i^{2}}{1-i^{2}} \\
+& =\frac{1-2 i-1}{1+1}=-\mathrm{i}
+\end{aligned}
+$$
+
+Its conjugate is i .
+
+\section*{8. Properties of complex conjugate:-}
+(i) $(\overline{\bar{Z}})=Z$\\
+(ii) $z+\bar{z}=2 \operatorname{Re}(z)$\\
+(iii) $\mathrm{z}-\overline{\mathrm{Z}}=2 \operatorname{iIm}(\mathrm{z})$\\
+(iv) $\overline{z+w}=\bar{z}+\bar{w}$\\
+(v) $z W=\bar{z} \bar{w}$\\
+(vi) $\overline{Z_{1} \cdot Z_{2} \cdot Z_{3}}=\overline{Z_{1}} \cdot \overline{Z_{2}} \cdot \overline{Z_{3}}$\\
+(vii) $\overline{z_{1}+z_{2}}=\overline{z_{1}}+\overline{z_{2}}$\\
+(viii) $\overline{z_{1}+z_{2}+z_{3}}=\overline{z_{1}}+\overline{z_{2}}+\overline{z_{3}}$\\
+(ix) $\binom{\bar{z}}{\bar{w}}=\frac{\bar{z}}{\bar{w}}$
+
+\section*{9. Absolute value (Modulus) of a complex number:-}
+Let $z=(a+i b)$ be any complex number. The absolute value of a complex number denoted by $|z|$ is given by
+
+$$
+|z|=\sqrt{a^{2}+b^{2}}
+$$
+
+\section*{Example:-}
+The modulus of $(1+\sqrt{2}+i)$ is\\
+a) $2 \sqrt{2}$\\
+b) $2+\sqrt{3}$\\
+c) $\sqrt{4+2 \sqrt{2}}$\\
+d) 1
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+|z| & =\sqrt{(1+\sqrt{2})^{2}+(1)^{2}} \\
+& =\sqrt{1+2 \sqrt{2}+2+1} \\
+& =\sqrt{4+2 \sqrt{2}}
+\end{aligned}
+$$
+
+\section*{Example:-}
+The modulus of $\frac{a-i b}{a+i b}$ is equals to:\\
+a) $\sqrt{a^{2}+b^{2}}$\\
+b) $(a+b)$\\
+c) 1\\
+d) $\frac{1}{2}(a+b)$
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+\mathrm{z} & =\frac{a-i b}{a+i b} \\
+\text { Let }|\mathrm{z}| & =\left|\frac{a-i b}{a+i b}\right| \\
+& =\frac{\sqrt{a^{2}+(-b)^{2}}}{\sqrt{a^{2}+b^{2}}}=1
+\end{aligned}
+$$
+
+\section*{Properties: -}
+(i) The modulus of a complex number and its conjugate are same i.e.
+
+$$
+\left|z_{1}\right|=\left|\bar{z}_{1}\right|=\left|-z_{1}\right|
+$$
+
+(ii) $\left|z_{1}\right|=0$ iff $z_{1}=0$\\
+(iii) $-\left|z_{1}\right| \leq \operatorname{Re}\left(z_{1}\right) \leq\left|z_{1}\right|$\\
+(iv) $-\left|z_{1}\right| \leq \operatorname{Im}\left(z_{1}\right) \leq\left|z_{1}\right|$\\
+(v) $\left|z_{1} z_{2}\right|=\left|z_{1}\right| \cdot\left|z_{2}\right|$\\
+(vi) $\left|\frac{z_{1}}{z_{2}}\right|=\frac{\left|z_{1}\right|}{\left|z_{2}\right|}$ Provided $z_{2} \neq 0$\\
+(vii) $|z+w| \leq|z|+|w|$\\
+(viii) $|z-w| \geq|z|-|w|$\\
+(ix) $|z-w| \leq|z|+|w|$\\
+(x) $|z|^{2}=z, z$\\
+(xi) $\left|z_{1}+z_{2}\right|^{2}+\left|z_{1}-z_{2}\right|^{2}=2\left(\left|z_{1}\right|^{2}+\left|z_{2}\right|^{2}\right)$\\
+(xii) $\left|z_{1}+z_{2}\right|=\left|z_{1}-z_{2}\right| \Leftrightarrow \arg \left(z_{1}\right)-\arg \left(z_{2}\right)=\pi / 2$\\
+(xiii) $\left|z_{1}+z_{2}\right|=\left|z_{1}\right|+\left|z_{2}\right| \Leftrightarrow \arg \left(z_{1}\right)=\arg \left(z_{2}\right)$
+
+\section*{Some important results:-}
+(i) If $z_{1}$ and $z_{2}$ are complex numbers, then the distance between them is given by
+
+$$
+\left|z_{1}-z_{2}\right|
+$$
+
+(ii) Three points $z_{1}, z_{2}, z_{3}$ are collinear if
+
+$$
+\left|\begin{array}{lll}
+z_{1} & \overline{z_{1}} & 1 \\
+z_{2} & \overline{z_{2}} & 1 \\
+z_{3} & \overline{z_{3}} & 1
+\end{array}\right|=0
+$$
+
+(iii) If three complex numbers are in A.P. they lie in a same straight line
+
+\section*{Different forms of complex number:-}
+a) Cartesian form:-
+
+Complex number in the form $z=(x+i y)$ is known as cartesian form of complex number Example:
+
+$$
+z=2+3 i, 1+i \text { etc. }
+$$
+
+b) Polar Form:-
+
+Complex number in the form $\mathrm{z}=\mathrm{r}(\cos \theta+\mathrm{i} \sin \theta)$ is known as polar form of complex number $z=x+i y$.\\
+where, $\mathrm{r}^{2}=\mathrm{x}^{2}+\mathrm{y}^{2}$\\
+and $\tan \theta=y / x$\\
+Where $\theta$ is known as argument or amplitude.\\
+\includegraphics[max width=\textwidth, center]{31db57cf-5c7a-4d09-9ac4-355c75863af7-08_598_854_1783_635}
+
+Note:-\\
+(i) The principal value of argument of $z$ denoted by argz is given by:
+
+$$
+\arg (z)=\tan ^{-1}(y / x), z \neq 0(-\pi<\theta \leq \pi)
+$$
+
+(ii) The principal values of argument of $Z$ will be $\theta, \pi-\theta,-\pi+\theta$ and $-\theta$ according as the point $z$ lies in the $1^{\text {st }}, 2^{\text {nd }}, 3^{\text {rd }}$ and $4^{\text {th }}$ quadrant.\\
+(iii) If $\arg z=0$ or $\pi$ then $z$ is purely real.\\
+(iv) If $\arg z=\pi / 2$ or $-\pi / 2$ then $z$ is purely imaginary.\\
+(v) Argument of complex number 0 is not defined.
+
+\section*{Example:}
+Change ( $2+2 \sqrt{3} i$ ) into polar form.\\
+a) $4(\cos 60+i \sin 60)$\\
+b) $2(\cos 30+i \sin 30)$\\
+c) $8(\cos 45+i \sin 45)$\\
+d) none
+
+\section*{Solution:-}
+Let $(x+i y)=2+2 \sqrt{3} i$\\
+where $x=2$ and $y=\sqrt{3}$\\
+we have
+
+$$
+\begin{aligned}
+r^{2} & =x^{2}+y^{2} \\
+& =2^{2}+(2 \sqrt{3})^{2} \\
+\therefore \mathbf{r} & =4
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{gathered}
+\tan \theta=\frac{y}{x}=\frac{2 \sqrt{3}}{2}=\sqrt{3} \\
+\theta=60^{\circ}
+\end{gathered}
+$$
+
+∴ The required polar form is $4\left(\cos 60^{\circ}+i \sin 60^{\circ}\right)$.
+
+\section*{Example:-}
+The argument of $(2+2 i)$ is\\
+a) $\frac{\pi}{4}$\\
+b) $-\frac{\pi}{4}$\\
+c) $\frac{\pi}{2}$\\
+d) $\frac{\pi}{3}$
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+& \text { Let } \mathrm{x}+\mathrm{iy}=2+2 \mathrm{i} \\
+& \tan \theta=\frac{y}{x} \\
+& =\frac{2}{2}=1 \\
+& \theta \rightarrow \frac{\pi}{4}
+\end{aligned}
+$$
+
+Example:-\\
+The argument of ( $1-i$ ) is:\\
+a) $\frac{\pi}{4}$\\
+b) $-\frac{\pi}{4}$\\
+c) $\frac{\pi}{2}$\\
+d) $\frac{\pi}{3}$
+
+\section*{Solution:-}
+Let $x+i y=1+(-i)$\\
+$(1,-1)$ lies in the $4^{\text {th }}$ quadrant principal value $=-\tan ^{-1}(1)$
+
+$$
+=-\frac{\pi}{4}
+$$
+
+Note:\\
+(i) $\operatorname{Arg}\left(z_{1} z_{2}\right)=\operatorname{Arg}\left(z_{1}\right)+\operatorname{Arg}\left(z_{2}\right)$\\
+(ii) $\operatorname{Arg}\left(\frac{z_{1}}{z_{2}}\right)=\operatorname{Arg}\left(z_{1}\right)-\operatorname{Arg}\left(z_{2}\right)$\\
+(iii) $\operatorname{Arg}(\bar{Z})=2 \pi-\operatorname{Arg}(z)$
+
+\section*{c) Exponential form:-}
+Complex number of the form $z=r e^{i \theta}$ where $\mathrm{e}^{i \theta}=(\cos \theta+i \sin \theta)$ is known as exponential form of complex number.
+
+\section*{Note:-}
+i. The complex number $\cos \theta+i \sin \theta$ is also denoted by $\mathrm{e}^{-1 \theta}$.\\
+i.e. $e^{i \theta}=\cos \theta+i \sin \theta$\\
+ii. $e^{i \alpha} \cdot e^{i \beta}=e^{(\alpha+\beta)}$\\
+iii. $\frac{e^{i a}}{e^{i \beta}}=\mathrm{e}^{(\mathrm{a}-\beta)}$
+
+\section*{Example:-}
+The value of $2 \mathrm{e}^{i \pi 3}$ is\\
+a) $1+I$\\
+b) $1+\sqrt{3} i$\\
+c) $\sqrt{3}-\mathrm{I}$\\
+d) $2+2 \sqrt{2} i$
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+2 \mathrm{e}^{i \theta} & =2(\cos \theta+\mathrm{i} \sin \theta) \\
+2 \mathrm{e}^{\mathrm{i} 3} & =2\left(\cos \frac{\pi}{3}+i \sin \frac{\pi}{3}\right) \\
+& =2\left(\frac{1}{2}+i \frac{\sqrt{3}}{2}\right) \\
+& =2\left(\frac{1+\sqrt{3} i}{2}\right) \\
+& =1+\sqrt{3} i
+\end{aligned}
+$$
+
+\section*{Product and quotient of complex numbers:}
+Let $\mathrm{z}_{1}=\mathrm{r}_{1}\left(\cos \theta_{1}+i \sin \theta_{1}\right)$
+
+$$
+\begin{aligned}
+& z_{2}=r_{2}\left(\cos \theta_{2}+i \sin \theta_{2}\right) \\
+& z_{1} z_{2}=r_{1} r_{2}\left[\left(\cos \left(\theta_{1}+\theta_{2}\right)+i \sin \left(\theta_{1}+\theta_{2}\right)\right]\right. \\
+& \quad \frac{z_{1}}{z_{2}}=\frac{r_{1}}{r_{2}}\left[\cos \left(\theta_{1}-\theta_{2}\right)+i \sin \left(\theta_{1}-\theta_{2}\right)\right] ; z \neq 0
+\end{aligned}
+$$
+
+\section*{Example:-}
+The value of $\frac{2(\cos 70+i \sin 70)}{\cos 10+i \sin 10}$ is\\
+a) $1+I$\\
+b) $\frac{1}{2}+\frac{\sqrt{3}}{2} i$\\
+c) $1+\sqrt{3} i$\\
+d) $2+\sqrt{2} i$
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+& =2\left[\cos \left(70^{\circ}-10^{\circ}\right\}+i \sin \left(70^{\circ}-10^{\circ}\right)\right] \\
+& =2\left(\cos 60^{\circ}+i \sin 60^{\circ}\right) \\
+& =2(1 / 2+i \sqrt{3} / 2) \\
+& =1+i \sqrt{3}
+\end{aligned}
+$$
+
+\section*{(13) De Moivre's Theorem:}
+For any integer $n$ (positive or negative or zero).
+
+$$
+[r(\cos \theta+i \sin \theta)]^{n}=r^{n}(\cos n \theta+i \sin \theta)
+$$
+
+\section*{Example:-}
+The value of $\frac{\cos 6 \theta+i \sin 6 \theta}{(\cos \theta+i \sin \theta)^{2}}$ is\\
+a) $\cos \theta+i \sin \theta$\\
+b) $\cos 4 \theta+i \sin 4 \theta$\\
+c) $\cos \theta-i \sin \theta$\\
+d) $\cos 2 \theta+i \sin 2 \theta$
+
+\section*{Solution:-}
+By using De-moivre' s theorem:
+
+$$
+\begin{aligned}
+& =\frac{\cos 6 \theta+i \sin 6 \theta}{\cos 2 \theta+i \sin 4 \theta} \\
+& =\cos (6 \theta-2 \theta)+i \sin (6 \theta-2 \theta) \\
+& =\cos 4 \theta+i \sin 4 \theta
+\end{aligned}
+$$
+
+Example:-\\
+The value of $\left(\frac{1}{2}+i \frac{\sqrt{3}}{2}\right)^{7}$ is\\
+a) $(1+i)$\\
+b) $\frac{1}{2}+i \frac{\sqrt{3}}{2}$\\
+c) $2+I$\\
+d) $\frac{1}{\sqrt{2}}+\frac{i}{\sqrt{2}}$
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+& \text { Let } \mathrm{x}+\mathrm{iy}=\left(\frac{1}{2}+i \frac{\sqrt{3}}{2}\right) \\
+& \mathrm{r}^{2}=\mathrm{x}^{2}+\mathrm{y}^{2} \\
+& =\left(\frac{1}{2}\right)^{2}+\left(\frac{\sqrt{3}}{2}\right)^{2} \\
+& \mathrm{r}=1 \\
+& \tan \theta=\frac{y}{x}=\frac{\sqrt{3} / 2}{1 / 2} \\
+& \theta=60^{\circ} \\
+& \left(\frac{1}{2}+i \frac{\sqrt{3}}{2}\right)^{7}=(\cos 60+\mathrm{isin} 60)^{7}
+\end{aligned}
+$$
+
+By applying De Moivre's theorem
+
+$$
+\begin{aligned}
+& =\cos 60 \times 7+i \sin 60 \times 7 \\
+& =\cos (360+60)+i \sin (360+60) \\
+& =\cos 60+i \sin 60 \\
+& =\left(\frac{1}{2}+i \frac{\sqrt{3}}{2}\right)
+\end{aligned}
+$$
+
+(14) For any non-zero complex number $\mathrm{Z}=\mathrm{r}(\cos \theta+\mathrm{i} \sin \theta)$ and any positive integer n , the n distinct roots are given by:
+
+$$
+z_{k}=\sqrt[n]{r}\left(\cos \theta_{k}+i \sin \theta_{k}\right)
+$$
+
+where $\theta_{i}=\frac{\theta+k 360}{n}$
+
+$$
+k=0,1,2, \cdots \cdots \cdots(n-1)
+$$
+
+\section*{Example:-}
+If $Z=(\cos \theta+i \sin \theta)$ then the value of $Z^{n}+\frac{1}{Z^{n}}=$\\
+a) $2 \cos \theta$\\
+b) $2 \cos n \theta$\\
+c) $2^{n} \cos \theta$\\
+d) $2 \sin n \theta$
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+Z & =(\cos \theta+i \sin \theta) \\
+Z^{n} & =(\cos \theta+i \sin \theta)^{n} \\
+& =\cos n \theta+i \sin n \theta \\
+\frac{1}{Z^{n}} & =Z^{-n}=\cos n \theta-i \sin n \theta
+\end{aligned}
+$$
+
+Now,
+
+$$
+\begin{aligned}
+& Z^{n}+\frac{1}{Z^{n}} \\
+& =\cos n \theta+i \sin n \theta+\cos n \theta-i \sin n \theta \\
+& =2 \cos n \theta
+\end{aligned}
+$$
+
+\section*{(15) Square roots of a complex number}
+Let $z=a+i b$ be any complex number whose square roots is to be calculated.\\
+Let $(x+i y)^{2}=a+i b$\\
+then $\mathrm{x}^{2}=\frac{\sqrt{a^{2}+b^{2}}+a}{2}$ and $\mathrm{y}^{2}=\frac{\sqrt{a^{2}+b^{2}}-a}{2}$,\\
+Where $x y$ and $b$ must have same sign.\\
+Note:-\\
+Logarithm of a complex number :-\\
+Let, $z=r e^{i \theta}$ be any complex number.
+
+$$
+\begin{aligned}
+\log z & =\log r e^{i \theta} \\
+& =\log r+\log e^{i \theta} \\
+\text { Then } \quad & =\log r+i \theta \log e \\
+& =\log r+i \theta \\
+\therefore \log z= & \log |z|+i \operatorname{amp}(z)
+\end{aligned}
+$$
+
+\section*{Example:-}
+The square roots of $(5+12 i)$\\
+Let $\mathrm{z}=\mathrm{a}+\mathrm{ib}=5+12 \mathrm{i}$\\
+where $\mathrm{a}=5$ and $\mathrm{b}=12$\\
+We have:
+
+$$
+\begin{aligned}
+& \mathrm{x}^{2}=\frac{\sqrt{a^{2}+b^{2}}+a}{2} \text { and } \mathrm{y}^{2}= \frac{\sqrt{a^{2}+b^{2}}-a}{2} \\
+&=\frac{\sqrt{5^{2}+12^{2}}+5}{2}=\frac{\sqrt{5^{2}+12^{2}}-5}{2} \\
+&=9 \\
+& x= \pm 3 \quad y= \pm 2
+\end{aligned}
+$$
+
+Since $b$ is positive we should take same sign of $x$ and y i.e.\\
+When $x=3, y=2$ the square roots $(x+i y)=3+2 \mathrm{i}$\\
+when $x=-3, y=-2$ the square roots $(x+i y)=-3-2 i=-(3+2 i)$\\
+∴ square roots are $\pm(3+2 i)$.
+
+\section*{Note:}
+(If $b$ is negative, we should take opposite sign.)
+
+\section*{Example:-}
+The square roots of ( $3-4 \mathrm{i}$ ) are
+
+$$
+\begin{aligned}
+& \sqrt{3-4 i} \\
+= & \sqrt{2^{2}-2 \cdot 2 i+i^{2}} \\
+= & \sqrt{(2-i)^{2}} \\
+= & \pm(2-i)
+\end{aligned}
+$$
+
+\section*{(16) Cube roots of unity:-}
+Let $z=\sqrt[3]{1}$ cubing both sides
+
+$$
+\begin{aligned}
+& z^{3}=1 \\
+& z^{3}-1=0 \\
+& (z-1)\left(z^{2}+z+1\right)=0
+\end{aligned}
+$$
+
+So, $z=1$\\
+or, $\mathrm{z}^{2}+\mathrm{z}+1=0$\\
+we have $z=\frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a}=\frac{-1 \pm \sqrt{1-4}}{2.1}$
+
+$$
+\begin{aligned}
+& =\frac{-1 \pm \sqrt{-3}}{2} \\
+& =\frac{-1 \pm \sqrt{-1 \times 3}}{2} \\
+& =\frac{-1 \pm \sqrt{i^{2} \times 3}}{2} \\
+& =\frac{-1 \pm \sqrt{3} i}{2}
+\end{aligned}
+$$
+
+Taking positive and negative signs,
+
+$$
+w=\frac{-1+\sqrt{3} i}{2}
+$$
+
+and $w^{2}=\frac{-1-\sqrt{3} i}{2}$\\
+(i) Cube roots of unity are $1, \frac{-1+\sqrt{3} i}{2}, \frac{-1-\sqrt{3} i}{2}$\\
+(ii) Sum of the three cube roots of unity is zero $1+w+w^{2}=0$\\
+(iii) Product of imaginary cube roots of unity is lie $\mathrm{w} w^{2}=w^{3}=1$\\
+(iv) Cube roots of unity on the Argand plane forms equilateral triangle.
+
+\section*{Fourth roots of unity:-}
+(i) Fourth roots of unity are $\pm 1, \pm \mathrm{i}$\\
+(ii) Sum of fourth roots of unity is 0 , i.e. $1+\mathrm{i}-1-\mathrm{i}=0$\\
+(iii) Product of fourth roots of unity is -1 i.e $1 \times-1 \times i \times-i=i^{2}=-1$\\
+(iv) Fourth roots of unity on the Argand plane forms a square.\\
+(v) $n^{\text {th }}$ roots of unity on the 'Argand plane' forms a regular polygon having $n$ sides.\\
+(vi) The area of triangle with vertices are $z, i z$ and $z+i z$ is $\frac{1}{2}|Z|^{2}$.\\
+(vii) The sum of $n, n^{\text {th }}$ roots of unity ( $\mathrm{n}>1$ ) is zero.
+
+\section*{Example:}
+The value of $\left(1-w+w^{2}\right)^{4}\left(1+w-w^{2}\right)^{4}=$\\
+a) 128\\
+b) 256\\
+c) 512\\
+d) 64
+
+\section*{Solution:}
+$$
+\begin{aligned}
+& \left(1-w+\frac{\left.w^{2}\right)^{4}}{(1+w}-\left(\frac{1}{2}-w^{2}\right)^{4}\right. \\
+& =(-w-w)^{4}\left(-w^{2}-w^{2}\right)^{4} \\
+& =(-2 w)^{4}\left(-2 w^{2}\right)^{4} \\
+& =16 w^{3} \cdot w 16 w^{6} \cdot w^{2} \\
+& =256 \cdot 1 \cdot w \cdot 1 \cdot w^{2}=256 w^{3}=256 \\
+& 1+w+w^{2}=0 \\
+& w+w^{2}=-1 \\
+& 1+w=-w^{2} \\
+& 1+w^{2}=-w
+\end{aligned}
+$$
+
+\section*{Example:}
+If $\left|\frac{z-4}{z-2}\right|=1$, then $\operatorname{Re}(z)=$\\
+a) 1\\
+b) 2\\
+c) 3
+
+\section*{Solution:}
+$$
+\begin{aligned}
+& \left|\frac{x+i y-4}{x+i y-2}\right|=1 \\
+& \frac{\sqrt{(x-4)^{2}+y^{2}}}{\sqrt{(x-2)^{2}+y^{2}}}=1
+\end{aligned}
+$$
+
+Squaring we get,
+
+$$
+\begin{aligned}
+(x-4)^{2}+y^{2} & =(x-2)^{2}+y^{2} \\
+x & =3
+\end{aligned}
+$$
+
+\section*{Example:-}
+Fourth roots of unity i.e. $z^{4}=1$ are:\\
+a) $\pm 1$\\
+b) $\pm I$
+
+\begin{itemize}
+  \item c) $\pm 1, \pm i$\\
+d) $1, w, w$
+\end{itemize}
+
+\section*{Solution:-}
+$$
+\begin{aligned}
+Z^{4} & =1 \\
+Z & =(1)^{1 / 4} \\
+& =(1+0 . i)^{1 / 4} \\
+& =(\cos 0+i \sin 0)^{1 / 4} \\
+& =[\cos (2 n \pi+0)+i \sin (2 n \pi+0)]^{1 / 4}
+\end{aligned}
+$$
+
+By applying De moivre's theorem,
+
+$$
+\begin{aligned}
+& =\cos \frac{2 n \pi}{4}+i \sin \frac{2 n \pi}{4} \\
+& =\cos \frac{n \pi}{2}+i \sin \frac{n \pi}{2}
+\end{aligned}
+$$
+
+Putting $\mathrm{n}=0,1,2,3$ we get the required result.
+
+\section*{Example:-}
+If the area of triangle formed by the points $\mathrm{z}, \mathrm{z}+\mathrm{iz}$ and iz on the complex number is 18 , then the value of $|z|$ is:\\
+a) 3\\
+b) $4 \sqrt{2}$\\
+c) 9\\
+d) 6
+
+\section*{Solution:-}
+The area of triangle whose vertices are $z, i z$, and $z+i z$ is given by, Area of triangle
+
+$$
+\begin{aligned}
+18 & =\frac{1}{2}|z|^{2} \\
+36 & =|z|^{2} \\
+|z| & =6
+\end{aligned}
+$$
+
+\section*{Example:-}
+The value of $\frac{a+b w+c w^{2}}{a w+b w^{2}+c}=$\\
+a) 1\\
+b) $w$\\
+c) $w^{2}$\\
+d) 0
+
+\section*{Solution:-}
+$$
+\frac{a+b w+c w^{2}}{a w+b w^{2}+c}
+$$
+
+Multiplying both numerator and denominator by w , we get
+
+$$
+\begin{aligned}
+& =\frac{a w+b w^{2}+c w^{3}}{w\left(a w+b w^{2}+c\right)} \\
+& =\frac{1}{w}\left[\therefore w^{3}=1\right] \\
+& =\frac{w^{3}}{w}=w^{2}
+\end{aligned}
+$$
+
+
+\end{document}

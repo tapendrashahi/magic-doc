@@ -8,6 +8,7 @@ import { Notes } from './pages/Notes';
 import { Editor } from './pages/Editor';
 import { History } from './pages/History';
 import { Converter } from './pages/Converter';
+import Compiler from './pages/Compiler';
 import './App.css';
 
 function AppRoutes() {
@@ -63,6 +64,14 @@ function AppRoutes() {
         element={
           <ProtectedRoute>
             <Converter />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/compiler"
+        element={
+          <ProtectedRoute>
+            <Compiler />
           </ProtectedRoute>
         }
       />

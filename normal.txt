@@ -1,0 +1,1875 @@
+\section*{Tissues}
+- The word tissue is derived from texere (Latin: 'weave')
+✓ Meaning of texere: Cells that form tissues are woven together.
+- Tissue: A group or layer of specialised cells with a similar structure and perform a specific function.
+✓ A level of organisation in multicellular organism
+✓ An assembly of similar cells and their extracellular matrix from same embryonic origin
+✓ An aggregate of cells usually of a particular kind together with their intercellular substance that form one of the structural materials of life
+- Tissue shows an inflammatory reaction to an infection or injury.
+- Present in the multicellular animals from the Phylum Coelenterata to Phylum Chordata [No true tissues are present in Phylum Porifera although cells are present and they are cellular-grade]
+- Groups of tissues: Produce organs
+- Groups of organs: Produce systems
+- Groups of the systems: Produce a single body
+
+\section*{History of Tissues/Histology}
+- Marcello Malpighi (1628-1694): Founder/Pioneer of Microscopical Anatomy, Founder of Histology; Father of Histology; Father of Physiology and Embryology
+- Malpighi: First observation of capillaries in animals and discovered the link between arteries and veins
+- Marie Francois Xavier Bichat (1771-1802): Father of Modern Histology
+- Bichat: Coined the term 'Tissue' in 1801
+- Bichat's Contribution: Identified 21 different types of tissues based on their physical \& functional features without help of microscopes
+- 'Histology' coined by: Dr. Karl Mayer (1819)
+- Book of Mayer: On histology and a new division of the tissues of the human body
+
+\section*{Types of Tissues}
+- Epithelial tissue or Epithelium or Integumentary, or Protective, or Covering epithelium
+- Connective tissue or Tissue of internal environment or Supporting, or Sustentative epithelium
+- Muscular tissue or Contractile Tissue
+- Nervous tissue or Irritable or Conductive Tissue
+
+\section*{Epithelial Tissues}
+
+Epithelial tissues: Group of cells that form limiting and lining membranes and cover the free surface of an organ, body surface, cavities, \& form glands
+- Contain two distinct surfaces (Apical or Free surface \& Basal or Fixed surface)
+✓ Apical surface: Exposed to the body cavity
+✓ Basal surface: Near the underlying tissue
+✓ Tight junctions: Area between apical \& basal surfaces
+- Epithelial surface supported on the basal surface by a basement membrane (basal lamina)
+✓ Basement membrane: Thin layer of a specialised exracellular matrix
+✓ Molecular composition of basement membrane: Collagen IV + Proteoglycans + Nodegen complex
+- Derived from all 3 germinal layers (Ectoderm + Mesoderm + Endoderm)
+✓ Ectoderm: Skin; Endoderm: Linings of respiratory \& gastrointestinal tract; Mesoderm: Renal epithelium
+- Avascular or non-vascular due to lack of blood vessels
+- Depend on underlying connective tissues with capillary beds for nutrition \& removal of waste products
+- Easily regenerate, i.e., sunburn and skinned knee regeneration.
+- Divide throughout their life
+- Provided with microvilli (Brushbordered), Stercocilia, Kinocilia, or Flagella
+- Bound together in sheets of tissues via forces of interactions:
+i. Tight junctions: Form a watertight seal between cells
+✓ Tight seal is formed by transmembrane proteins (Claudins + Occludins)
+✓ Prevents leakage of molecules between cells (Seal-Forming Junctions)
+ii. Gap Junctions (Communication Junctions): Channels for direct communication \& transport of small molecules between cells iii. Adherens Junction: Link the cell membrane \& cytoskeletal elements (Actin) within the cells
+✓ Contains a cadherin-catenin complex
+iv. Desmosomes: Act like 'Spot Welds' or 'Rivets'[Provide strong adhesion between cells]
+✓ Use membrane protein (Cadherins) and Intermediate filaments to join cells
+- Examples: Hard and horny chitin of insects, scales of fish, horny plates and scales of reptiles, feathers of birds, and hair and nails of mammals
+
+Location: Capillary bed; Female reproductive organs; Kidney; Major cavities of the body; Skin; Bile duct and salivary glands; The lining of alveoli or air sacs; Lining of the nose, ear, and eye; Oesophagus, stomach, small intestine, and pancreas
+
+\section*{A. Simple Epithelial Tissues}
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-04.jpg?height=1488&width=1339&top_left_y=19&top_left_x=120}
+\captionsetup{labelformat=empty}
+\caption{Figure: Types of epithelial tissues in animals}
+\end{figure}
+
+\section*{1. Simple Squamous Epithelium}
+
+\section*{- 1 layer of flat or polygonal thin cells}
+✓ Flattened or rounded nucleus
+✓ Lying at basement membrane
+✓ Also called pavement epithelium due to its tile-like features
+✓ Also called tessellated tissue due to its interlock-like mosaic structures
+
+\section*{- Locations}
+```
+v Alveoli (Lungs)
+```
+
+✓ Ascending limb/loop of Henle of Nephron: Thin parts in Medulla of Kidney
+✓ Bowman's (Glomerular) capsule: Outer/Parietal layer
+✓ Coelom [Squamous epithelium of coelom is called Mesothelium]
+✓ Descending limb/loop of Henle of Nephron: Thin parts in Medulla of Kidney
+✓ Endothelium: Inner lining of blood capillaries
+✓ Endocardium: Inner lining of the heart
+✓ Filtration and diffusion requiring tissues
+- Functions
+✓ Filtration and diffusion due to delicate lining
+✓ Permeable \& small molecules pass via the membranes by filtration and diffusion
+2. Cuboidal or Cubical Epithelium
+✓ 1 layer of cube-like or cuboid-like cells
+✓ A large, spherical, and central nucleus
+✓ Lying at basement membrane
+
+\section*{Location}
+✓ Germinal epithelium of the ovary\& testes
+✓ Lining of nephrons
+✓ Terminal bronchioles
+✓ Eye (Retina)
+✓ Excretory ducts of many glands
+✓ Lumina of convoluted tubules
+✓ Thyroid follicles
+
+\section*{A. Secretory cuboidal epithelium}
+- Location: Glands\& glandular ducts (Salivary glands, Bile ducts, Sweat glands, and Thyroid follicles)
+- Involved in secretion
+B. Protective cuboidal epithelium
+- Location: Ducts of larger glands (Mammary \&Sweat glands)
+- Provides barrier against mechanical or chemical stress
+C. Germinal epithelium
+- Location: Ovary\& Seminiferous tubules of testes
+- Involved in ovum \& sperm production
+D. Simple ciliated cuboidal epithelium
+- Location: Smaller bronchioles
+- Trap the particles from lungs
+E. Simple brushbordered (Or microvilli) cuboidal epithelium
+- Proximal convoluted tubule (Cortex of kidney): To reabsorb substances (ions, nutrients, and water) from filtrate
+- Descending limb/loop of Henle (Thick part: Cortex of kidney): Water reabsorption + Ion transport [Fewer microvilli than proximal convoluted tubule]
+- Note: Microvilli of kidneys increase surface area for absorption
+F. Absorptive cuboidal epithelium
+- Location 1: Ascending limb/loop of Henle (Distal thick part: Cortex \& Medulla of kidney)
+✓ Active transport of $\mathrm{Na}^{+}, \mathrm{Cl}^{-}$(Impermeable to water)
+- Location 2: Distal convoluted tubule (Cortex of kidney)
+✓ Secretion and reabsorption
+- Location 3: Collecting ducts (Principal cells \& Intercalated cells)
+✓ Principal cells: Reabsorb water \& $\mathrm{Na}^{+}$
+✓ Intercalated cells: Secretion of $\mathrm{H}^{+}, \mathrm{OH}^{-}$\& $\mathrm{HCO}_{3}{ }^{-}$; Reabsorption of $\mathrm{K}^{+}$
+- Note: Stomach contains cuboidal epithelium during embryonic development, but later differentiates into columnar cells.
+
+\section*{G. Pigmented cuboidal epithelium}
+- Retinal pigmented epithelium between photoreceptors \& choroid of eye: To maintain health \& function of retina (rods \& cones).
+✓ Neuroectodermal in origin
+✓ Have microvilli
+✓ Forms outer blood-retinal barrier.
+✓ Absorbs light energy (Due to melanosomes or melanin granules) \& reduce light scattering
+✓ Contains tyrosinase enzyme to synthesise melanin granules
+✓ Phagocytose rod and cone outer segments
+✓ Transport vitamin A to photoreceptors
+✓ Note: Retinal pigmented epithelium are columnar in posterior pole but longer, narrower, more densely pigmented near the ora serrata.
+- Notes: Ependymal cells that line brain ventricles are simple columnar or cuboidal \& may have microvilli \& cilia
+✓ These microvilli help in CSF absorption.
+✓ These cilia help in CSF circulation.
+3. Simple Columnar Epithelial Tissue or Cylindrical Epithelium
+✓ 1 layer rectangular tall cells
+✓ Round or oval nucleus at base
+✓ Lying at basement membrane
+- Location
+✓ Respiratory system, including the nasal passage
+✓ Lining of the buccal cavity, stomach, and intestine
+✓ Cornea and inner ear
+- Functions
+✓ Protection, Secretion (Mucus)
+✓ Absorption \& Transportation (Small intestine)
+✓ Provide sensory input
+- Goblet cells
+✓ First noted by Henle in 1837 while studying the small intestine lining
+✓ Leydig in 1857 observed mucus-producing Goblet cells while examining the epidermis of fish
+✓ Term coined by Schulze in 1867 (Due to Goblet shape of cell)
+- Apical part: Cup-shaped (With mucus-laden granules)
+- Basal part: Stem-shaped (Without granules)
+4. Simple Ciliated Columnar Epithelium
+✓ 1 layer of tall/rectangular cells with cilia (250-300 cilia/cell)
+✓ Apical part with mitochondria \& Basal part with oval/elongated nucleus
+- Location
+✓ Tracheal \& Bronchial systems
+✓ Fallopian tubes
+- Functions
+✓ Help to repair damaged bronchiolar epithelium
+✓ Secretion of mucus in respiratory system (Help in propelling allergen)
+- Beating frequency of cilia in tracheal systems: $8-20 \mathrm{~Hz}$ to mobilise mucus
+✓ Reproductive system (Help in transporting the unfertilised ovum from ovaries to fallopian tubes)
+✓ Digestive system (Peristaltic movement of food in oesophagus)
+- Brushbordered Columnar Epithelium
+✓ Situated in enterocytes \& brushbordered membrane of small intestine \& colonocytes of large intestine
+✓ Help in absorption of nutrients
+- Smoking and its effects
+✓ Paralysis of cilia
+✓ Low clearance of mucus
+✓ Have to cough to remove mucus of lungs
+✓ Leads to asthma \&emphysema (Breathlessness due to collapsed alveoli of lungs)
+5. Pseudostratified Epithelium
+✓ Tough and a single layer of cells
+✓ Lying at the basement membrane
+✓ Layer of columnar or cubical and ciliated cells
+✓ 2 types of cells (Longer \& Shorter)
+✓ Nucleus at different levels of strata
+
+Types of Pseudostratified Epithelium: 4
+a) Pseudostratified ciliated columnar epithelium: Found in Nasal cavity, Trachea \& Primary bronchi
+- Cilia: Move mucus \& trapped particles out of airways
+b) Pseudostratified nonciliated columnar epithelium: Found in Prostatic duct \& part of vas deferens
+- Prostatic duct: Helps in secretion
+- Vas deferens: Absorption process
+c) Pseudostratified columnar epithelium (with Stereocilia):
+![](https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-09.jpg?height=666&width=593&top_left_y=1592&top_left_x=490)
+
+Found in membranous part of Epididymis
+- Very long microvilli in principal epithelial cells in epididymal head: Stereocilia
+- Stereocilia: Increases excess fluid absorption \& sperm maturation
+d) Pseudostratified columnar epithelium (with Microvilli): Found in Epididymis
+
+\section*{B. Compound Epithelial Tissues}
+- Represented by stratified epithelium
+- Group of cells arranged in 2 or more than 2 layers at the basement membrane; Meeting by innermost layer of cells to basement membrane
+- Situated at skin, oesophagus, and tongue
+- Help in protection and contraction of organs
+
+\section*{1. Stratified Squamous Epithelium}
+- Flattened scale-like cells in uppermost layer
+- Cubical \& columnar cells in deeper layer
+- Highly irregular cells near basement membrane
+- Support in protection against friction, microbial invasion, and desiccation
+- 2 types: a. Stratified squamous cornified epithelium \& b. Stratified squamous non-cornified epithelium
+- Types of cornified epithelia: Soft (Epidermis) and Hard (Plate of fingernail) depending on degree and type of keratinisation
+- Fully keratinised cells without a nucleus are called 'Floes'.
+
+TABLE: Differences between stratified squamous cornified (Keratinised) and non-cornified (Nonkeratinised) epithelium
+
+\begin{tabular}{|l|l|l|}
+\hline Characters & Keratinised & Non-Keratinised \\
+\hline Keratin & Yes & No \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|}
+\hline Toughness & Tough, resistant, \& horny & No \\
+\hline Waterproof & Yes & No \\
+\hline Function & Prevents drying up of underlying cells & Keeps the tissue moist \\
+\hline Diffusion of nutrients \& wastes & Block & Cannot block \\
+\hline Subsequent life of tissue & Dies & Live \\
+\hline Location & \begin{tabular}{l}
+Enamel of teeth, horns, hair, nails, skin, vaginal vestibule \\
+Others: \\
+Hard \& horny chitin of insects, scales of fish, horny plates and scales of reptiles, feathers of birds, \& hair \& nails of mammals
+\end{tabular} & Conjunctiva, anus, cervix, cornea, epiglottis, female urethra, oesophagus, oral cavity, rectum, \&inner surface of vagina \\
+\hline
+\end{tabular}
+- Eumelanin: Makes dark colours in hair, skin, and eyes
+- Pheomelanin: Makes pink or red colours in lips, nipples, vagina, glans penis
+- Alpha-keratin: Found in hair, epidermis, horns \& nails of mammals [Examples: Type I \& II keratins]
+- Beta-keratin: Found in feathers, claws, beaks, scales of birds and reptiles
+- Cholesteatoma: Presence of keratinised squamous epithelium and keratin debris in the middle ear or mastoid [Can lead to hearing loss]
+- Human Papillomavirus (HPV) can cause warts on the squamous epithelial cells of epidermis of skin.
+2. Stratified Cuboidal Epithelium
+- Multiple layers of cuboidal cells
+- Superficial (Smaller) \& Basal (Larger)
+- Location
+✓ Sweat glands and ducts
+✓ Larger ducts of exocrine glands
+✓ Sweat glands in the skin
+✓ Mammary glands in the breast
+✓ Excretory ducts of salivary glands
+- Functions
+✓ Secretion of sweat, milk, and saliva
+✓ Aids active transport in the intestine
+✓ Protection of gland ducts
+3.Stratified Columnar Epithelium: Multiple layers of columnar cells
+✓ Location
+✓ Epiglottis
+✓ Lining (Pharynx, Intestine,Anus, Urethra, Uterus)
+✓ Near salivary glands
+✓ Ocular conjunctiva (Mucous Membrane of eyelid)
+✓ Vas deferens
+- Functions: Secretion + Protection + Absorption + Transportation
+4.Stratified Ciliated Columnar Epithelium
+- Multiple layers of ciliated columnar cells
+- Deeper layer with small, irregularly polyhedral, or fusiform cells
+✓ Location: Larynx + Upper surface of the soft palate
+✓ Functions: Protection + Transport
+
+\section*{5.Transitional (Plastic) Epithelium}
+- Structure falls between the stratified squamous non-cornified \& stratified columnar epithelium
+- Total layers of cells: 3 or 4
+✓ Pear-shaped or pyriform
+✓ Small polyhedral cells
+✓ Highly proliferative
+i. Basal layer cells: Cuboidal, or cube-shaped, and columnar, or column-shaped
+ii. Superficial layer cells: Large quadrilateral flattened cells
+- Connections to neural \& connective tissue
+- Shape depends on the degree of stretch
+✓ Not stretching (Empty bladder) → Large \& Rounded (Cuboidal)
+✓ Stretched (Full bladder) → Squamous (Flattened)
+- Basement membrane: 2 main layers
+✓ Basal lamina: Upper layer near to epithelial cells
+- Composed of collagen type IV, Laminins, \& Proteoglycans
+✓ Reticular lamina: Lower layer with collagen fibres
+- Helps in structural support
+- Selective barriers
+- Cell attachment
+- Tissue repair
+- Location of transitional epithelium
+- Gland ducts of the prostate
+- Pelvis of the kidney
+- Upper part of the urethra
+- Ureters
+- Urinary bladder (Urothelium)
+- Function of transitional epithelium
+✓ Protection, Preventing reabsorption of urine, toxic wastes, and pathogens
+✓ A barrier between lumen or inside hollow space
+- Few examples of plastic epithelium
+✓ Cuboidal Epithelium of Vagina (Pre-adolescent Girl) → Stratified Squamous (Puberty Stage) (Increases thickness of vaginal epithelium)[Due to oestrogen at puberty][Note: The human vaginal stratified squamous epithelium is the first mucosal surface contacted by sexually transmitted pathogens]
+✓ Ciliated Pseudostratified \& Cuboidal Epithelium of bronchus → Cigarette Smoking → Nonciliated Stratified Squamous Epithelium
+
+\section*{C. Glandular Epithelium}
+- Secretory epithelial cells in glandular epithelium
+- Ectoderm, mesoderm, or endoderm in origin
+- Granules in cytoplasm of secretory cells: Zymogen
+- Classification of glandular epithelial cells based on 5 methods
+
+\section*{I. Numbers of cells}
+1. Unicellular glands: With only 1 cell
+- Secrete mucus
+- Examples: Mucous cell or Goblet cell (A type of mucous gland or muciparous gland) of the nasal cavity \& mucous membrane of small $\&$ large intestine.
+2. Multicellular glands: With many cells
+- Secrete directly or via the excretory ducts
+- Example: Sweat glands, gastric glands
+
+\section*{II. Presence or absence of ducts}
+1. Exocrine glands: Duct glands
+- Produce and release contents into ducts
+- Example: Salivary glands, tear glands, intestinal glands, and gastric glands
+2. Endocrine glands: Ductless glands
+- Secrete contents into the bloodstream
+- Example: Pituitary, thyroid, \& parathyroid glands
+3. Heterocrine glands: Both exocrine \& endocrine glands
+- Example: Pancreas and male \& female reproductive organs
+
+\section*{III. Secretory unit}
+1. Simple tubular gland: Straight terminal portion
+- Example: Crypts of Lieberkuhn
+2. Simple coiled tubular gland: 1 long coiled tubule in terminal portion which passes into a long excretory duct
+- Example: Sweat glands
+3. Simple branched tubular glands: Tubules of the terminal part split fork-like into 2 or more branches [Branches may be coiled near ends]
+- Example: Stomach and uterus
+4. Simple acinous (Alveolar) glands: 1 acinus with 1 excretory duct
+- Example: Seminal vesicles of mammals and the mucous gland of the frog's skin
+5. Simple branched acinous (Alveolar) glands: Several acini arranged along a duct
+- Example: Sebaceous glands of the skin
+6. Compound tubular glands: Terminal portions of the smallest lobules are more or less coiled tubular and branching
+- Example: Bulbourethral glands and liver
+7. Compound acinous (Alveolar) glands: Oval or spherical sacs in terminal portions
+- Example: Salivary glands (Sublingual \& Submandibular) and glands of respiratory passage, pancreas, and the mammary glands
+8. Compound tubuloacinar (Tubuloalveolar) glands: Tubular \& Alveolar secretory parts
+- Example: Salivary glands (Parotid), Meibomian glands of the eyelids, and pancreas
+
+\section*{IV. Based on modes of secretion}
+
+\section*{1. Holocrine gland}
+- Secretions in cytoplasm
+- Secretion released by plasmalemma rupture
+- Release of secretions with cell death
+- Example: Sebaceous glands, tarsal glands
+2. Apocrine gland
+- Secretory products at apical part
+- Rupture of apical part
+- Generation of apical part
+- Repeating the same process
+- Example: Mammary glands and apocrine sweat glands
+2. Merocrine (Epicrine) gland
+- Secretory product discharged (Exocytosis) without loss of cytoplasm or any part of cell
+- Example: Eccrine sweat glands, Salivary glands \& pancreatic glands
+- Ascending order of self-damaging cells and secretions of glands: Merocrine secretion< Apocrine secretion< Holocrine secretion
+
+\section*{V. Based on nature of secretion}
+1. Mucous glands
+- Rounded cells called mucocytes
+- Rich in glycoprotein
+- Secretion of mucus (Mucin-rich liquid)
+- Example:Goblet cells, a few gastric glands, sublingual salivary glands (Under the tongue), and palatine mucous glands (Minor salivary glands on roof of mouth)
+
+\section*{2. Serous glands}
+- More cuboidal or columnar cells called serocytes
+- Secretion: A clear watery fluid [Albuminoid secretion with glycoproteins, enzymes, \& lysozymes]
+- Example: Pancreas, sweat glands, intestinal glands, and parotid salivary glands
+
+\section*{3. Mixed glands}
+- Both serocytes (serous secretion) and mucocytes (mucus fluid secretion)
+- Example: Submandibular salivary glands, pancreas, and most gastric glands
+- HybridFunction: They have properties of both eccrine and apocrine glands, producing a watery secretion similar to eccrine sweat but in larger volumes, similar to apocrine glands.
+✓ Mammary gland cell secretion: Lipid by Apocrine method \& Casein protien by merocrine method
+✓ Sweat glands of axilla: Apocrine cells + Eccrine cells
+
+\section*{Few glands \& secretions}
+- Types of glands in skin: 2 types [Sweat glands + Sebaceous glands]
+I. Sweat glands $=$ Sudoriferous glands $=$ Sudoriparous glands
+
+Sweat glands: 2 types [Eccrine sweat glands + Apocrine sweat glands]
+i. Eccrine Sweat Glands: Widely distributed in body
+✓ Mostly in palms of the hands, soles of the feet, forehead, and scalp
+✓ Secrete their contents via pores on the skin surface
+✓ Aid in thermoregulation \& cooling
+✓ pH ranges: Eccrine sweat (4-6.8)
+✓ Lacking in lips, ear canal, glans penis, labia minora, \& clitoris
+ii. Apocrine Sweat Glands
+✓ Found in armpits and groin \& associated with hair follicles
+✓ Activated during stress or hormonal changes
+✓ Secrete a thicker \& odorous sweat [Odour due to bacterial decomposition]
+✓ Efficiently cool hoofed animals (Camels, cattle, donkeys, horses)
+✓ Secrete milky substances via opening in hair follicles
+✓ pH ranges: Apocrine sweat (6-7.5)
+✓ Modified sweat glands: Can be variously classified
+a. Ceruminous glands: Forms of sweat glands
+✓ Found in external auditory canal (Produce ear wax)
+b. Mammary glands: Apocrine secretion \& produce milk
+c. Moll's gland (the gland of Moll or ciliary gland): A modified apocrine sweat gland on the margin of the eyelid [Secrete oily fluid to lubricate eyelid]
+d. Apoeccrine glands: Larger than eccrine \& smaller than apocrine
+
+◇ Found in axillary regions
+◇ Highly secrete sweats (Hyperhidrosis)
+
+\section*{II. Sebaceous glands}
+- Location: Found in skin except for the palms and soles
+- Form grape-like clusters
+- Contain acini cells
+- Release contents (Sebum: An oily substance) in the duct in hair follicle
+- Sebum: Helps to lubricate the skin \& hair
+- Holocrine in nature (Glandular cells rupture)
+- Example: Meibomian glands
+✓ Meibomian glands: Secrete meibum to form outer (Aqueous) layer of tear film \& to reduce tear evaporation
+
+\section*{D. Sensory Epithelium}
+- Sensory epithelium: Consists of sensory cells \& supporting cells
+✓ Sensory epithelial cells: With sensory hairs at one end [With nerve fibres at another end]
+✓ Supporting cells: No sensory hairs \& nerve fibres
+a. Olfactory Epithelium: Situated in nasal cavity [Detect airborne odour]
+b. Gustatory Epithelium: Situated on tongue's taste buds [Detect taste stimuli]
+c. Auditory Epithelium (Organ of Corti): Situated in the cochlea of inner ear [Converts sound vibrations into neural signals]
+d. Vestibular Epithelium: Situated in the semicircular canals and otolith organs of inner ear [Senses both dynamic \& static equilibrium]
+✓ Dynamic equilibrium: Senses rotational movements of the head; By semicircular canals
+✓ Static Equilibrium: Senses head position relative to gravity when body is not moving; By Utricle \& Saccule
+e. Retinal Epithelium (Cuboidal Epithelium): Situated in the retina of eyes
+✓ Converts light into visual signals
+
+\section*{E. Germinal Epithelium}
+- Thick layer of cells in testes and ovaries
+
+\section*{A. Ovarian Germinal Epithelium}
+- Found on surface of ovary [Surface epithelium or Germinal epithelium of Waldeyer]
+- 2 theories of ovum generation
+i. Oocyte generation via cuboidal epithelium (Germinal epithelium)
+✓ New oocyte with Zona Pellucida \& 12 granulosa cells originate from germinal epithelium arising from mesenchymal cells in tunica albuginea
+ii. Oocyte generation via Yolk Sac
+✓ Derived from mesoderm
+- Usual tumour of ovarian germinal epithelium: Surface epithelial Stromal tumour
+B. Testicular Germinal Epithelium: Found on Seminiferous tubules of testes
+- Consists of 2 types of cells
+i. Sertoli/Nurse/Sustentacular cells: Non-dividing \& supportive to developing sperm
+ii. Cuboidal spermatogenic cell (Germinal epithelium): Develops into sperm cells via spermatogenesis
+
+\section*{AG PLUS DOSE}
+- Fox-Fordyce disease: Itchy rash caused by inflammation of apocrine sweat glands in pubic areas
+- Miliaria rubra: Rupture of sweat glands \& sweat migration to their tissues
+- Hunter syndrome: Metachromin granules and mucin in the cytoplasm of the eccrine sweat glands
+- Zymogen granules: Found in cytoplasm of secretory cells
+- Johann Conrad Brunner: First describer of the glands in the proximal duodenum
+- Brunner's glands in the submucosa of Duodenum: Duodenum can be distinguished from the ileum \& jejunum
+✓ Location of Brunner's glands: Above the sphincter of Oddi
+✓ Brunner's glands secretion: Alkaline
+- Protecting from acidic chyme coming from stomach
+- Lubricate intestinal wall
+- Types of hairs in humans: 3
+✓ Terminal: Scalp, eyebrows/lashes, beard, axillae, pubic areas
+✓ Vellus: Finer downy hair covering the body
+✓ Lanugo: In utero and shed before, or at, birth
+- Paronychium: The lateral fold of skin on the sides of the nail
+- Hyponychium: Area beneath the free edge of the nail [Consists of a thickened layer of stratum corneum]
+- Arrector pili muscles: Bundles of smooth muscle fibres attached to hair follicles in the skin
+✓ Contraction under sympathetic nervous system control
+✓ Cause the hair stand up (Also called goosebumps)
+✓ Goosebump significance: Thermoregulation
+
+\section*{Connective Tissues}
+- Derived from the mesenchyme
+- Formed by cells of mesoderm
+- Play role in connection between the cells and tissues
+- Support various organs in defined position
+- Most widely distributed tissue in the human body
+- 2 types of connective tissues: Embryonic \& Adult
+i. Embryonic connective tissues
+✓ Found in embryo
+✓ Consists of mesenchyme and mucous connective tissue
+
+\section*{a. Mucous connective tissue}
+- Wharton's jelly or Cock's comb: A gelatinous tissue containing mucopolysaccharides \& hyaluronic acid in the umbilical cord of foetus
+
+\section*{b. Mesenchyme connective tissue}
+- Mesoderm-derived
+- Also Ectoderm-derived (Neural crest cells) in certain areas
+- Also present in adult stage [In bone marrow \& adipose tissues]
+- 2 types
+✓ Mesenchymal cells or multipotent stem cells: Differentiate into various cell types (Pluripotent)
+✓ Extracellular Matrix (ECM): Gel-like substances with collagen and elastic fibres and glycoproteins
+ii. Adult connective tissues: Areolar, Fibrous, Adipose, Osseous (Bone), Cartilaginous (Cartilage), and Liquid connective tissues (Blood \& Lymph)
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-22.jpg?height=463&width=969&top_left_y=1118&top_left_x=305}
+\captionsetup{labelformat=empty}
+\caption{Figure: Classification of connective tissues}
+\end{figure}
+
+\section*{1. Areolar Tissue}
+- Tissue formed by the direct differentiation of mesenchyme
+- A type of loose fibro-elastic connective tissue
+- Found throughout the body, mainly in the subcutaneous, submucosa, \& subserosa layers
+- Cells and fibres embedded in a homogeneous ground substance.
+> ✓ Fibroblasts: Spindle-shaped; Generate fibres
+
+\section*{- White collagenous fibres}
+- Long \& unbranched
+- Present in bundles
+- Flexible, inelastic
+- Contain collagen protein
+- Yellow elastic fibres
+- Long \& branched
+- Arranged in single
+- Contain elastin protein
+- Reticular fibres
+- Few in numbers
+- Delicate
+- Form network
+- Contain type III collagen protein (Reticulin)
+- Fat cells (Adipocytes): Spherical or ovoid [Store fat]
+- Mast cells
+- Large and oval
+- Contain granular cytoplasm
+- Secrete heparin, histamine, serotonin, cytokines, \& many proteases
+✓ Heparin: Acts as an anticoagulant[One of the most powerful natural anticoagulant called Hirudin is found in leech (Hirudo) and was only remedy of blood clotting until the discovery of heparin]
+✓ Histamine: Acts as a vasodilator [Decreases blood pressure], neurotransmitter, inflammatory mediator (Allergy-inducer), and immune-responder
+✓ Serotonin: Acts as a vasoconstrictor [Increases blood pressure]
+- Mesenchyme cells: Multipotent
+✓ Differentiates into Osteoblasts (Bones), Chondrocytes (Cartilages), Myocytes (Muscles), \& Adipocytes (Fat cells)
+- Lymphocytes (T \& B): Antibody production
+- Plasma cells/Cart-Wheel cells: Secrete antibodies
+- Pigment cells: Produce melanin pigments [Protects from UV rays]
+- Reticular cells/Fibroblasts: Synthesise collagen alpha-1 (III) proteins
+- Histiocytes: Capture the foreign and self-antigens
+✓ Langerhans cells: Tissue-resident macrophages
+- Contain Birbeck granules
+- Aids Phagocytosis
+- Acts as Front-line defence of body
+- Acts as Antigen-sentinel \& antigen-presenting cells
+- Initially, Paul Langerhans (Medical student of age-21 years) identified these cells as parts of nervous system [Later, known as antigen-handling cell]
+- Dendritic cells: Phagocytosis + Antigen presentation to T cells + T cell activation + T cell expansion
+- Macrophages: Potent phagocytosis +T and B cell activation
+
+\section*{2. Fibrous or Dense Connective Tissue}
+- Includes white collagenous fibrous tissues and yellow elastic fibrous tissues
+- Supports, protects, and holds bones, muscles, and other tissues and organs in place.
+
+\section*{I. White collagenous fibrous tissue}
+- Location: Ligaments, tendons, aponeurosis (layers of flat broad tendons), dura mater, periosteum of bone, fibrocartilage, pericardium, the sclerotic coat of the eye, \& perichondrium
+- Contains tropocollagen protein
+- Flexible fibres (Not elastic)
+- Long, straight, or wavy thread-like structures
+- Shining collagenous white fibre
+- Vascular and Nervous
+- Silvery lustre in colour
+- Produces mechanical protection against stretch \& pressure
+- Strength \& flexibility to organs
+- Tendon: Dense, strong fibrous connective tissue made up of collagen fibres
+- Connection of Tendon: To a skeletal muscle and bone
+- Ligaments: Connect bones to bones
+- Strain: Rupture of Tendon
+- Sprain: Caused by excessive pulling/stretching of ligaments
+
+\section*{II. Yellow elastic fibrous tissue}
+- Location: Walls of bronchi, larynx, arteries and capsule of spleen
+- Ligamentum nuchae of quadrupeds \& ligamentum flavum of vertebra, and in the areolar tissue
+- Components: Elastin protein + Refractile fibres
+- Thin, refractile, and cylindrical thread-like structures
+- Yellow elastic fibres
+- Contains bundles of fibres covered with areolar tissue
+- Acts as a strong elastic rope
+- Helps in resisting stretch and recoil
+- Prevents excessive dilatation of blood vessel
+
+\section*{3.Adipose Connective Tissue}
+- Type of loose connective tissue
+- Contains adipocytes (Fat cells: Store triglycerides)
+- Cytoplasm, nucleus, and other organelles at cellular edge
+- 2 types of adipose tissues
+- Location: Around heart, kidneys
+✓ In cervical, supraclavicular, axillary, paravertebral, perirenal, periadrenal, mediastinal, \& upper abdominal regions
+✓ In subcutaneous layer deep to the skin
+✓ In yellow marrow of the long bones
+✓ Inside the eye socket, posterior to the eyeball
+✓ Padding around the joints
+- Acts as insulating layer
+- Reduces heat loss via body
+- Mechanical protection
+- Stores extra energy
+- Acts as a cushion to body
+- Few notes on Adipose Tissues
+✓ Asprosin: Hormone produced by adipose cells
+✓ Asprosin function: Stimulates liver to release glucose into the bloodstream
+✓ Leptin: Hormone made by adipose cells and enterocytes in small intestine
+✓ Leptin function: Inhibits hunger and reduces fat storage in adipocytes
+✓ Adinopectin: Hormone produced by adipose tissue, muscle, and the brain
+✓ Adinopectin function: Takes part in regulating glucose levels
+✓ Frog's fat bodies: Formed by adipose tissues
+✓ Prominent adipose tissue sites: Subcutaneous fat (Panniculus adipsoses); Blubber of whales; Hump of camels
+✓ Adipose tissue and heat conduction: A poor conductor of heat [Reduces heat loss via skin]
+
+TABLE: Differences between white \& brown adipose tissues
+
+\begin{tabular}{|l|l|}
+\hline White Adipose Tissue & Brown Adipose Tissue \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|}
+\hline Stores excess energy as triglycerides & Produces heat and transfers energy \\
+\hline 1 lipid droplet/cell & Multiple small droplets/cell \\
+\hline Thin, elongated, and variable mitochondria & Numerous, large, and spherical mitochondria \\
+\hline White: Due to low numbers of mitochondria \& thinner nerve supplies & Brown: Due to high numbers of mitochondria \& denser nerve supplies \\
+\hline Lesser capillaries & More capillaries \\
+\hline Spherical cell & Polygonal cell \\
+\hline Proteins: Leptin, Asprosin, \& Adiponectin & Protein: Uncoupling protein 1 (UCP1) \\
+\hline Increases with age relative to total body weight & Decreases with age \\
+\hline
+\end{tabular}
+
+\section*{4. Skeletal/Osseous Connective Tissue}
+- Hardest tissue of all connective tissues
+- Comprises bones \& cartilages
+- Mesodermal in origin
+- Bone: Solid, rigid and strong
+✓ Bone contents:Water (20\%) + Organic matters (30-40\%) + Inorganic matters (4050\%) + Others (2-5\%)
+- Water Types in Bone: Free \& bound water
+- Role of Water in Bone: Maintains Hydration + Nutrient/Ion Diffusion
+- Organic Matrix: Ossein [30-40\% of bone mass] [Ossein is also called Animal Matter]
+- Constituents of Ossein: Type I Collagen [90-95\%] + Proteoglycans + Glycoproteins
+✓ Role of Ossein in bone: Provides Tensile Strength + Calcium hydroxyapatite, $\mathrm{Ca}_{10}\left[\left(\mathrm{PO}_{4}\right)_{6}(\mathrm{OH})_{2}\right]$
+- Flexibility + Toughness
+✓ Inorganic matter:
+- Chemical formula of Calcium hydroxyapatite: $\mathrm{Ca}_{10}\left[\left(\mathrm{PO}_{4}\right)_{6}(\mathrm{OH})_{2}\right]$
+- Role of Calcium hydroxyapatite: Provides bone hardness \& compressive strength + Stores mineral and ions
+- Minerals storage by bones: Calcium (98\%) + Phosphorus (85\%)
+- Increases with age [Old person has brittle bone]
+- Brittle Bone: Hard but easily breakable bone
+- Other components: Bone cells (Osteocytes, Osteoblasts)
+- Role of Bone Cells: Bone formation \& Bone remodelling
+✓ Bloodflow rate in adult bone: $200-400 \mathrm{~mL} / \mathrm{min}$ [Highly vascular]
+✓ Bone can regenerate
+✓ Bone regeneration process: Inflammation, soft callus formation by chondroblasts, hard callus formation by osteoblast, Remodelling of bone tissues
+
+3 types of bone cells: Osteoblasts, Osteocytes, \& Osteoclasts
+i. Osteoblast (Greek; Osteo: Bone + Blastano: Germinate): Cuboidal or pyramidal
+- 1 nucleated and 1 nucleolus
+- A well-marked Golgi body, mitochondria, \& fine granules
+- Derived from: A mesenchymal stem cell
+- Synthesises collagen, osteocalcin, \& osteopontin
+- Produces calcium and phosphate-based mineral (Hydroxyapatite)
+- Contains enzyme (Alkaline phosphatase) that is required for bone matrix proteins \& bone calcification/accumulation of calcium
+ii. Osteocyte (Greek; Osteo: Bone + Cyte: Cell): Star-shaped
+- Most common in mature bone tissue
+- Can live as long as animal
+- Stellate (star) shape
+- 1 nucleus in mature cell with 1-2 nucleolus
+- Presence of canaliculi inside spaces
+- Not undergo mitosis
+- Derived from: Osteoprogenitor [Developed from osteoblasts]
+- Regulates the activity of osteoblast and osteoclast \& hormonal regulation of phosphate metabolism; Ion exchange; Bone destruction via osteocytic osteolysis
+
+\section*{iii. Osteoclast (Greek; Osteon: Bone + Clastos: Broken): Multinucleated}
+- Contains high concentration of vesicles and vacuoles
+- Found in pits in the bone surface called resorption bays or Howship's lacunae
+- Lysosomes with acid phosphatase
+- Predominant Golgi body
+- Derived from: Blood monocytes and macrophages of haematopoietic cells in the bone marrow [Not from osteoprogenitor cells]
+- Resorbs and breaks down bone tissue
+- Secretes carbonic anhydrase enzyme
+- Regulates calcium level in blood
+- Releases acid and collagenase and digests protein and mineral
+- Works in remodelling, growth, repair, ion transport, protein secretion, and vesicular transport
+
+Types of Bones: Classification based on 5 methods [Shape; Development; Region; Macroscopic structure; \& Microscopic structure]
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Bones based on shape}
+\begin{tabular}{|l|l|l|}
+\hline Types & Structure & Example \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{tabular}{|l|l|l|}
+\hline Long Bones & Yellow bone marrows; 1 Elongated shaft (Diaphysis) +2 Expanded ends (2 Epiphyses) on both sides & All bones of limbs except the wrist \& ankle bones \\
+\hline Short Bones & Cube-shaped & Wrist bones and ankle of the limbs (Cuboid, cuneiform, scaphoid, trapezoid, all carpal \& tarsal bones) \\
+\hline Flat Bones & Thin, flat, and curved; Red bone marrows & Bones of skull, ribs, \& sternum \\
+\hline Irregular Bones & Irregular shape & Vertebrae, Hip bone, \& Bones in base of skull \\
+\hline Pneumatic Bones & \begin{tabular}{l}
+- Irregular with large air spaces \\
+- Act as resonance of sound and as airconditioning chambers
+\end{tabular} & Major portion of skull in the sphenoid, ethmoid, \& maxilla \\
+\hline Sesamoid Bones & Short; Develop within tendon; Lacking of periosteum; Ossification after birth & Knee cap or patella, pisiform, \& fibula \\
+\hline
+\end{tabular}
+
+TABLE: Bones based on development
+
+\begin{tabular}{|l|l|l|}
+\hline Type of Bones & Ossification from & Example \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|}
+\hline Membranous Bones (Dermal Bones) (Investing Bones) & Mesenchymal condensations in the intrauterine life \& Intra-membranous ossification[Involve multipotent mesenchymal stem cells differentiation, but no role of totipotent cells] & Bones of the skull \& face \\
+\hline Cartilaginous Bones (Replacing Bones) & A cartilage model \& Intra-cartilaginous & Bones of limbs, vertebral column, \& thoracic cage \\
+\hline Membrocartil aginous Bones & Partially from cartilage \& partially from mesenchymal condensations & Clavicle, mandible, occipital, temporal, \& sphenoid \\
+\hline
+\end{tabular}
+
+TABLE: Bones based on region
+
+\begin{tabular}{|l|l|l|}
+\hline & Structure & Example \\
+\hline Axial Bones & Form the axial skeleton of the body & thoracic cage \\
+\hline Appendic ular Bones & Form the appendicular skeleton of the body & Bones of the limbs \& girdles of limbs \\
+\hline
+\end{tabular}
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Bone based on macroscopic structure}
+\begin{tabular}{|l|l|l|}
+\hline Compact Bone (Cortical Bone) & Spongy Bone (Cancellous or trabecular Bone) & Diploid Bone \\
+\hline High bone tissue and low empty space & Low bone tissue and high empty space & \multirow[t]{6}{*}{Combination of both bones; Flat bones of skull and ribs} \\
+\hline Closely packed osteon (Haversian system) & No Haversian system; Only plates/trabeculae & \\
+\hline Heavier, strong, and compact. & Lighter, spongy, and soft & \\
+\hline Forms diaphysis (shaft) of long bones & Forms epiphyses (ends) of long bones; Epiphyses: Covered by articular cartilage (A thin layer of hyaline cartilage) & \\
+\hline Yellow bone marrow & Red bone marrow & \\
+\hline 80\% & 20\% & \\
+\hline
+\end{tabular}
+\end{table}
+![](https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-32.jpg?height=402&width=865&top_left_y=1832&top_left_x=359)
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Bone based on microscopic structure}
+\begin{tabular}{|l|l|}
+\hline \multicolumn{1}{|c|}{ Lamellar Bone } & \multicolumn{1}{c|}{ Fibrous Bone } \\
+\hline Thin plates or lamellae of bony tissue & More fibres \\
+\hline Found in mature bones & Found in foetus \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{Structure of a compact bone or Haversian bone}
+- Strong with complex tissues [Example: Long bones (Femur \& Humerus)]
+- Periosteum (Outer tough membrane)
+- Endosteum (Lines the marrow spaces)
+- Matrix: Ossein protein + Lamellae (Concentric layers) + Osteocytes + Osteoblasts
+- A typical Haversian system/Osteon:Structural \& functional unit of a compact bone
+- Location of Haversian system: Found in shaft of long bones of mammals
+- Function of Haversian system: Provide extra nutrients to living parts of matrix
+- Lack of Haversian system: Absent in spongy bones
+✓ Haversian canal: A longitudinal channel (artery, vein, nerve fibre, lymph vessel, \& blood capillaries)
+✓ Surrounded by about 8-15 concentric lamellae
+- Canal surface: Bony
+- Lined by Endosteal osteoblasts
+✓ Lacunae (Cavities): Between lamellae
+✓ Lacunae contents: Completely filled up with osteocytes
+✓ Canaliculi (Marrow channels): Produced by each lacuna
+- Volkmann's canal: Horizontal canals that connect different Haversian canals at $90^{\circ}$
+- Similarity \& differences between Volkmann's \& Haversian canal:
+
+Similar structure, but Haversian canal is larger in diameter
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Differences between tendon and ligament}
+\begin{tabular}{|l|l|l|}
+\hline & Tendon & Ligament \\
+\hline Features & Contains white fibrous tissues & Yellow elastic tissue with some white fibres \\
+\hline Fibroblasts position & Continuous row & Scattered \\
+\hline Fibre arrangemen t & Regularly arranged & Irregularly arranged \\
+\hline Thickness of fibres & Thin & Thick \\
+\hline Fibre occurrence & Bundles and unbranched & Network and branched \\
+\hline Elasticity & Inelastic \& flexible & Elastic and flexible \\
+\hline Connection & Muscle to bone & Bone to bone \\
+\hline Functions & Provides strong attachment & Help in stretching of various organs \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Differences between muscle and tendon}
+\begin{tabular}{|l|l|l|}
+\hline Features & Muscle & Tendon \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{tabular}{|l|l|l|}
+\hline Types of tissues & A bundle or band of fibrous tissue & A flexible but inelastic cord of strong fibrous collagen tissue \\
+\hline Types of cells & Skeletal cell, smooth cell, \& cardiac cell & Spindle-shaped tenocytes (fibrocytes) \& tenoblasts (fibroblasts) \\
+\hline Classification & Smooth, skeletal, \& cardiac muscles & The Achilles tendon, wrist tendon, thumb tendon \& elbow tendon, and others \\
+\hline Functions & Aids in movement of the body or particular organ & Connects muscles to the bones \\
+\hline
+\end{tabular}
+
+\section*{B. Cartilage connective tissue}
+- Contains cells, fibres, and matrix
+- Cells: Chondroblasts, chondrocytes, \& chondroclasts
+- Matrix: $10 \%$ aggrecan $+75 \%$ water + Collagen and non-collagen fibres + Chondromucin glycoprotein More or less translucent, strong, flexible, \& semi-rigid.
+- Lack blood vessel, lymph vessel, \& nerves
+- No regeneration of cartilage
+- Extracellular material (Ground Substance): Glycosaminoglycan (GAG) + Chondroitin sulphate + Collagen and or elastic fibres + Glycoprotein
+- Functions of Ground substance: Provides toughness, flexible, durable, and resistant to compression forces
+- A template for the growth and development of long bones
+- Elastic fibres for elasticity \& Collagen fibres for tensile strength
+- 3 types of cartilages: Hyaline + Elastic + Fibrocartilages
+I. Hyaline cartilage: Translucent
+- Bluish-white in fresh
+- Surrounded by perichondrium except over articular surfaces
+- Perichondrium with i. Spindle-shaped cells, ii. Outer (Collagenproducing fibroblasts), iii. Inner (Chondroblasts) layers
+- Unit cells (Chondrocytes: Spherical or slightly triangular with central nucleus)
+- Lacuna with 2,4 , or other groups of chondrocytes
+- Chondromucin in matrix
+- Solid \& Basophilic matrix
+- Location: Entire skeleton is first laid down as hyaline cartilage (In embryo), later replaced by bone (In adult)
+- Location in adults: Articular and costal cartilage, cartilage of the nose, larynx (Not in epiglottis), cuneiform \& corniculate cartilages of trachea and bronchi
+II. Elastic cartilage: Network of yellow elastic fibres with matrix \& perichondrium
+- More opaque than hyaline cartilage
+- Helps in elasticity, strengthening attached organs
+- Location: 3Es (Epiglottis, Ear-pinna, Eustachian tube)
+III. Fibrocartilage: Fine and dense collagenous fibres arranged in layers
+- Lacking perichondrium
+- Acts as a shock absorber in pubic symphysis and intervertebral disc
+- Location: Pubic symphysis and intervertebral discs
+
+TABLE: Comparison between bone and cartilage
+
+\begin{tabular}{|l|l|l|}
+\hline & Bone & Cartilage \\
+\hline Features & \multicolumn{2}{|l|}{Structure} \\
+\hline Vascularity & Vascular & Avascular \\
+\hline Strength & Strong due to calcification & Thin, flexible, soft, \& resistant to compressive forces \\
+\hline Lamella & Lamellated (with calcium deposition) & Lacking \\
+\hline Cells & Osteoblasts, osteocytes, \& osteoclasts & Chondrocytes, chrondroblasts, \& chondroclasts \\
+\hline Water content & Lower & Higher \\
+\hline Elasticity & Less & More \\
+\hline Covering & Periosteum & Perichondrium (Not in articular surfaces) \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|}
+\hline Haversian system & May or may not & Lacking \\
+\hline Modification & Not into cartilage & Hyaline type into bone \\
+\hline Cell per lacuna & 1 osteocyte & 1 or a group of chondroblasts \\
+\hline Extracellular matrix (Ground substance) & Lacking fibre & Collagen and elastic fibres. \\
+\hline Lamellae in matrix & Yes & No \\
+\hline Bone marrow & Yes & No \\
+\hline Growth direction & Bidirectiona 1 & Unidirectional \\
+\hline & \multicolumn{2}{|l|}{Location} \\
+\hline Location & Most axial and appendicular skeleton & Between joints of bones, Respiratory tract, Flexibilityrequiring tissues \\
+\hline
+\end{tabular}
+
+TABLE:Differences between red bone marrow and yellow bone marrow
+
+\begin{tabular}{|l|l|}
+\hline Red bone marrow & Yellow bone marrow \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|}
+\hline Generates RBCs, WBCs, \& platelets & Generates cartilage, fat, and bone cells [Generates blood cells in emergency] \\
+\hline Contains blood stem cells & Contains fat \& stem cells \\
+\hline Red due to RBCs & Yellow due to adipocytes \\
+\hline Active & Inactive \\
+\hline
+\end{tabular}
+
+\section*{AG PLUS DOSE}
+- Haversian System Discoverer: Clopton Havers, a British physician
+- Haversian System Synonym: System of Havers/Osteon
+- Sequestrum: Dead bone
+- Osteoid: Demineralised bone matrix
+- Strongest cartilage: White fibrocartilage
+- Length of Dead body > Live body: Due to relaxation of intervertebral disc
+- Bone $\mathbf{+} \mathbf{~ K O H} \boldsymbol{\rightarrow}$ No effect
+- Bone → Burning → Destruction of organic content → Brittle bone
+- Bone + Dilute acid → Few days → Decalcification → Soft \& Flexible bone
+- Vitamin D Functions: Regulates growth and maintenance of bones
+- Vitamin D deficiency: Rickets (Children) and Osteomalacia (Adults)
+✓ Rickets: Bone softening \& weakening
+✓ Osteomalacia: Bone softening
+- Paget's disease: Irregular thickening and softening of bones
+- Cartilage nourishment: Via diffusion from nearby capillaries
+- Blood vessels in perichondrium: Yes (Vascular)
+- An equilibrium between Osteoblasts \& Osteoclasts: Maintenance of bone tissues
+- Osteogenesis/Ossification: Formation of bone [Begins between the 6th \& 7th weeks of embryo development and continues till 25 years]
+- Osteogenesis imperfecta (OI)/Brittle Bone Disease: A genetic/heritable disease
+✓ Bone fracture easily
+✓ No obvious cause/with minimal injury
+✓ Mild (Few fractures) to Severe (Many medical complications)
+- Decalcification: Removal of calcium
+- Calcification: Deposition of calcium
+- Longest, heaviest, \& strongest bone: Femur due to supporting heavy weight \& withstanding significant forces
+- Hardest bone: Jawbone due to dense bone tissue \& mineral content [Resistant to wear \& tear]
+- Weakest bone: Clavicle/Collar-bone [Easily breakable bone]
+- Smallest \& Softest bone: Stapes
+- Hardest substance of human body: Enamel of tooth
+✓ Contents [95\% of Calcium and Phosphate, Ultra-strong crystallites (Small crystals) + 4\% water + 1\% proteins]
+✓ Dental enamel: Dense, Highly mineralised, Hard, \& Brittle
+
+\section*{5. Liquid Connective or Vascular Tissue}
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-41.jpg?height=762&width=995&top_left_y=18&top_left_x=293}
+\captionsetup{labelformat=empty}
+\caption{Figure: Components of liquid connective tissues}
+\end{figure}
+
+\section*{Blood}
+- An opaque, slightly alkaline, viscid red colour complex fluid
+- Derived from mesoderm
+- Softest tissue
+- pH of arterial or Capillary blood: 7.45
+- pH of venous blood: 7.35
+- Volume of blood: 7-8\% of total body weight (Male $=5-6$ Litres \& Female $=4-5$ Litres)
+- Haemopoiesis/Haematopoiesis: Process of blood cell formation
+
+\section*{Plasma}
+- Volume: 55\% to 60\% of blood fluid
+- Constituents by volume: $92 \%$ of water $+8 \%$ blood plasma proteins + Trace amounts of other materials by volume
+- Colour of plasma: Straw (Pale Yellow)-coloured transparent
+- Plasma Organic Matters: Carbohydrate (Glucose), fats (Phospholipids, Cholesterol, Neutral fat), Urea, Uric acid, \& Creatinine
+- Plasma Inorganic Ions: Sodium, potassium, calcium, magnesium, phosphorus, iron, copper, bicarbonates, phosphates, \& chlorides
+- Serum: Amber (Yellow)-coloured fluid in plasma
+- Serum proteins $=$ Albumin + Globulin + Regulatory proteins
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Different proteins of blood}
+\begin{tabular}{|l|l|l|l|}
+\hline Protein Type & Structure & Function & \% in blood \\
+\hline Albumin & Single-chain, globular & Regulate colloidal osmotic pressure of blood Transport lipids and steroid hormones & 55\% \\
+\hline Globulin (3 types) & & & 38\% \\
+\hline I. $\alpha$ globulin & Mostly singlechain & Transport hormones, ions, and lipids & $\alpha=8 \%$ \\
+\hline II. $\beta$ globulin & Often dimeric or multimeric chains & Transport hormones, ions, and lipids & $\beta=12 \%$ \\
+\hline III. $\gamma$ globulins & 2 heavy +2 light chains & Support to immunity & $\gamma=18 \%$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{tabular}{|l|l|l|l|}
+\hline Fibrinoge n & Large, soluble protein & Blood coagulator & 7\% \\
+\hline Regulatory Proteins (Enzymes, proenzyme s , and hormones) & Varied structures & Regulate gene expression & 1\% \\
+\hline
+\end{tabular}
+
+TABLE: Differences between blood plasma \& serum
+
+\begin{tabular}{|l|l|}
+\hline Plasma & Serum \\
+\hline Obtained if anticoagulated blood is centrifuged & Obtained if coagulated blood is centrifuged \\
+\hline Anti-coagulants are required for separation. & Anti-coagulants are not required. \\
+\hline Fibrinogen & No fibrinogen \\
+\hline Plasma $=$ Serum + Fibrinogen & Serum = Plasma - Fibrinogen \\
+\hline Can clot & Cannot clot \\
+\hline Straw-coloured fluid & A clear colourless fluid (may be slightly yellow) \\
+\hline
+\end{tabular}
+- Blood cells/corpuscles: Red blood corpuscles (RBCs) or erythrocytes, white blood corpuscles (WBCs) or leucocytes, \& platelets or thrombocytes
+
+TABLE: Characteristics and functions of RBC, WBC, \& platelets
+
+\begin{tabular}{|l|l|l|l|}
+\hline Features & RBCs & WBCs & Platelets \\
+\hline Synonyms & Erythrocytes & Leucocytes & Thrombocyt es \\
+\hline Colour & Red & Colourless & Colourless \\
+\hline Generation & Myeloid stem cells & Both from myeloid \& lymphoid stem cells & From myeloid stem cells \\
+\hline Formation & \begin{tabular}{l}
+Embryonic \\
+life: Liver \& spleen \\
+Adult: Red bone marrow of sternum, ribs, \& vertebrae
+\end{tabular} & Red bone marrow \& Lymphatic system & Red bone marrow \& lungs \\
+\hline Shape & Biconcave disc & Various, irregular & Round or oval, biconvex disc \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|l|}
+\hline Size & $6-8 \mu \mathrm{~m}$ & $7-20 \mu \mathrm{~m}$ & $2-3 \mu \mathrm{~m}$ \\
+\hline Nucleus & \begin{tabular}{l} 
+Absence in \\
+humans
+\end{tabular} & \begin{tabular}{l} 
+Presence in \\
+humans
+\end{tabular} & \begin{tabular}{l} 
+Absence in \\
+humans
+\end{tabular} \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|l|}
+\hline Lifespan & 120 days & <1 day-5 days & 10 days \\
+\hline Types & Only one type & Various, e.g., neutrophils, T lymphocytes, B lymphocytes, plasma cells, monocytes, macrophages, dendritic cells, eosinophils, basophils & Only one type \\
+\hline Circulatory system & Cardiovasc ular system & Cardiovascular and lymphatic system & Cardiovascula r system \\
+\hline Component s & Haemoglobi n & Antibodies & Clotting factors \\
+\hline Total Count & Male: 5.4 million per cubic mm; Female: 4.8 million per cubic mm & 4,000-11,000 per cubic mm & 150, 000-400, 000 per cubic mm \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|l|}
+\hline Functions & $\mathrm{O}_{2} \& \mathrm{CO}_{2}$ transportati on; Hb in synthesising bilirubin and biliverdin pigments & Produces antibodies; Phagocytosis \& Pinocytosis; Antiallergic; Prevents intravascular clotting & Blood clotting; Chemotaxis; Haemostasis; Thrombosis; Inflammation \\
+\hline Effects in lacking & Anaemia (Jaundice, low oxygen level) & Leukopenia (Faint, death) & Haemophilia (Clotting disorder: Gum \& Rectal Bleeding, Blood vomit, Death) \\
+\hline Excessive production & Polycythae mia & Leukocytosis & Thrombocytos is \\
+\hline
+\end{tabular}
+
+TABLE: Differences among different leucocytes
+
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline Feature & Neutro phil & Eosinoph il & Basop hil & Monocyte & Lymphocyte \\
+\hline Shape & Round & Round & Round & Large (Often oval) & 2 forms (Small \& Large), Round \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline Size & $10-12 \mu \mathrm{r}$ & $10-12 \mu \mathrm{~m}$ & $8-10 \mu \mathrm{n}$ & $12-22 \mu \mathrm{~m}$ & Smaller (7-8 $\mu \mathrm{m}$ )- Larger $(12-15 \mu \mathrm{~m})$ \\
+\hline Nucleus & 2-7 lobed & 2-3 lobed & 2-3 lobed & Kidneyshaped or horseshoe -shaped & Large, round \\
+\hline Granules & Small, Pale lilac & Large, Redorang e & Large, Dark blue & Few (Azuroph il)/Vacuo le, or None & None \\
+\hline \% by total volume & 50-70\% & 1-4\% & 0.5-1\% & 2-8\% & 20-40\% \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline Halflife & 6-8 hours & 12-15 hours & 3-5 days & 3-5 days & 3-5 days \\
+\hline Functio ns & Phagocyto sis , Destructio n of bacteria, 1st line of defence & Combat multicell ula r parasites, Allergy response & Release Histamin e, Mediate inflamma tor y responses & Phagocyto sis; Can generate macropha ges \& dendritic cells & Adaptive immune response (B and T cells) \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline Disease s & Neutropeni a (Reduced neutrophil) & Eosinoph ili a (Enhance d eosinoph il) & Basophili a (Enhance d basophil) & Monocyto sis (Enhanced monocytes ) & Lymphocyt ope nia (Reduced lymphocyte s) \\
+\hline \% by total volume & 50-70\% & 1-4\% & 0.5-1\% & 2-8\% & 20-40\% \\
+\hline
+\end{tabular}
+
+TABLE: Few types of anaemia and their causes
+
+\begin{tabular}{|l|l|}
+\hline Types of Anaemia & Cause \\
+\hline Aplastic Anaemia & Bone marrow failure leading to reduced blood cell production \\
+\hline Chronic Disease Anaemia & Chronic inflammatory conditions, cancer, or kidney disease, leading to reduced RBC production \\
+\hline Folate Deficiency Anaemia & Lack of folate levels due to poor diet, malabsorption, or pregnancy \\
+\hline Haemolytic Anaemia & RBC destruction due to autoimmune diseases, infections, or genetic disorders (Sickle cell disease) \\
+\hline Haemorrhagic Anaemia & Due to excessive bleeding \\
+\hline Iron-Deficiency Anaemia/Microcytic Anaemia & Lack of iron due to poor diet, blood loss, or malabsorption \\
+\hline Megaloblastic Anaemia & Lack of folic acid \& Vitamin B12 \\
+\hline Pernicious Anaemia/Vitamin B12 Deficiency Anaemia & Lack of vitamin B12 due to poor diet or malabsorption \\
+\hline Septicaemia & Multiplication of bacteria inside blood cells \\
+\hline Sickle-celled Anaemia & Gene mutation and due to defect in beta \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|}
+\hline & chain \\
+\hline Sideroblastic Anaemia & Abnormal iron utilisation in bone marrow, leading to ineffective erythropoiesis (Lead poisoning or genetic conditions) \\
+\hline Thalassaemia/Hereditary Haemolytic Anaemia & Genetic disorder affecting Hb synthesis, leading to decreased RBC production \\
+\hline
+\end{tabular}
+
+\section*{Factors of Platelets}
+- There are 19 factors, starting from factor I to factor XX.
+- There is no factor VI. It is not recognised yet.
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Factors present in the platelets}
+\begin{tabular}{|l|l|}
+\hline Factors & Name \\
+\hline I & Fibrinogen \\
+\hline II & Prothrombin \\
+\hline III & Tissue factor (Thromboplastin) \\
+\hline IV & Calcium ions ( $\mathrm{Ca}^{2+}$ ) \\
+\hline V & Proaccelerin /Labile factor \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\begin{tabular}{|l|l|}
+\hline VII & Proconvertin (Stable factor) \\
+\hline VIII & Antihaemophilic factor A (Cofactor) \\
+\hline IX & Christmas factor / Antihaemophilic factor B (Plasma thromboplastin component) \\
+\hline X & Stuart-Prower factor (Enzyme) \\
+\hline XI & Plasma thromboplastin antecedent \\
+\hline XII & Hageman factor \\
+\hline XIII & Fibrin-stabilising factor \\
+\hline XIV & Prekallikerin (F Fletcher) \\
+\hline XV & High-molecular weight kininogen (HMWK) (F FitzgeralD. \\
+\hline XVI & von Willebrand Factor (VWF) \\
+\hline XVII & Antithrombin III \\
+\hline XVIII & Heparin cofactor II \\
+\hline XIX & Protein C \\
+\hline XX & Protein S \\
+\hline
+\end{tabular}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Classification of platelet factors in 3 groups}
+\end{table}
+
+\begin{tabular}{|l|l|l|}
+\hline Fibrinogen Family & Vitamin K Dependent & Contact Family \\
+\hline Fibrinogen & Factor II & Factor XI \\
+\hline Factor V & Factor VII & Factor XII \\
+\hline Factor VIII & Factor IX & HMWK \\
+\hline Factor XIII & Factor X & Prekallikerin \\
+\hline
+\end{tabular}
+
+\section*{Blood clotting mechanism by platelet}
+1. First stage (Primary haemostasis): A weak platelet plug is formed by:
+a. Vasoconstriction or constriction of the blood vessels
+b. Platelet adhesion or attachment to the damaged subendothelial part
+c. Platelet activation [Change in shape (smooth discs to multipseudopodial plugs) \& cytoplasmic granule by thrombin]
+d. Platelet aggregation by the help of fibrinogen
+2. Second stage (Secondary haemostasis): Finally, with the help of $\mathrm{Ca}^{2+}$, the clotting factors work to stabilise the weak platelet plug by:
+a. Activation of clotting factors
+b. Modification of prothrombin to thrombin due to $\mathrm{Ca}^{2+}$
+c. Modification of fibrinogen to fibrin due to activated thrombin
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-51.jpg?height=586&width=823&top_left_y=1587&top_left_x=375}
+\captionsetup{labelformat=empty}
+\caption{Figure: Mechanism of blood clotting via clotting factor-pathways}
+\end{figure}
+
+\section*{B. Lymph}
+- Colour and location: A clear fluid within vessels of the lymphatic system
+- Derivation: Derived from tissue fluid (Interstitial fluid)
+- Lymph formation methods: Modified proteins \& excess interstitial fluid collected by lymph capillaries
+- Travelling direction of lymph: Lymph vessels → lymph nodes
+- Lymph: Plasma + Leucocytes
+- RBCs and Platelets: Completely absent in lymph
+- Composition of interstitial fluid, Intercellular fluid, Tissue fluid, and Lymph: Similar
+- Composition of Lymph: Varies in composition in different locations [Lymph nodes, lymph vessels, and various organs]
+- Main composition: WBCs [B lymphocytes, T lymphocytes, monocytes, macrophages, dendritic cells, natural killer cells, eosinophils, and basophils] + Chyle [Lymph formed in the digestive tract, contains triglycerides]
+- Routes of exchange of materials between blood and tissue cells: Via Tissue fluid
+- Routes of exchange of materials between blood and tissue fluid: Via Blood capillaries
+- Lymph main function: Maintains the blood volume [Lymph goes from lymphatic system to blood vascular system]
+- Lymph function regarding nutriens: Oxygen, hormones, food, proteins to cells
+- Lymph function regarding wastes: Carbon dioxide, dead cells, nonessential substances to spleen
+- Lacteals: Lymph capillaries in intestinal villi; Associated with fats (Lipids)
+- Lymph and immunity: Transports dendritic cells, macrophages, monocytes, B cells, T cells, natural killer cells, cytokines, and antibody
+- Lymphatic system: Group of tissues and organs associated with lymph flow; Includes lymph vessels \& lymphoid tissues
+a. Lymph vessels/Lymphatics: Lymph capillaries, afferent lymph, \& efferent lymph; Thinwalled; Valved; Mainly 3 layers [Smaller lymphatics without muscle layers \& adventitia]
+- Adventitia with fibrous tissue (Outermost layer)
+- Smooth muscle layer (Thin layer)
+- Endothelium (Simple squamous epithelium)
+✓ Afferent lymph vessels: Larger diameter [Transport lymph to a lymph node]
+✓ Efferent lymph vessels: Smaller diameter [Transport lymph from one lymph node to another lymph node, or to a larger lymph duct or to the vein]
+b. Lymphoid tissue: Development of lymphocytes occurs [2 types: Primary \& Secondary]
+- Primary lymphoid tissues: Thymus, embryonic liver, \& adult bone marrow
+✓ Produce lymphocytes
+- Secondary lymphoid tissues: Spleen \& lymph nodes
+✓ Induce maturation of the T lymphocytes
+✓ Lymph node: Oval- or kidney-shaped
+- Surrounded by a fibrous capsule
+- Has outer cortex \& Inner medulla
+- Presence of T cell area and B cell follicle
+- Both afferent \& efferent lymphatics
+- Takes part in
+i. filtration of immune cells, antigens, foreign particles;
+ii. Activation, expansion, and polarisation of T cells into various subsets of T cells
+iii. T-B cellular interactions
+iv. Antibody secretion
+
+TABLE: Differences between blood and lymph
+
+\begin{tabular}{|l|l|l|}
+\hline Feature & Blood & Lymph \\
+\hline Composition & Cells [RBCs + WBCs + Platelets] + Plasma & WBCs [Lymphocytes in major] + Plasma \\
+\hline Colour & Red & Clear/Colourless \\
+\hline Circulation & Heart pumps through arteries \& veins & Moved by muscle action \\
+\hline Oxygen Content & High (in Arteries) \& Low (in Veins) & Low \\
+\hline Nutrient Content & High & Low \\
+\hline Metabolic wastes & Less & More \\
+\hline Protein Levels & Soluble>Insoluble & Insoluble>Soluble \\
+\hline Clotting & Can clot & Cannot clot \\
+\hline Vessel Types & Arteries, Veins, \& Capillaries & Lymphatic vessels \\
+\hline
+\end{tabular}
+
+Azurophilic: Stained by a Romanowsky stain
+Lymphoma: Cancer beginning at the lymphatic system due to abnormal WBCs
+✓ Types of Lymphoma: Non-Hodgkin [90\% of all lymphoma] \& Hodgkin [10\% of all lymphoma]
+
+Non-Hodgkin Types: B cell lymphomas \& T cell lymphomas Aetiology of Non-Hodgkin Lympomas: Human T-lymphoma virus 1, Epstein-Barr virus infection and human herpesvirus 8
+
+Aetiology of Hodgkin Lymphomas: Epstein-Barr virus (EBV), formally called Human gammaherpesvirus 4, HIV/AIDS
+Main Features of Hodgkin Lymphomas: Giant cells called ReedSternberg cells derived from B lymphocytes detected in lymph nodes
+Pancytopenia: Low production of red blood cells (RBCs), white blood cells (WBCs), and platelets
+
+Thrombocythemia (Essential Thrombocythemia) (ET): Overproduction of platelets (thrombocytes) in the bone marrow
+✓ Chronic myeloproliferative disorder of bonemarrow
+
+Illness of polycythemia: Heart failure and low oxygen level
+Leukaemia: Cancers of WBCs, which begin in the bone marrow
+✓ Uncontrolled production of abnormal white blood cells affecting blood and bone marrow
+
+Types of Leukaemia: Acute \& Chronic lymphoblastic
+✓ Acute \& Chronic myeloid
+
+Myeloid Leukaemia: Excessive production of immature leucocytes [Neutrophils, Basophils, Eosinophils, \& Monocytes] and may involve RBCs \& Platelets from myeloid stem cells
+✓ Acute Myeloid Leukaemia: Cancer progresses rapidly
+- Occur at any age but more common in adults
+✓ Chronic Myeloid Leukaemia: Cancer progresses slowly
+- Occur more common in adults
+
+Lymphoblastic Leukaemia: Excessive production of immature lymphocytes [B cells, T cells, \& natural killer (NK) cells]
+✓ Acute Lymphoblastic Leukaemia: Cancer progresses rapidly
+- Occur at any ages but more common in children
+✓ Chronic Lymphoblastic Leukaemia: Cancer progresses slowly
+- More common in old adults
+
+Erythropoiesis: Formation and development of erythrocytes from stem cells called erythrocytoblasts
+✓ Erythropoietin Hormone: Released by kidneys during decreased level of oxygen
+✓ Haematopoietic stem cells → Erythropoietin hormone by kidney → Proliferation \& Differentiation → Erythrocytes
+- First Erythropoiesis Occurring Organs: Mesodermal cells of the yolk in the foetus
+- Later Erthropoiesis Occurring Organs: Liver, bone marrow, \& spleen
+- Erythropoiesis Occurring Organs in Adults: Red bone marrow of the pelvis, Cranial bones, Tibia, Femur, Sternum, Ribs, \& Vertebrae
+- Why RBCs need to remove all cellular structures?: To accommodate more haemoglobin \& oxygen efficiently
+- Lack of Nucleus and Mitochondria in RBC: Adaptation to highsugar and high-haem conditions by limiting reactive oxygen species (ROS) generation
+- Sources of energy/ATP for RBC: Anaerobic glycolysis of glucose
+- RBC Mode of Respiration: Only anaerobic respiration
+- Oxygen-transporting but not using blood cell: RBC
+- Why glucose uptake by RBCs is not regulated by insulin?: Due to lack of an insulin receptor on RBCs
+- Why mature RBCs do not divide?/Why RBCs have limited repairing capacity?: Due to lack of nucleus, DNA, \& organelles
+- Haemocytoblast or Multipotent Haematopoietic Stem Cells → Development of all blood cells
+- Haemocytoblast $\xrightarrow{\text { Produces }}$ Common Myeloid Progenitor + Common Lymphoid Progenitor Produces
+- Common Myeloid Progenitor ⟶ Thrombocytes, Erythrocytes, Mast cells, Myeloblast Produces
+- Myeloblast → Basophil, Neutrophil, Eosinophil, Monocyte
+- Alpha- and beta-globulins Synthesis: In liver
+- Albumin: Globulin = 3:1
+- Synthetic rate of plasma by liver $=30 \mathrm{gm} /$ day
+- Haematocrit $=\%$ of blood volume occupied by RBCs
+- Haematocrit values in adult (Males): 41-53\%
+- Haematocrit values in adult (Females): 36-46\%
+- Haematocrit values in children: 30-44\%
+- Haematocrit values in newborns: 45-61 \%
+- pH level of blood: Arteries > Veins
+- Main buffer of blood = Sodium bicarbonate
+- RBCs of Camel and Llama (Class: Mammalia): Oval \& nucleated
+- Musk deer (Class: Mammalia): Smallest RBC
+- Amphibian RBCs: Largest among vertebrates
+- Biconcave RBC: Due to inherent tension of spectrin protein (cytoskeletal protein)
+- Isotonic solution with blood: 0.85\% saline
+- Haemoglobin $=1$ Haem (Iron-containing chelate) +4 Globin chains (4 Polypeptide chains)
+
+\footnotetext{
+✓ Adult haemoglobin $=2 \alpha$ chain ( $2 \times 141$ amino acids) $+2 \beta$ chains ( $2 \times 146$ amino acids)
+✓ Normal Haemoglobin in humans: 6 distinct species [ 3 in normal adults +3 in foetal life]
+}
+$\checkmark 3 \mathrm{Hb}$ in normal adults: $\mathrm{HbA}(95-98 \%), \mathrm{HbA} 2(2-3 \%), \mathrm{HbF}$ (<1\%)
+✓ 3 Hb in normal foetuses: $\mathrm{HbF}(50-80 \%), \mathrm{Hb}$ Gower-1 ( ζ2ɛ2 ), Hb Gower-2 ( $\alpha 2 \varepsilon 2$ )
+✓ Hb in minor adults (HbA2): $2 \alpha$-chains ( $2 \times 141$ amino acids) $+2 \delta$ - chains ( $2 \times 146$ amino acids)
+- Globins associated with Haemoglobin in both embryonic and after birth: Alpha ( $\alpha$ ) chain, Beta ( $\beta$ ) chain, Gamma ( $\gamma$ ) chain, Delta ( $\delta$ ) chain, Epsilon ( $\varepsilon$ ) chain, \& Zeta ( $\zeta$ ) chain; Replaced by HbF (2 alpha chains + 2 gamma chains) in foetal life
+- Location of chromosome for alpha chain: Chromosome 16 [Total genes $=2$ genes/chromosome $=2 \times 2=4$ genes]
+- Location of chromosome for beta chain: Chromosome 11 [Total genes $=1$ gene/chromosome $=1 \times 2=2$ genes]
+- HbF: Higher oxygen affinity than adult Hb
+✓ Capable of $\mathrm{O}_{2}$ transport in peripheral tissues in hypoxic (Low oxygen level) foetus
+- HbF amino acids $=2$ alpha chains $[2 \times 141$ amino acids $]+2$ gamma chains [ $2 \times 146$ amino acids]
+✓ Infants up to 6 months do not depend on Hb A synthesis
+✓ Babies at 3 months of age: Occurrence of switching from Hb F to Hb A
+✓ Newborns' RBCs resistant to alkaline denaturation: Evidence of existence of Hb molecule different from normal HbA
+- Amount of Hb with respect to RBCs $=33 \%$ of RBCs
+- Hb level: Newborn [20-22 gm/dL], Male [14-18 gm/dL], Female [12$16 \mathrm{gm} / \mathrm{dL}$ ]
+- Diapedesis: WBC movement similar to amoeba
+✓ Leukocyte extravasation
+✓ Leukocyte adhesion cascade
+✓ Passage of cells via the intact vessel wall
+- Lacteals: Lymph capillaries in the intestinal villi
+- Lymph: Middle man between body cells \& blood
+- Interstitial space: Centre of formation of lymph
+- Cyanosis: A bluish/purplish discolouration of skin \& mucous membranes due to lack of optimum oxygen in blood
+- Primary clinical sites of cyanosis: Lips, Fingertips, Toes, Ears, Nailbeds
+- Cyanosis Consequences: Chronic Obstructive Pulmonary Disease (COPD), Pneumonia, Asthma, Congenital heart defect, Heart failure, Pulmonary Embolism, Peripheral Vascular Disease, Shock
+- T cell formation: Bone marrow (From hematopoietic stem cells)
+- T cell (Immature called Thymocytes) maturation site: Thymus
+- B cell formation \& maturation: Bone marrow (From hematopoietic stem cells)
+- B cell further development: Secondary lymphoid organs (Spleen, Lymph Nodes) → Encounters an antigen → Further maturation inside Germinal centres
+- CD: Cluster of Differentiation [A system to identify and classify surface molecules on cells]
+- Total numbers of CD markers discovered to date: 370
+- CD4: Cluster of Differentiation 4 [Found on helper T cells]
+- Th1 cells: T helper subsets of CD4 T cell
+✓ Can directly kill cells that contain pathogen (Intracellular)
+✓ Potent cells to be activated for intracellular pathogens
+- Th2 cells: T helper subsets of CD4 T cell
+✓ Help B cells for antibody production
+✓ Immunity to helminths and allergic reactions
+- Th17 cells: T helper subsets of CD4 T cell
+✓ Cytokine responses Immunity for fungal and bacterial infections
+- T follicular helper (Tfh) cells: Help B cells for antibody production
+- CD8: Cluster of Differentiation 8 [Found on cytotoxic T cells]
+- Cytotoxic CD8 T cells: Killer cells that can directly kill cells that contain pathogen (Intracellular)
+✓ Potent cells to be activated for intracellular pathogens
+- Numbers of RBCs in people living in different landscapes:
+
+Mountainous people>Low altitude people [Low oxygen level → High erythropoietin hormone from kidney → High Erythropoiesis → More RBC]
+- Blood bank of body: Spleen
+- Graveyard of body: Spleen [Due to destruction of old non-functional RBCs in spleen, liver, \& bone marrow]
+- Blood destruction sites: Liver, Spleen, \& Bone marrow
+- Erythropenia: Decrease in numbers of RBCs
+- Hirudin: An anticoagulant in the saliva of leech (Hirudinaria spp.)
+- Blood storage chemical \& temperature: With Anticoagulant at 4 degree Celsius
+- Prevention of blood clotting in a test tube: By addition of oxalate or citrate (Na \& K)
+- Blood bank chemicals to prevent blood clotting: Citrate Phosphate Dextrose (CPD), Acid Citrate Destrose (ACD), and Ethylene Diamine Tetra Acetic Acid (EDTA)
+- Anticoagulant: Any substance that prevents clotting
+- Lack of blood coagulation inside blood vessel during normal circulation: Due to Heparin (A rapidacting anticoagulant)
+- Mechanisms of heparin in avoiding blood coagulation: Activating antithrombin III that inhibits thrombin and factor Xa, reducing blood clotting
+- Anticoagulant used in open-heart surgery via intravenous (IV) method: Heparin
+- Role of vitamin K (Phylloquinone) in blood clotting: Synthesis of Prothrombin
+- Blood clotting: Changing of blood from liquid to gel, forming a clot ✓ Involves platelets \& vessel walls
+✓ Immediate \& temporary response to prevent blood loss
+✓ Take within seconds to minutes
+- Blood coagulation: Complex biochemical events, forming a stable fibrin clot
+✓ Broader clotting process
+✓ Involves clotting factors, thrombin, \& fibrin
+✓ Long-term stabilisation of clot to prevent further bleeding \& wound healing
+✓ Take several minutes
+- Clotting time: Manual Method (Capillary Tube Method) [4-10 minutes]
+✓ Lee-White Method (Whole Blood Clotting Time) [5-15 minutes]
+- Thrombosis: Clotting in unbroken blood vessel
+- Thrombus: A clot lodged in a vessel
+- Embolus: A substance or object that travels via bloodstream and lodges in a blood vessel, causing a blockage
+✓ Fat embolus
+✓ Air embolus
+✓ Amniotic fluid embolus
+✓ Tumour embolus
+✓ Thromboembolus (A blood clot/thrombus)
+- Cascade theory: Recent theory of blood clotting via prothrombin activator complex formation
+Vitamin K role: For prothrombin synthesis
+
+\section*{Muscular tissues}
+- Myology: Study of muscles
+- Muscles: Tissue with contractile cells
+- Origin: Mesodermal in origin except for muscles of the iris (Ectodermal)
+- Myoblasts: Muscle-forming cells
+- \% of the body weight in humans: 50\%
+- Numbers of muscles in humans: 639
+- Functions: Protection; Movement of external and internal organs; Temperature regulation; Breathing; Speaking; Eating
+- Components of muscles: 75\% Water +20\% Protein +5\% Carbohydrates, Lipids, Inorganic salts, \& Non-protein Nitrogenous Compounds
+- Main properties of muscular tissues: Elasticity, Extensibility, Contractility, Conductivity \& Excitability [Most specialised is Contractility]
+- Types: 3 [Skeletal muscle, Cardiac muscle, \& Smooth muscle]
+1.Skeletal Muscle
+- Most common \& Widely distributed muscle tissue
+- Attached to skeleton except muscle of tongue and diaphragm
+- Synonyms: Striated/Striped [Light \& Dark bands alternately]
+✓ Skeletal: Attached to bones \& facilitate bone movement
+✓ Phasic: Fast twitching \& Tire quickly
+✓ Voluntary muscles: Under control of our will
+- Skeletal muscle as antagonistic muscle pair: Out of two muscle sets, one contracts to move body part and another contracts to return body part to original position
+✓ Biceps contract to produce movement but triceps relax to allow movement to occur
+- Agonist skeletal muscle: Contracting muscle [Example: Biceps]
+- Antagonistic skeletal muscle: Relaxing/Lengthening muscle [Example: Triceps]
+- \% of skeletal muscles: Makes up 40\% of the body's total mass
+- Location of skeletal muscle: In biceps brachii and gluteus maximus, eyes, throat, diaphragm, anus
+- Sarcoplasmic reticulum: Endoplasmic reticulum of muscle cells
+✓ stores \& Releases calcium ions
+- Triggering of muscle contraction process: Release of calcium ions from sarcoplasmic reticulum
+- Walk-along Theory/Ratchet Theory: Molecular mechanism of muscle contraction
+- Rigor mortis: Rigidity developed in muscles after death
+- Contraction of muscles of shortest duration: In eyelids
+- Function of skeletal muscle: Acts as the movement of the limbs, facial expressions, eye movements, contraction, posture, and swallowing
+- Fatigue: A drop in contraction/relaxation forces or failure to contract after prolonged stimulation
+- Tetanus/Lockjaw: A sustained (Involuntary) contraction of muscle (or Spasm) beginning at jaw, leading bone fracture
+✓ Caused by a bacterium (Clostridium tetani)
+- Most abundant mineral: $\mathrm{K}^{+}$
+- Major component: Water (75\%)
+- Muscle haemoglobin/Own oxygen-carrying iron-protein pigment (Red): Myoglobin
+- Proteins of muscle: Actin, Troponin, Tropomyocin; Meromyocin; Myosin, Myoglobulin
+- Stored carbohydrate in muscle: Glycogen
+- Under direct conscious control of the cerebral cortex of the brain: Neurogenic muscle
+- Role of CNS \& PNS: Contraction regulated by their motor nerve fibres
+- Myofibril/Muscle fibre: Cylindrical; Unbranched; Produces great strength to the muscle
+- Cellular structure: Multinucleated Syncytium or Coenocytic
+✓ Nucleus in alternative position at peripheral sides
+✓ Long nucleus
+✓ Distinct sarcolemma
+✓ Dark band (Anisotropic-A band) and light band (Isotropic-I band) alternatively in sarcoplasm (striped muscle/striated muscle)
+✓ Many mitochondria \& myoglobin in sarcoplasm
+✓ 2 types of filaments (Actin \& Myosin)
+
+Microstructure of a skeletal myofibril
+- Sarcomere: Smallest functional unit of skeletal muscle
+- Consists of repeating unit between two Z (German; Zwischen: Between)-lines or Z-discs or Z-bands
+- Each sarcomere consists of thick \& thin myofilaments
+- 1 sarcomere: Contains 1 dark A band \& half of I band on each end [1A+1/2I]
+a. Dark band/Anisotropic (A)-band: Contains thick filaments with both Actin \& Myosin (Dark)
+- Actin filaments: Thin contractile filaments; Major components of the I-band; Extend into the A-band
+- Filaments are anchored at the middle line called M (German; Mittelscheibe: The disc in the middle of the sarcomere)-line
+- H zone in the middle of the A band
+b. Light band/Isotropic (I)-band: Contains thin filaments with Actin (Light)
+- Contains Krause's membrane or Z-band
+- Z-band function: An anchoring point of the actin filaments
+- Dobber's dot/disc: Situated at the centre of the I-band; A fine, dense Z-line or Krause's membrane
+![](https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-65.jpg?height=490&width=831&top_left_y=23&top_left_x=372)
+![](https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-65.jpg?height=781&width=1054&top_left_y=594&top_left_x=261)
+
+TABLE: Differences between Actin and Myosin
+
+\begin{tabular}{|l|l|l|}
+\hline Features & Actin & Myosin \\
+\hline Definition & A group of globular proteins & A family of motor proteins \\
+\hline Location & A- and I-bands of sarcomere & A- bands of sarcomere \\
+\hline Size & $2-2.6 \mu \mathrm{~m}$ (Thin filaments) & $4-5 \mu \mathrm{~m}$ (Thick filaments) \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|}
+\begin{tabular}{l} 
+Proteins in \\
+filaments
+\end{tabular} & \begin{tabular}{l} 
+Actin + Tropomyosin + \\
+Troponin
+\end{tabular} & \begin{tabular}{l} 
+Myosin heavy \& \\
+light chains
+\end{tabular} \\
+\hline \begin{tabular}{l} 
+Muscle \\
+contraction
+\end{tabular} & \begin{tabular}{l} 
+By interact with myosin, \\
+it supports contraction.
+\end{tabular} & \begin{tabular}{l} 
+Breaks down \\
+ATP to generate \\
+force
+\end{tabular} \\
+\hline
+\end{tabular}
+
+\section*{2. Visceral muscle (Smooth muscle)}
+- Muscular tissue containing a group of unstriated, unbranched, and uninucleated smooth cells
+- Location: Digestive system, Urinary bladder, Walls of blood vessels
+- Functions: Peristalsis, Delivery of a baby via contraction of uterine muscle (myometrium), Contraction of internal organs involuntarily
+- Involuntarily muscle nervous regulation: Regulated by the autonomic nervous system
+✓ Does not get fatigued
+✓ Can produce powerful and long-lasting contractions by its group
+✓ Not attached to bone
+✓ Spindle-shaped muscle fibres
+✓ Lacks sarcomeres
+✓ Lacks stripes/bands (Non-striped muscle)
+✓ Consists of thick \& thin filaments but not arranged in sarcomeres [Non-striated muscle]
+✓ Contains actin \& myosin filaments but lacks Troponin complex [Troponin C, Troponin I, \& Troponin T]
+- Troponin Complex Protein Lists:Troponin C, Troponin I, \& Troponin T
+- Troponin Complex Mechanisms: Connect intracellular $\mathrm{Ca}^{2+}$ concentration, producing muscle contraction
+- A smooth muscle cell
+✓ Long, thin, spindle shaped
+✓ Single central nucleus
+✓ Many protein fibres
+✓ Slow contraction
+✓ Weak cellular structure
+
+\section*{3. Cardiac muscle}
+- Defined usually as a muscular tissue found only in the heart
+✓ Also present in muscular wall (Myocardium) of the heart, Walls of the aorta, Walls of the pulmonary vein, Walls of the superior vena cava
+- Acts as a pacemaker of the heart
+- Contains the cardiac cells, which are striated, branched, \& uninucleated
+- Involuntary \&is controlled unconsciously by the areas in the brainstem \& hypothalamus, Fibres supplied with both CNS and ANS
+- Cellular characters
+✓ Nucleus: Central \& single nucleus
+✓ Intercalated discs: Help in quick passage of electrochemical signals between cells
+✓ Length: Shorter than skeletal muscle cell
+✓ Do not fuse during development
+✓ Myofibril and mitochondria: Provide great strength and power to pump blood throughout life
+✓ Striation: Due to actin \& myosin into regular myofibrils
+
+\begin{table}
+\captionsetup{labelformat=empty}
+\caption{TABLE: Differences among striated, smooth, \& cardiac muscles}
+\begin{tabular}{|l|l|l|l|}
+\hline \begin{tabular}{l} 
+Characters and \\
+functions
+\end{tabular} & Skeletal & Smooth & Cardiac \\
+\hline Shape & \begin{tabular}{l} 
+Very long, \\
+cylindrical
+\end{tabular} & \begin{tabular}{l} 
+Elongated \\
+fusiform
+\end{tabular} & \begin{tabular}{l} 
+Short \\
+cylindrical
+\end{tabular} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{tabular}{|l|l|l|l|}
+\hline Sarcolemma & A thin, transparent and distinct & Indistinct sarcolemma & Distinct sarcolemma \\
+\hline Mitochondrial numbers & Lots & Fewer & More than those of skeletal muscle \\
+\hline Number of nucleus & Multinucle ate (may be >100) & Single & Single \\
+\hline Sarcomere & Form myofibrils & Do not form myofibrils & Form myofibrils \\
+\hline Strips & Striated & Nonstriated & Striated \\
+\hline Intercalated disc & Absence & Absence & Presence \\
+\hline Contraction & Fast, no rhythmic & Slower, rhythmic & Intermediate, rhythmic \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|l|}
+\hline Energy requiremen ts & High & Lower & Intermediate \\
+\hline Fatigue & Easily undergoes & Goes less fatigue & Does not fatigue \\
+\hline Stimulation & Not selfstimulatin g & Selfstimulating & Self-stimulating \\
+\hline
+\end{tabular}
+- A-band: A (Anisotrobic)-band; Zone of filaments with both actin and myosin
+- Actin filaments: Thin contractile filaments [Major components of the I-band]
+- Arrector pili muscle of the skin: Asmooth muscle
+- Cori's cycle: Lactic acid in liver is converted to glycogen
+- Dystrophin: A large protein that links thin filaments to transmembrane proteins
+- Elastic filament: A myofilament with titin protein
+- Endomysium: A thin layer of loose connective tissue that surrounds each muscle fibre
+✓ Contains blood capillaries and nerve fibres
+✓ Provides extracellular chemical environment for the muscle fibre
+- Epimysium: A fibrous sheath that surrounds the entire muscle ✓ 2 layers (Fascia: Outer surface + Perimysium: Inner surface)
+- F-actin (Filamentous actin): Contains long \& thin filaments made up of globular (G)-actin
+- Fascia: A sheet of connective tissue that separates neighbouring muscles or muscle groups from each other and from the subcutaneous tissue
+- G actin: Globular subunit of F actin
+- H-zone: H means the German 'helle' or brighter; Zone of the thick filaments with only myosin
+- I (Isotropic)-band: Zone of thin filaments with only actin
+- Internal eye muscles (Smooth muscles): Control lens thickness and pupil size in the eyeball
+- M-line: The letter M is derived from the German 'Mittelscheibe' (or the disc in the middle of sarcomere); Line formed by cross-connecting elements of the cytoskeleton
+- Muscle contraction: Chemical energy into mechanical contraction
+- Myofibril: A bundle of protein microfilaments
+- Myofibrillar muscle proteins: Actin, Myosin, \& Actomyosin
+- Myofilament: A threadlike complex of several hundred contractile protein molecules
+- Myoglobin: Oxygen-storing red pigment of muscle.
+- Myosin: Protein with a long shaft-like tail and a globular head
+- Myosin filaments: Thick contractile filaments
+✓ Bipolar
+✓ Extend throughout the A-band
+- Myogram: Recording of muscular contraction
+- Muscular dystrophy: Progressive muscle weakness \& degeneration [Mutation of gene of protein (Dystrophin)]
+- Nematode sperms: Lack actin
+- Perimysium: Thicker layer of connective tissue that surrounds muscle fibres together in bundles called fascicles
+✓ Carries the larger nerves and blood vessels as well as stretch receptors (Muscle spindles)
+- Poliomyelitis/Polio: Infectious disease caused by serotype poliovirus of Genus Enterovirus and species enterovirusC [Muscle Weakening Syndrome]
+- Red muscle fibres: Thin \& smaller
+✓ Red due to large amount of myoglobin
+✓ Contain many mitochondria
+✓ Perform slow and sustained contractions for a long period
+- Sarcolemma: Plasma membrane of a muscle fibre
+- Sarcoplasm: Cytoplasm of a muscle fibre
+- Sarcoplasmic muscle protein: Haemoglobin \& Myoglobin Stromal muscle proteins: Collagen, elastin, \& reticulin T tubule: Tunnel-like extension of the sarcolemma
+✓ Conducts electrical signals from the cell surface to its interior
+
+Titin: A giant, springy protein that forms the elastic filaments [Largest Protein]
+White muscle fibres: Thick \& larger
+✓ White due to small amount of myoglobin
+✓ Less number of mitochondria
+✓ Perform fast work for short duration
+
+Biceps brachii: Muscle of arm
+Ciliary muscle: Eye muscle [Changes in focal length of lens]
+Gluteus maximus (Buttock muscle): Largest muscles
+Intercostal muscles: Between ribs
+Latissimus dorsi: Muscle of shoulder
+Masseter (Jaw muscle): Strongest muscle
+✓ Elevates mandible
+✓ Enables chewing \& biting
+✓ Can produce up to 91 kg of force on molars
+✓ Muscle of lower jaw (Mandible) [Upper jaw means maxilla]
+
+Calf muscle (Gastrocnemius \& Soleus): Generates strong force for walking, running,s\& jumping
+Myocardium: Muscle with highest endurance (Contraction without fatigue from birth to death)
+Papillary muscle: Muscles associated with heart
+Pectoralis major: Found below breast in man [Flight muscle in bird]
+Rectus abdominis: Longest muscle in abdomen
+Sartorius (Tailor's muscle): Longest muscle
+Stapedius: Thinnest muscle/Smallest muscle
+Triceps brachii: Muscle of arm
+Quadriceps: Strongest leg muscles
+
+\section*{Nervous Tissues}
+- 2 types of cells: Neurons \& glial cells
+✓ Essential for the adjustment of the body with response to either external or internal environmental changes
+✓ Highly specialised epithelial tissue for reception, discharge, and transmission of stimuli
+✓ Ectodermal in origin [Exception: Microglia \& Meninges; Derived from Mesoderm]
+1. Neuron (Neurone)
+- Fundamental, structural, and functional unit of CNS \& PNS
+- A conducting cell
+- Capable of transmitting data and information
+- Receives, processes, and transfers electrochemical information signals
+- Numbers of neurons in humans: 100 billion
+![](https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-72.jpg?height=725&width=1140&top_left_y=819&top_left_x=216)
+
+\section*{Types}
+
+The types of neuron depend on the classification system.
+A. Types based on functions
+a. Afferent neuron or sensory neuron: Carries information to the brain and spinal cord from sensual perceptions (Smell, touch, taste, light, \& others)
+b. Efferent neuron or motor neuron or motoneuron: Carries information from the brain and spinal cord to the various muscles and fibres
+- Aids contraction of nonstriated and skeletal muscle
+- Leads to secretion from a gland
+c. Internuncial or interneuron or intercalated neuron: Present in brain \& spinal cord
+- Aids in relaying information between afferent \& efferent neurons
+- Though both afferent \& efferent neurons work together, they are not directly connected.
+B. Based on poles or number of processes
+a. Unipolar neuron: 1 axon +1 cell body
+- Originates from 1 pole of cell body
+- Occurs during development
+- Rare in adult brain
+- Found in craniospinal ganglia(Ganglia associated with
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-73.jpg?height=337&width=753&top_left_y=878&top_left_x=408}
+\captionsetup{labelformat=empty}
+\caption{Figure: Unipolar neuron}
+\end{figure}
+the spinal and certain cranial nerves)
+- Example: Invertebrates (Flies, Hydra), Human embryonic neurons
+- Function: For sensory transmission
+b. Bipolar neuron: $\mathbf{1}$ axon $\boldsymbol{+} \mathbf{1}$ dendrite
+- Originates from poles of cell body
+- Situated inretina, olfactory epithelium, and ganglia of the cranial nerve VIII (Ear)
+- Helps in vision, smell \& hearing
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-74.jpg?height=344&width=823&top_left_y=21&top_left_x=378}
+\captionsetup{labelformat=empty}
+\caption{Figure: Bipolar neuron}
+\end{figure}
+- Specialised for precise signal transmission in sensory pathways
+
+\section*{c. Multipolar neuron: $\mathbf{1}$ axon + many dendrites}
+- Commonly occurring neurons (>99\%)
+- Motoneurons \& numerous small interneurons of the spinal cord, pyramidal neurons in the cerebral cortex, and Purkinje cells of the cerebellar cortex]
+- Helps in motor control
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-74.jpg?height=463&width=720&top_left_y=1005&top_left_x=422}
+\captionsetup{labelformat=empty}
+\caption{Figure: Multipolar neuron}
+\end{figure}
+
+\section*{d. Pseudounipolar neuron: $\mathbf{1}$ axon $+\mathbf{2}$ branches (Central \& Peripheral)}
+- Similar diameters of both branches
+- Same density of microtubules and neurofilaments; Sensory
+- Example: All ganglia like spinal trigeminal, geniculate (VII), glossopharyngeal (IX), \& vagal (X) ganglia
+- Develops from bipolar neurons
+- Transmit sensory information (Touch, pain \& temperature)
+
+\begin{figure}
+\includegraphics[max width=\textwidth]{https://cdn.mathpix.com/cropped/2c809914-5a5e-4bbf-a93a-5551cb2fd280-75.jpg?height=417&width=889&top_left_y=23&top_left_x=345}
+\captionsetup{labelformat=empty}
+\caption{Figure: Pseudounipolar neuron}
+\end{figure}
+
+\section*{C. Based on length of axons}
+a. Golgi I neuron or Long-axon multipolar neuron: Contains a long axon
+- Axon beginning in grey matter of brain \& spinal cord
+b. Golgi II neuron or Short-axon multipolar neuron: 0-1 short axon
+- Numerous incerebral cortex, cerebellar cortex, \& spinal cord
+
+\section*{Structure of a typical Neuron: Consists of 2 parts (Cell body \& Processes)}
+
+\section*{A. Cell Body or Cyton or Centron or Perikaryon, or Soma}
+- Rounded, polygonal, spindle-shaped, flask-shaped, or pyramid-shaped
+- Surrounded by a plasma membrane
+- Neuroplasm: Cytoplasm of neuron
+- Contents of neuroplasm: Nissl granules, Neurofibrils, Golgi apparatus, Ribosome, Endoplasmic reticulum, and others.
+- Nissl bodies or Nissl granules, or Nissl substances, or tigroid substances: Discovered by Franz Nissl, a German neuropathologist
+- Discrete granular structures (Dark material) in the cytoplasm of somata \& dendrites
+- Contain rough endoplasmic reticulum with ribosomes \& mRNA
+- Take part in protein synthesis
+- A spherical nucleus with a large nucleolus
+- Function of cell body: Regulate the functional activities of the cell
+B. Processes: 2 branching processes (Axon \& Dendrite)
+i. Axon: A long branch arising from axon hillock
+- Output of neuron
+- Covered by endoneurium
+- Axoplasm (Cytoplasm of neuron) surrounded by axolemma
+- Branched axon terminal (Terminal bouton or Synapic bouton or Small swelling, or Endfeet)
+- Boutons contain neurotransmitter-containing vesicles
+ii. Dendrite (Greek: Tree): 1 or many shorter branched processes; Input of neuron; Provided with numerous spines to generate a greater surface area for the neuron to the synapse; Serves to collect messages to the cell body
+- Nissl bodies or Nissl granules, or Nissl substances, or tigroid substances: Discovered by Franz Nissl, a German neuropathologist
+✓ Discrete granular structures (Dark material) in the cytoplasm of somata and dendrites
+✓ Contain rough endoplasmic reticulum with ribosomes and mRNA
+✓ Take part in protein synthesis in the neuronal cytoplasm
+- Types of connection
+✓ Axodendritic: Between axon that synapses on dendrite
+✓ Dendrodendritic: Between dendrite that synapses on other dendrites
+✓ Axosomatic: Between an axon that synapses on a nerve cell body
+✓ Axoaxonic: Between an axon that synapses on another axon
+- Immature neurons, or neural stem cells \& neural progenitor cells, can divide.
+- Immature neurons or neural stem cells, or neural progenitor cells → Neurons/ Glial cells
+- Mature neurons do not undergo division
+- Causes of lack of neuronal division
+i. Lack of centrosomes (No spindle fibre formation)
+ii. Focus on neuronal function rather than division
+iii. Potentiality of damage in established connections with other neurons after division
+iv. Presence of inhibitory molecules (Nogo proteins)
+v. Limited support from oligodendrocytes
+vi. Lack of neurolemma/neurilemma \& Schwann cells in CNS
+vii. Scar tissue formation by astrocytes following CNS injury, leading to blockage of regrowth and enhancing inhibitory molecules
+- Regeneration of neuron in PNS: Possible to a certain limit
+✓ Due to Schwann cells and connective tissues around nerve fibres
+✓ Not always perfect
+✓ Rate of regeneration: $1-5 \mathrm{~mm}$ per day
+- $\mathbf{1 ~ m m}$ per day $=$ Small neuron
+- $\mathbf{5 ~ m m}$ per day $=$ Large neuron
+✓ More successful than regeneration in CNS
+✓ Depends on Schwann cell
+✓ CNS with limited capacity for regeneration
+- Due to inhibitory environment by oligodendrocytes
+- Lack of supportive cellular mechanisms
+- Rateof CNS regeneration (Spontaneous Axonal Sprouting Rate) $=0.1-<1 \mathrm{~mm}$ per month
+- Rate of PNS regeneration (Spontaneous Axonal Sprouting Rate) $=1 \mathrm{~mm}$ per month
+- Exceptional cases of neuronal division
+✓ Neurons of hippocampus and olfactory bulb undergo neurogenesis (Generation of new neurons)
+✓ Hippocampus and olfactory bulb consists of stem cells that can differentiate into new neurons
+
+TABLE: Differences between axon \& dendrite
+
+\begin{tabular}{|l|l|l|}
+\hline Features & Axon & Dendrite \\
+\hline Length & Long & Short \& Tapering \\
+\hline Process of neuron & 1 & Multiple \\
+\hline Thickness & Uniform & Not uniform \\
+\hline Size (Length) & Sciatic nerve PNS: $>1 \mathrm{~m}$ CNS: $<1 \mathrm{~mm}->1 \mathrm{~m}$ & $<1.5 \mathrm{~mm}$ \\
+\hline Branching & Unbranched; Branches at the distal end (Axon terminal) & Branched \\
+\hline Starting point & Axon hillock & Receiving surface of neurons \\
+\hline Neurilemma & Present & Absent \\
+\hline Nodes/Internodes & Present & Absent \\
+\hline Nissl granules & Present & Absent \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|}
+\hline \begin{tabular}{l} 
+External \\
+surface
+\end{tabular} & Smooth & Rough \\
+\hline Synaptic knobs & Present & Absent \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|}
+\hline Neurotransmitt er vesicles & Present & Absent \\
+\hline Formation & Efferent component & Afferent component \\
+\hline Impulse conduction & Away from cell body & Towards cell body \\
+\hline
+\end{tabular}
+
+TABLE: Differences between myelinated \& non-myelinated nerve fibre
+
+\begin{tabular}{|l|l|l|}
+\hline Features & Myelinated (Medullated) Nerve Fibre or Myelinated fibre & Nonmyelinated (Nonmedullated) Nerve Fibre or Unmyelinated fibre \\
+\hline Myelin sheath & Present & Absent \\
+\hline Diameter & Larger & Smaller \\
+\hline Conduction speed (V) m/s [D = Diameter] & $\mathrm{V}=6 \sqrt{\mathrm{D}}$ & $\mathrm{V}=0.4 \mathrm{D}$ \\
+\hline Speed of impulse & $5-120 \mathrm{~m} / \mathrm{s}$ & $0.5-2 \mathrm{~m} / \mathrm{s}$ \\
+\hline Importance & In vertebrates & All invertebrates \\
+\hline Size ranges & In mammalian PNS, its axon is $0.120 \mu \mathrm{~m}$ in diameter. & In mammalian PNS, its axon is less than $2 \mu \mathrm{~m}$ in diameter. \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|l|l|}
+\hline Myelin sheaths & 250-300 turns around axon & Lacking \\
+\hline Electrical insulation & Higher & Lower \\
+\hline Protected by & Schwann cells \& myelin sheath & Schwann cells \& connective tissues \\
+\hline Energy efficiency & Higher & Lower \\
+\hline Ion exchange & Lower & More \\
+\hline Conduction types & Saltatory & Continuous (Slow \& Steady) \\
+\hline Function & Fast reflex, Motor control, Sharp pain & Slow pain, Autonomic control \\
+\hline
+\end{tabular}
+2. Glia or Glial cells or Neuroglia
+- Non-neuronal cell
+- Maintains homeostasis and forms myelin
+- Provides support and protection to the neuron of the CNS \& PNS
+- Glial cell of CNS: Oligodendrocytes, astrocytes, ependymal cells, \& microglia
+- Glial cell of PNS: Schwann cells and satellite cells
+- Glial cells \& Axon potentials: No conduction of axon potentials
+- Continue dividing throughout life
+- Covers neuron \& provides physical support
+- Supplies nutrients \& oxygen to neuron
+- Destroys pathogens and removes dead, apoptotic, \& necrotic bodies
+✓ Apoptosis: Programmed cell death
+✓ Necrosis: Accidental cell death
+- Insulates one neuron from another
+- Aids in synaptic transmission only at hippocampus \& cerebellum
+- Supports in immune response in the CNS \& PNS
+a. Astrocytes or Astroglia (Greek; Astron: Star + Kutos: Cavity/Cell)
+- Star-shaped [Radiating numerous processes]
+- A small cell body
+- Hold neuron together
+- Maintenance of ion concentration of neurons
+- Formation of blood-brain barrier
+
+\section*{b. Oligodendrocytes or Oligodendroglia}
+- Coat axons in the CNS
+- Contain bulbous sac-like body
+- Have up to 15 arm-like processes
+- 40 or more myelin sheaths produced by 1 oligodendrocyte
+- Insulate nerve fibre from extracellular fluid
+- Speed up conduction
+
+\section*{c. Microglia}
+- Derived from the earliest mononuclear cells found in the yolk sac
+- Specialised macrophages
+- Can phagocytose microbes, dead tissues, \& foreign matters (Innate immune responses)
+- Irregular shaped
+- Oblong nuclei
+- Mobile within brain
+
+\section*{d. Ependymal cell or Ependymocyte}
+- Situated in lining of the spinal cord \& the ventricular system of the brain
+- Cuboidal cells (Some are ciliated).
+- Formation of choroid plexus \& blood-CSF barrier
+- Act as a neural stem cell
+
+\section*{e. Schwann cell: Situated in PNS}
+- Developed from neural crest cells
+- Forms myelin sheaths around PNS fibres
+- Perform phagocytosis
+
+\section*{f. Satellite glial cells}
+- Surround neurons in sensory, sympathetic, \& parasympathetic ganglia
+- Sensitive to injury and inflammation
+- Regulate external chemical milieu
+- Enhance intracellular $\mathrm{Ca}^{2+}$ levels
+
+\section*{g. Enteric glial cells}
+- Found in intrinsic ganglia of the digestive system
+- Involved in homeostasis and muscular \& digestive processes
+
+\section*{h. Pituicytes}
+- A modified glial cell in posterior pituitary gland
+- Contain rough endoplasmic reticulum, large Golgi apparatuses, \& neurosecretory granules
+- Synthesise hormones
+
+\section*{i. Tanycyte}
+- A special ependymal cell
+- Found in hypothalamus\& 3rd ventricle
+- Releases gonadotropin-releasing hormone (GnRH)
+
+\section*{AG PLUS DOSE}
+- Fasciculi: The parallel bundles of nerve fibres covered by perineurium
+- First origin of nervous tissue: In coelenterates
+- Coelenterate nervous tissue: Non-polar, impulses move in any direction
+- Nerve cord in invertebrates: Solid, double, ventral
+- Nerve cord in vertebrates: Hollow, tubular, dorsal
+- Nerve: Group of axon
+- Ganglion: Group of cytons
+- Myelin sheath: Formed by i. Oligodendrocytes [CNS] \& ii. Schwann cells in [PNS]
+- Myelin sheath composition: Protein (Myelin basic protein) (20\%)+ Lipid (Phospholipid+Glycolipids+Cholesterol) (80\%)
+- Myelin sheath insulating property: Due to Phospholipid + Glycolipids + Cholesterol
+- Myelin production \& Maintenance: By Vitamin B12 (Cobalamin)
+- Myelin sheath colour: A glistening white in colour (Similar to white matter of the brain and spinal cord)
+- Myelination: Production of the myelin sheath
+- Demyelination: Nerve damage \& consequently neuropathies
+- Neurilemma: A thick outermost coil
+- Factors affecting the signal speed along with a nerve fibre
+i. The diameter of the fibre
+✓ Large fibres = High surface area = Rapid conduction
+ii. Presence or absence of myelin
+✓ Myelin speeds signal conduction. For example, the speed of impulse is about $0.5-2.0 \mathrm{~m} / \mathrm{sec}$ in $2-4 \mu \mathrm{~m}$ unmyelinated fibres compared to $3-15 \mathrm{~m} / \mathrm{sec}$ in myelinated fibres of the same size.
+✓ In large myelinated fibres (up to $20 \mu \mathrm{~m}$ in diameter), the speed is as fast as $120 \mathrm{~m} / \mathrm{sec}$.
+- Significance of slow unmyelinated fibre
+✓ During secreting stomach acid or dilating the pupil
+- Significance of fast myelinated fibre
+✓ During vision, balance, writing examination papers, and public speech

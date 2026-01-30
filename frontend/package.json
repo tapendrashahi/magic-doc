@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ace-builds": "^1.43.6",
     "axios": "^1.13.4",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
     "mathjax": "^4.1.0",
     "prismjs": "^1.30.0",
     "react": "^19.2.0",
+    "react-ace": "^14.0.1",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.13.0",
     "zustand": "^5.0.10"
