@@ -124,7 +124,7 @@ class HTMLAssembler:
     def wrap_equation_tiptap(self, equation: Equation) -> str:
         """
         Wrap a rendered equation in TipTap editor format.
-        Uses URL-encoded LaTeX in data-latex attribute.
+        Uses URL-encoded LaTeX in data-latex attribute for Tiptap compatibility.
         
         Args:
             equation: Equation object with latex code
@@ -132,8 +132,11 @@ class HTMLAssembler:
         Returns:
             TipTap-formatted equation span
         """
-        # URL-encode the LaTeX
-        encoded_latex = quote(equation.latex, safe='')
+        # Use URL-encoded LaTeX for Tiptap compatibility
+        # Tiptap expects URL-encoded content in data-latex attribute
+        from urllib.parse import quote
+        # Keep parentheses unencoded as per working examples
+        encoded_latex = quote(equation.latex, safe='()')
         
         # Build the TipTap wrapper span
         wrapper = (
@@ -145,24 +148,25 @@ class HTMLAssembler:
     def format_section(self, section: Section) -> str:
         """
         Format a section header to appropriate HTML tag.
+        Use <p><strong> format instead of <h2> to match expected output.
         
         Args:
             section: Section object from extraction
             
         Returns:
-            HTML tag (e.g., '<h2>Title</h2>')
+            HTML tag (e.g., '<p><strong>Title</strong></p>')
         """
-        tag = section.html_tag
         title = escape(section.title)
-        return f'<{tag}>{title}</{tag}>'
+        return f'<p><strong>{title}</strong></p>'
     
     def format_text(self, text: str, inline_mode: bool = False) -> str:
         """
-        Format plain text with optional div wrapping and text formatting.
+        Format plain text with optional <p> wrapping and text formatting.
+        Uses <p> tags instead of <div> to match expected output format.
         
         Args:
             text: Plain text to format
-            inline_mode: If True, don't wrap in divs (for inline content with equations)
+            inline_mode: If True, don't wrap in <p> tags (for inline content with equations)
             
         Returns:
             Formatted HTML
@@ -170,27 +174,30 @@ class HTMLAssembler:
         if not text or not text.strip():
             return ''
         
+        # Clean up LaTeX commands and artifacts that should not appear in text
+        formatted = self._clean_latex_text(text)
+        
         # Note: List conversion now happens in LatexNormalizer.convert_lists()
         # before equation extraction, so lists are already HTML at this point
         
         # Apply text formatting (bold, italic, etc.)
-        formatted = self.apply_text_formatting(text)
+        formatted = self.apply_text_formatting(formatted)
         
         # Only escape if we don't have HTML lists/elements already
-        if '<ul>' not in text and '<ol>' not in text and '<li>' not in text:
+        if '<ul>' not in formatted and '<ol>' not in formatted and '<li>' not in formatted:
             formatted = escape(formatted)
         
         # Normalize whitespace but preserve single spaces
         formatted = re.sub(r'  +', ' ', formatted)
         
         if inline_mode or not self.wrap_text_in_divs:
-            # Don't wrap in divs for inline content
+            # Don't wrap in <p> for inline content
             return formatted.strip()
         
-        # Split by paragraph breaks and wrap each paragraph
+        # Split by paragraph breaks and wrap each paragraph in <p> tags
         paragraphs = re.split(r'\n\s*\n+', formatted.strip())
-        wrapped = [f'<div>{p.strip()}</div>' for p in paragraphs if p.strip()]
-        return '\n'.join(wrapped)
+        wrapped = [f'<p>{p.strip()}</p>' for p in paragraphs if p.strip()]
+        return ''.join(wrapped)
     
     def apply_text_formatting(self, text: str) -> str:
         """
@@ -208,6 +215,57 @@ class HTMLAssembler:
             result = re.sub(pattern, replacement, result)
         
         return result
+    
+    def _clean_latex_text(self, text: str) -> str:
+        """
+        Clean up LaTeX commands and artifacts that shouldn't appear in plain text output.
+        This removes commands like \includegraphics, \setcounter, etc.
+        
+        Args:
+            text: Text that may contain LaTeX artifacts
+            
+        Returns:
+            Cleaned text suitable for display
+        """
+        result = text
+        
+        # Remove LaTeX commands but preserve their text content
+        # For \command{text}, we want to keep "text" but remove "\command"
+        
+        # Handle \includegraphics - remove entirely (no content to preserve)
+        result = re.sub(r'\\includegraphics\s*(?:\[[^\]]*\])?\s*\{[^}]*\}', '', result)
+        
+        # Handle \setcounter - remove entirely (structural command)
+        result = re.sub(r'\\setcounter\{[^}]*\}\{[^}]*\}', '', result)
+        
+        # Handle \begin{...} and \end{...} - remove entirely
+        result = re.sub(r'\\(begin|end)\{[^}]*\}', '', result)
+        
+        # For text formatting commands, we want to remove the command but keep the content
+        # Replace \textbf{content} with just content, etc.
+        result = re.sub(r'\\textbf\{([^}]*)\}', r'\1', result)  # \textbf{x} -> x
+        result = re.sub(r'\\textit\{([^}]*)\}', r'\1', result)  # \textit{x} -> x
+        result = re.sub(r'\\emph\{([^}]*)\}', r'\1', result)    # \emph{x} -> x
+        result = re.sub(r'\\texttt\{([^}]*)\}', r'\1', result)  # \texttt{x} -> x
+        result = re.sub(r'\\mathrm\{([^}]*)\}', r'\1', result)  # \mathrm{x} -> x
+        result = re.sub(r'\\mathbf\{([^}]*)\}', r'\1', result)  # \mathbf{x} -> x
+        result = re.sub(r'\\mathit\{([^}]*)\}', r'\1', result)  # \mathit{x} -> x
+        result = re.sub(r'\\mathcal\{([^}]*)\}', r'\1', result) # \mathcal{x} -> x
+        result = re.sub(r'\\sqrt\{([^}]*)\}', r'\1', result)    # \sqrt{x} -> x
+        result = re.sub(r'\\sqrt\[([^\]]*)\]\{([^}]*)\}', r'\2', result)  # \sqrt[n]{x} -> x
+        
+        # Remove remaining LaTeX commands that don't have braces or brackets
+        # These include bare commands like \It, \note, \item, \section, etc.
+        result = re.sub(r'\\[a-zA-Z]+\*?(?:\s+|(?=[\s.,;:!?\)])|$)', ' ', result)
+        
+        # Remove any remaining backslashes (safety for edge cases)
+        result = result.replace('\\', '')
+        
+        # Clean up multiple spaces
+        result = re.sub(r'  +', ' ', result)
+        result = re.sub(r'\n\s*\n\s*\n+', '\n\n', result)
+        
+        return result.strip()
     
     def validate_html(self, html: str) -> Tuple[bool, Optional[str]]:
         """
@@ -320,8 +378,21 @@ class HTMLAssembler:
             
             # Add the replacement element
             if replacement['type'] == 'equation':
-                wrapped = self.wrap_equation(replacement['object'])
-                current_block.append(wrapped)
+                eq = replacement['object']
+                # Check if this is a display equation (block-level) or inline
+                if eq.is_display_mode:
+                    # Display equation breaks the current block
+                    # Flush current text block
+                    if current_block:
+                        html_blocks.append(self._wrap_block(current_block))
+                        current_block = []
+                    # Display equation gets its own <p> block
+                    wrapped = self.wrap_equation(eq)
+                    html_blocks.append(f'<p>{wrapped}</p>')
+                else:
+                    # Inline equation stays in current block with surrounding text
+                    wrapped = self.wrap_equation(eq)
+                    current_block.append(wrapped)
             elif replacement['type'] == 'section':
                 # Section breaks the block
                 if current_block:
@@ -343,8 +414,12 @@ class HTMLAssembler:
         if current_block:
             html_blocks.append(self._wrap_block(current_block))
         
-        # Join blocks
-        html_fragment = '\n'.join(html_blocks)
+        # Join blocks - NO newlines, output should be single line
+        html_fragment = ''.join(html_blocks)
+        
+        # IMPORTANT: Remove ALL newlines from the final output to ensure single-line format
+        # This includes newlines that may have been embedded from TeX source (e.g., \\ in equations)
+        html_fragment = html_fragment.replace('\n', '').replace('\r', '')
         
         # Validate
         is_valid, error_msg = self.validate_html(html_fragment)
@@ -355,8 +430,9 @@ class HTMLAssembler:
     
     def _wrap_block(self, parts: List[str]) -> str:
         """
-        Wrap a block of content (text + inline equations) in a div.
+        Wrap a block of content (text + inline equations) in a paragraph.
         Preserves single space gap between text and equations.
+        Uses <p> tags instead of <div> to match expected output format.
         
         Args:
             parts: List of HTML parts (text, inline equation spans, etc.)
@@ -371,7 +447,7 @@ class HTMLAssembler:
                 content = part
             else:
                 # Check if part is an equation span
-                if part.strip().startswith('<span') and '__se__katex' in part:
+                if part.strip().startswith('<span') and 'tiptap-katex' in part:
                     # Add single space if content doesn't already end with space
                     if content and not content.endswith(' '):
                         content += ' '
@@ -384,7 +460,7 @@ class HTMLAssembler:
                     content += part
         
         if content.strip():
-            return f'<div>{content.strip()}</div>'
+            return f'<p>{content.strip()}</p>'
         return ''
     
     def get_statistics(

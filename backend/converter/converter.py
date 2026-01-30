@@ -53,10 +53,27 @@ def convert_mathpix_to_lms_html(mathpix_text):
         normalized_text = normalizer.normalize(mathpix_text)
         logger.info("  LaTeX normalization complete (Varangle->angle, overparen->widehat)")
         
+        # Extract document content only (skip preamble to avoid extracting from \DeclareUnicodeCharacter etc.)
+        doc_start = normalized_text.find(r'\begin{document}')
+        doc_end = normalized_text.find(r'\end{document}')
+        
+        if doc_start >= 0 and doc_end >= 0:
+            # Extract from document only
+            doc_start_pos = doc_start + len(r'\begin{document}')
+            document_content = normalized_text[doc_start_pos:doc_end]
+            extraction_text = document_content
+            extraction_offset = doc_start_pos
+            logger.info(f"  Extracting from document content only (skipping preamble)")
+        else:
+            # No document markers found, extract from whole text
+            extraction_text = normalized_text
+            extraction_offset = 0
+            logger.warning("  No \\begin{document} found, extracting from entire text")
+        
         # ===== PHASE 2: EXTRACTION =====
         logger.info("Phase 2: Extracting equations and sections...")
         extractor = LatexExtractor()
-        equations, sections = extractor.extract_all(normalized_text)
+        equations, sections = extractor.extract_all(extraction_text)
         logger.info(f"  Extracted {len(equations)} equations, {len(sections)} sections")
         
         # ===== PHASE 3: RENDERING =====
@@ -75,7 +92,10 @@ def convert_mathpix_to_lms_html(mathpix_text):
         # ===== PHASE 4: ASSEMBLY =====
         logger.info("Phase 4: Assembling HTML fragment...")
         assembler = HTMLAssembler(equation_format="tiptap")
-        html_fragment = assembler.assemble_fragment(normalized_text, equations, sections)
+        
+        # Assemble from extraction_text (which is what contains the extracted equations)
+        # This ensures positions match correctly
+        html_fragment = assembler.assemble_fragment(extraction_text, equations, sections)
         logger.info(f"  Assembled HTML fragment ({len(html_fragment)} chars)")
         
         # ===== VALIDATION =====
