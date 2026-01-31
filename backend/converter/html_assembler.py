@@ -196,7 +196,16 @@ class HTMLAssembler:
         
         # Split by paragraph breaks and wrap each paragraph in <p> tags
         paragraphs = re.split(r'\n\s*\n+', formatted.strip())
-        wrapped = [f'<p>{p.strip()}</p>' for p in paragraphs if p.strip()]
+        wrapped = []
+        for p in paragraphs:
+            p = p.strip()
+            if not p:
+                continue
+            # Don't wrap block-level elements in <p> tags
+            if p.startswith('<ul') or p.startswith('<ol') or p.startswith('<table') or p.startswith('<blockquote'):
+                wrapped.append(p)
+            else:
+                wrapped.append(f'<p>{p}</p>')
         return ''.join(wrapped)
     
     def apply_text_formatting(self, text: str) -> str:
@@ -433,6 +442,7 @@ class HTMLAssembler:
         Wrap a block of content (text + inline equations) in a paragraph.
         Preserves single space gap between text and equations.
         Uses <p> tags instead of <div> to match expected output format.
+        Block-level elements (lists, tables) are NOT wrapped in <p> tags.
         
         Args:
             parts: List of HTML parts (text, inline equation spans, etc.)
@@ -460,6 +470,9 @@ class HTMLAssembler:
                     content += part
         
         if content.strip():
+            # Don't wrap block-level elements in <p> tags
+            if content.strip().startswith('<ul') or content.strip().startswith('<ol') or content.strip().startswith('<table') or content.strip().startswith('<blockquote'):
+                return content.strip()
             return f'<p>{content.strip()}</p>'
         return ''
     

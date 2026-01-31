@@ -4,6 +4,7 @@ Supports multiple modes:
 - 'lms_fragment': New LMS-compatible KaTeX HTML fragments (Phase 5+)
 - 'katex': Preserve KaTeX-compatible delimiters (legacy)
 - 'plain_html': Convert to plain HTML with Unicode symbols (legacy)
+- 'table': LaTeX tables to HTML tables (Phase 6+)
 """
 import re
 import time
@@ -13,6 +14,7 @@ from .latex_extractor import LatexExtractor
 from .katex_renderer import KaTeXRenderer
 from .html_assembler import HTMLAssembler
 from .latex_normalizer import LatexNormalizer
+from .latex_table_converter import convert_latex_table
 
 logger = logging.getLogger(__name__)
 
@@ -30,6 +32,7 @@ def convert_mathpix_to_lms_html(mathpix_text):
     2. LaTeX Extraction (Phase 2) - Find equations and sections
     3. KaTeX Rendering (Phase 3) - Render to HTML via Node.js
     4. HTML Assembly (Phase 4) - Wrap with LMS attributes and assemble
+    5. Table Conversion (Phase 6) - Convert LaTeX tables to HTML tables
     
     Args:
         mathpix_text: Raw Mathpix LaTeX output text
@@ -52,6 +55,32 @@ def convert_mathpix_to_lms_html(mathpix_text):
         normalizer = LatexNormalizer()
         normalized_text = normalizer.normalize(mathpix_text)
         logger.info("  LaTeX normalization complete (Varangle->angle, overparen->widehat)")
+        
+        # ===== PHASE 6 (Early): TABLE DETECTION & CONVERSION =====
+        # Check for LaTeX tables in the content - if found, convert them
+        logger.info("Phase 6: Checking for LaTeX tables...")
+        table_html = None
+        table_pattern = None
+        try:
+            table_html = convert_latex_table(normalized_text)
+            if table_html:
+                logger.info("  Found LaTeX table - will embed after assembly")
+                logger.info(f"  Generated table HTML ({len(table_html)} chars)")
+                # Find and mark the table location but don't replace yet
+                # Replace with a marker to preserve position information
+                table_pattern = re.search(
+                    r'\\begin\{center\}\s*\\begin\{tabular\}.*?\\end\{tabular\}\s*\\end\{center\}|\\begin\{tabular\}.*?\\end\{tabular\}',
+                    normalized_text,
+                    flags=re.DOTALL
+                )
+                if table_pattern:
+                    # Replace table with placeholder that won't be escaped
+                    marker = f"__TABLE_PLACEHOLDER_{hash(table_html)%1000000}__"
+                    normalized_text = normalized_text[:table_pattern.start()] + marker + normalized_text[table_pattern.end():]
+                    logger.info(f"  Table marked with placeholder: {marker}")
+        except Exception as e:
+            logger.warning(f"  Table conversion failed: {e} - continuing without table conversion")
+            table_html = None
         
         # Extract document content only (skip preamble to avoid extracting from \DeclareUnicodeCharacter etc.)
         doc_start = normalized_text.find(r'\begin{document}')
@@ -98,6 +127,35 @@ def convert_mathpix_to_lms_html(mathpix_text):
         html_fragment = assembler.assemble_fragment(extraction_text, equations, sections)
         logger.info(f"  Assembled HTML fragment ({len(html_fragment)} chars)")
         
+        # ===== PHASE 6 (Late): REPLACE TABLE PLACEHOLDER =====
+        # Replace the placeholder with the actual table HTML (which won't be escaped)
+        if table_html:
+            logger.info("Phase 6 (Late): Replacing table placeholder with actual HTML...")
+            marker = f"__TABLE_PLACEHOLDER_{hash(table_html)%1000000}__"
+            # Unescape the marker from the HTML and replace with actual table
+            escaped_marker = marker.replace('_', '&#95;')  # HTML entity for underscore
+            
+            # Try both escaped and unescaped versions
+            if marker in html_fragment:
+                html_fragment = html_fragment.replace(marker, table_html)
+                logger.info("  Table placeholder replaced (unescaped)")
+            elif f'<p>{escaped_marker}</p>' in html_fragment:
+                # Replace wrapped version with just the table (don't keep <p> wrapper)
+                html_fragment = html_fragment.replace(f'<p>{escaped_marker}</p>', table_html)
+                logger.info("  Table placeholder replaced (unwrapped from <p>)")
+            else:
+                # Fallback: try to find the escaped version
+                escaped_marker_full = marker.replace('_', '&#95;').replace('-', '&#45;')
+                if escaped_marker_full in html_fragment:
+                    html_fragment = html_fragment.replace(escaped_marker_full, table_html)
+                    logger.info("  Table placeholder replaced (fully escaped)")
+                else:
+                    logger.warning("  Could not find table placeholder in output")
+            
+            # Clean up any remaining <p> wrapping around the table
+            html_fragment = re.sub(r'<p>(\s*<table>)', r'\1', html_fragment)
+            html_fragment = re.sub(r'(</table>)\s*</p>', r'\1', html_fragment)
+        
         # ===== VALIDATION =====
         is_valid, error_msg = assembler.validate_html(html_fragment)
         if not is_valid:
@@ -127,32 +185,96 @@ def convert_mathpix_to_lms_html_with_stats(mathpix_text):
     logger.info("Starting conversion with statistics...")
     
     try:
+        # ===== PHASE 1: DOCUMENT EXTRACTION =====
         # Extract content from \begin{document}...\end{document} if present
-        import re
+        logger.info("Phase 1: Extracting document content...")
         doc_match = re.search(r'\\begin\{document\}(.*?)\\end\{document\}', mathpix_text, re.DOTALL)
         if doc_match:
             content_to_convert = doc_match.group(1).strip()
+            logger.info("  Found document environment - extracting content")
         else:
             content_to_convert = mathpix_text
+            logger.warning("  No document environment found - using full text")
         
-        # Normalize
+        # ===== PHASE 1.5: NORMALIZATION =====
+        logger.info("Phase 1.5: Normalizing LaTeX commands...")
         normalizer = LatexNormalizer()
         normalized_text = normalizer.normalize(content_to_convert)
         
-        # Extract
+        # ===== PHASE 6 (Early): TABLE DETECTION & CONVERSION =====
+        # Check for LaTeX tables - if found, convert and embed them
+        logger.info("Phase 6: Checking for LaTeX tables...")
+        table_html = None
+        table_pattern = None
+        try:
+            table_html = convert_latex_table(normalized_text)
+            if table_html:
+                logger.info("  Found LaTeX table - will embed after assembly")
+                logger.info(f"  Generated table HTML ({len(table_html)} chars)")
+                # Find and mark the table location but don't replace yet
+                # Replace with a marker to preserve position information
+                table_pattern = re.search(
+                    r'\\begin\{center\}\s*\\begin\{tabular\}.*?\\end\{tabular\}\s*\\end\{center\}|\\begin\{tabular\}.*?\\end\{tabular\}',
+                    normalized_text,
+                    flags=re.DOTALL
+                )
+                if table_pattern:
+                    # Replace table with placeholder that won't be escaped
+                    marker = f"__TABLE_PLACEHOLDER_{hash(table_html)%1000000}__"
+                    normalized_text = normalized_text[:table_pattern.start()] + marker + normalized_text[table_pattern.end():]
+                    logger.info(f"  Table marked with placeholder: {marker}")
+        except Exception as e:
+            logger.warning(f"  Table conversion failed: {e} - continuing without table conversion")
+            table_html = None
+        
+        # ===== PHASE 2: EXTRACTION =====
+        logger.info("Phase 2: Extracting equations and sections...")
         extractor = LatexExtractor()
         equations, sections = extractor.extract_all(normalized_text)
         
-        # Render
+        # ===== PHASE 3: RENDERING =====
+        logger.info("Phase 3: Rendering equations to KaTeX...")
         renderer = KaTeXRenderer()
-        renderer.render_batch(equations)
+        renderer.render_batch(equations, stop_on_error=False)
         
-        # Assemble
+        # ===== PHASE 4: ASSEMBLY =====
+        logger.info("Phase 4: Assembling HTML fragment...")
         assembler = HTMLAssembler(equation_format="tiptap")
         html_fragment = assembler.assemble_fragment(normalized_text, equations, sections)
         
+        # ===== PHASE 6 (Late): REPLACE TABLE PLACEHOLDER =====
+        # Replace the placeholder with the actual table HTML (which won't be escaped)
+        if table_html:
+            logger.info("Phase 6 (Late): Replacing table placeholder with actual HTML...")
+            marker = f"__TABLE_PLACEHOLDER_{hash(table_html)%1000000}__"
+            # Unescape the marker from the HTML and replace with actual table
+            escaped_marker = marker.replace('_', '&#95;')  # HTML entity for underscore
+            
+            # Try both escaped and unescaped versions
+            if marker in html_fragment:
+                html_fragment = html_fragment.replace(marker, table_html)
+                logger.info("  Table placeholder replaced (unescaped)")
+            elif f'<p>{escaped_marker}</p>' in html_fragment:
+                # Replace wrapped version with just the table (don't keep <p> wrapper)
+                html_fragment = html_fragment.replace(f'<p>{escaped_marker}</p>', table_html)
+                logger.info("  Table placeholder replaced (unwrapped from <p>)")
+            else:
+                # Fallback: try to find the escaped version
+                escaped_marker_full = marker.replace('_', '&#95;').replace('-', '&#45;')
+                if escaped_marker_full in html_fragment:
+                    html_fragment = html_fragment.replace(escaped_marker_full, table_html)
+                    logger.info("  Table placeholder replaced (fully escaped)")
+                else:
+                    logger.warning("  Could not find table placeholder in output")
+            
+            # Clean up any remaining <p> wrapping around the table
+            html_fragment = re.sub(r'<p>(\s*<table>)', r'\1', html_fragment)
+            html_fragment = re.sub(r'(</table>)\s*</p>', r'\1', html_fragment)
+        
         # Get statistics
+        logger.info("Computing statistics...")
         stats = assembler.get_statistics(normalized_text, equations, sections, html_fragment)
+        stats['conversion_type'] = 'mixed' if table_html else 'standard'
         
         logger.info(f"Conversion complete: {stats['total_equations']} equations, {stats['total_sections']} sections")
         

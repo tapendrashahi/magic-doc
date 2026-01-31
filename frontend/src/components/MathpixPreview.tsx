@@ -10,6 +10,36 @@ interface MathpixPreviewProps {
   format?: ConversionFormat;
 }
 
+// CSS styles for proper list and table rendering (no prose indentation)
+const previewStyles = `
+  /* Override default Tailwind prose styles that cause indentation */
+  .mathpix-preview ul,
+  .mathpix-preview ol {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mathpix-preview li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .mathpix-preview table {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+  }
+  
+  .mathpix-preview p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+`;
+
+// Log CSS injection
+console.log('[MathpixPreview] CSS styles defined:', previewStyles);
+
 export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
   html,
   loading = false,
@@ -20,6 +50,17 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
   const codeContainerRef = useRef<HTMLDivElement>(null);
   const preElementRef = useRef<HTMLPreElement>(null);
   const [outputTab, setOutputTab] = useState<'preview' | 'code'>('preview');
+
+  // Inject CSS styles once on mount
+  useEffect(() => {
+    const styleId = 'mathpix-preview-styles';
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('style');
+      style.id = styleId;
+      style.textContent = previewStyles;
+      document.head.appendChild(style);
+    }
+  }, []);
 
   // Initialize KaTeX only if format is 'katex' - runs once on component mount
   useEffect(() => {
@@ -172,10 +213,13 @@ export const MathpixPreview: React.FC<MathpixPreviewProps> = React.memo(({
         {!loading && html && outputTab === 'preview' && (
           <div
             ref={previewRef}
-            className="prose prose-sm max-w-none leading-relaxed text-gray-900"
+            className="mathpix-preview max-w-none leading-relaxed text-gray-900"
             style={{ 
               fontSize: '16px',
-              lineHeight: '1.8'
+              lineHeight: '1.8',
+              /* Reset any default indentation from parent containers */
+              marginLeft: '0',
+              paddingLeft: '0'
             }}
             dangerouslySetInnerHTML={{ __html: displayHtml }}
           />

@@ -1,0 +1,653 @@
+Oxidation of complex organic compounds (carbohydrates, lipids, proteins) releasing energy with help of enzymes.
+It is exothermic, exergonic, catabolic and oxido-reductive process.
+Oxidation of complex organic compounds (carbohydrates, lipids, proteins) releasing energy with help of enzymes.
+It is exothermic, exergonic, catabolic and oxido-reductive process.
+C
+6
+H
+12
+O
+6
++
+O
+2
+→
+C
+O
+2
++
+H
+2
+O
++
+686
+K
+c
+a
+l
+C 
+6
+​
+ H 
+12
+​
+ O 
+6
+​
+ +O 
+2
+​
+ →CO 
+2
+​
+ +H 
+2
+​
+ O+686Kcal
+
+Order of preferable respiratory substrate is: Glucose, fat, protein
+Glucose is the first preferred substrate of respiration and when complex carbohydrate and fats are used as respiratory substrate, it is called floating respiration.
+When protein is used as the respiratory substrate, it is called protoplasmic respiration.
+Depending upon the oxygen required, respiration may be aerobic or anaerobic respiration.
+Aerobic respiration
+
+Anaerobic respiration
+
+Takes place in presence of oxygen
+
+Takes place in absence of oxygen
+
+Complete oxidation of glucose
+
+Incomplete oxidation of glucose
+
+Takes place in cytoplasm and mitochondria
+
+Takes place in cytoplasm
+
+Completes in glycolysis, Krebs cycle and terminal oxidation.
+
+Completes in glycolysis and incomplete oxidation of pyruvic acid.
+
+Production of large amount of energy i.e 36-38 ATP or 686 Kcal.
+
+Production of large amount of energy i.e 2 ATP or 36-50 Kcal.
+
+Occurs in most of animals and higher plants.
+
+Occurs in lower organisms (yeast and bacteria) and temporarily in few higher organisms.
+
+End products are inorganic forms (i.e water and 
+C
+O
+2
+CO 
+2
+​
+  ).
+
+End products are organic forms (Lactic acid, alcohol, acetic acids etc.) or both organic and inorganic forms (i.e 
+C
+O
+2
+CO 
+2
+​
+  ).
+
+Water is produced as end product.
+
+Water is not produced as end product.
+
+Production of large number of 
+C
+O
+2
+⋅
+CO 
+2
+​
+ ⋅
+
+Less or no production of 
+C
+O
+2
+CO 
+2
+​
+ .
+
+Anaerobic respiration, also called fermentation is the exergonic or exothermic process and the term first used by Pasteur.
+The enzyme responsible for fermentation is Zymase first extracted by Buchner from yeast.Fermentation can be of following types on the base of end product;
+Alcoholic fermentation
+
+Occurs when oxygen is completely absent
+Exhibited by bacteria and yeast
+Completes in 3 steps; glycolysis, decarboxylation and dehydrogenation Glucose
+Occurs when oxygen is completely absent
+Exhibited by bacteria and yeast
+Completes in 3 steps; glycolysis, decarboxylation and dehydrogenation Glucose 
+→
+→ Pyruvic acid 
+→
+→ Acetaldehyde 
+→
+→ Ethyl alcohol 
++
+C
+O
+2
++
++CO 
+2
+​
+ + energy</li></ul>
+Acetic acid fermentation
+
+Occurs when oxygen is completely absent
+Exhibited by bacteria called Acetobacter aceti
+Completes in 3 steps; glycolysis, decarboxylation and dehydrogenation Glucose
+Occurs when oxygen is completely absent
+Exhibited by bacteria called Acetobacter aceti
+Completes in 3 steps; glycolysis, decarboxylation and dehydrogenation Glucose 
+→
+→ Pyruvic acid 
+→
+→ Acetaldehyde 
+→
+→ Acetic Acid 
++
+C
+O
+2
++
++CO 
+2
+​
+ + energy</li></ul>
+Lactic acid fermentation
+
+Occurs when oxygen is insufficient in a cell (i.e. hypoxia)
+Exhibited by muscle cells, endoparasitic worms
+Completes in 3 steps; glycolysis, decarboxylation and dehydrogenation Glucose → Pyruvic acid
+Occurs when oxygen is insufficient in a cell (i.e. hypoxia)
+Exhibited by muscle cells, endoparasitic worms
+Completes in 3 steps; glycolysis, decarboxylation and dehydrogenation Glucose → Pyruvic acid 
+→
+→ Lactic acid + energy</li></ul>
+Aerobic respiration has four continuous processes:
+
+Glycolysis in cytosol/cytoplasm (EMP pathway),
+Oxidative decarboxylation in outer and Perimitochondrial space,
+Kreb cycle in mitochondrial matrix (Tricarboxylic acid cycle or TCA cycle) but in bacteria it occurs in cytosol and
+Oxidative phosphorylation in inner membrane of mitochondria (Terminal oxidation, ETS)
+1. Glycolysis
+
+Carbohydrate to enter into glycolysis, the glucose and fructose derived from hydrolysis of starch, sucrose or fructans must first be converted to hexose phosphates.
+Six carbon compounds - Glucose is broken down into 3-carbon compound pyruvic acid with net release of 2 ATP and
+Carbohydrate to enter into glycolysis, the glucose and fructose derived from hydrolysis of starch, sucrose or fructans must first be converted to hexose phosphates.
+Six carbon compounds - Glucose is broken down into 3-carbon compound pyruvic acid with net release of 2 ATP and 
+2
+N
+A
+D
+H
+2
+2NADH 
+2
+​
+  .
+Occurs in cytoplasm of cell
+Also called EMP pathway - named after scientists who demonstrated (German biochemist, Gustab G. Embden and Otto F. Meyerhof and Parnas)
+Glycolysis includes 10 enzymatic steps,
+Irreversible reactions: conversion of glucose into glucose 6 phosphate, conversion of fructose6 phosphate to fructose 1, 6-diphosphate.
+Primary Rate determining enzymes: phosphofructokinase.
+Reaction that does not require enzyme is conversion of 1,3 biphosphoglyceraldehyde into 1, 3 diphosphoglycerate.
+Total production of 4 ATP in glycolysis, 2 ATP while converting 1,3 diphosphoglycerate to 3 phosphoglycerate and 2 ATP while converting 3 phosphoenol pyruvate to pyruvate.
+Glycolysis EMP pathway
+
+Total production of ATP in glycolysis 
+=
+10
+=10 ATP
+Net production of ATP in glycolysis 
+=
+8
+=8 ATP
+Total gain of ATP in glycolysis = 4 ATP
+Net gain of ATP in glycolysis 
+=
+2
+=2 ATP
+Net gain of ATP in glycolysis through ETS = 6 ATP
+In aerobic glycolysis, in addition to 2 ATP molecules, reducing power, 2 NADH2 enter into mitochondria where they undergo ETS releasing 4 or 6 molecules of ATP.
+Test Yourself
+
+Q.The most preferable substrate for respiration is carbohydrate (or glucose ) as compare to protein and fat. The energy produced by 1 gm of carbohydrate isA. 4 caloriesB. 7 caloriesC. 9 caloriesD. 8 calories
+
+2. Oxidative decarboxylation
+
+In mitochondria, pyruvic acid produced through glycolysis goes on oxidation and decarboxylation forming 2 Acetyl CO A.
+In the outer membrane of mitochondria, pyruvic acid is decarboxylated into acetic acid with release of one
+In mitochondria, pyruvic acid produced through glycolysis goes on oxidation and decarboxylation forming 2 Acetyl CO A.
+In the outer membrane of mitochondria, pyruvic acid is decarboxylated into acetic acid with release of one 
+C
+O
+2
+CO 
+2
+​
+  .
+The acetic acid is decarboxylated and combines with co - enzyme A to form Acetyl CoA by reducing NAD into NADH 
++
+H
++
++H+ and both reactions are catalyzed by pyruvate dehydrogenase (PDH) complex enzymes.
+Acetyl CoA is the most common substrate that enters into Krebs cycle -
+Acetyl CoA links glycolysis and Krebs cycle.
+2 molecules of
+and both reactions are catalyzed by pyruvate dehydrogenase (PDH) complex enzymes.
+
+Acetyl CoA is the most common substrate that enters into Krebs cycle -
+Acetyl CoA links glycolysis and Krebs cycle.
+2 molecules of 
+C
+O
+2
+CO 
+2
+​
+  are released during link reaction.
+2NADH2 produced in link reaction enter into ETS to form 6 ATP 
+(
+2
+×
+3
+=
+6
+)
+(2×3=6) .</li></ul>
+3. Krebs cycle (citric acid cycle or tricarboxylic acid cycle or TCA cycle)
+
+It is the oxygen consuming process in which acetyl CoA is successfully decarboxylated and dehydrogenated into 
+C
+O
+2
+,
+H
+2
+O
+,
+N
+A
+D
+P
+H
+2
+CO 
+2
+​
+ ,H 
+2
+​
+ O,NADPH 
+2
+​
+  and 
+F
+A
+D
+H
+2
+FADH 
+2
+​
+  to liberate ATP in matrix of mitochondria. The Krebs cycle has 10 step of enzymatic reaction and discovered by German biochemist : Sir Hans Adolph
+Krebs 
+(
+1935
+,
+1945
+)
+(1935,1945) and Johnson (1937) .
+Krebs was awarded by novel prize in 1953 in medicine.
+The first metabolic product of Krebs cycle is citric acid which contain three carboxylic acid group 
+(
+−
+C
+O
+O
+H
+)
+(−COOH) , hence called TCA or tricarboxylic acid cycle.
+The reactions of TCA cycle starts by condensation of acetyl - CoA with oxaloacetic acid (OAA) catalyzed by the citrate synthetase producing citric acid.
+All the reaction takes place in mitochondrial matrix except reduction of FAD which occurs in inner membrane of mitochondria because succinate dehydrogenase present only in inner membrane.
+It produces intermediate metabolites (both anabolic and catabolic) so called amphibolic or Anapleurotic pathway.
+Only one 5 carbon compound is formed during Kreb's cycle i.e
+, hence called TCA or tricarboxylic acid cycle.
+
+The reactions of TCA cycle starts by condensation of acetyl - CoA with oxaloacetic acid (OAA) catalyzed by the citrate synthetase producing citric acid.
+All the reaction takes place in mitochondrial matrix except reduction of FAD which occurs in inner membrane of mitochondria because succinate dehydrogenase present only in inner membrane.
+It produces intermediate metabolites (both anabolic and catabolic) so called amphibolic or Anapleurotic pathway.
+Only one 5 carbon compound is formed during Kreb's cycle i.e 
+α
+α ketoglutaric acid.
+All the reactions are reversible (except reaction 2, 6 and 7)
+One molecule of Pyruvic acid releases - 3 molecules of 
+C
+O
+2
+,
+4
+CO 
+2
+​
+ ,4 molecules of 
+N
+A
+D
+P
+H
+2
+,
+2
+NADPH 
+2
+​
+ ,2 molecules of 
+F
+A
+D
+H
+2
+FADH 
+2
+​
+  and 1 molecule of GTP (ATP).
+The connecting link between respiration and protein synthesis is aketoglutaric acid.
+From substrate phosphorylation in each Krebs cycle one ATP is formed. ATP is directly formed from GTP.
+There are
+and 1 molecule of GTP (ATP).
+
+The connecting link between respiration and protein synthesis is aketoglutaric acid.
+From substrate phosphorylation in each Krebs cycle one ATP is formed. ATP is directly formed from GTP.
+There are 
+2
+2 decarboxylation, 1 substrate phosphorylation, 4 dehydrogenation and 5 oxidation reaction in Krebs cycle.
+One molecule of glucose gives two molecules of pyruvic acid and from two kreb's cycle, 24
+ATP are formed (22 ATP from ETS and 2 ATP from substrate phosphorylation).
+In the oxidation reaction step, the hydrogen acceptor is NAD but in case of oxidation of succinic acid, the hydrogen acceptor is FAD.
+4. Oxidative phosphorylation or ETS or Terminal oxidation
+
+It is the last step of aerobic respiration, the reduced coenzymes produced during glycolysis and Krebs cycle get oxidized by molecular oxygen.
+Synthesis of ATP by oxidation and reduction of cytochrome cofactors and coenzymes (NADH + and FADH + in presence of ATP synthetase present in oxysome (elementary particles or Fo and F1 particles) of inner membrane of mitochondria and called as oxidative phosphorylation.
+All the enzymes required for ETS are found in the F1 particles of mitochondria.
+In the ETS, electrons flow from more electronegative carrier to more electropositive carrier
+Oxidation and reduction process occurs in FAD, UQ, Cyt. complexes.
+The electron transport chain in mitochondria consists of 4 multiprotein electron transport complexes:
+Complex I (NADH dehydrogenase)
+Complex II (Succinate dehydrogenase)
+Complex III (Dihydroubiquinone - UQH
+It is the last step of aerobic respiration, the reduced coenzymes produced during glycolysis and Krebs cycle get oxidized by molecular oxygen.
+Synthesis of ATP by oxidation and reduction of cytochrome cofactors and coenzymes (NADH + and FADH + in presence of ATP synthetase present in oxysome (elementary particles or Fo and F1 particles) of inner membrane of mitochondria and called as oxidative phosphorylation.
+All the enzymes required for ETS are found in the F1 particles of mitochondria.
+In the ETS, electrons flow from more electronegative carrier to more electropositive carrier
+Oxidation and reduction process occurs in FAD, UQ, Cyt. complexes.
+The electron transport chain in mitochondria consists of 4 multiprotein electron transport complexes:
+Complex I (NADH dehydrogenase)
+Complex II (Succinate dehydrogenase)
+Complex III (Dihydroubiquinone - UQH 
+2
+2
+​
+  )
+Complex IV (Cyt c - oxygen oxidoreductase)
+Energy released in from ETS stored in the form of ATP and every molecule of
+)
+
+Complex IV (Cyt c - oxygen oxidoreductase)
+Energy released in from ETS stored in the form of ATP and every molecule of 
+N
+A
+D
+H
++
+H
++
+NADH+H 
++
+  produces 3ATP, FADH 
++
+H
++
++H 
++
+  produces 2 ATP.
+Energy is generated by the transfer of protons across the membrane which can be used for chemical, osmotic, or mechanical work - proton motive force.
+Each molecule of ATP can store 7.6 (7.3 or 8.9) Kcal energy.
+The chemicals that inhibit electron flow are: cyanide, azides and carbon monoxide that form a complex with cytochorome a3 and stop further transfer of oxygen.
+The reduced coenzymes
+produces 2 ATP.
+
+Energy is generated by the transfer of protons across the membrane which can be used for chemical, osmotic, or mechanical work - proton motive force.
+Each molecule of ATP can store 7.6 (7.3 or 8.9) Kcal energy.
+The chemicals that inhibit electron flow are: cyanide, azides and carbon monoxide that form a complex with cytochorome a3 and stop further transfer of oxygen.
+The reduced coenzymes 
+N
+A
+D
+H
+2
+NADH 
+2
+​
+  should enter into inner membrane of mitochondria, there are two compartments that 
+N
+A
+D
+H
+2
+NADH 
+2
+​
+  produced from glycolysis present in cytoplasm and cannot cross the membrane of mitochondria but it produced from Krebs cycle present in mitochondria. So there are twomechanisms for ATP production: malate-aspartate shuttle and Glycerol phosphate shuttle.
+In malate-aspartate shuttle: oxaloacetate gains two hydrogen atom from NADH2 to form malate and malate after reaching membrane reduces NAD to NADH2 in the presence of malate dehydrogenase. The 
+N
+A
+D
+H
+2
+NADH 
+2
+​
+  produces 3 ATP molecules.
+In glycerol phosphate shuttle: dihydroxyacetone phosphate accepts two hydrogen atoms from 
+N
+A
+D
+H
+2
+NADH 
+2
+​
+  to form glycerol-3 phosphate. After reach to the membrane, it reduces FAD into 
+F
+A
+D
+H
+2
+FADH 
+2
+​
+  in presence of glycerol dehydrogenase. The 
+F
+A
+D
+H
+2
+FADH 
+2
+​
+  produce only two ATP.</li></ul>
+Aerobic respiration
+
+Anaerobic respiration
+
+Takes place in presence of oxygen
+
+Takes place in absence of oxygen
+
+Complete oxidation of glucose
+
+Incomplete oxidation of glucose
+
+Takes place in cytoplasm and mitochondria
+
+Takes place in cytoplasm
+
+Completes in glycolysis, Krebs cycle and terminal oxidation.
+
+Completes in glycolysis and incomplete oxidation of pyruvic acid.
+
+Production of large amount of energy i.e 36-38 ATP or 686 Kcal.
+
+Production of large amount of energy i.e 2 ATP or 36-50 Kcal.
+
+Occurs in most of animals and higher plants.
+
+Occurs in lower organisms (yeast and bacteria) and temporarily in few higher organisms.
+
+End products are inorganic forms (i.e water and 
+C
+O
+2
+CO 
+2
+​
+  ).
+
+End products are organic forms (Lactic acid, alcohol, acetic acids etc.) or both organic and inorganic forms (i.e 
+C
+O
+2
+CO 
+2
+​
+  ).
+
+Water is produced as end product.
+
+Water is not produced as end product.
+
+Production of large number of 
+C
+O
+2
+⋅
+CO 
+2
+​
+ ⋅
+
+Less or no production of 
+C
+O
+2
+CO 
+2
+​
+ .
+
+32 or 34 from ETS and 4 from without ETS (Substrate respiration)
+36 to 38 ATPs are formed by complete oxidation of glucose or hexose sugar or C compound during aerobic respiration.
+1 ATP molecule stores about 7.3 kcal of energy so the total energy stored as ATP is: 
+38
+×
+7.3
+=
+277.4
+k
+c
+a
+l
+38×7.3=277.4kcal . This means that only 277.4 kcal are captured in the form of ATP out of 686 kcal energy available from glucose.The efficiency of respiration is calculated as the fraction of the energy captured in ATP compared to the total energy stored in glucose.Efficiency of respiration 
+=
+ energy captured in ATP 
+ Total energy stored in gulcose 
+×
+100
+%
+= 
+ Total energy stored in gulcose 
+ energy captured in ATP 
+​
+ ×100% </li></ul>
+Respiratory quotient (RQ)
+
+It is the ratio of number of molecule of carbondioxide evolved to the number of molecules of oxygen consumed during respiration.
+RQ is measured by Ganong's respirometer.
+RQ value depends upon nature of substrate; ( i.e carbohydrate
+It is the ratio of number of molecule of carbondioxide evolved to the number of molecules of oxygen consumed during respiration.
+RQ is measured by Ganong's respirometer.
+RQ value depends upon nature of substrate; ( i.e carbohydrate 
+=
+1
+=1 , protein 
+<
+1
+<1 , fat 
+<
+1
+<1 while organic acids like malic acid 
+=
+>
+1
+=>1 ).
+The RQ value for aerobic respiration is equivalent to 1 while the value is less than 1 for anaerobic module respiration.The RQ values for different plant parts and substrates are given below:
+Leaves rich in carbohydrate -1
+Darkened shoots of Opuntia - 0.03
+Germinating starchy seeds -1
+Germinating linseed (high fat) - 0.64
+Germinating buckwheat (high protein) - 0.5
+Germinating peas -1.54-2.4
+Factor Responsible for Respiration
+
+Light: It has no direct role in respiration. However, stomata open in presence of light which indirectly helps in exchange of respiratory gases. Respiratory rates in leaves adapted to full sun (sun leaves) are generally higher than those of leaves of the same species adapted to shade.
+Oxygen: Oxygen is essential for aerobic respiration but higher concentration oxygen inhibits the respiration which is known as Pasteur's effect.
+Temperature: The optimum temperature for respiration is
+Light: It has no direct role in respiration. However, stomata open in presence of light which indirectly helps in exchange of respiratory gases. Respiratory rates in leaves adapted to full sun (sun leaves) are generally higher than those of leaves of the same species adapted to shade.
+Oxygen: Oxygen is essential for aerobic respiration but higher concentration oxygen inhibits the respiration which is known as Pasteur's effect.
+Temperature: The optimum temperature for respiration is 
+2
+7
+∘
+C
+27 
+∘
+ C and with every 
+1
+0
+∘
+C
+10 
+∘
+ C rise of temperature from 
+0
+−
+3
+0
+∘
+C
+0−30 
+∘
+ C , the rate of respiration increases by 
+2
+−
+2− 2.5 times. It is called temperature coefficient.
+If the plant transferred from water to salt solution, the rate of respiration increases called salt respiration. It is due to absorption of ions require metabolic energy.
+Any injury, wounds and infections increase the rate of respiration for healing meristematic activities are required.
+Rate of respiration decreases with increase in age.
+Chemicals like, cyanides, azides, rotenone, antimycin, amytal, DNP etc inhibit the respiration.
+Increasing the concentration of carbondioxide decreases the rate of respiration. During respiration approximately 113 Kcal energy release per molecule of oxygen absorbed.
+Hormones like auxin, gibberellins, cytokinin increase the rate of respiration, specially ethylene is climacteric hormone that accelerates the rate of respiration.
